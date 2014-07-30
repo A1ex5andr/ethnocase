@@ -320,7 +320,8 @@ header {
 		margin: 30px auto;
 		display: block;
 	}
-	.picsGallery-thumbs{
+	.picsGallery-thumbs, .picsGallery-show{
+		@include span(border-box);
 	}
 }
 .singleCase {

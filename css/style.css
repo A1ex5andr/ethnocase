@@ -2660,6 +2660,14 @@ header .headLogo .logo {
   margin: 30px auto;
   display: block;
 }
+.picsGallery .picsGallery-thumbs, .picsGallery .picsGallery-show {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding-left: 0.4166666667%;
+  padding-right: 0.4166666667%;
+}
 
 .singleCase .singleCase-about {
   padding: 10px;
