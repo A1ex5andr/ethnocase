@@ -8,6 +8,7 @@ $susy: (
 @import "susy";
 @import "breakpoint";
 @import "reset";
+@import "normalize";
 @import "grids";
 @import "font-awesome";
 @import "nav";
@@ -40,7 +41,7 @@ a {
 	color: #333;
 }
 a:focus {
-	outline: thin dotted;
+	outline: none;
 }
 textarea {
 	resize: vertical;
@@ -321,7 +322,7 @@ header {
 		display: block;
 	}
 	.picsGallery-thumbs, .picsGallery-show{
-		@include span(border-box);
+		overflow: hidden;
 	}
 }
 .singleCase {
