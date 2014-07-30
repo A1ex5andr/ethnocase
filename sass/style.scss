@@ -114,6 +114,11 @@ textarea {
 }
 .img-responsive{
 	width: 100%;
+			border: 1px #CFCFCF solid;
+		padding: 4px;
+		width: 90%;
+		margin: 0 auto;
+		display: block;
 }
 .truncate {
 	width: 90%;
@@ -505,6 +510,49 @@ header {
 	}
 }
 
+/* about us page*/
+.aboutUs {
+	h3 {
+		text-align: center;
+		font-weight: 100;
+		margin: 30px 10%;
+		letter-spacing: 2px;
+		line-height: 22px;
+		border-top: 1px #CFCFCF solid;
+		// border-bottom: 1px #CFCFCF solid;
+		padding: 10px;
+		text-transform: capitalize;
+	}
+	p {
+		padding: 10px;
+		text-align: justify;
+		font-size: 15px;
+		text-indent: 10px;
+		margin: 0 6%;
+	}
+	h4 {
+		text-align: right;
+		padding-right: 10%;
+		margin: 0 0 20px 0;
+	}
+}
+
+/* picture Gallery */
+.picGallery{
+	margin: 20px 0;
+	overflow: hidden;
+	div {
+		@include span(8);
+	}
+	img {
+		border: 1px #CFCFCF solid;
+		padding: 4px;
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	}
+}
+/* all pages footer */
 footer {
 	@include layout(border-box);
 	text-align: center;
@@ -660,13 +708,16 @@ footer {
 			}
 		}
 	}
-
 	.btn-Remove {
 		position: absolute;
 		right: 0;
 		bottom: 0;
 	}
-
+	.aboutUs {
+		h3 {
+			margin: 30px 30%;
+		}
+	}
 }
 
 //from 960px to 1200
