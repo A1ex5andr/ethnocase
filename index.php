@@ -1,3 +1,39 @@
+<?php
+//error_reporting(E_ERROR | E_WARNING | E_PARSE);
+error_reporting(E_ERROR | E_PARSE);
+if ( !defined('MITH') )
+    define('MITH', 'zeusz');
+
+require_once("./incl/medoo.min.php");
+require_once("./incl/common.php");
+require_once("./incl/functions.php"); 
+
+$lang = language($lang);
+
+//echo $language;
+
+
+//$words = translate($language);
+
+
+include ("incl/header.php");
+
+if (($args["0"] == "news") OR ($args["1"] == "news")){
+
+}else{
+    
+    include("incl/main.php");
+
+}
+
+
+include ("incl/footer.php");
+
+
+
+?>
+
+
 <?php require_once("layout/head.php"); ?>
 <?php require_once("layout/header.php"); ?>
 	<div class="slogan container">
