@@ -1,6 +1,8 @@
 <?php
+
 $site = "http://etno.dev/";
-//$dlang = "ukr";
+
+
 
 // ochistka POST
 foreach($_POST as $key => $value) {
@@ -44,5 +46,6 @@ if (($args['0'] == "rus") OR ($args['0'] == "eng")){
 	elseif ($args['0'] == "rus") {$lang = 'rus';}
 	else {$lang = 'ukr'; }
 
+if (!isset($args['0'])){$lang = 'ukr';}
 
 ?>

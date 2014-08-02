@@ -9,35 +9,15 @@ startSession();
 
 function language($lang){
 
-if ((!isset($_COOKIE['lang'])) || (!is_numeric($_COOKIE['lang'])) || ($_COOKIE['lang']>3) ){
-	$lang = langtcook($lang);
-	setcookie('lang',$lang,time() + (86400 * 7));
-	$_SESSION['lang'] = langfcook($lang);
-}
-
-if ((!empty($_COOKIE['lang'])) AND (is_numeric($_COOKIE['lang'])) AND ($_COOKIE['lang']<4)  ){
-	$lang =  langfcook($_COOKIE['lang']);
-	header('Location: ' . $site."/".$lang);
-}
-
-
-setcookie('first_name',$first_name,time() + (86400 * 7));
-
-	if (($_COOKIE['lang'] == "") OR (!is_numeric($_COOKIE['lang'])) OR ($_COOKIE['lang'] > 3)) {
-			$language = '1';
-		}else {$language = $_COOKIE['lang'];}
+if ((!isset($_COOKIE['lang'])) || (!is_numeric($_COOKIE['lang'])) || ($_COOKIE['lang']>3) || (empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang) )
+	{
+		$lang = langtcook($lang);
+		setcookie('lang',$lang,time() + (86400 * 7));
+		$_SESSION['lang'] = langfcook($lang);
+		$lang = langfcook($lang);
 	}
 
-	if (($_COOKIE['lang'] == "") OR ($_COOKIE['lang'] != $language)) {
-		setcookie('lang',$language,time() + (86400 * 7));
-	}
-
-	if (($_SESSION['lang'] == "") OR ($_SESSION['lang'] != $language)) {
-		$_SESSION['lang'] = $language;
-	}
-
-
-	return $language;
+	return $lang;
 }
 
 function langtcook($arg) {
@@ -58,20 +38,33 @@ function langfcook($arg) {
 	return $flag;
 }
 
+function menu($lang)
+{
+	$database = new medoo();
+    $menus = $database->select("menus", ["id", "link_item", "menu", "parent", "orders", $lang, "class"], 
+        [
+        "active" => "1",
+        "ORDER" => ["orders ASC", "id ASC"]
+        ]);
+// echo $database->last_query();   
+// var_dump($database->error());
+    return $menus;
+}
 
 
+function common_txt($lang)
+{
+	$max = array("no_text" => "ERROR");
+	$database = new medoo();
+    $sel = $database->select("texts", ["link_item", $lang]);
+		foreach($sel as $data)
+			{
+				$mix = $data["link_item"];
+				array_push($max[$mix] = $data[$lang]);
+				
+			}
 
-
-
-
-function flags($lang) {
-
-	if ($lang == "2") {$flag = "rus";}
-	elseif ($lang == "3") {$flag = "eng";}
-	else {$flag = "ukr";}
-
-	echo $flag;
-
+    return $max;
 }
 
 
@@ -108,20 +101,18 @@ $url = explode('/',$url);
 
 }
 
-function common_txt($tb, $txt) {
-	global $common;
 
-	$i = false;
-	
-	foreach($common as $data){
-		if ($txt == $data["name"]){
-			return $data[$tb];
-			$i = true;
-		}
-	}
-	if ($i = false){return "NO_TEXT_ERROR";}
-           
-}
+
+
+
+
+
+
+
+
+
+
+
 
 function news($tb, $q) {
 

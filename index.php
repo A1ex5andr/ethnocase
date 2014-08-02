@@ -4,33 +4,32 @@ error_reporting(E_ERROR | E_PARSE);
 if ( !defined('MITH') )
     define('MITH', 'zeusz');
 
-require_once("./incl/medoo.min.php");
 require_once("./incl/common.php");
+require_once("./incl/medoo.min.php");
 require_once("./incl/functions.php"); 
 
-$lang = language($lang);
+if ((empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang))
+	{
+		$lang = language($lang);
+	}
 
-//echo $language;
+$texts = common_txt($lang);
 
-
-//$words = translate($language);
-
-
-include ("incl/header.php");
+require_once("layout/head.php");
+require_once("layout/header.php");
 
 if (($args["0"] == "news") OR ($args["1"] == "news")){
 
 }else{
     
-    include("incl/main.php");
+    include("layout/main.php");
 
 }
 
 
-include ("incl/footer.php");
+require_once("layout/footer.php");
 
-
-
+exit;
 ?>
 
 
