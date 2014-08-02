@@ -32,8 +32,7 @@ foreach($menus as $data)
 	    <nav id="navigation" class="nav-collapse">
 	      <ul>
 <?php echo $pr_menu; ?>
-	        <!-- <li><a href="#">Wallpapers</a></li> 
-	        <li>
+	    <!-- <li>
 	        	<a href="<?php echo $site; ?>cart/"><i class="fa fa-shopping-cart"></i> Cart
 					<span class="inCart">1</span>
 	        	</a>

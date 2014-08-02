@@ -7,3 +7,4 @@
 <?php require_once("layout/indexNews.php"); ?>
 <?php require_once("layout/indexCatalog.php"); ?>
 <?php require_once("layout/contacts.php"); ?>
+

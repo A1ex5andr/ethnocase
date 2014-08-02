@@ -38,37 +38,6 @@ function langfcook($arg) {
 	return $flag;
 }
 
-function menu($lang)
-{
-	$database = new medoo();
-    $menus = $database->select("menus", ["id", "link_item", "menu", "parent", "orders", $lang, "class"], 
-        [
-        "active" => "1",
-        "ORDER" => ["orders ASC", "id ASC"]
-        ]);
-// echo $database->last_query();   
-// var_dump($database->error());
-    return $menus;
-}
-
-
-function common_txt($lang)
-{
-	$max = array("no_text" => "ERROR");
-	$database = new medoo();
-    $sel = $database->select("texts", ["link_item", $lang]);
-		foreach($sel as $data)
-			{
-				$mix = $data["link_item"];
-				array_push($max[$mix] = $data[$lang]);
-				
-			}
-
-    return $max;
-}
-
-
-
 function flags_url($lang){
 
 $args = "";
@@ -101,38 +70,75 @@ $url = explode('/',$url);
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-function news($tb, $q) {
-
-    $database = new medoo();
-    $news = $database->select("news", ["link_item", "img", $tb."_title", $tb, "pos"], 
+function menu($lang)
+{
+	$database = new medoo();
+    $menus = $database->select("menus", ["id", "link_item", "menu", "parent", "orders", $lang, "class"], 
         [
-        "ORDER" => "news.dat DESC",
-		"LIMIT" => $q
+        "active" => "1",
+        "ORDER" => ["orders ASC", "id ASC"]
         ]);
-    return $news;
-
+// echo $database->last_query();   
+// var_dump($database->error());
+    return $menus;
 }
 
-// function translate($lang) {
-// 	$database = new medoo('ethnocase');
-//     $words = $database->select("translate", ["id", "lang", "menu", "parent", "orders", $lang], 
-//     	[
-//     	"ORDER" => "menus.orders ASC"
-//     	]);
-// }
+function news($lang, $lim_from, $lim_step)
+{
+	$database = new medoo();
+    $news = $database->select("news", ["link_item", "img", $lang, "top", "pos"], 
+        [
+        "active" => "1",
+        "ORDER" => ["top ASC", "id ASC", "pos ASC"],
+        "LIMIT" => [$lim_from, $lim_step]
+        ]);
+
+    return $news;
+}
+
+function common_txt($lang)
+{
+	$max = array("no_text" => "ERROR");
+	$database = new medoo();
+    $sel = $database->select("texts", ["link_item", $lang]);
+		foreach($sel as $data)
+			{
+				$mix = $data["link_item"];
+				array_push($max[$mix] = $data[$lang]);
+				
+			}
+
+    return $max;
+}
+
+function cases($lang, $lim_from, $lim_step)
+{
+	$database = new medoo();
+
+	$name = "name_".$lang;
+	$model = "model_".$lang;
+	$about = "about_".$lang;
+
+    $cases = $database->select("cases", ["link_item", "img", $name, $model, $about, "price", "price_old", "sale", "disc", "stock"], 
+        [
+        "active" => "1",
+        "ORDER" => ["id DESC"],
+        "LIMIT" => [$lim_from, $lim_step]
+        ]);
+
+    return $cases;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 function is_valid_email($email) 
     {

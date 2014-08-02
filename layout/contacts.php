@@ -2,11 +2,11 @@
         <div class="container">
 
             <header class="headline">
-                <h2>Contact Us</h2>
+                <h2><?php echo $texts['contact']; ?></h2>
             </header>
 
             <div class="contactsBlock contactsSocial">
-                <p class="contactUs">If You have any questions about ethnoitem products, delivery or cooperation with us, please, feel free to leave us a message or call anytime. We always happy to talk about Ukrainean culture, simply bacasuse we love it :)
+                <p class="contactUs"><?php echo $texts['contact_text']; ?>
                 </p>
                 <div class="contactsSocial">
                     <div class="contactsSocial-link">
@@ -44,10 +44,10 @@
 
             <div class="contactsBlock contactsForm">
                 <form action="contact.php" method="post" role="form">
-	                <input type="text" class="form-name" id="nameinput" placeholder="Name" name="contact-name">
+	                <input type="text" class="form-name" id="nameinput" placeholder="<?php echo $texts['name']; ?>" name="contact-name">
 	                <input type="email" class="form-mail" id="emailinput" placeholder="Email" name="contact-email">
-	                <textarea class="form-mesg" rows="6" name="contact-message" placeholder="Message"></textarea>
-	                <button type="submit" class="btn btn-send"><i class="fa fa-pencil-square-o"></i> SEND</button>                
+	                <textarea class="form-mesg" rows="6" name="contact-message" placeholder="<?php echo $texts['message']; ?>"></textarea>
+	                <button type="submit" class="btn btn-send"><i class="fa fa-pencil-square-o"></i> <?php echo $texts['send']; ?></button>                
 	            </form>
             </div>
         </div>
