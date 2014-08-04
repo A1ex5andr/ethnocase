@@ -111,7 +111,7 @@ function common_txt($lang)
     return $max;
 }
 
-function cases($lang, $lim_from, $lim_step)
+function cases($lang, $sel)
 {
 	$database = new medoo();
 
@@ -119,11 +119,14 @@ function cases($lang, $lim_from, $lim_step)
 	$model = "model_".$lang;
 	$about = "about_".$lang;
 
-    $cases = $database->select("cases", ["link_item", "img", $name, $model, $about, "price", "price_old", "sale", "disc", "stock"], 
+    $cases = $database->select("cases", ["link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
         [
-        "active" => "1",
+        "AND" => [
+        	"active" => "1",
+        	$sel => "1"
+        	],
         "ORDER" => ["id DESC"],
-        "LIMIT" => [$lim_from, $lim_step]
+        "LIMIT" => ["3"]
         ]);
 
     return $cases;
