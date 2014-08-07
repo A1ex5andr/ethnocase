@@ -6,16 +6,11 @@
 		</div>
 <?php 
 
-$menus = menu($lang);
+$menus = menu($lang, '1');
 $pr_menu = '';
 
 foreach($menus as $data)
 	{
-		$i = "0";
-        foreach($menus as $dat)
-        {
-			if ($data["id"] == $dat["parent"]){$i++;}
-        }
 
 		if ($data["parent"] == "0")
 		{

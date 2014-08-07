@@ -70,12 +70,15 @@ $url = explode('/',$url);
 
 }
 
-function menu($lang)
+function menu($lang, $menu)
 {
 	$database = new medoo();
-    $menus = $database->select("menus", ["id", "link_item", "menu", "parent", "orders", $lang, "class"], 
+    $menus = $database->select("menus", ["id", "link_item", "menu", "img", "parent", "orders", $lang, "class", "alt" ], 
         [
-        "active" => "1",
+        "AND" => [
+        	"active" => "1",
+        	"menu" => $menu
+        	],
         "ORDER" => ["orders ASC", "id ASC"]
         ]);
 // echo $database->last_query();   
@@ -86,7 +89,8 @@ function menu($lang)
 function news($lang, $lim_from, $lim_step)
 {
 	$database = new medoo();
-    $news = $database->select("news", ["link_item", "img", $lang, "top", "pos"], 
+	$txt = $lang."_txt";
+    $news = $database->select("news", ["link_item", "img", $lang, $txt, "top", "pos"], 
         [
         "active" => "1",
         "ORDER" => ["top ASC", "id ASC", "pos ASC"],
@@ -132,7 +136,25 @@ function cases($lang, $sel)
     return $cases;
 }
 
+function cars($lang)
+{
+	$database = new medoo();
 
+	$name = "name_".$lang;
+	$model = "model_".$lang;
+	$about = "about_".$lang;
+
+    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "disc", "stock", "sale"], 
+        [
+        "AND" => [
+        	"active" => "1"
+        	],
+        "ORDER" => ["id DESC"],
+        "LIMIT" => ["3"]
+        ]);
+
+    return $cars;
+}
 
 
 

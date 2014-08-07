@@ -18,11 +18,36 @@ $texts = common_txt($lang);
 require_once("layout/head.php");
 require_once("layout/header.php");
 
-if (($args["0"] == "news") OR ($args["1"] == "news")){
+if ($loc["0"] == "news"){
+
+		require_once("layout/newsDetailed.php");
+		require_once("layout/bestseller.php");
+		require_once("layout/onsale.php");
+		require_once("layout/contacts.php");
+
+}elseif ($loc["0"] == "cars"){
+
+		require_once("layout/cars.php");
+		require_once("layout/contacts.php");
+
+}elseif ($loc["0"] == "cases"){
+
+		require_once("layout/cars.php");
+		if ($loc["1"] == "cases"){ require_once("layout/cases.php"); }
+		else { require_once("layout/cases.php"); }
+		require_once("layout/contacts.php");
 
 }else{
     
-    include("layout/main.php");
+	    echo '<div class="slogan container">
+	        <h1>'.$texts['sloganSmall'].'</h1>
+	    </div>';
+		require_once("layout/slider.php");
+		require_once("layout/indexNews.php");
+		require_once("layout/newest.php");
+		require_once("layout/bestseller.php");
+		require_once("layout/onsale.php");
+		require_once("layout/contacts.php");
 
 }
 

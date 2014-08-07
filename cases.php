@@ -1,6 +1,3 @@
-<?php require_once("layout/head.php"); ?>
-<?php require_once("layout/header.php"); ?>
-
 
 	<section class="container">
         <div class="catalog-brand">
