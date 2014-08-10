@@ -25,15 +25,15 @@ if ($loc["0"] == "news"){
 		require_once("layout/onsale.php");
 		require_once("layout/contacts.php");
 
-}elseif ($loc["0"] == "cars"){
+}elseif ($loc["0"] == "auto"){
 
 		require_once("layout/cars.php");
 		require_once("layout/contacts.php");
 
-}elseif ($loc["0"] == "cases"){
+}elseif ($loc["0"] == "products"){
 
-		require_once("layout/cars.php");
-		if ($loc["1"] == "cases"){ require_once("layout/cases.php"); }
+		if (!empty($loc["2"])) { require_once("layout/cases_details.php"); }
+		elseif (!empty($loc["1"])) { require_once("layout/cases_model.php"); }
 		else { require_once("layout/cases.php"); }
 		require_once("layout/contacts.php");
 

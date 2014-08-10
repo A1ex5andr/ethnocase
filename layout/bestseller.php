@@ -19,7 +19,7 @@ if ($data["price_old"] != '0'){echo '                    <div class="itemPrice-o
 if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
 echo '                </div>
                 <div class="picWrap">
-                    <img class="picIndex" src="img/cases/'.$data["img"].'" alt="">
+                    <img class="picIndex" src="'.$site.'img/cases/'.$data["img"].'" alt="">
                 </div>
             </a>
             <h3 class="itemName">'.$data[$name].'</h3>

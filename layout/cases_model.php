@@ -1,11 +1,29 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
+<?php 
+$menus = menu($lang, '2');
 
+$my_menu_txt = "";
+$id = "";
+
+foreach($menus as $data)
+    {
+
+        if ($data["link_item"] == $loc["1"])
+        {
+            $my_menu_txt = $data[$lang];
+            $id = $data["id"];
+            $links = "products/".$data["link_item"]."/";
+        }
+    }
+
+if ($my_menu_txt == "") { echo "404"; exit;}
+?>
 	<section class="items container">
-	    <div class="headline"><h2><?php echo $texts['onsell']; ?></h2></div>
+	    <div class="headline"><h2><?php echo $my_menu_txt; ?></h2></div>
 
 <?php 
 
-$cases = cases($lang, 'sale');
+$cases = cases_model($lang, $id);
 $name = "name_".$lang;
 $model = "model_".$lang;
 
@@ -13,7 +31,7 @@ foreach($cases as $data)
     {
 
 echo '      <div class="itemBlock">
-            <a href="'.$data["link_item"].'" class="itemBlockLink">
+            <a href="'.$site.$links.$data["link_item"].'" class="itemBlockLink">
                 <div class="itemPrice priceDiscount">
                     <div class="itemPrice-final">'.$data["price"].'&#8372;</div>';
 if ($data["price_old"] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data["price_old"].'&#8372;&nbsp;</div>';}

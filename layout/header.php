@@ -1,7 +1,7 @@
 <?php if ( !defined('MITH') ) {exit;} ?>	<header class="container">
 		<div class="headLogo">
 			<a href="<?php echo $site; ?>">
-				<img src="img/logo.jpg" alt="" class="logo">
+				<img src="<?php echo $site; ?>img/logo.jpg" alt="" class="logo">
 			</a>
 		</div>
 <?php 

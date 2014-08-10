@@ -22,7 +22,7 @@ foreach($cars as $data)
         if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
         echo '                </div>
                         <div class="picWrap">
-                            <img class="picIndex" src="img/cars/'.$data["img"].'" alt="">
+                            <img class="picIndex" src="'.$site.'img/cars/'.$data["img"].'" alt="">
                         </div>
                     </a>
                     <h3 class="itemName">'.$data[$name].'</h3>
@@ -50,7 +50,7 @@ foreach($cars as $data)
         if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
         echo '                </div>
                         <div class="picWrap">
-                            <img class="picIndex" src="img/cars/'.$data["img"].'" alt="">
+                            <img class="picIndex" src="'.$site.'img/cars/'.$data["img"].'" alt="">
                         </div>
                     </a>
                     <h3 class="itemName">'.$data[$name].'</h3>
@@ -78,7 +78,7 @@ foreach($cars as $data)
         if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
         echo '                </div>
                         <div class="picWrap">
-                            <img class="picIndex" src="img/cars/'.$data["img"].'" alt="">
+                            <img class="picIndex" src="'.$site.'img/cars/'.$data["img"].'" alt="">
                         </div>
                     </a>
                     <h3 class="itemName">'.$data[$name].'</h3>
