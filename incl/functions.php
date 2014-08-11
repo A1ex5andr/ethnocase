@@ -195,7 +195,18 @@ function cars($lang)
     return $cars;
 }
 
-
+function pages($lang, $page)
+{
+	$database = new medoo();
+    $pages = $database->select("pages", ["id", "link_item", $lang], 
+        [
+        "AND" => [
+        	"active" => "1",
+        	"link_item" => $page
+        	]
+        ]);
+    return $pages;
+}
 
 
 

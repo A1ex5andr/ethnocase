@@ -37,7 +37,11 @@ if ($loc["0"] == "news"){
 		else { require_once("layout/cases.php"); }
 		require_once("layout/contacts.php");
 
-}else{
+}elseif ($loc["0"] == "404"){
+
+	require_once("layout/404.php");
+
+}elseif(empty($loc["0"])){
     
 	    echo '<div class="slogan container">
 	        <h1>'.$texts['sloganSmall'].'</h1>
@@ -48,6 +52,10 @@ if ($loc["0"] == "news"){
 		require_once("layout/bestseller.php");
 		require_once("layout/onsale.php");
 		require_once("layout/contacts.php");
+
+}else{
+	
+	require_once("layout/pages.php");
 
 }
 
