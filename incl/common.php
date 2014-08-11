@@ -1,6 +1,6 @@
 <?php
 
-$site = "http://etno.dev/";
+$site = "http://new.ethnocase.com/";
 
 
 
