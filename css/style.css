@@ -3462,7 +3462,7 @@ footer {
       .itemBlock .itemBlockLink:hover .itemName {
         visibility: visible; }
 
-  /* line 645, ../sass/style.scss */
+  /* line 646, ../sass/style.scss */
   .catalog-brand .brandModel {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3472,7 +3472,7 @@ footer {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
 
-  /* line 649, ../sass/style.scss */
+  /* line 650, ../sass/style.scss */
   .picsGallery {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3481,7 +3481,7 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 651, ../sass/style.scss */
+    /* line 652, ../sass/style.scss */
     .picsGallery span {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -3490,20 +3490,20 @@ footer {
       float: left;
       padding-left: 0.41667%;
       padding-right: 0.41667%; }
-    /* line 655, ../sass/style.scss */
+    /* line 656, ../sass/style.scss */
     .picsGallery .picsGallery-thumbs img {
       border: 1px solid #DDD; }
-    /* line 659, ../sass/style.scss */
+    /* line 660, ../sass/style.scss */
     .picsGallery .picsGallery-show {
       display: block; }
-    /* line 662, ../sass/style.scss */
+    /* line 663, ../sass/style.scss */
     .picsGallery .singleCasePic {
       margin: 20px auto;
       display: block !important;
       width: 100%;
       max-width: 100%; }
 
-  /* line 669, ../sass/style.scss */
+  /* line 670, ../sass/style.scss */
   .singleCase {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3514,7 +3514,7 @@ footer {
     padding-right: 0.41667%;
     padding-left: 6%; }
 
-  /* line 674, ../sass/style.scss */
+  /* line 675, ../sass/style.scss */
   .contacts .contactsBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3524,7 +3524,7 @@ footer {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
 
-  /* line 678, ../sass/style.scss */
+  /* line 679, ../sass/style.scss */
   .inCart-item {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3534,7 +3534,7 @@ footer {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
 
-  /* line 681, ../sass/style.scss */
+  /* line 682, ../sass/style.scss */
   .inCart-itemPicture {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3543,11 +3543,11 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 683, ../sass/style.scss */
+    /* line 684, ../sass/style.scss */
     .inCart-itemPicture img.picIndex {
       width: 100%; }
 
-  /* line 687, ../sass/style.scss */
+  /* line 688, ../sass/style.scss */
   .inCart-details {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3556,49 +3556,49 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 690, ../sass/style.scss */
+    /* line 691, ../sass/style.scss */
     .inCart-details ul li {
       width: 20%; }
 
-  /* line 695, ../sass/style.scss */
+  /* line 696, ../sass/style.scss */
   .orderForm-delivery {
     margin: 30px 60px; }
-    /* line 697, ../sass/style.scss */
+    /* line 698, ../sass/style.scss */
     .orderForm-delivery > div:hover {
       background: #EBEBEB; }
 
-  /* line 701, ../sass/style.scss */
+  /* line 702, ../sass/style.scss */
   .orderForm-info {
     width: 80%;
     margin: 0 auto; }
-    /* line 704, ../sass/style.scss */
+    /* line 705, ../sass/style.scss */
     .orderForm-info textarea {
       width: 100%;
       height: 160px; }
 
-  /* line 709, ../sass/style.scss */
+  /* line 710, ../sass/style.scss */
   .btn-Remove {
     position: absolute;
     right: 0;
     bottom: 0; }
 
-  /* line 715, ../sass/style.scss */
+  /* line 716, ../sass/style.scss */
   .aboutUs h3 {
     margin: 30px 30%; } }
 @media (min-width: 960px) {
-  /* line 725, ../sass/style.scss */
+  /* line 726, ../sass/style.scss */
   h1 {
     font-size: 2.2em; }
 
-  /* line 725, ../sass/style.scss */
+  /* line 726, ../sass/style.scss */
   h2 {
     font-size: 1.5em; }
 
-  /* line 725, ../sass/style.scss */
+  /* line 726, ../sass/style.scss */
   h3 {
     font-size: 1.2em; }
 
-  /* line 728, ../sass/style.scss */
+  /* line 729, ../sass/style.scss */
   .container {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3612,7 +3612,7 @@ footer {
       display: block;
       clear: both; }
 
-  /* line 731, ../sass/style.scss */
+  /* line 732, ../sass/style.scss */
   .itemBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3621,12 +3621,12 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 735, ../sass/style.scss */
+    /* line 736, ../sass/style.scss */
     .itemBlock .itemBlockLink .picWrap .picIndex {
       width: 220px;
       margin-left: -50px; } }
 @media (min-width: 1200px) {
-  /* line 746, ../sass/style.scss */
+  /* line 747, ../sass/style.scss */
   .container {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3640,7 +3640,7 @@ footer {
       display: block;
       clear: both; }
 
-  /* line 754, ../sass/style.scss */
+  /* line 755, ../sass/style.scss */
   .picWrap .picIndex {
     width: 250px;
     margin-left: -50px; } }

@@ -40,7 +40,6 @@ if ($loc["0"] == "news"){
 }elseif ($loc["0"] == "404"){
 
 	require_once("layout/404.php");
-	exit;
 
 }elseif(empty($loc["0"])){
     
@@ -60,6 +59,7 @@ if ($loc["0"] == "news"){
 	require_once("layout/contacts.php");
 
 }
+
 
 require_once("layout/footer.php");
 
