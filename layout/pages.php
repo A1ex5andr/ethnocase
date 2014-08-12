@@ -1,17 +1,17 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php	
-
 $page = pages($lang, $loc["0"]);
-foreach($page as $data)
-    {
-	    if (!empty($data[$lang])){
 
-			echo $data[$lang];
+if (!empty($page)){
+	foreach($page as $data)
+	    {
+		    if (!empty($data[$lang])){
 
-		}else{
+				echo $data[$lang]."-";
 
-			header( 'Refresh: 0; url='.$site.'/404' );
-
+			}
 		}
-	}
+}else{
+	require_once("layout/404.php");
+}
 ?>
