@@ -1,12 +1,18 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 	<section class="items container">
-	    <div class="headline"><h2><?php echo $texts['bestsell']; ?></h2></div>
+
 
 <?php 
 
 $cases = cases($lang, 'top');
 $name = "name_".$lang;
 $model = "model_".$lang;
+
+if (!empty($cases)){
+
+    echo '        <div class="headline"><h2>'.$texts['bestsell'].'</h2></div>';
+
+}
 
 foreach($cases as $data)
     {
