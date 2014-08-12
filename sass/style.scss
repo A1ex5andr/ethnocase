@@ -64,7 +64,7 @@ textarea {
 	margin: 10px;
 	padding: 10px 20px;
 	background-color: #1fa67a;
-	border: 1px solid #1b926c;
+//	border: 1px solid #1b926c;
 	color: #fff;
 	cursor: pointer;
 	font-size: 14px;
@@ -118,7 +118,7 @@ textarea {
 	#{$header} { line-height: $size;}
 }
 .img-responsive{
-	width: 100%;
+//	width: 100%;
 	border: 1px #CFCFCF solid;
 	padding: 4px;
 	width: 90%;
@@ -228,24 +228,24 @@ textarea {
 		font-family: $fontExo2;
 		text-align: center;
 		.itemPrice {
-			position: absolute;
-			right: 0;
-			.itemPrice-final {
-				background: #ff4949;
-				padding: 10px;
-				color: #fff;
-			}
-			.itemPrice-old {
-				background: #696969;
-				padding: 10px;
-				color: #fff;
-				text-decoration: line-through;
-			}
-			.itemPrice-disc {
-				padding: 10px;
-				background: #2CFFC4;
+		  position: absolute;
+		  right: 0;
+          .itemPrice-final {
+            background: #696969;
+            padding: 10px;
+            color: #fff;
+          }
+          .itemPrice-old {
+            background: #ff4949;
+            padding: 10px;
+            color: #fff;
+            text-decoration: line-through;
+          }
+          .itemPrice-disc {
+              padding: 10px;
+              background: #2CFFC4;
 
-			}
+          }
 		}
 		.picWrap{
 			overflow: hidden;

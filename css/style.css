@@ -2782,7 +2782,6 @@ textarea {
   margin: 10px;
   padding: 10px 20px;
   background-color: #1fa67a;
-  border: 1px solid #1b926c;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
@@ -2797,7 +2796,6 @@ textarea {
   margin: 10px;
   padding: 10px 20px;
   background-color: #1fa67a;
-  border: 1px solid #1b926c;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
@@ -2814,7 +2812,6 @@ textarea {
   margin: 10px;
   padding: 10px 20px;
   background-color: #1fa67a;
-  border: 1px solid #1b926c;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
@@ -2829,7 +2826,6 @@ textarea {
   margin: 10px;
   padding: 10px 20px;
   background-color: #1fa67a;
-  border: 1px solid #1b926c;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
@@ -2887,7 +2883,6 @@ h1 {
 
 /* line 120, ../sass/style.scss */
 .img-responsive {
-  width: 100%;
   border: 1px #CFCFCF solid;
   padding: 4px;
   width: 90%;
@@ -3011,12 +3006,12 @@ h1 {
       right: 0; }
       /* line 233, ../sass/style.scss */
       .itemBlock .itemBlockLink .itemPrice .itemPrice-final {
-        background: #ff4949;
+        background: #696969;
         padding: 10px;
         color: #fff; }
       /* line 238, ../sass/style.scss */
       .itemBlock .itemBlockLink .itemPrice .itemPrice-old {
-        background: #696969;
+        background: #ff4949;
         padding: 10px;
         color: #fff;
         text-decoration: line-through; }
