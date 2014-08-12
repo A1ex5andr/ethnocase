@@ -230,22 +230,22 @@ textarea {
 		.itemPrice {
 		  position: absolute;
 		  right: 0;
-          .itemPrice-final {
-            background: #696969;
-            padding: 10px;
-            color: #fff;
-          }
-          .itemPrice-old {
-            background: #ff4949;
-            padding: 10px;
-            color: #fff;
-            text-decoration: line-through;
-          }
-          .itemPrice-disc {
-              padding: 10px;
-              background: #2CFFC4;
+		  .itemPrice-final {
+			background: #696969;
+			padding: 10px;
+			color: #fff;
+		  }
+		  .itemPrice-old {
+			background: #ff4949;
+			padding: 10px;
+			color: #fff;
+			text-decoration: line-through;
+		  }
+		  .itemPrice-disc {
+			  padding: 10px;
+			  background: #2CFFC4;
 
-          }
+		  }
 		}
 		.picWrap{
 			overflow: hidden;
@@ -337,7 +337,7 @@ textarea {
 	background-color: #f0f0f0;
 	border-top: 1px solid #949191;
 	.headline {
- 	text-align: left;
+	text-align: left;
 		h1, h2, h3, h4 {
 			border-bottom: 1px solid #929292;
 		}
@@ -560,6 +560,15 @@ footer {
 	padding: 10px;
 }
 
+/* 404 */
+.error404 {
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 80px 0px;
+  }
+}
 
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
