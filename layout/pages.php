@@ -13,5 +13,6 @@ if (!empty($page)){
 		}
 }else{
 	require_once("layout/404.php");
+	exit;
 }
 ?>
