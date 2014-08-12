@@ -2,7 +2,6 @@
 /* ------------------------------------------
   RESET
 --------------------------------------------- */
-/* line 7, ../sass/_reset.scss */
 body, div,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
@@ -13,7 +12,6 @@ summary, hgroup {
   padding: 0;
   border: 0; }
 
-/* line 18, ../sass/_reset.scss */
 a:active,
 a:hover {
   outline: 0; }
@@ -29,7 +27,6 @@ a:hover {
 @viewport {
   width: device-width; }
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
-/* line 29, ../sass/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -39,28 +36,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-/* line 29, ../sass/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
-/* line 29, ../sass/_reset.scss */
 body {
   line-height: 1; }
 
-/* line 29, ../sass/_reset.scss */
 ol, ul {
   list-style: none; }
 
-/* line 29, ../sass/_reset.scss */
 blockquote, q {
   quotes: none; }
 
-/* line 29, ../sass/_reset.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
 
-/* line 29, ../sass/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -71,7 +62,6 @@ table {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 9, ../sass/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -83,7 +73,6 @@ html {
 /**
  * Remove default margin.
  */
-/* line 19, ../sass/_normalize.scss */
 body {
   margin: 0; }
 
@@ -94,7 +83,6 @@ body {
  * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 32, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -113,7 +101,6 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 52, ../sass/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -127,7 +114,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 65, ../sass/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -136,7 +122,6 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 75, ../sass/_normalize.scss */
 [hidden],
 template {
   display: none; }
@@ -146,14 +131,12 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 87, ../sass/_normalize.scss */
 a {
   background: transparent; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 95, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0; }
@@ -163,14 +146,12 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 107, ../sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 115, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
@@ -178,7 +159,6 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 124, ../sass/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -186,7 +166,6 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 133, ../sass/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -194,7 +173,6 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 142, ../sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -202,14 +180,12 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 151, ../sass/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 159, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -217,11 +193,9 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 167, ../sass/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 171, ../sass/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -230,14 +204,12 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 182, ../sass/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 190, ../sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -246,14 +218,12 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 201, ../sass/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 209, ../sass/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -262,14 +232,12 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 219, ../sass/_normalize.scss */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 227, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -289,7 +257,6 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 250, ../sass/_normalize.scss */
 button,
 input,
 optgroup,
@@ -305,7 +272,6 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 264, ../sass/_normalize.scss */
 button {
   overflow: visible; }
 
@@ -315,7 +281,6 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 275, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -327,7 +292,6 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 288, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -340,7 +304,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 300, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -348,7 +311,6 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 309, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -358,7 +320,6 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 320, ../sass/_normalize.scss */
 input {
   line-height: normal; }
 
@@ -369,7 +330,6 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 332, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -382,7 +342,6 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 344, ../sass/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -392,7 +351,6 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 355, ../sass/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -406,7 +364,6 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 368, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -414,7 +371,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 377, ../sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -424,7 +380,6 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 388, ../sass/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -434,7 +389,6 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 397, ../sass/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -442,7 +396,6 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 406, ../sass/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -451,12 +404,10 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 417, ../sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 422, ../sass/_normalize.scss */
 td,
 th {
   padding: 0; }
@@ -473,7 +424,6 @@ th {
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 14, ../sass/_font-awesome.scss */
 .fa {
   display: inline-block;
   font-family: FontAwesome;
@@ -484,44 +434,35 @@ th {
   -moz-osx-font-smoothing: grayscale; }
 
 /* makes the font 33% larger relative to the icon container */
-/* line 24, ../sass/_font-awesome.scss */
 .fa-lg {
   font-size: 1.33333333em;
   line-height: 0.75em;
   vertical-align: -15%; }
 
-/* line 29, ../sass/_font-awesome.scss */
 .fa-2x {
   font-size: 2em; }
 
-/* line 32, ../sass/_font-awesome.scss */
 .fa-3x {
   font-size: 3em; }
 
-/* line 35, ../sass/_font-awesome.scss */
 .fa-4x {
   font-size: 4em; }
 
-/* line 38, ../sass/_font-awesome.scss */
 .fa-5x {
   font-size: 5em; }
 
-/* line 41, ../sass/_font-awesome.scss */
 .fa-fw {
   width: 1.28571429em;
   text-align: center; }
 
-/* line 45, ../sass/_font-awesome.scss */
 .fa-ul {
   padding-left: 0;
   margin-left: 2.14285714em;
   list-style-type: none; }
 
-/* line 50, ../sass/_font-awesome.scss */
 .fa-ul > li {
   position: relative; }
 
-/* line 53, ../sass/_font-awesome.scss */
 .fa-li {
   position: absolute;
   left: -2.14285714em;
@@ -529,33 +470,26 @@ th {
   top: 0.14285714em;
   text-align: center; }
 
-/* line 60, ../sass/_font-awesome.scss */
 .fa-li.fa-lg {
   left: -1.85714286em; }
 
-/* line 63, ../sass/_font-awesome.scss */
 .fa-border {
   padding: .2em .25em .15em;
   border: solid 0.08em #eeeeee;
   border-radius: .1em; }
 
-/* line 68, ../sass/_font-awesome.scss */
 .pull-right {
   float: right; }
 
-/* line 71, ../sass/_font-awesome.scss */
 .pull-left {
   float: left; }
 
-/* line 74, ../sass/_font-awesome.scss */
 .fa.pull-left {
   margin-right: .3em; }
 
-/* line 77, ../sass/_font-awesome.scss */
 .fa.pull-right {
   margin-left: .3em; }
 
-/* line 80, ../sass/_font-awesome.scss */
 .fa-spin {
   -webkit-animation: spin 2s infinite linear;
   -moz-animation: spin 2s infinite linear;
@@ -563,40 +497,31 @@ th {
   animation: spin 2s infinite linear; }
 
 @-moz-keyframes spin {
-  /* line 87, ../sass/_font-awesome.scss */
   0% {
     -moz-transform: rotate(0deg); }
 
-  /* line 90, ../sass/_font-awesome.scss */
   100% {
     -moz-transform: rotate(359deg); } }
 @-webkit-keyframes spin {
-  /* line 95, ../sass/_font-awesome.scss */
   0% {
     -webkit-transform: rotate(0deg); }
 
-  /* line 98, ../sass/_font-awesome.scss */
   100% {
     -webkit-transform: rotate(359deg); } }
 @-o-keyframes spin {
-  /* line 103, ../sass/_font-awesome.scss */
   0% {
     -o-transform: rotate(0deg); }
 
-  /* line 106, ../sass/_font-awesome.scss */
   100% {
     -o-transform: rotate(359deg); } }
 @keyframes spin {
-  /* line 111, ../sass/_font-awesome.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 115, ../sass/_font-awesome.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
-/* line 120, ../sass/_font-awesome.scss */
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
@@ -605,7 +530,6 @@ th {
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-/* line 128, ../sass/_font-awesome.scss */
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
@@ -614,7 +538,6 @@ th {
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
 
-/* line 136, ../sass/_font-awesome.scss */
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
@@ -623,7 +546,6 @@ th {
   -o-transform: rotate(270deg);
   transform: rotate(270deg); }
 
-/* line 144, ../sass/_font-awesome.scss */
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
   -webkit-transform: scale(-1, 1);
@@ -632,7 +554,6 @@ th {
   -o-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
-/* line 152, ../sass/_font-awesome.scss */
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
   -webkit-transform: scale(1, -1);
@@ -641,7 +562,6 @@ th {
   -o-transform: scale(1, -1);
   transform: scale(1, -1); }
 
-/* line 160, ../sass/_font-awesome.scss */
 .fa-stack {
   position: relative;
   display: inline-block;
@@ -650,7 +570,6 @@ th {
   line-height: 2em;
   vertical-align: middle; }
 
-/* line 168, ../sass/_font-awesome.scss */
 .fa-stack-1x,
 .fa-stack-2x {
   position: absolute;
@@ -658,1837 +577,1395 @@ th {
   width: 100%;
   text-align: center; }
 
-/* line 175, ../sass/_font-awesome.scss */
 .fa-stack-1x {
   line-height: inherit; }
 
-/* line 178, ../sass/_font-awesome.scss */
 .fa-stack-2x {
   font-size: 2em; }
 
-/* line 181, ../sass/_font-awesome.scss */
 .fa-inverse {
   color: #ffffff; }
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-/* line 186, ../sass/_font-awesome.scss */
 .fa-glass:before {
   content: "\f000"; }
 
-/* line 189, ../sass/_font-awesome.scss */
 .fa-music:before {
   content: "\f001"; }
 
-/* line 192, ../sass/_font-awesome.scss */
 .fa-search:before {
   content: "\f002"; }
 
-/* line 195, ../sass/_font-awesome.scss */
 .fa-envelope-o:before {
   content: "\f003"; }
 
-/* line 198, ../sass/_font-awesome.scss */
 .fa-heart:before {
   content: "\f004"; }
 
-/* line 201, ../sass/_font-awesome.scss */
 .fa-star:before {
   content: "\f005"; }
 
-/* line 204, ../sass/_font-awesome.scss */
 .fa-star-o:before {
   content: "\f006"; }
 
-/* line 207, ../sass/_font-awesome.scss */
 .fa-user:before {
   content: "\f007"; }
 
-/* line 210, ../sass/_font-awesome.scss */
 .fa-film:before {
   content: "\f008"; }
 
-/* line 213, ../sass/_font-awesome.scss */
 .fa-th-large:before {
   content: "\f009"; }
 
-/* line 216, ../sass/_font-awesome.scss */
 .fa-th:before {
   content: "\f00a"; }
 
-/* line 219, ../sass/_font-awesome.scss */
 .fa-th-list:before {
   content: "\f00b"; }
 
-/* line 222, ../sass/_font-awesome.scss */
 .fa-check:before {
   content: "\f00c"; }
 
-/* line 225, ../sass/_font-awesome.scss */
 .fa-times:before {
   content: "\f00d"; }
 
-/* line 228, ../sass/_font-awesome.scss */
 .fa-search-plus:before {
   content: "\f00e"; }
 
-/* line 231, ../sass/_font-awesome.scss */
 .fa-search-minus:before {
   content: "\f010"; }
 
-/* line 234, ../sass/_font-awesome.scss */
 .fa-power-off:before {
   content: "\f011"; }
 
-/* line 237, ../sass/_font-awesome.scss */
 .fa-signal:before {
   content: "\f012"; }
 
-/* line 240, ../sass/_font-awesome.scss */
 .fa-gear:before,
 .fa-cog:before {
   content: "\f013"; }
 
-/* line 244, ../sass/_font-awesome.scss */
 .fa-trash-o:before {
   content: "\f014"; }
 
-/* line 247, ../sass/_font-awesome.scss */
 .fa-home:before {
   content: "\f015"; }
 
-/* line 250, ../sass/_font-awesome.scss */
 .fa-file-o:before {
   content: "\f016"; }
 
-/* line 253, ../sass/_font-awesome.scss */
 .fa-clock-o:before {
   content: "\f017"; }
 
-/* line 256, ../sass/_font-awesome.scss */
 .fa-road:before {
   content: "\f018"; }
 
-/* line 259, ../sass/_font-awesome.scss */
 .fa-download:before {
   content: "\f019"; }
 
-/* line 262, ../sass/_font-awesome.scss */
 .fa-arrow-circle-o-down:before {
   content: "\f01a"; }
 
-/* line 265, ../sass/_font-awesome.scss */
 .fa-arrow-circle-o-up:before {
   content: "\f01b"; }
 
-/* line 268, ../sass/_font-awesome.scss */
 .fa-inbox:before {
   content: "\f01c"; }
 
-/* line 271, ../sass/_font-awesome.scss */
 .fa-play-circle-o:before {
   content: "\f01d"; }
 
-/* line 274, ../sass/_font-awesome.scss */
 .fa-rotate-right:before,
 .fa-repeat:before {
   content: "\f01e"; }
 
-/* line 278, ../sass/_font-awesome.scss */
 .fa-refresh:before {
   content: "\f021"; }
 
-/* line 281, ../sass/_font-awesome.scss */
 .fa-list-alt:before {
   content: "\f022"; }
 
-/* line 284, ../sass/_font-awesome.scss */
 .fa-lock:before {
   content: "\f023"; }
 
-/* line 287, ../sass/_font-awesome.scss */
 .fa-flag:before {
   content: "\f024"; }
 
-/* line 290, ../sass/_font-awesome.scss */
 .fa-headphones:before {
   content: "\f025"; }
 
-/* line 293, ../sass/_font-awesome.scss */
 .fa-volume-off:before {
   content: "\f026"; }
 
-/* line 296, ../sass/_font-awesome.scss */
 .fa-volume-down:before {
   content: "\f027"; }
 
-/* line 299, ../sass/_font-awesome.scss */
 .fa-volume-up:before {
   content: "\f028"; }
 
-/* line 302, ../sass/_font-awesome.scss */
 .fa-qrcode:before {
   content: "\f029"; }
 
-/* line 305, ../sass/_font-awesome.scss */
 .fa-barcode:before {
   content: "\f02a"; }
 
-/* line 308, ../sass/_font-awesome.scss */
 .fa-tag:before {
   content: "\f02b"; }
 
-/* line 311, ../sass/_font-awesome.scss */
 .fa-tags:before {
   content: "\f02c"; }
 
-/* line 314, ../sass/_font-awesome.scss */
 .fa-book:before {
   content: "\f02d"; }
 
-/* line 317, ../sass/_font-awesome.scss */
 .fa-bookmark:before {
   content: "\f02e"; }
 
-/* line 320, ../sass/_font-awesome.scss */
 .fa-print:before {
   content: "\f02f"; }
 
-/* line 323, ../sass/_font-awesome.scss */
 .fa-camera:before {
   content: "\f030"; }
 
-/* line 326, ../sass/_font-awesome.scss */
 .fa-font:before {
   content: "\f031"; }
 
-/* line 329, ../sass/_font-awesome.scss */
 .fa-bold:before {
   content: "\f032"; }
 
-/* line 332, ../sass/_font-awesome.scss */
 .fa-italic:before {
   content: "\f033"; }
 
-/* line 335, ../sass/_font-awesome.scss */
 .fa-text-height:before {
   content: "\f034"; }
 
-/* line 338, ../sass/_font-awesome.scss */
 .fa-text-width:before {
   content: "\f035"; }
 
-/* line 341, ../sass/_font-awesome.scss */
 .fa-align-left:before {
   content: "\f036"; }
 
-/* line 344, ../sass/_font-awesome.scss */
 .fa-align-center:before {
   content: "\f037"; }
 
-/* line 347, ../sass/_font-awesome.scss */
 .fa-align-right:before {
   content: "\f038"; }
 
-/* line 350, ../sass/_font-awesome.scss */
 .fa-align-justify:before {
   content: "\f039"; }
 
-/* line 353, ../sass/_font-awesome.scss */
 .fa-list:before {
   content: "\f03a"; }
 
-/* line 356, ../sass/_font-awesome.scss */
 .fa-dedent:before,
 .fa-outdent:before {
   content: "\f03b"; }
 
-/* line 360, ../sass/_font-awesome.scss */
 .fa-indent:before {
   content: "\f03c"; }
 
-/* line 363, ../sass/_font-awesome.scss */
 .fa-video-camera:before {
   content: "\f03d"; }
 
-/* line 366, ../sass/_font-awesome.scss */
 .fa-photo:before,
 .fa-image:before,
 .fa-picture-o:before {
   content: "\f03e"; }
 
-/* line 371, ../sass/_font-awesome.scss */
 .fa-pencil:before {
   content: "\f040"; }
 
-/* line 374, ../sass/_font-awesome.scss */
 .fa-map-marker:before {
   content: "\f041"; }
 
-/* line 377, ../sass/_font-awesome.scss */
 .fa-adjust:before {
   content: "\f042"; }
 
-/* line 380, ../sass/_font-awesome.scss */
 .fa-tint:before {
   content: "\f043"; }
 
-/* line 383, ../sass/_font-awesome.scss */
 .fa-edit:before,
 .fa-pencil-square-o:before {
   content: "\f044"; }
 
-/* line 387, ../sass/_font-awesome.scss */
 .fa-share-square-o:before {
   content: "\f045"; }
 
-/* line 390, ../sass/_font-awesome.scss */
 .fa-check-square-o:before {
   content: "\f046"; }
 
-/* line 393, ../sass/_font-awesome.scss */
 .fa-arrows:before {
   content: "\f047"; }
 
-/* line 396, ../sass/_font-awesome.scss */
 .fa-step-backward:before {
   content: "\f048"; }
 
-/* line 399, ../sass/_font-awesome.scss */
 .fa-fast-backward:before {
   content: "\f049"; }
 
-/* line 402, ../sass/_font-awesome.scss */
 .fa-backward:before {
   content: "\f04a"; }
 
-/* line 405, ../sass/_font-awesome.scss */
 .fa-play:before {
   content: "\f04b"; }
 
-/* line 408, ../sass/_font-awesome.scss */
 .fa-pause:before {
   content: "\f04c"; }
 
-/* line 411, ../sass/_font-awesome.scss */
 .fa-stop:before {
   content: "\f04d"; }
 
-/* line 414, ../sass/_font-awesome.scss */
 .fa-forward:before {
   content: "\f04e"; }
 
-/* line 417, ../sass/_font-awesome.scss */
 .fa-fast-forward:before {
   content: "\f050"; }
 
-/* line 420, ../sass/_font-awesome.scss */
 .fa-step-forward:before {
   content: "\f051"; }
 
-/* line 423, ../sass/_font-awesome.scss */
 .fa-eject:before {
   content: "\f052"; }
 
-/* line 426, ../sass/_font-awesome.scss */
 .fa-chevron-left:before {
   content: "\f053"; }
 
-/* line 429, ../sass/_font-awesome.scss */
 .fa-chevron-right:before {
   content: "\f054"; }
 
-/* line 432, ../sass/_font-awesome.scss */
 .fa-plus-circle:before {
   content: "\f055"; }
 
-/* line 435, ../sass/_font-awesome.scss */
 .fa-minus-circle:before {
   content: "\f056"; }
 
-/* line 438, ../sass/_font-awesome.scss */
 .fa-times-circle:before {
   content: "\f057"; }
 
-/* line 441, ../sass/_font-awesome.scss */
 .fa-check-circle:before {
   content: "\f058"; }
 
-/* line 444, ../sass/_font-awesome.scss */
 .fa-question-circle:before {
   content: "\f059"; }
 
-/* line 447, ../sass/_font-awesome.scss */
 .fa-info-circle:before {
   content: "\f05a"; }
 
-/* line 450, ../sass/_font-awesome.scss */
 .fa-crosshairs:before {
   content: "\f05b"; }
 
-/* line 453, ../sass/_font-awesome.scss */
 .fa-times-circle-o:before {
   content: "\f05c"; }
 
-/* line 456, ../sass/_font-awesome.scss */
 .fa-check-circle-o:before {
   content: "\f05d"; }
 
-/* line 459, ../sass/_font-awesome.scss */
 .fa-ban:before {
   content: "\f05e"; }
 
-/* line 462, ../sass/_font-awesome.scss */
 .fa-arrow-left:before {
   content: "\f060"; }
 
-/* line 465, ../sass/_font-awesome.scss */
 .fa-arrow-right:before {
   content: "\f061"; }
 
-/* line 468, ../sass/_font-awesome.scss */
 .fa-arrow-up:before {
   content: "\f062"; }
 
-/* line 471, ../sass/_font-awesome.scss */
 .fa-arrow-down:before {
   content: "\f063"; }
 
-/* line 474, ../sass/_font-awesome.scss */
 .fa-mail-forward:before,
 .fa-share:before {
   content: "\f064"; }
 
-/* line 478, ../sass/_font-awesome.scss */
 .fa-expand:before {
   content: "\f065"; }
 
-/* line 481, ../sass/_font-awesome.scss */
 .fa-compress:before {
   content: "\f066"; }
 
-/* line 484, ../sass/_font-awesome.scss */
 .fa-plus:before {
   content: "\f067"; }
 
-/* line 487, ../sass/_font-awesome.scss */
 .fa-minus:before {
   content: "\f068"; }
 
-/* line 490, ../sass/_font-awesome.scss */
 .fa-asterisk:before {
   content: "\f069"; }
 
-/* line 493, ../sass/_font-awesome.scss */
 .fa-exclamation-circle:before {
   content: "\f06a"; }
 
-/* line 496, ../sass/_font-awesome.scss */
 .fa-gift:before {
   content: "\f06b"; }
 
-/* line 499, ../sass/_font-awesome.scss */
 .fa-leaf:before {
   content: "\f06c"; }
 
-/* line 502, ../sass/_font-awesome.scss */
 .fa-fire:before {
   content: "\f06d"; }
 
-/* line 505, ../sass/_font-awesome.scss */
 .fa-eye:before {
   content: "\f06e"; }
 
-/* line 508, ../sass/_font-awesome.scss */
 .fa-eye-slash:before {
   content: "\f070"; }
 
-/* line 511, ../sass/_font-awesome.scss */
 .fa-warning:before,
 .fa-exclamation-triangle:before {
   content: "\f071"; }
 
-/* line 515, ../sass/_font-awesome.scss */
 .fa-plane:before {
   content: "\f072"; }
 
-/* line 518, ../sass/_font-awesome.scss */
 .fa-calendar:before {
   content: "\f073"; }
 
-/* line 521, ../sass/_font-awesome.scss */
 .fa-random:before {
   content: "\f074"; }
 
-/* line 524, ../sass/_font-awesome.scss */
 .fa-comment:before {
   content: "\f075"; }
 
-/* line 527, ../sass/_font-awesome.scss */
 .fa-magnet:before {
   content: "\f076"; }
 
-/* line 530, ../sass/_font-awesome.scss */
 .fa-chevron-up:before {
   content: "\f077"; }
 
-/* line 533, ../sass/_font-awesome.scss */
 .fa-chevron-down:before {
   content: "\f078"; }
 
-/* line 536, ../sass/_font-awesome.scss */
 .fa-retweet:before {
   content: "\f079"; }
 
-/* line 539, ../sass/_font-awesome.scss */
 .fa-shopping-cart:before {
   content: "\f07a"; }
 
-/* line 542, ../sass/_font-awesome.scss */
 .fa-folder:before {
   content: "\f07b"; }
 
-/* line 545, ../sass/_font-awesome.scss */
 .fa-folder-open:before {
   content: "\f07c"; }
 
-/* line 548, ../sass/_font-awesome.scss */
 .fa-arrows-v:before {
   content: "\f07d"; }
 
-/* line 551, ../sass/_font-awesome.scss */
 .fa-arrows-h:before {
   content: "\f07e"; }
 
-/* line 554, ../sass/_font-awesome.scss */
 .fa-bar-chart-o:before {
   content: "\f080"; }
 
-/* line 557, ../sass/_font-awesome.scss */
 .fa-twitter-square:before {
   content: "\f081"; }
 
-/* line 560, ../sass/_font-awesome.scss */
 .fa-facebook-square:before {
   content: "\f082"; }
 
-/* line 563, ../sass/_font-awesome.scss */
 .fa-camera-retro:before {
   content: "\f083"; }
 
-/* line 566, ../sass/_font-awesome.scss */
 .fa-key:before {
   content: "\f084"; }
 
-/* line 569, ../sass/_font-awesome.scss */
 .fa-gears:before,
 .fa-cogs:before {
   content: "\f085"; }
 
-/* line 573, ../sass/_font-awesome.scss */
 .fa-comments:before {
   content: "\f086"; }
 
-/* line 576, ../sass/_font-awesome.scss */
 .fa-thumbs-o-up:before {
   content: "\f087"; }
 
-/* line 579, ../sass/_font-awesome.scss */
 .fa-thumbs-o-down:before {
   content: "\f088"; }
 
-/* line 582, ../sass/_font-awesome.scss */
 .fa-star-half:before {
   content: "\f089"; }
 
-/* line 585, ../sass/_font-awesome.scss */
 .fa-heart-o:before {
   content: "\f08a"; }
 
-/* line 588, ../sass/_font-awesome.scss */
 .fa-sign-out:before {
   content: "\f08b"; }
 
-/* line 591, ../sass/_font-awesome.scss */
 .fa-linkedin-square:before {
   content: "\f08c"; }
 
-/* line 594, ../sass/_font-awesome.scss */
 .fa-thumb-tack:before {
   content: "\f08d"; }
 
-/* line 597, ../sass/_font-awesome.scss */
 .fa-external-link:before {
   content: "\f08e"; }
 
-/* line 600, ../sass/_font-awesome.scss */
 .fa-sign-in:before {
   content: "\f090"; }
 
-/* line 603, ../sass/_font-awesome.scss */
 .fa-trophy:before {
   content: "\f091"; }
 
-/* line 606, ../sass/_font-awesome.scss */
 .fa-github-square:before {
   content: "\f092"; }
 
-/* line 609, ../sass/_font-awesome.scss */
 .fa-upload:before {
   content: "\f093"; }
 
-/* line 612, ../sass/_font-awesome.scss */
 .fa-lemon-o:before {
   content: "\f094"; }
 
-/* line 615, ../sass/_font-awesome.scss */
 .fa-phone:before {
   content: "\f095"; }
 
-/* line 618, ../sass/_font-awesome.scss */
 .fa-square-o:before {
   content: "\f096"; }
 
-/* line 621, ../sass/_font-awesome.scss */
 .fa-bookmark-o:before {
   content: "\f097"; }
 
-/* line 624, ../sass/_font-awesome.scss */
 .fa-phone-square:before {
   content: "\f098"; }
 
-/* line 627, ../sass/_font-awesome.scss */
 .fa-twitter:before {
   content: "\f099"; }
 
-/* line 630, ../sass/_font-awesome.scss */
 .fa-facebook:before {
   content: "\f09a"; }
 
-/* line 633, ../sass/_font-awesome.scss */
 .fa-github:before {
   content: "\f09b"; }
 
-/* line 636, ../sass/_font-awesome.scss */
 .fa-unlock:before {
   content: "\f09c"; }
 
-/* line 639, ../sass/_font-awesome.scss */
 .fa-credit-card:before {
   content: "\f09d"; }
 
-/* line 642, ../sass/_font-awesome.scss */
 .fa-rss:before {
   content: "\f09e"; }
 
-/* line 645, ../sass/_font-awesome.scss */
 .fa-hdd-o:before {
   content: "\f0a0"; }
 
-/* line 648, ../sass/_font-awesome.scss */
 .fa-bullhorn:before {
   content: "\f0a1"; }
 
-/* line 651, ../sass/_font-awesome.scss */
 .fa-bell:before {
   content: "\f0f3"; }
 
-/* line 654, ../sass/_font-awesome.scss */
 .fa-certificate:before {
   content: "\f0a3"; }
 
-/* line 657, ../sass/_font-awesome.scss */
 .fa-hand-o-right:before {
   content: "\f0a4"; }
 
-/* line 660, ../sass/_font-awesome.scss */
 .fa-hand-o-left:before {
   content: "\f0a5"; }
 
-/* line 663, ../sass/_font-awesome.scss */
 .fa-hand-o-up:before {
   content: "\f0a6"; }
 
-/* line 666, ../sass/_font-awesome.scss */
 .fa-hand-o-down:before {
   content: "\f0a7"; }
 
-/* line 669, ../sass/_font-awesome.scss */
 .fa-arrow-circle-left:before {
   content: "\f0a8"; }
 
-/* line 672, ../sass/_font-awesome.scss */
 .fa-arrow-circle-right:before {
   content: "\f0a9"; }
 
-/* line 675, ../sass/_font-awesome.scss */
 .fa-arrow-circle-up:before {
   content: "\f0aa"; }
 
-/* line 678, ../sass/_font-awesome.scss */
 .fa-arrow-circle-down:before {
   content: "\f0ab"; }
 
-/* line 681, ../sass/_font-awesome.scss */
 .fa-globe:before {
   content: "\f0ac"; }
 
-/* line 684, ../sass/_font-awesome.scss */
 .fa-wrench:before {
   content: "\f0ad"; }
 
-/* line 687, ../sass/_font-awesome.scss */
 .fa-tasks:before {
   content: "\f0ae"; }
 
-/* line 690, ../sass/_font-awesome.scss */
 .fa-filter:before {
   content: "\f0b0"; }
 
-/* line 693, ../sass/_font-awesome.scss */
 .fa-briefcase:before {
   content: "\f0b1"; }
 
-/* line 696, ../sass/_font-awesome.scss */
 .fa-arrows-alt:before {
   content: "\f0b2"; }
 
-/* line 699, ../sass/_font-awesome.scss */
 .fa-group:before,
 .fa-users:before {
   content: "\f0c0"; }
 
-/* line 703, ../sass/_font-awesome.scss */
 .fa-chain:before,
 .fa-link:before {
   content: "\f0c1"; }
 
-/* line 707, ../sass/_font-awesome.scss */
 .fa-cloud:before {
   content: "\f0c2"; }
 
-/* line 710, ../sass/_font-awesome.scss */
 .fa-flask:before {
   content: "\f0c3"; }
 
-/* line 713, ../sass/_font-awesome.scss */
 .fa-cut:before,
 .fa-scissors:before {
   content: "\f0c4"; }
 
-/* line 717, ../sass/_font-awesome.scss */
 .fa-copy:before,
 .fa-files-o:before {
   content: "\f0c5"; }
 
-/* line 721, ../sass/_font-awesome.scss */
 .fa-paperclip:before {
   content: "\f0c6"; }
 
-/* line 724, ../sass/_font-awesome.scss */
 .fa-save:before,
 .fa-floppy-o:before {
   content: "\f0c7"; }
 
-/* line 728, ../sass/_font-awesome.scss */
 .fa-square:before {
   content: "\f0c8"; }
 
-/* line 731, ../sass/_font-awesome.scss */
 .fa-navicon:before,
 .fa-reorder:before,
 .fa-bars:before {
   content: "\f0c9"; }
 
-/* line 736, ../sass/_font-awesome.scss */
 .fa-list-ul:before {
   content: "\f0ca"; }
 
-/* line 739, ../sass/_font-awesome.scss */
 .fa-list-ol:before {
   content: "\f0cb"; }
 
-/* line 742, ../sass/_font-awesome.scss */
 .fa-strikethrough:before {
   content: "\f0cc"; }
 
-/* line 745, ../sass/_font-awesome.scss */
 .fa-underline:before {
   content: "\f0cd"; }
 
-/* line 748, ../sass/_font-awesome.scss */
 .fa-table:before {
   content: "\f0ce"; }
 
-/* line 751, ../sass/_font-awesome.scss */
 .fa-magic:before {
   content: "\f0d0"; }
 
-/* line 754, ../sass/_font-awesome.scss */
 .fa-truck:before {
   content: "\f0d1"; }
 
-/* line 757, ../sass/_font-awesome.scss */
 .fa-pinterest:before {
   content: "\f0d2"; }
 
-/* line 760, ../sass/_font-awesome.scss */
 .fa-pinterest-square:before {
   content: "\f0d3"; }
 
-/* line 763, ../sass/_font-awesome.scss */
 .fa-google-plus-square:before {
   content: "\f0d4"; }
 
-/* line 766, ../sass/_font-awesome.scss */
 .fa-google-plus:before {
   content: "\f0d5"; }
 
-/* line 769, ../sass/_font-awesome.scss */
 .fa-money:before {
   content: "\f0d6"; }
 
-/* line 772, ../sass/_font-awesome.scss */
 .fa-caret-down:before {
   content: "\f0d7"; }
 
-/* line 775, ../sass/_font-awesome.scss */
 .fa-caret-up:before {
   content: "\f0d8"; }
 
-/* line 778, ../sass/_font-awesome.scss */
 .fa-caret-left:before {
   content: "\f0d9"; }
 
-/* line 781, ../sass/_font-awesome.scss */
 .fa-caret-right:before {
   content: "\f0da"; }
 
-/* line 784, ../sass/_font-awesome.scss */
 .fa-columns:before {
   content: "\f0db"; }
 
-/* line 787, ../sass/_font-awesome.scss */
 .fa-unsorted:before,
 .fa-sort:before {
   content: "\f0dc"; }
 
-/* line 791, ../sass/_font-awesome.scss */
 .fa-sort-down:before,
 .fa-sort-desc:before {
   content: "\f0dd"; }
 
-/* line 795, ../sass/_font-awesome.scss */
 .fa-sort-up:before,
 .fa-sort-asc:before {
   content: "\f0de"; }
 
-/* line 799, ../sass/_font-awesome.scss */
 .fa-envelope:before {
   content: "\f0e0"; }
 
-/* line 802, ../sass/_font-awesome.scss */
 .fa-linkedin:before {
   content: "\f0e1"; }
 
-/* line 805, ../sass/_font-awesome.scss */
 .fa-rotate-left:before,
 .fa-undo:before {
   content: "\f0e2"; }
 
-/* line 809, ../sass/_font-awesome.scss */
 .fa-legal:before,
 .fa-gavel:before {
   content: "\f0e3"; }
 
-/* line 813, ../sass/_font-awesome.scss */
 .fa-dashboard:before,
 .fa-tachometer:before {
   content: "\f0e4"; }
 
-/* line 817, ../sass/_font-awesome.scss */
 .fa-comment-o:before {
   content: "\f0e5"; }
 
-/* line 820, ../sass/_font-awesome.scss */
 .fa-comments-o:before {
   content: "\f0e6"; }
 
-/* line 823, ../sass/_font-awesome.scss */
 .fa-flash:before,
 .fa-bolt:before {
   content: "\f0e7"; }
 
-/* line 827, ../sass/_font-awesome.scss */
 .fa-sitemap:before {
   content: "\f0e8"; }
 
-/* line 830, ../sass/_font-awesome.scss */
 .fa-umbrella:before {
   content: "\f0e9"; }
 
-/* line 833, ../sass/_font-awesome.scss */
 .fa-paste:before,
 .fa-clipboard:before {
   content: "\f0ea"; }
 
-/* line 837, ../sass/_font-awesome.scss */
 .fa-lightbulb-o:before {
   content: "\f0eb"; }
 
-/* line 840, ../sass/_font-awesome.scss */
 .fa-exchange:before {
   content: "\f0ec"; }
 
-/* line 843, ../sass/_font-awesome.scss */
 .fa-cloud-download:before {
   content: "\f0ed"; }
 
-/* line 846, ../sass/_font-awesome.scss */
 .fa-cloud-upload:before {
   content: "\f0ee"; }
 
-/* line 849, ../sass/_font-awesome.scss */
 .fa-user-md:before {
   content: "\f0f0"; }
 
-/* line 852, ../sass/_font-awesome.scss */
 .fa-stethoscope:before {
   content: "\f0f1"; }
 
-/* line 855, ../sass/_font-awesome.scss */
 .fa-suitcase:before {
   content: "\f0f2"; }
 
-/* line 858, ../sass/_font-awesome.scss */
 .fa-bell-o:before {
   content: "\f0a2"; }
 
-/* line 861, ../sass/_font-awesome.scss */
 .fa-coffee:before {
   content: "\f0f4"; }
 
-/* line 864, ../sass/_font-awesome.scss */
 .fa-cutlery:before {
   content: "\f0f5"; }
 
-/* line 867, ../sass/_font-awesome.scss */
 .fa-file-text-o:before {
   content: "\f0f6"; }
 
-/* line 870, ../sass/_font-awesome.scss */
 .fa-building-o:before {
   content: "\f0f7"; }
 
-/* line 873, ../sass/_font-awesome.scss */
 .fa-hospital-o:before {
   content: "\f0f8"; }
 
-/* line 876, ../sass/_font-awesome.scss */
 .fa-ambulance:before {
   content: "\f0f9"; }
 
-/* line 879, ../sass/_font-awesome.scss */
 .fa-medkit:before {
   content: "\f0fa"; }
 
-/* line 882, ../sass/_font-awesome.scss */
 .fa-fighter-jet:before {
   content: "\f0fb"; }
 
-/* line 885, ../sass/_font-awesome.scss */
 .fa-beer:before {
   content: "\f0fc"; }
 
-/* line 888, ../sass/_font-awesome.scss */
 .fa-h-square:before {
   content: "\f0fd"; }
 
-/* line 891, ../sass/_font-awesome.scss */
 .fa-plus-square:before {
   content: "\f0fe"; }
 
-/* line 894, ../sass/_font-awesome.scss */
 .fa-angle-double-left:before {
   content: "\f100"; }
 
-/* line 897, ../sass/_font-awesome.scss */
 .fa-angle-double-right:before {
   content: "\f101"; }
 
-/* line 900, ../sass/_font-awesome.scss */
 .fa-angle-double-up:before {
   content: "\f102"; }
 
-/* line 903, ../sass/_font-awesome.scss */
 .fa-angle-double-down:before {
   content: "\f103"; }
 
-/* line 906, ../sass/_font-awesome.scss */
 .fa-angle-left:before {
   content: "\f104"; }
 
-/* line 909, ../sass/_font-awesome.scss */
 .fa-angle-right:before {
   content: "\f105"; }
 
-/* line 912, ../sass/_font-awesome.scss */
 .fa-angle-up:before {
   content: "\f106"; }
 
-/* line 915, ../sass/_font-awesome.scss */
 .fa-angle-down:before {
   content: "\f107"; }
 
-/* line 918, ../sass/_font-awesome.scss */
 .fa-desktop:before {
   content: "\f108"; }
 
-/* line 921, ../sass/_font-awesome.scss */
 .fa-laptop:before {
   content: "\f109"; }
 
-/* line 924, ../sass/_font-awesome.scss */
 .fa-tablet:before {
   content: "\f10a"; }
 
-/* line 927, ../sass/_font-awesome.scss */
 .fa-mobile-phone:before,
 .fa-mobile:before {
   content: "\f10b"; }
 
-/* line 931, ../sass/_font-awesome.scss */
 .fa-circle-o:before {
   content: "\f10c"; }
 
-/* line 934, ../sass/_font-awesome.scss */
 .fa-quote-left:before {
   content: "\f10d"; }
 
-/* line 937, ../sass/_font-awesome.scss */
 .fa-quote-right:before {
   content: "\f10e"; }
 
-/* line 940, ../sass/_font-awesome.scss */
 .fa-spinner:before {
   content: "\f110"; }
 
-/* line 943, ../sass/_font-awesome.scss */
 .fa-circle:before {
   content: "\f111"; }
 
-/* line 946, ../sass/_font-awesome.scss */
 .fa-mail-reply:before,
 .fa-reply:before {
   content: "\f112"; }
 
-/* line 950, ../sass/_font-awesome.scss */
 .fa-github-alt:before {
   content: "\f113"; }
 
-/* line 953, ../sass/_font-awesome.scss */
 .fa-folder-o:before {
   content: "\f114"; }
 
-/* line 956, ../sass/_font-awesome.scss */
 .fa-folder-open-o:before {
   content: "\f115"; }
 
-/* line 959, ../sass/_font-awesome.scss */
 .fa-smile-o:before {
   content: "\f118"; }
 
-/* line 962, ../sass/_font-awesome.scss */
 .fa-frown-o:before {
   content: "\f119"; }
 
-/* line 965, ../sass/_font-awesome.scss */
 .fa-meh-o:before {
   content: "\f11a"; }
 
-/* line 968, ../sass/_font-awesome.scss */
 .fa-gamepad:before {
   content: "\f11b"; }
 
-/* line 971, ../sass/_font-awesome.scss */
 .fa-keyboard-o:before {
   content: "\f11c"; }
 
-/* line 974, ../sass/_font-awesome.scss */
 .fa-flag-o:before {
   content: "\f11d"; }
 
-/* line 977, ../sass/_font-awesome.scss */
 .fa-flag-checkered:before {
   content: "\f11e"; }
 
-/* line 980, ../sass/_font-awesome.scss */
 .fa-terminal:before {
   content: "\f120"; }
 
-/* line 983, ../sass/_font-awesome.scss */
 .fa-code:before {
   content: "\f121"; }
 
-/* line 986, ../sass/_font-awesome.scss */
 .fa-mail-reply-all:before,
 .fa-reply-all:before {
   content: "\f122"; }
 
-/* line 990, ../sass/_font-awesome.scss */
 .fa-star-half-empty:before,
 .fa-star-half-full:before,
 .fa-star-half-o:before {
   content: "\f123"; }
 
-/* line 995, ../sass/_font-awesome.scss */
 .fa-location-arrow:before {
   content: "\f124"; }
 
-/* line 998, ../sass/_font-awesome.scss */
 .fa-crop:before {
   content: "\f125"; }
 
-/* line 1001, ../sass/_font-awesome.scss */
 .fa-code-fork:before {
   content: "\f126"; }
 
-/* line 1004, ../sass/_font-awesome.scss */
 .fa-unlink:before,
 .fa-chain-broken:before {
   content: "\f127"; }
 
-/* line 1008, ../sass/_font-awesome.scss */
 .fa-question:before {
   content: "\f128"; }
 
-/* line 1011, ../sass/_font-awesome.scss */
 .fa-info:before {
   content: "\f129"; }
 
-/* line 1014, ../sass/_font-awesome.scss */
 .fa-exclamation:before {
   content: "\f12a"; }
 
-/* line 1017, ../sass/_font-awesome.scss */
 .fa-superscript:before {
   content: "\f12b"; }
 
-/* line 1020, ../sass/_font-awesome.scss */
 .fa-subscript:before {
   content: "\f12c"; }
 
-/* line 1023, ../sass/_font-awesome.scss */
 .fa-eraser:before {
   content: "\f12d"; }
 
-/* line 1026, ../sass/_font-awesome.scss */
 .fa-puzzle-piece:before {
   content: "\f12e"; }
 
-/* line 1029, ../sass/_font-awesome.scss */
 .fa-microphone:before {
   content: "\f130"; }
 
-/* line 1032, ../sass/_font-awesome.scss */
 .fa-microphone-slash:before {
   content: "\f131"; }
 
-/* line 1035, ../sass/_font-awesome.scss */
 .fa-shield:before {
   content: "\f132"; }
 
-/* line 1038, ../sass/_font-awesome.scss */
 .fa-calendar-o:before {
   content: "\f133"; }
 
-/* line 1041, ../sass/_font-awesome.scss */
 .fa-fire-extinguisher:before {
   content: "\f134"; }
 
-/* line 1044, ../sass/_font-awesome.scss */
 .fa-rocket:before {
   content: "\f135"; }
 
-/* line 1047, ../sass/_font-awesome.scss */
 .fa-maxcdn:before {
   content: "\f136"; }
 
-/* line 1050, ../sass/_font-awesome.scss */
 .fa-chevron-circle-left:before {
   content: "\f137"; }
 
-/* line 1053, ../sass/_font-awesome.scss */
 .fa-chevron-circle-right:before {
   content: "\f138"; }
 
-/* line 1056, ../sass/_font-awesome.scss */
 .fa-chevron-circle-up:before {
   content: "\f139"; }
 
-/* line 1059, ../sass/_font-awesome.scss */
 .fa-chevron-circle-down:before {
   content: "\f13a"; }
 
-/* line 1062, ../sass/_font-awesome.scss */
 .fa-html5:before {
   content: "\f13b"; }
 
-/* line 1065, ../sass/_font-awesome.scss */
 .fa-css3:before {
   content: "\f13c"; }
 
-/* line 1068, ../sass/_font-awesome.scss */
 .fa-anchor:before {
   content: "\f13d"; }
 
-/* line 1071, ../sass/_font-awesome.scss */
 .fa-unlock-alt:before {
   content: "\f13e"; }
 
-/* line 1074, ../sass/_font-awesome.scss */
 .fa-bullseye:before {
   content: "\f140"; }
 
-/* line 1077, ../sass/_font-awesome.scss */
 .fa-ellipsis-h:before {
   content: "\f141"; }
 
-/* line 1080, ../sass/_font-awesome.scss */
 .fa-ellipsis-v:before {
   content: "\f142"; }
 
-/* line 1083, ../sass/_font-awesome.scss */
 .fa-rss-square:before {
   content: "\f143"; }
 
-/* line 1086, ../sass/_font-awesome.scss */
 .fa-play-circle:before {
   content: "\f144"; }
 
-/* line 1089, ../sass/_font-awesome.scss */
 .fa-ticket:before {
   content: "\f145"; }
 
-/* line 1092, ../sass/_font-awesome.scss */
 .fa-minus-square:before {
   content: "\f146"; }
 
-/* line 1095, ../sass/_font-awesome.scss */
 .fa-minus-square-o:before {
   content: "\f147"; }
 
-/* line 1098, ../sass/_font-awesome.scss */
 .fa-level-up:before {
   content: "\f148"; }
 
-/* line 1101, ../sass/_font-awesome.scss */
 .fa-level-down:before {
   content: "\f149"; }
 
-/* line 1104, ../sass/_font-awesome.scss */
 .fa-check-square:before {
   content: "\f14a"; }
 
-/* line 1107, ../sass/_font-awesome.scss */
 .fa-pencil-square:before {
   content: "\f14b"; }
 
-/* line 1110, ../sass/_font-awesome.scss */
 .fa-external-link-square:before {
   content: "\f14c"; }
 
-/* line 1113, ../sass/_font-awesome.scss */
 .fa-share-square:before {
   content: "\f14d"; }
 
-/* line 1116, ../sass/_font-awesome.scss */
 .fa-compass:before {
   content: "\f14e"; }
 
-/* line 1119, ../sass/_font-awesome.scss */
 .fa-toggle-down:before,
 .fa-caret-square-o-down:before {
   content: "\f150"; }
 
-/* line 1123, ../sass/_font-awesome.scss */
 .fa-toggle-up:before,
 .fa-caret-square-o-up:before {
   content: "\f151"; }
 
-/* line 1127, ../sass/_font-awesome.scss */
 .fa-toggle-right:before,
 .fa-caret-square-o-right:before {
   content: "\f152"; }
 
-/* line 1131, ../sass/_font-awesome.scss */
 .fa-euro:before,
 .fa-eur:before {
   content: "\f153"; }
 
-/* line 1135, ../sass/_font-awesome.scss */
 .fa-gbp:before {
   content: "\f154"; }
 
-/* line 1138, ../sass/_font-awesome.scss */
 .fa-dollar:before,
 .fa-usd:before {
   content: "\f155"; }
 
-/* line 1142, ../sass/_font-awesome.scss */
 .fa-rupee:before,
 .fa-inr:before {
   content: "\f156"; }
 
-/* line 1146, ../sass/_font-awesome.scss */
 .fa-cny:before,
 .fa-rmb:before,
 .fa-yen:before,
 .fa-jpy:before {
   content: "\f157"; }
 
-/* line 1152, ../sass/_font-awesome.scss */
 .fa-ruble:before,
 .fa-rouble:before,
 .fa-rub:before {
   content: "\f158"; }
 
-/* line 1157, ../sass/_font-awesome.scss */
 .fa-won:before,
 .fa-krw:before {
   content: "\f159"; }
 
-/* line 1161, ../sass/_font-awesome.scss */
 .fa-bitcoin:before,
 .fa-btc:before {
   content: "\f15a"; }
 
-/* line 1165, ../sass/_font-awesome.scss */
 .fa-file:before {
   content: "\f15b"; }
 
-/* line 1168, ../sass/_font-awesome.scss */
 .fa-file-text:before {
   content: "\f15c"; }
 
-/* line 1171, ../sass/_font-awesome.scss */
 .fa-sort-alpha-asc:before {
   content: "\f15d"; }
 
-/* line 1174, ../sass/_font-awesome.scss */
 .fa-sort-alpha-desc:before {
   content: "\f15e"; }
 
-/* line 1177, ../sass/_font-awesome.scss */
 .fa-sort-amount-asc:before {
   content: "\f160"; }
 
-/* line 1180, ../sass/_font-awesome.scss */
 .fa-sort-amount-desc:before {
   content: "\f161"; }
 
-/* line 1183, ../sass/_font-awesome.scss */
 .fa-sort-numeric-asc:before {
   content: "\f162"; }
 
-/* line 1186, ../sass/_font-awesome.scss */
 .fa-sort-numeric-desc:before {
   content: "\f163"; }
 
-/* line 1189, ../sass/_font-awesome.scss */
 .fa-thumbs-up:before {
   content: "\f164"; }
 
-/* line 1192, ../sass/_font-awesome.scss */
 .fa-thumbs-down:before {
   content: "\f165"; }
 
-/* line 1195, ../sass/_font-awesome.scss */
 .fa-youtube-square:before {
   content: "\f166"; }
 
-/* line 1198, ../sass/_font-awesome.scss */
 .fa-youtube:before {
   content: "\f167"; }
 
-/* line 1201, ../sass/_font-awesome.scss */
 .fa-xing:before {
   content: "\f168"; }
 
-/* line 1204, ../sass/_font-awesome.scss */
 .fa-xing-square:before {
   content: "\f169"; }
 
-/* line 1207, ../sass/_font-awesome.scss */
 .fa-youtube-play:before {
   content: "\f16a"; }
 
-/* line 1210, ../sass/_font-awesome.scss */
 .fa-dropbox:before {
   content: "\f16b"; }
 
-/* line 1213, ../sass/_font-awesome.scss */
 .fa-stack-overflow:before {
   content: "\f16c"; }
 
-/* line 1216, ../sass/_font-awesome.scss */
 .fa-instagram:before {
   content: "\f16d"; }
 
-/* line 1219, ../sass/_font-awesome.scss */
 .fa-flickr:before {
   content: "\f16e"; }
 
-/* line 1222, ../sass/_font-awesome.scss */
 .fa-adn:before {
   content: "\f170"; }
 
-/* line 1225, ../sass/_font-awesome.scss */
 .fa-bitbucket:before {
   content: "\f171"; }
 
-/* line 1228, ../sass/_font-awesome.scss */
 .fa-bitbucket-square:before {
   content: "\f172"; }
 
-/* line 1231, ../sass/_font-awesome.scss */
 .fa-tumblr:before {
   content: "\f173"; }
 
-/* line 1234, ../sass/_font-awesome.scss */
 .fa-tumblr-square:before {
   content: "\f174"; }
 
-/* line 1237, ../sass/_font-awesome.scss */
 .fa-long-arrow-down:before {
   content: "\f175"; }
 
-/* line 1240, ../sass/_font-awesome.scss */
 .fa-long-arrow-up:before {
   content: "\f176"; }
 
-/* line 1243, ../sass/_font-awesome.scss */
 .fa-long-arrow-left:before {
   content: "\f177"; }
 
-/* line 1246, ../sass/_font-awesome.scss */
 .fa-long-arrow-right:before {
   content: "\f178"; }
 
-/* line 1249, ../sass/_font-awesome.scss */
 .fa-apple:before {
   content: "\f179"; }
 
-/* line 1252, ../sass/_font-awesome.scss */
 .fa-windows:before {
   content: "\f17a"; }
 
-/* line 1255, ../sass/_font-awesome.scss */
 .fa-android:before {
   content: "\f17b"; }
 
-/* line 1258, ../sass/_font-awesome.scss */
 .fa-linux:before {
   content: "\f17c"; }
 
-/* line 1261, ../sass/_font-awesome.scss */
 .fa-dribbble:before {
   content: "\f17d"; }
 
-/* line 1264, ../sass/_font-awesome.scss */
 .fa-skype:before {
   content: "\f17e"; }
 
-/* line 1267, ../sass/_font-awesome.scss */
 .fa-foursquare:before {
   content: "\f180"; }
 
-/* line 1270, ../sass/_font-awesome.scss */
 .fa-trello:before {
   content: "\f181"; }
 
-/* line 1273, ../sass/_font-awesome.scss */
 .fa-female:before {
   content: "\f182"; }
 
-/* line 1276, ../sass/_font-awesome.scss */
 .fa-male:before {
   content: "\f183"; }
 
-/* line 1279, ../sass/_font-awesome.scss */
 .fa-gittip:before {
   content: "\f184"; }
 
-/* line 1282, ../sass/_font-awesome.scss */
 .fa-sun-o:before {
   content: "\f185"; }
 
-/* line 1285, ../sass/_font-awesome.scss */
 .fa-moon-o:before {
   content: "\f186"; }
 
-/* line 1288, ../sass/_font-awesome.scss */
 .fa-archive:before {
   content: "\f187"; }
 
-/* line 1291, ../sass/_font-awesome.scss */
 .fa-bug:before {
   content: "\f188"; }
 
-/* line 1294, ../sass/_font-awesome.scss */
 .fa-vk:before {
   content: "\f189"; }
 
-/* line 1297, ../sass/_font-awesome.scss */
 .fa-weibo:before {
   content: "\f18a"; }
 
-/* line 1300, ../sass/_font-awesome.scss */
 .fa-renren:before {
   content: "\f18b"; }
 
-/* line 1303, ../sass/_font-awesome.scss */
 .fa-pagelines:before {
   content: "\f18c"; }
 
-/* line 1306, ../sass/_font-awesome.scss */
 .fa-stack-exchange:before {
   content: "\f18d"; }
 
-/* line 1309, ../sass/_font-awesome.scss */
 .fa-arrow-circle-o-right:before {
   content: "\f18e"; }
 
-/* line 1312, ../sass/_font-awesome.scss */
 .fa-arrow-circle-o-left:before {
   content: "\f190"; }
 
-/* line 1315, ../sass/_font-awesome.scss */
 .fa-toggle-left:before,
 .fa-caret-square-o-left:before {
   content: "\f191"; }
 
-/* line 1319, ../sass/_font-awesome.scss */
 .fa-dot-circle-o:before {
   content: "\f192"; }
 
-/* line 1322, ../sass/_font-awesome.scss */
 .fa-wheelchair:before {
   content: "\f193"; }
 
-/* line 1325, ../sass/_font-awesome.scss */
 .fa-vimeo-square:before {
   content: "\f194"; }
 
-/* line 1328, ../sass/_font-awesome.scss */
 .fa-turkish-lira:before,
 .fa-try:before {
   content: "\f195"; }
 
-/* line 1332, ../sass/_font-awesome.scss */
 .fa-plus-square-o:before {
   content: "\f196"; }
 
-/* line 1335, ../sass/_font-awesome.scss */
 .fa-space-shuttle:before {
   content: "\f197"; }
 
-/* line 1338, ../sass/_font-awesome.scss */
 .fa-slack:before {
   content: "\f198"; }
 
-/* line 1341, ../sass/_font-awesome.scss */
 .fa-envelope-square:before {
   content: "\f199"; }
 
-/* line 1344, ../sass/_font-awesome.scss */
 .fa-wordpress:before {
   content: "\f19a"; }
 
-/* line 1347, ../sass/_font-awesome.scss */
 .fa-openid:before {
   content: "\f19b"; }
 
-/* line 1350, ../sass/_font-awesome.scss */
 .fa-institution:before,
 .fa-bank:before,
 .fa-university:before {
   content: "\f19c"; }
 
-/* line 1355, ../sass/_font-awesome.scss */
 .fa-mortar-board:before,
 .fa-graduation-cap:before {
   content: "\f19d"; }
 
-/* line 1359, ../sass/_font-awesome.scss */
 .fa-yahoo:before {
   content: "\f19e"; }
 
-/* line 1362, ../sass/_font-awesome.scss */
 .fa-google:before {
   content: "\f1a0"; }
 
-/* line 1365, ../sass/_font-awesome.scss */
 .fa-reddit:before {
   content: "\f1a1"; }
 
-/* line 1368, ../sass/_font-awesome.scss */
 .fa-reddit-square:before {
   content: "\f1a2"; }
 
-/* line 1371, ../sass/_font-awesome.scss */
 .fa-stumbleupon-circle:before {
   content: "\f1a3"; }
 
-/* line 1374, ../sass/_font-awesome.scss */
 .fa-stumbleupon:before {
   content: "\f1a4"; }
 
-/* line 1377, ../sass/_font-awesome.scss */
 .fa-delicious:before {
   content: "\f1a5"; }
 
-/* line 1380, ../sass/_font-awesome.scss */
 .fa-digg:before {
   content: "\f1a6"; }
 
-/* line 1383, ../sass/_font-awesome.scss */
 .fa-pied-piper-square:before,
 .fa-pied-piper:before {
   content: "\f1a7"; }
 
-/* line 1387, ../sass/_font-awesome.scss */
 .fa-pied-piper-alt:before {
   content: "\f1a8"; }
 
-/* line 1390, ../sass/_font-awesome.scss */
 .fa-drupal:before {
   content: "\f1a9"; }
 
-/* line 1393, ../sass/_font-awesome.scss */
 .fa-joomla:before {
   content: "\f1aa"; }
 
-/* line 1396, ../sass/_font-awesome.scss */
 .fa-language:before {
   content: "\f1ab"; }
 
-/* line 1399, ../sass/_font-awesome.scss */
 .fa-fax:before {
   content: "\f1ac"; }
 
-/* line 1402, ../sass/_font-awesome.scss */
 .fa-building:before {
   content: "\f1ad"; }
 
-/* line 1405, ../sass/_font-awesome.scss */
 .fa-child:before {
   content: "\f1ae"; }
 
-/* line 1408, ../sass/_font-awesome.scss */
 .fa-paw:before {
   content: "\f1b0"; }
 
-/* line 1411, ../sass/_font-awesome.scss */
 .fa-spoon:before {
   content: "\f1b1"; }
 
-/* line 1414, ../sass/_font-awesome.scss */
 .fa-cube:before {
   content: "\f1b2"; }
 
-/* line 1417, ../sass/_font-awesome.scss */
 .fa-cubes:before {
   content: "\f1b3"; }
 
-/* line 1420, ../sass/_font-awesome.scss */
 .fa-behance:before {
   content: "\f1b4"; }
 
-/* line 1423, ../sass/_font-awesome.scss */
 .fa-behance-square:before {
   content: "\f1b5"; }
 
-/* line 1426, ../sass/_font-awesome.scss */
 .fa-steam:before {
   content: "\f1b6"; }
 
-/* line 1429, ../sass/_font-awesome.scss */
 .fa-steam-square:before {
   content: "\f1b7"; }
 
-/* line 1432, ../sass/_font-awesome.scss */
 .fa-recycle:before {
   content: "\f1b8"; }
 
-/* line 1435, ../sass/_font-awesome.scss */
 .fa-automobile:before,
 .fa-car:before {
   content: "\f1b9"; }
 
-/* line 1439, ../sass/_font-awesome.scss */
 .fa-cab:before,
 .fa-taxi:before {
   content: "\f1ba"; }
 
-/* line 1443, ../sass/_font-awesome.scss */
 .fa-tree:before {
   content: "\f1bb"; }
 
-/* line 1446, ../sass/_font-awesome.scss */
 .fa-spotify:before {
   content: "\f1bc"; }
 
-/* line 1449, ../sass/_font-awesome.scss */
 .fa-deviantart:before {
   content: "\f1bd"; }
 
-/* line 1452, ../sass/_font-awesome.scss */
 .fa-soundcloud:before {
   content: "\f1be"; }
 
-/* line 1455, ../sass/_font-awesome.scss */
 .fa-database:before {
   content: "\f1c0"; }
 
-/* line 1458, ../sass/_font-awesome.scss */
 .fa-file-pdf-o:before {
   content: "\f1c1"; }
 
-/* line 1461, ../sass/_font-awesome.scss */
 .fa-file-word-o:before {
   content: "\f1c2"; }
 
-/* line 1464, ../sass/_font-awesome.scss */
 .fa-file-excel-o:before {
   content: "\f1c3"; }
 
-/* line 1467, ../sass/_font-awesome.scss */
 .fa-file-powerpoint-o:before {
   content: "\f1c4"; }
 
-/* line 1470, ../sass/_font-awesome.scss */
 .fa-file-photo-o:before,
 .fa-file-picture-o:before,
 .fa-file-image-o:before {
   content: "\f1c5"; }
 
-/* line 1475, ../sass/_font-awesome.scss */
 .fa-file-zip-o:before,
 .fa-file-archive-o:before {
   content: "\f1c6"; }
 
-/* line 1479, ../sass/_font-awesome.scss */
 .fa-file-sound-o:before,
 .fa-file-audio-o:before {
   content: "\f1c7"; }
 
-/* line 1483, ../sass/_font-awesome.scss */
 .fa-file-movie-o:before,
 .fa-file-video-o:before {
   content: "\f1c8"; }
 
-/* line 1487, ../sass/_font-awesome.scss */
 .fa-file-code-o:before {
   content: "\f1c9"; }
 
-/* line 1490, ../sass/_font-awesome.scss */
 .fa-vine:before {
   content: "\f1ca"; }
 
-/* line 1493, ../sass/_font-awesome.scss */
 .fa-codepen:before {
   content: "\f1cb"; }
 
-/* line 1496, ../sass/_font-awesome.scss */
 .fa-jsfiddle:before {
   content: "\f1cc"; }
 
-/* line 1499, ../sass/_font-awesome.scss */
 .fa-life-bouy:before,
 .fa-life-saver:before,
 .fa-support:before,
 .fa-life-ring:before {
   content: "\f1cd"; }
 
-/* line 1505, ../sass/_font-awesome.scss */
 .fa-circle-o-notch:before {
   content: "\f1ce"; }
 
-/* line 1508, ../sass/_font-awesome.scss */
 .fa-ra:before,
 .fa-rebel:before {
   content: "\f1d0"; }
 
-/* line 1512, ../sass/_font-awesome.scss */
 .fa-ge:before,
 .fa-empire:before {
   content: "\f1d1"; }
 
-/* line 1516, ../sass/_font-awesome.scss */
 .fa-git-square:before {
   content: "\f1d2"; }
 
-/* line 1519, ../sass/_font-awesome.scss */
 .fa-git:before {
   content: "\f1d3"; }
 
-/* line 1522, ../sass/_font-awesome.scss */
 .fa-hacker-news:before {
   content: "\f1d4"; }
 
-/* line 1525, ../sass/_font-awesome.scss */
 .fa-tencent-weibo:before {
   content: "\f1d5"; }
 
-/* line 1528, ../sass/_font-awesome.scss */
 .fa-qq:before {
   content: "\f1d6"; }
 
-/* line 1531, ../sass/_font-awesome.scss */
 .fa-wechat:before,
 .fa-weixin:before {
   content: "\f1d7"; }
 
-/* line 1535, ../sass/_font-awesome.scss */
 .fa-send:before,
 .fa-paper-plane:before {
   content: "\f1d8"; }
 
-/* line 1539, ../sass/_font-awesome.scss */
 .fa-send-o:before,
 .fa-paper-plane-o:before {
   content: "\f1d9"; }
 
-/* line 1543, ../sass/_font-awesome.scss */
 .fa-history:before {
   content: "\f1da"; }
 
-/* line 1546, ../sass/_font-awesome.scss */
 .fa-circle-thin:before {
   content: "\f1db"; }
 
-/* line 1549, ../sass/_font-awesome.scss */
 .fa-header:before {
   content: "\f1dc"; }
 
-/* line 1552, ../sass/_font-awesome.scss */
 .fa-paragraph:before {
   content: "\f1dd"; }
 
-/* line 1555, ../sass/_font-awesome.scss */
 .fa-sliders:before {
   content: "\f1de"; }
 
-/* line 1558, ../sass/_font-awesome.scss */
 .fa-share-alt:before {
   content: "\f1e0"; }
 
-/* line 1561, ../sass/_font-awesome.scss */
 .fa-share-alt-square:before {
   content: "\f1e1"; }
 
-/* line 1564, ../sass/_font-awesome.scss */
 .fa-bomb:before {
   content: "\f1e2"; }
 
@@ -2496,7 +1973,6 @@ th {
 =                 NAVIGATION                  =
 =============================================*/
 /*! responsive-nav.js 1.0.32 by @viljamis */
-/* line 12, ../sass/_nav.scss */
 .nav-collapse ul {
   margin: 0;
   padding: 0;
@@ -2508,12 +1984,10 @@ th {
   text-size-adjust: 100%;
   font: normal 100%/1.4 sans-serif; }
 
-/* line 24, ../sass/_nav.scss */
 .nav-collapse li {
   width: 100%;
   display: block; }
 
-/* line 29, ../sass/_nav.scss */
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -2522,15 +1996,12 @@ th {
   overflow: hidden;
   zoom: 1; }
 
-/* line 38, ../sass/_nav.scss */
 .nav-collapse.opened {
   max-height: 9999px; }
 
-/* line 42, ../sass/_nav.scss */
 .disable-pointer-events {
   pointer-events: none !important; }
 
-/* line 46, ../sass/_nav.scss */
 .nav-toggle {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -2541,29 +2012,24 @@ th {
   user-select: none; }
 
 @media screen and (min-width: 768px) {
-  /* line 57, ../sass/_nav.scss */
   .js .nav-collapse {
     position: relative; }
 
-  /* line 60, ../sass/_nav.scss */
   .js .nav-collapse.closed {
     max-height: none; }
 
-  /* line 63, ../sass/_nav.scss */
   .nav-toggle {
     display: none; } }
 /* ------------------------------------------
   NAVIGATION STYLES
   (+ responsive-nav.css file is loaded in the <head>)
 --------------------------------------------- */
-/* line 75, ../sass/_nav.scss */
 .fixed {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0; }
 
-/* line 82, ../sass/_nav.scss */
 .nav-collapse .inCart {
   width: 20px;
   height: 20px;
@@ -2575,35 +2041,29 @@ th {
   border-radius: 16px;
   text-align: center; }
 
-/* line 93, ../sass/_nav.scss */
 .nav-collapse .fa {
   font-size: 18px;
   padding-right: 10px; }
 
-/* line 97, ../sass/_nav.scss */
 .nav-collapse,
 .nav-collapse * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 104, ../sass/_nav.scss */
 .nav-collapse,
 .nav-collapse ul {
   list-style: none;
   width: 100%;
   float: left; }
 
-/* line 111, ../sass/_nav.scss */
 .nav-collapse li {
   float: left;
   width: 100%; }
 
 @media screen and (min-width: 768px) {
-  /* line 118, ../sass/_nav.scss */
   .nav-collapse li {
     width: 20%; } }
-/* line 123, ../sass/_nav.scss */
 .nav-collapse a {
   color: #fff;
   text-decoration: none;
@@ -2614,7 +2074,6 @@ th {
   float: left; }
 
 @media screen and (max-width: 767px) {
-  /* line 135, ../sass/_nav.scss */
   .nav-collapse ul ul li {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2623,7 +2082,6 @@ th {
     float: left;
     text-align: center; } }
 @media screen and (min-width: 768px) {
-  /* line 142, ../sass/_nav.scss */
   .nav-collapse a {
     margin: 0;
     padding: 10px;
@@ -2631,56 +2089,44 @@ th {
     text-align: center;
     border-bottom: 0;
     border-right: 1px solid white; } }
-/* line 152, ../sass/_nav.scss */
 .nav-collapse ul ul a {
   background: #ca3716; }
 
 @media screen and (min-width: 768px) {
-  /* line 158, ../sass/_nav.scss */
   .nav-collapse {
     overflow: visible !important; }
-    /* line 160, ../sass/_nav.scss */
     .nav-collapse .fa {
       margin-left: -20px;
       visibility: hidden; }
-    /* line 164, ../sass/_nav.scss */
     .nav-collapse .inCart {
       background: #37302a; }
-    /* line 168, ../sass/_nav.scss */
     .nav-collapse li:hover .fa {
       visibility: visible; }
-    /* line 171, ../sass/_nav.scss */
     .nav-collapse li:hover .inCart {
       background: #fff;
       color: #37302a; }
 
-  /* line 177, ../sass/_nav.scss */
   .nav-collapse a {
     color: #37302a;
     background: #F3F3F3; }
 
-  /* line 181, ../sass/_nav.scss */
   .nav-collapse a:hover {
     color: #fff;
     background: #d30000; }
 
-  /* line 185, ../sass/_nav.scss */
   .nav-collapse ul ul li {
     width: 33.33333%; }
 
-  /* line 188, ../sass/_nav.scss */
   .nav-collapse ul li.lang {
     position: absolute;
     right: 0;
     top: -60px;
     z-index: 9999; }
 
-  /* line 194, ../sass/_nav.scss */
   .nav-collapse ul ul a {
     padding: 10px 0;
     background: #fff; }
 
-  /* line 198, ../sass/_nav.scss */
   .nav-collapse ul ul a:hover {
     background: #7C7C7C; } }
 /* ------------------------------------------
@@ -2692,7 +2138,6 @@ th {
   src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 219, ../sass/_nav.scss */
 .nav-toggle {
   position: fixed;
   -webkit-font-smoothing: antialiased;
@@ -2710,7 +2155,6 @@ th {
   height: 55px;
   float: right; }
 
-/* line 237, ../sass/_nav.scss */
 .nav-toggle:before {
   color: #d30000;
   /* Edit this to change the icon color */
@@ -2730,7 +2174,6 @@ th {
   top: 0;
   left: 0; }
 
-/* line 256, ../sass/_nav.scss */
 .nav-toggle.active::before {
   font-size: 24px;
   content: "x"; }
@@ -2738,7 +2181,6 @@ th {
 /* ------------------------------------------
   BASE DEMO STYLES
 --------------------------------------------- */
-/* line 30, ../sass/style.scss */
 body {
   background: #fff;
   margin: 0;
@@ -2747,24 +2189,19 @@ body {
   font-family: "Open Sans", sans-serif;
   min-width: 320px; }
 
-/* line 39, ../sass/style.scss */
 a {
   text-decoration: none;
   color: #333; }
 
-/* line 43, ../sass/style.scss */
 a:focus {
   outline: none; }
 
-/* line 46, ../sass/style.scss */
 textarea {
   resize: vertical; }
 
-/* line 49, ../sass/style.scss */
 .show {
   display: block !important; }
 
-/* line 53, ../sass/style.scss */
 .noSelection {
   -webkit-user-select: none;
   /* Chrome all / Safari all */
@@ -2776,7 +2213,6 @@ textarea {
   -o-user-select: none;
   user-select: none; }
 
-/* line 75, ../sass/style.scss */
 .btn-send {
   display: inline-block;
   margin: 10px;
@@ -2790,7 +2226,6 @@ textarea {
   border: 1px solid #fff;
   background-color: #d30000; }
 
-/* line 79, ../sass/style.scss */
 .btn-Remove {
   display: inline-block;
   margin: 10px;
@@ -2806,7 +2241,6 @@ textarea {
   border: 1px solid #A7A7A7;
   float: right; }
 
-/* line 85, ../sass/style.scss */
 .btn-addMore {
   display: inline-block;
   margin: 10px;
@@ -2820,7 +2254,6 @@ textarea {
   border: 1px solid #fff;
   min-width: 240px; }
 
-/* line 89, ../sass/style.scss */
 .btn-sendOrder {
   display: inline-block;
   margin: 10px;
@@ -2833,11 +2266,9 @@ textarea {
   font-weight: 700;
   border: 1px solid #fff; }
 
-/* line 93, ../sass/style.scss */
 .pullLeft {
   float: left; }
 
-/* line 96, ../sass/style.scss */
 .pullRight {
   float: right; }
 
@@ -2845,7 +2276,6 @@ textarea {
 =          GENERAL FOR ALL RESOULUTIONS       =
 =============================================*/
 /* main all pages container */
-/* line 104, ../sass/style.scss */
 .container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2853,35 +2283,28 @@ textarea {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
   .container:after {
     content: " ";
     display: block;
     clear: both; }
 
 /* hide slider for mobile */
-/* line 109, ../sass/style.scss */
 .slider {
   display: none; }
 
 /* sliders css is placed in its own slide css */
-/* line 115, ../sass/style.scss */
 h1 {
   font-size: 2em; }
 
-/* line 115, ../sass/style.scss */
 h2 {
   font-size: 1.5em; }
 
-/* line 115, ../sass/style.scss */
 h3 {
   font-size: 1.2em; }
 
-/* line 118, ../sass/style.scss */
 h1 {
   line-height: 1em; }
 
-/* line 120, ../sass/style.scss */
 .img-responsive {
   border: 1px #CFCFCF solid;
   padding: 4px;
@@ -2889,42 +2312,35 @@ h1 {
   margin: 0 auto;
   display: block; }
 
-/* line 128, ../sass/style.scss */
 .truncate {
   width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
-/* line 134, ../sass/style.scss */
 .headLogo {
   width: 180px;
   padding: 12px 0 0 12px;
   position: absolute; }
-  /* line 138, ../sass/style.scss */
   .headLogo .logo {
     display: block;
     width: 100%; }
 
 /* slogan */
-/* line 145, ../sass/style.scss */
 .slogan {
   margin-top: 30px;
   color: #CE1418;
   text-align: center;
   padding: 0	10px; }
-  /* line 150, ../sass/style.scss */
   .slogan h1, .slogan h2, .slogan h3, .slogan h4, .slogan h5 {
     font-family: "Exo 2", sans-serif;
     font-style: italic; }
 
-/* line 156, ../sass/style.scss */
 .headline {
   display: block;
   margin: 30px auto;
   border-bottom: 1px solid #DFDFDF;
   padding-left: 0; }
-  /* line 161, ../sass/style.scss */
   .headline h1, .headline h2, .headline h3, .headline h4 {
     font-size: 20px;
     margin: 0 0 -1px 0;
@@ -2934,27 +2350,21 @@ h1 {
     vertical-align: bottom;
     font-weight: 400;
     text-transform: uppercase; }
-    /* line 171, ../sass/style.scss */
     .headline h1 > img, .headline h2 > img, .headline h3 > img, .headline h4 > img {
       max-height: 28px; }
 
 /* news */
-/* line 178, ../sass/style.scss */
 .newsBlock {
   margin-bottom: 30px; }
-  /* line 180, ../sass/style.scss */
   .newsBlock .img-responsive {
     width: 90%;
     margin: 0 auto;
     display: block; }
-  /* line 185, ../sass/style.scss */
   .newsBlock .img-news {
     width: 40%;
     max-width: 400px; }
-    /* line 188, ../sass/style.scss */
     .newsBlock .img-news.pullLeft, .newsBlock .img-news.pullRight {
       padding: 10px; }
-  /* line 193, ../sass/style.scss */
   .newsBlock h3:after {
     width: 60px;
     height: 1px;
@@ -2967,20 +2377,17 @@ h1 {
     transition: width 2s;
     -webkit-transition: width 2s;
     /* Safari */ }
-  /* line 205, ../sass/style.scss */
   .newsBlock p {
     padding: 10px;
     text-align: justify;
     font-size: 15px; }
 
-/* line 211, ../sass/style.scss */
 .newsTitle {
   text-align: center;
   margin: 0 auto;
   font-weight: 100; }
 
 /* items */
-/* line 218, ../sass/style.scss */
 .itemBlock {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2991,7 +2398,6 @@ h1 {
   padding-right: 0.41667%;
   margin-bottom: 34px;
   position: relative; }
-  /* line 222, ../sass/style.scss */
   .itemBlock .itemBlockLink {
     margin: 0 auto;
     width: 90%;
@@ -3000,37 +2406,29 @@ h1 {
     position: relative;
     font-family: "Exo 2", sans-serif;
     text-align: center; }
-    /* line 230, ../sass/style.scss */
     .itemBlock .itemBlockLink .itemPrice {
       position: absolute;
       right: 0; }
-      /* line 233, ../sass/style.scss */
       .itemBlock .itemBlockLink .itemPrice .itemPrice-final {
         background: #696969;
         padding: 10px;
         color: #fff; }
-      /* line 238, ../sass/style.scss */
       .itemBlock .itemBlockLink .itemPrice .itemPrice-old {
         background: #ff4949;
         padding: 10px;
         color: #fff;
         text-decoration: line-through; }
-      /* line 244, ../sass/style.scss */
       .itemBlock .itemBlockLink .itemPrice .itemPrice-disc {
         padding: 10px;
         background: #2CFFC4; }
-    /* line 250, ../sass/style.scss */
     .itemBlock .itemBlockLink .picWrap {
       overflow: hidden;
       padding: 10px 0; }
-      /* line 253, ../sass/style.scss */
       .itemBlock .itemBlockLink .picWrap .picIndex {
         width: 200px; }
-    /* line 259, ../sass/style.scss */
     .itemBlock .itemBlockLink .stripeWrap .stripeIndex {
       width: 100%;
       display: block; }
-  /* line 265, ../sass/style.scss */
   .itemBlock h2.itemName,
   .itemBlock h3.itemName {
     -moz-box-sizing: border-box;
@@ -3047,42 +2445,33 @@ h1 {
     font-weight: 100; }
 
 /* brands catalog */
-/* line 285, ../sass/style.scss */
 .brandModel {
   margin: 0 0 16px 0; }
-  /* line 287, ../sass/style.scss */
   .brandModel a {
     overflow: hidden;
     text-align: center;
     display: block; }
-    /* line 291, ../sass/style.scss */
     .brandModel a .brandPicWrap {
       overflow: hidden;
       position: relative; }
-      /* line 294, ../sass/style.scss */
       .brandModel a .brandPicWrap img {
         border-bottom: 1px solid #838383;
         display: block;
         margin: 0 auto; }
-  /* line 301, ../sass/style.scss */
   .brandModel h2 {
     font-weight: 100; }
 
 /* single model details */
-/* line 308, ../sass/style.scss */
 .picsGallery img {
   width: 90%;
   max-width: 460px;
   margin: 30px auto;
   display: block; }
-/* line 314, ../sass/style.scss */
 .picsGallery .picsGallery-thumbs, .picsGallery .picsGallery-show {
   overflow: hidden; }
-/* line 317, ../sass/style.scss */
 .picsGallery .picsGallery-show {
   display: none; }
 
-/* line 322, ../sass/style.scss */
 .singleCase .singleCase-about {
   padding: 10px;
   text-align: justify;
@@ -3091,27 +2480,22 @@ h1 {
   line-height: 20px; }
 
 /* contacts */
-/* line 333, ../sass/style.scss */
 .contacts {
   padding: 0 0 20px 0;
   margin-top: 30px;
   text-align: center;
   background-color: #f0f0f0;
   border-top: 1px solid #949191; }
-  /* line 339, ../sass/style.scss */
   .contacts .headline {
     text-align: left; }
-    /* line 341, ../sass/style.scss */
     .contacts .headline h1, .contacts .headline h2, .contacts .headline h3, .contacts .headline h4 {
       border-bottom: 1px solid #929292; }
-  /* line 345, ../sass/style.scss */
   .contacts .contactsBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     float: left; }
-    /* line 347, ../sass/style.scss */
     .contacts .contactsBlock p.contactUs {
       text-align: justify;
       text-indent: 20px;
@@ -3119,11 +2503,9 @@ h1 {
       line-height: 20px;
       font-weight: 100;
       font-size: 14px; }
-    /* line 355, ../sass/style.scss */
     .contacts .contactsBlock .contactsSocial {
       margin: 20px 0;
       overflow: hidden; }
-      /* line 358, ../sass/style.scss */
       .contacts .contactsBlock .contactsSocial .contactsSocial-link {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -3132,10 +2514,8 @@ h1 {
         float: left;
         padding-left: 3.33333%;
         padding-right: 3.33333%; }
-        /* line 360, ../sass/style.scss */
         .contacts .contactsBlock .contactsSocial .contactsSocial-link .contact-meta {
           display: none; }
-  /* line 367, ../sass/style.scss */
   .contacts .contactsForm .form-name,
   .contacts .contactsForm .form-mail,
   .contacts .contactsForm .form-mesg {
@@ -3154,10 +2534,8 @@ h1 {
     padding-right: 0.41667%;
     float: none;
     padding-left: 10px; }
-  /* line 386, ../sass/style.scss */
   .contacts .contactsForm .form-mesg {
     height: 110px; }
-  /* line 389, ../sass/style.scss */
   .contacts .contactsForm .form-name:focus,
   .contacts .contactsForm .form-mail:focus,
   .contacts .contactsForm .form-mesg:focus {
@@ -3166,7 +2544,6 @@ h1 {
     border-color: #E55050; }
 
 /* cart */
-/* line 400, ../sass/style.scss */
 .inCart-item {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3179,7 +2556,6 @@ h1 {
   border-bottom: 1px solid #EAEAEA;
   position: relative; }
 
-/* line 406, ../sass/style.scss */
 .inCart-itemPicture {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3188,11 +2564,9 @@ h1 {
   float: left;
   padding-left: 0.41667%;
   padding-right: 0.41667%; }
-  /* line 408, ../sass/style.scss */
   .inCart-itemPicture img.picIndex {
     width: 100%; }
 
-/* line 412, ../sass/style.scss */
 .inCart-details {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3201,14 +2575,12 @@ h1 {
   float: left;
   padding-left: 0.41667%;
   padding-right: 0.41667%; }
-  /* line 414, ../sass/style.scss */
   .inCart-details ul {
     list-style: none;
     padding: 0;
     text-align: center;
     margin: 0;
     font-weight: 100; }
-    /* line 420, ../sass/style.scss */
     .inCart-details ul li {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -3222,35 +2594,28 @@ h1 {
       text-align: left;
       padding: 10px;
       overflow: hidden; }
-      /* line 428, ../sass/style.scss */
       .inCart-details ul li h4 {
         color: #dd0044;
         text-align: center; }
-      /* line 432, ../sass/style.scss */
       .inCart-details ul li h2 {
         text-align: center;
         font-weight: 100;
         margin-bottom: 10px;
         margin-top: 0px; }
-      /* line 438, ../sass/style.scss */
       .inCart-details ul li .itemPrice-old,
       .inCart-details ul li .itemPrice-disc {
         color: #777; }
-      /* line 442, ../sass/style.scss */
       .inCart-details ul li .itemPrice-old {
         text-decoration: line-through; }
 
-/* line 448, ../sass/style.scss */
 .inCart-more {
   width: 100%;
   clear: both; }
-  /* line 451, ../sass/style.scss */
   .inCart-more .btn-addMore {
     margin: 0 auto;
     display: block; }
 
 /* order form */
-/* line 459, ../sass/style.scss */
 .orderInput input {
   width: 90%;
   margin: 0 auto;
@@ -3260,49 +2625,38 @@ h1 {
   font-size: 16px;
   margin-top: 20px;
   border-radius: 0; }
-/* line 469, ../sass/style.scss */
 .orderInput input:focus {
   outline: 0;
   border-bottom: 1px solid #F00; }
 
-/* line 474, ../sass/style.scss */
 .sendOrder {
   width: 100%;
   clear: both;
   margin-top: 20px; }
-  /* line 478, ../sass/style.scss */
   .sendOrder .btn-sendOrder {
     margin: 0 auto;
     display: block; }
 
-/* line 483, ../sass/style.scss */
 .orderForm-delivery {
   margin: 30px 20px; }
-  /* line 485, ../sass/style.scss */
   .orderForm-delivery > div {
     padding: 10px; }
-  /* line 488, ../sass/style.scss */
   .orderForm-delivery input {
     margin-right: 8px; }
 
-/* line 492, ../sass/style.scss */
 .orderForm-info {
   width: 90%;
   margin: 0 auto; }
-  /* line 495, ../sass/style.scss */
   .orderForm-info textarea {
     width: 100%; }
 
-/* line 500, ../sass/style.scss */
 .total {
   width: 100%;
   clear: both; }
-  /* line 503, ../sass/style.scss */
   .total .totalDetails {
     float: right; }
 
 /* about us page*/
-/* line 510, ../sass/style.scss */
 .aboutUs h3 {
   text-align: center;
   font-weight: 100;
@@ -3312,25 +2666,21 @@ h1 {
   border-top: 1px #CFCFCF solid;
   padding: 10px;
   text-transform: capitalize; }
-/* line 521, ../sass/style.scss */
 .aboutUs p {
   padding: 10px;
   text-align: justify;
   font-size: 15px;
   text-indent: 10px;
   margin: 0 6%; }
-/* line 528, ../sass/style.scss */
 .aboutUs h4 {
   text-align: right;
   padding-right: 10%;
   margin: 0 0 20px 0; }
 
 /* picture Gallery */
-/* line 536, ../sass/style.scss */
 .picGallery {
   margin: 20px 0;
   overflow: hidden; }
-  /* line 539, ../sass/style.scss */
   .picGallery div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3339,7 +2689,6 @@ h1 {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-  /* line 542, ../sass/style.scss */
   .picGallery img {
     border: 1px #CFCFCF solid;
     padding: 4px;
@@ -3348,7 +2697,6 @@ h1 {
     display: block; }
 
 /* all pages footer */
-/* line 552, ../sass/style.scss */
 footer {
   text-align: center;
   background-color: #D6D6D6;
@@ -3359,34 +2707,27 @@ footer {
   padding: 10px; }
 
 /* 404 */
-/* line 566, ../sass/style.scss */
 .error404 img {
   display: block;
   margin: 0 auto;
   padding: 80px 0px; }
 
 @media (min-width: 768px) {
-  /* line 584, ../sass/style.scss */
   h1 {
     font-size: 2em; }
 
-  /* line 584, ../sass/style.scss */
   h2 {
     font-size: 1.5em; }
 
-  /* line 584, ../sass/style.scss */
   h3 {
     font-size: 1.2em; }
 
-  /* line 588, ../sass/style.scss */
   h1 {
     line-height: 1.2em; }
 
-  /* line 591, ../sass/style.scss */
   a:hover {
     color: #dd0044; }
 
-  /* line 594, ../sass/style.scss */
   .container {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3395,23 +2736,19 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 0 10px; }
-    /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
     .container:after {
       content: " ";
       display: block;
       clear: both; }
 
-  /* line 599, ../sass/style.scss */
   header .headLogo {
     width: 280px;
     padding: 16px 0 16px 12px;
     position: relative; }
 
-  /* line 605, ../sass/style.scss */
   .slider {
     display: block; }
 
-  /* line 609, ../sass/style.scss */
   .news .newsBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3420,11 +2757,9 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 612, ../sass/style.scss */
     .news .newsBlock:hover h3:after {
       width: 90%;
       background-color: #D30000; }
-  /* line 618, ../sass/style.scss */
   .news .newsDetailed {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3434,7 +2769,6 @@ footer {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
 
-  /* line 622, ../sass/style.scss */
   .itemBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3443,36 +2777,31 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 624, ../sass/style.scss */
     .itemBlock .itemBlockLink {
       transition: all 2s;
       -webkit-transition: all 2s;
       /* Safari */ }
-      /* line 628, ../sass/style.scss */
       .itemBlock .itemBlockLink .picWrap .picIndex {
         width: 200px;
         margin-left: -60px; }
-      /* line 633, ../sass/style.scss */
       .itemBlock .itemBlockLink:hover + h3 {
         color: #D30000; }
-      /* line 636, ../sass/style.scss */
       .itemBlock .itemBlockLink:hover {
         border-color: #D30000; }
-      /* line 639, ../sass/style.scss */
       .itemBlock .itemBlockLink:hover .itemName {
         visibility: visible; }
 
-  /* line 646, ../sass/style.scss */
-  .catalog-brand .brandModel {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 0.41667%;
-    padding-right: 0.41667%; }
+  .catalog-brand {
+    overflow: hidden; }
+    .catalog-brand .brandModel {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 33.33333%;
+      float: left;
+      padding-left: 0.41667%;
+      padding-right: 0.41667%; }
 
-  /* line 650, ../sass/style.scss */
   .picsGallery {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3481,7 +2810,6 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 652, ../sass/style.scss */
     .picsGallery span {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -3490,20 +2818,16 @@ footer {
       float: left;
       padding-left: 0.41667%;
       padding-right: 0.41667%; }
-    /* line 656, ../sass/style.scss */
     .picsGallery .picsGallery-thumbs img {
       border: 1px solid #DDD; }
-    /* line 660, ../sass/style.scss */
     .picsGallery .picsGallery-show {
       display: block; }
-    /* line 663, ../sass/style.scss */
     .picsGallery .singleCasePic {
       margin: 20px auto;
       display: block !important;
       width: 100%;
       max-width: 100%; }
 
-  /* line 670, ../sass/style.scss */
   .singleCase {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3514,7 +2838,6 @@ footer {
     padding-right: 0.41667%;
     padding-left: 6%; }
 
-  /* line 675, ../sass/style.scss */
   .contacts .contactsBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3524,7 +2847,6 @@ footer {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
 
-  /* line 679, ../sass/style.scss */
   .inCart-item {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3534,7 +2856,6 @@ footer {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
 
-  /* line 682, ../sass/style.scss */
   .inCart-itemPicture {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3543,11 +2864,9 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 684, ../sass/style.scss */
     .inCart-itemPicture img.picIndex {
       width: 100%; }
 
-  /* line 688, ../sass/style.scss */
   .inCart-details {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3556,49 +2875,38 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 691, ../sass/style.scss */
     .inCart-details ul li {
       width: 20%; }
 
-  /* line 696, ../sass/style.scss */
   .orderForm-delivery {
     margin: 30px 60px; }
-    /* line 698, ../sass/style.scss */
     .orderForm-delivery > div:hover {
       background: #EBEBEB; }
 
-  /* line 702, ../sass/style.scss */
   .orderForm-info {
     width: 80%;
     margin: 0 auto; }
-    /* line 705, ../sass/style.scss */
     .orderForm-info textarea {
       width: 100%;
       height: 160px; }
 
-  /* line 710, ../sass/style.scss */
   .btn-Remove {
     position: absolute;
     right: 0;
     bottom: 0; }
 
-  /* line 716, ../sass/style.scss */
   .aboutUs h3 {
     margin: 30px 30%; } }
 @media (min-width: 960px) {
-  /* line 726, ../sass/style.scss */
   h1 {
     font-size: 2.2em; }
 
-  /* line 726, ../sass/style.scss */
   h2 {
     font-size: 1.5em; }
 
-  /* line 726, ../sass/style.scss */
   h3 {
     font-size: 1.2em; }
 
-  /* line 729, ../sass/style.scss */
   .container {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3606,13 +2914,11 @@ footer {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto; }
-    /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
     .container:after {
       content: " ";
       display: block;
       clear: both; }
 
-  /* line 732, ../sass/style.scss */
   .itemBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3621,12 +2927,10 @@ footer {
     float: left;
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
-    /* line 736, ../sass/style.scss */
     .itemBlock .itemBlockLink .picWrap .picIndex {
       width: 220px;
       margin-left: -50px; } }
 @media (min-width: 1200px) {
-  /* line 747, ../sass/style.scss */
   .container {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3634,13 +2938,11 @@ footer {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
-    /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
     .container:after {
       content: " ";
       display: block;
       clear: both; }
 
-  /* line 755, ../sass/style.scss */
   .picWrap .picIndex {
     width: 250px;
     margin-left: -50px; } }
