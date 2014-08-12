@@ -56,6 +56,7 @@ if ($loc["0"] == "news"){
 }else{
 	
 	require_once("layout/pages.php");
+	require_once("layout/contacts.php");
 
 }
 
