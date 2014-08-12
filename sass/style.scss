@@ -642,6 +642,7 @@ footer {
 		}
 	}
 	.catalog-brand{
+      overflow: hidden;
 		.brandModel{
 			@include span(8);
 		}
