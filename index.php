@@ -64,4 +64,5 @@ if ($loc["0"] == "news"){
 
 require_once("layout/footer.php");
 
+exit;
 ?>
