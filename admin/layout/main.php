@@ -1,8 +1,10 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php 
 
-if (!empty($form["text"]) AND (!empty($form["password"]))){
-
+if (!empty($form["text"]) AND (!empty($form["puk"]))){
+  $users = users($form["text"]);
+  var_dump($users);
+  exit;
 }
 
 ?>
@@ -20,10 +22,10 @@ if (!empty($form["text"]) AND (!empty($form["password"]))){
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input type="text" name="email" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" name="puk" placeholder="Password" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>

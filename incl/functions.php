@@ -277,7 +277,20 @@ function mailto($to,$subject,$message,$from,$exit)
     
     }
 // ==================================================================
+// ADMIN
 
+function users($email)
+{
+    $database = new medoo();
+    $users = $database->select("users", ["id", "user", "email", "password"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "email" => $email
+            ]
+        ]);
+    return $users;
+}
 
 
 
