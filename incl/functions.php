@@ -183,7 +183,7 @@ function cars($lang)
 	$model = "model_".$lang;
 	$about = "about_".$lang;
 
-    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "disc", "stock", "sale"], 
+    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
         [
         "AND" => [
         	"active" => "1"
