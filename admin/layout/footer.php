@@ -1,0 +1,7 @@
+<?php if ( !defined('MITH') ) {exit;} ?>
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+    </body>
+</html>

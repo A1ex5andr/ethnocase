@@ -15,10 +15,7 @@ $name = "name_".$lang;
 $model = "model_".$lang;
 $about = "about_".$lang;
 
-if (empty($cars)) {
-    require_once("layout/404.php");
-    exit;
-}
+check_link($cars);
 
 foreach($menus as $menu)
     {
@@ -30,7 +27,7 @@ foreach($menus as $menu)
             {
                 if ($data["catalog"] == $menu["link_item"]){
                 echo '      <div class="itemBlock">
-                            <a href="'.$data["link_item"].'" class="itemBlockLink">
+                            <a href="'.$site.'auto/'.$menu["link_item"].'/'.$data["link_item"].'" class="itemBlockLink">
                                 <div class="itemPrice priceDiscount">
                                     <div class="itemPrice-final">'.$data["price"].'&#8372;</div>';
                 if ($data["price_old"] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data["price_old"].'&#8372;&nbsp;</div>';}

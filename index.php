@@ -15,19 +15,31 @@ if ((empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang))
 
 $texts = common_txt($lang);
 
+// ----------- ADMIN BLOCK --------
+if ($loc["0"] == "lesya-ukrainka"){
+
+	require_once("admin/layout/head.php");
+	require_once("admin/layout/main.php");
+	require_once("admin/layout/footer.php");
+exit;
+}
+// ----------- #ADMIN BLOCK -------
+
 require_once("layout/head.php");
 require_once("layout/header.php");
 
 if ($loc["0"] == "news"){
 
-		require_once("layout/newsDetailed.php");
+		if (!empty($loc["1"])) { require_once("layout/news_details.php"); }
+		else{ require_once("layout/newsDetailed.php"); }
 		require_once("layout/bestseller.php");
 		require_once("layout/onsale.php");
 		require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "auto"){
 
-		require_once("layout/cars.php");
+		if (!empty($loc["2"])) { require_once("layout/cars_details.php"); }
+		else{ require_once("layout/cars.php"); }
 		require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "products"){
@@ -64,5 +76,4 @@ if ($loc["0"] == "news"){
 
 require_once("layout/footer.php");
 
-exit;
 ?>

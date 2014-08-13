@@ -1,7 +1,9 @@
 	<section class="news container">
+
+
 <?php 
 
-$news = news($lang, '0', '10');
+$news = news_one($lang, $loc["1"]);
 $txt = $lang."_txt";
 
 check_link($news);

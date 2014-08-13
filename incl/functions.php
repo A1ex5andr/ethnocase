@@ -100,6 +100,21 @@ function news($lang, $lim_from, $lim_step)
     return $news;
 }
 
+function news_one($lang, $link_item)
+{
+    $database = new medoo();
+    $txt = $lang."_txt";
+    $news = $database->select("news", ["link_item", "img", $lang, $txt,], 
+        [
+        "AND" => [
+        "active" => "1",
+        "link_item" => $link_item
+        ]
+        ]);
+
+    return $news;
+}
+
 function common_txt($lang)
 {
 	$max = array("no_text" => "ERROR");
@@ -195,6 +210,25 @@ function cars($lang)
     return $cars;
 }
 
+function cars_details($lang, $id)
+{
+    $database = new medoo();
+
+    $name = "name_".$lang;
+    $model = "model_".$lang;
+    $about = "about_".$lang;
+
+    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "link_item" => $id
+            ]
+        ]);
+
+    return $cars;
+}
+
 function pages($lang, $page)
 {
 	$database = new medoo();
@@ -208,7 +242,14 @@ function pages($lang, $page)
     return $pages;
 }
 
+function check_link($tocheck) {
 
+    if (empty($tocheck)) {
+        require_once("layout/404.php");
+        exit;
+    }
+
+}
 
 
 

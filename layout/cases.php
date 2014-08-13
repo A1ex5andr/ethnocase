@@ -7,10 +7,7 @@
 $menus = menu($lang, '2');
 $i = "0";
 
-if (empty($menus)) {
-    require_once("layout/404.php");
-    exit;
-}
+check_link($menus);
 
 
 
@@ -26,13 +23,13 @@ if (empty($menus)) {
                 </header>';
             	$i = $i+1;
                 $parent = $data["id"];
-
+                
                     foreach($menus as $dat)
                         {
                             
                             if ($dat["parent"] == $parent){
                                 echo '            <div class="brandModel">
-                                                    <a href="'.$dat["link_item"].'">
+                                                    <a href="'.$site.'products/'.$dat["link_item"].'">
                                                         <div class="brandPicWrap"><img src="'.$site.'img/cases/catModels/'.$dat["img"].'" alt=""></div>
                                                         <h2>'.$dat[$lang].'</h2>
                                                     </a>

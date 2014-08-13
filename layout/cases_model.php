@@ -16,7 +16,7 @@ foreach($menus as $data)
         }
     }
 
-if ($my_menu_txt == "") { echo "404"; exit;}
+check_link($my_menu_txt);
 ?>
 	<section class="items container">
 	    <div class="headline"><h2><?php echo $my_menu_txt; ?></h2></div>
@@ -26,6 +26,8 @@ if ($my_menu_txt == "") { echo "404"; exit;}
 $cases = cases_model($lang, $id);
 $name = "name_".$lang;
 $model = "model_".$lang;
+
+check_link($cases);
 
 foreach($cases as $data)
     {

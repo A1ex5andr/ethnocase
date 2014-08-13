@@ -3,7 +3,7 @@
 <?php 
 
 //check link
-$menus = menu($lang, '2');
+$menus = menu($lang, '3');
 
 $my_menu_txt = "";
 
@@ -20,16 +20,16 @@ check_link($my_menu_txt);
 
 // #check link
 
-$cases = cases_details($lang, $loc["2"]);
+$cars = cars_details($lang, $loc["2"]);
 $name = "name_".$lang;
 $model = "model_".$lang;
 $about = "about_".$lang;
 
 $i = "0";
 
-check_link($cases);
+check_link($cars);
 
-foreach($cases as $data)
+foreach($cars as $data)
     {
     	$i = $i + 1;
 
