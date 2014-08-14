@@ -1,9 +1,9 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php 
 
-if (!empty($form["text"]) AND (!empty($form["puk"]))){
-  $users = users($form["text"]);
-  var_dump($users);
+if (!empty($form["email"]) AND (!empty($form["puk"]))){
+  $users = users($form["email"]);
+  echo $users["user"];
   exit;
 }
 
@@ -20,7 +20,7 @@ if (!empty($form["text"]) AND (!empty($form["puk"]))){
           <a class="navbar-brand" href="<?php echo $site; ?>lesya-ukrainka">Ethnocase panel</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
+          <form class="navbar-form navbar-right" role="form" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <input type="text" name="email" placeholder="Email" class="form-control">
             </div>
