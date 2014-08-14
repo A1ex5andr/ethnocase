@@ -2213,58 +2213,27 @@ textarea {
   -o-user-select: none;
   user-select: none; }
 
-.btn-send {
+.btn {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
   background-color: #1fa67a;
-  color: #fff;
+  color: white;
   cursor: pointer;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px solid #fff;
-  background-color: #d30000; }
+  border: 1px solid white; }
+  .btn .fa {
+    padding-right: 6px; }
 
 .btn-Remove {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #1fa67a;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  border: 1px solid #fff;
-  background-color: #C9C9C9;
-  border: 1px solid #A7A7A7;
+  background-color: #d30000;
+  border: 1px solid #cfcfcf;
   float: right; }
 
 .btn-addMore {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #1fa67a;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  border: 1px solid #fff;
   min-width: 240px; }
-
-.btn-sendOrder {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #1fa67a;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  border: 1px solid #fff; }
 
 .pullLeft {
   float: left; }
@@ -2310,7 +2279,7 @@ h1 {
   line-height: 1em; }
 
 .img-responsive {
-  border: 1px #CFCFCF solid;
+  border: 1px #cfcfcf solid;
   padding: 4px;
   width: 90%;
   margin: 0 auto;
@@ -2343,14 +2312,14 @@ h1 {
 .headline {
   display: block;
   margin: 30px auto;
-  border-bottom: 1px solid #DFDFDF;
+  border-bottom: 1px solid #cfcfcf;
   padding-left: 0; }
   .headline h1, .headline h2, .headline h3, .headline h4 {
     font-size: 20px;
     margin: 0 0 -1px 0;
     padding: 0 10px 4px 10px;
     display: inline-block;
-    border-bottom: 1px solid #D30000;
+    border-bottom: 1px solid #d30000;
     vertical-align: bottom;
     font-weight: 400;
     text-transform: uppercase; }
@@ -2374,7 +2343,7 @@ h1 {
     height: 1px;
     display: block;
     content: "";
-    background-color: #DFDFDF;
+    background-color: #cfcfcf;
     position: relative;
     bottom: 0;
     margin: 10px auto 20px;
@@ -2405,7 +2374,7 @@ h1 {
   .itemBlock .itemBlockLink {
     margin: 0 auto;
     width: 90%;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #cfcfcf;
     display: block;
     position: relative;
     font-family: "Exo 2", sans-serif;
@@ -2416,15 +2385,15 @@ h1 {
       .itemBlock .itemBlockLink .itemPrice .itemPrice-final {
         background: #696969;
         padding: 10px;
-        color: #fff; }
+        color: white; }
       .itemBlock .itemBlockLink .itemPrice .itemPrice-old {
         background: #ff4949;
         padding: 10px;
-        color: #fff;
+        color: white;
         text-decoration: line-through; }
       .itemBlock .itemBlockLink .itemPrice .itemPrice-disc {
         padding: 10px;
-        background: #2CFFC4; }
+        background: #2cffc4; }
     .itemBlock .itemBlockLink .picWrap {
       overflow: hidden;
       padding: 10px 0; }
@@ -2459,7 +2428,7 @@ h1 {
       overflow: hidden;
       position: relative; }
       .brandModel a .brandPicWrap img {
-        border-bottom: 1px solid #838383;
+        border-bottom: 1px solid 0;
         display: block;
         margin: 0 auto; }
   .brandModel h2 {
@@ -2489,12 +2458,12 @@ h1 {
   padding: 0 0 20px 0;
   margin-top: 30px;
   text-align: center;
-  background-color: #f0f0f0;
-  border-top: 1px solid #949191; }
+  background-color: whitesmoke;
+  border-top: 1px solid #cdcdcd; }
   .contacts .headline {
     text-align: left; }
     .contacts .headline h1, .contacts .headline h2, .contacts .headline h3, .contacts .headline h4 {
-      border-bottom: 1px solid #929292; }
+      border-bottom: 1px solid #9b9b9b; }
   .contacts .contactsBlock {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2524,11 +2493,11 @@ h1 {
   .contacts .contactsForm .form-name,
   .contacts .contactsForm .form-mail,
   .contacts .contactsForm .form-mesg {
-    background-color: #FCFCFC;
+    background-color: #fafafa;
     margin-bottom: 5px;
     font-size: 14px;
-    border: 1px solid #DFDFDF;
-    color: #555;
+    border: 1px solid #d7d7d7;
+    color: #595959;
     line-height: 20px;
     width: 90%;
     -moz-box-sizing: border-box;
@@ -2544,9 +2513,9 @@ h1 {
   .contacts .contactsForm .form-name:focus,
   .contacts .contactsForm .form-mail:focus,
   .contacts .contactsForm .form-mesg:focus {
-    background-color: #fff;
+    background-color: white;
     outline: 0;
-    border-color: #E55050; }
+    border-color: #ff4949; }
 
 /* cart */
 .inCart-item {
@@ -2558,7 +2527,7 @@ h1 {
   padding-left: 0.41667%;
   padding-right: 0.41667%;
   margin: 20px 0 20px;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid #b9b9b9;
   position: relative; }
 
 .inCart-itemPicture {
@@ -2600,7 +2569,7 @@ h1 {
       padding: 10px;
       overflow: hidden; }
       .inCart-details ul li h4 {
-        color: #dd0044;
+        color: #d30000;
         text-align: center; }
       .inCart-details ul li h2 {
         text-align: center;
@@ -2609,7 +2578,7 @@ h1 {
         margin-top: 0px; }
       .inCart-details ul li .itemPrice-old,
       .inCart-details ul li .itemPrice-disc {
-        color: #777; }
+        color: #595959; }
       .inCart-details ul li .itemPrice-old {
         text-decoration: line-through; }
 
@@ -2626,13 +2595,13 @@ h1 {
   margin: 0 auto;
   display: block;
   border: 0;
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid #595959;
   font-size: 16px;
   margin-top: 20px;
   border-radius: 0; }
 .orderInput input:focus {
   outline: 0;
-  border-bottom: 1px solid #F00; }
+  border-bottom: 1px solid #ff4949; }
 
 .sendOrder {
   width: 100%;
@@ -2668,7 +2637,7 @@ h1 {
   margin: 30px 10%;
   letter-spacing: 2px;
   line-height: 22px;
-  border-top: 1px #CFCFCF solid;
+  border-top: 1px #cfcfcf solid;
   padding: 10px;
   text-transform: capitalize; }
 .aboutUs p {
@@ -2695,7 +2664,7 @@ h1 {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
   .picGallery img {
-    border: 1px #CFCFCF solid;
+    border: 1px #cfcfcf solid;
     padding: 4px;
     width: 90%;
     margin: 0 auto;
@@ -2704,10 +2673,10 @@ h1 {
 /* all pages footer */
 footer {
   text-align: center;
-  background-color: #D6D6D6;
+  background-color: #9b9b9b;
   /* background-color: #005C96; */
-  border-top: 1px dashed #F0F0F0;
-  color: #9B0000;
+  border-top: 1px solid whitesmoke;
+  color: white;
   font-size: 12px;
   padding: 10px; }
 
@@ -2731,7 +2700,11 @@ footer {
     line-height: 1.2em; }
 
   a:hover {
-    color: #dd0044; }
+    color: #d30000; }
+
+  .btn:hover {
+    background-color: #007448;
+    border-color: white; }
 
   .container {
     -moz-box-sizing: border-box;
@@ -2764,7 +2737,7 @@ footer {
     padding-right: 0.41667%; }
     .news .newsBlock:hover h3:after {
       width: 90%;
-      background-color: #D30000; }
+      background-color: #d30000; }
   .news .newsDetailed {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2790,9 +2763,9 @@ footer {
         width: 200px;
         margin-left: -60px; }
       .itemBlock .itemBlockLink:hover + h3 {
-        color: #D30000; }
+        color: #d30000; }
       .itemBlock .itemBlockLink:hover {
-        border-color: #D30000; }
+        border-color: #d30000; }
       .itemBlock .itemBlockLink:hover .itemName {
         visibility: visible; }
 
@@ -2824,7 +2797,7 @@ footer {
       padding-left: 0.41667%;
       padding-right: 0.41667%; }
     .picsGallery .picsGallery-thumbs img {
-      border: 1px solid #DDD; }
+      border: 1px solid #ebebeb; }
     .picsGallery .picsGallery-show {
       display: block; }
     .picsGallery .singleCasePic {
@@ -2886,7 +2859,7 @@ footer {
   .orderForm-delivery {
     margin: 30px 60px; }
     .orderForm-delivery > div:hover {
-      background: #EBEBEB; }
+      background: #ebebeb; }
 
   .orderForm-info {
     width: 80%;

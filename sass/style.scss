@@ -23,6 +23,15 @@ $fontOpenSans: 'Open Sans', sans-serif;
 // @import url(http://fonts.googleapis.com/css?family=Exo+2:300,200,500&subset=latin,cyrillic);
 $fontExo2: 'Exo 2', sans-serif;
 
+// colors
+$lightGreen: #2CFFC4;
+$green: #1fa67a;
+$white: #ffffff;
+$pink: #ff4949;
+$red: #d30000;
+$lightGray: #CFCFCF;
+$gray: #595959;
+$black: 000000;
 /* ------------------------------------------
   BASE DEMO STYLES
 --------------------------------------------- */
@@ -66,35 +75,39 @@ textarea {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #1fa67a;
+  background-color: $green;
   //	border: 1px solid #1b926c;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px solid #fff;
+  border: 1px solid $white;
+}
+.btn{
+  @include button;
+  .fa {
+    padding-right: 6px;
+  }
 }
 
 .btn-send {
-  @include button;
-  background-color: #d30000;
 }
 
 .btn-Remove {
-  @include button;
-  background-color: #C9C9C9;
-  border: 1px solid #A7A7A7;
+  background-color: $red;
+  border: 1px solid $lightGray;
   float: right;
 }
 
 .btn-addMore {
-  @include button;
   min-width: 240px;
 }
 
 .btn-sendOrder {
-  @include button;
+}
+
+.btn-buy {
 }
 
 .pullLeft {
@@ -141,7 +154,7 @@ textarea {
 
 .img-responsive {
   //	width: 100%;
-  border: 1px #CFCFCF solid;
+  border: 1px $lightGray solid;
   padding: 4px;
   width: 90%;
   margin: 0 auto;
@@ -180,7 +193,7 @@ textarea {
 .headline {
   display: block;
   margin: 30px auto;
-  border-bottom: 1px solid #DFDFDF;
+  border-bottom: 1px solid $lightGray;
   padding-left: 0;
   h1, h2, h3, h4 {
     font-size: 20px;
@@ -188,7 +201,7 @@ textarea {
     // padding: 0 30px 6px 30px;
     padding: 0 10px 4px 10px;
     display: inline-block;
-    border-bottom: 1px solid #D30000;
+    border-bottom: 1px solid $red;
     vertical-align: bottom;
     font-weight: 400;
     text-transform: uppercase;
@@ -219,7 +232,7 @@ textarea {
     height: 1px;
     display: block;
     content: "";
-    background-color: #DFDFDF;
+    background-color: $lightGray;
     position: relative;
     bottom: 0;
     margin: 10px auto 20px;
@@ -247,7 +260,7 @@ textarea {
   .itemBlockLink {
     margin: 0 auto;
     width: 90%;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $lightGray;
     display: block;
     position: relative;
     font-family: $fontExo2;
@@ -258,18 +271,17 @@ textarea {
       .itemPrice-final {
         background: #696969;
         padding: 10px;
-        color: #fff;
+        color: $white;
       }
       .itemPrice-old {
-        background: #ff4949;
+        background: $pink;
         padding: 10px;
-        color: #fff;
+        color: $white;
         text-decoration: line-through;
       }
       .itemPrice-disc {
         padding: 10px;
-        background: #2CFFC4;
-
+        background: $lightGreen;
       }
     }
     .picWrap {
@@ -290,15 +302,9 @@ textarea {
   h2.itemName,
   h3.itemName {
     @include span(border-box);
-    // position: absolute;
-    // bottom: -24px;
     width: 100%;
-    // background: #E7E7E7;
-    // border: 1px solid #d30000;
     margin-left: -1px;
-    // visibility: hidden;
     font-size: 16px;
-    // text-align: center;
     padding-left: 10%;
     font-family: $fontExo2;
     font-weight: 100;
@@ -316,7 +322,7 @@ textarea {
       overflow: hidden;
       position: relative;
       img {
-        border-bottom: 1px solid #838383;
+        border-bottom: 1px solid $black;
         display: block;
         margin: 0 auto;
       }
@@ -359,12 +365,12 @@ textarea {
   padding: 0 0 20px 0;
   margin-top: 30px;
   text-align: center;
-  background-color: #f0f0f0;
-  border-top: 1px solid #949191;
+  background-color: $white+-10;
+  border-top: 1px solid $white+-50;
   .headline {
     text-align: left;
     h1, h2, h3, h4 {
-      border-bottom: 1px solid #929292;
+      border-bottom: 1px solid $white+-100;
     }
   }
   .contactsBlock {
@@ -392,7 +398,7 @@ textarea {
     .form-name,
     .form-mail,
     .form-mesg {
-      background-color: #FCFCFC;
+      background-color: $white+-5;
       // -webkit-transition: all .2s ease-out;
       // -moz-transition: all .2s ease-out;
       // -o-transition: all .2s ease-out;
@@ -400,8 +406,8 @@ textarea {
       // cursor: default;
       margin-bottom: 5px;
       font-size: 14px;
-      border: 1px solid #DFDFDF;
-      color: #555;
+      border: 1px solid $white+-40;
+      color: $gray;
       line-height: 20px;
       width: 90%;
       @include span(border-box);
@@ -414,9 +420,9 @@ textarea {
     .form-name:focus,
     .form-mail:focus,
     .form-mesg:focus {
-      background-color: #fff;
+      background-color: $white;
       outline: 0;
-      border-color: #E55050;
+      border-color: $pink;
     }
   }
 }
@@ -425,7 +431,7 @@ textarea {
 .inCart-item {
   @include span(24 border-box);
   margin: 20px 0 20px;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid $white+-70;
   position: relative;
 }
 
@@ -453,7 +459,7 @@ textarea {
       padding: 10px;
       overflow: hidden;
       h4 {
-        color: #dd0044;
+        color: $red;
         text-align: center;
       }
       h2 {
@@ -464,7 +470,7 @@ textarea {
       }
       .itemPrice-old,
       .itemPrice-disc {
-        color: #777;
+        color: $gray;
       }
       .itemPrice-old {
         text-decoration: line-through;
@@ -489,14 +495,14 @@ textarea {
     margin: 0 auto;
     display: block;
     border: 0;
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid $gray;
     font-size: 16px;
     margin-top: 20px;
     border-radius: 0;
   }
   input:focus {
     outline: 0;
-    border-bottom: 1px solid #F00;
+    border-bottom: 1px solid $pink;
   }
 }
 
@@ -544,8 +550,8 @@ textarea {
     margin: 30px 10%;
     letter-spacing: 2px;
     line-height: 22px;
-    border-top: 1px #CFCFCF solid;
-    // border-bottom: 1px #CFCFCF solid;
+    border-top: 1px $lightGray solid;
+    // border-bottom: 1px $lightGray solid;
     padding: 10px;
     text-transform: capitalize;
   }
@@ -571,7 +577,7 @@ textarea {
     @include span(8);
   }
   img {
-    border: 1px #CFCFCF solid;
+    border: 1px $lightGray solid;
     padding: 4px;
     width: 90%;
     margin: 0 auto;
@@ -583,10 +589,10 @@ textarea {
 footer {
   @include layout(border-box);
   text-align: center;
-  background-color: #D6D6D6;
+  background-color: $white+-100;
   /* background-color: #005C96; */
-  border-top: 1px dashed #F0F0F0;
-  color: #9B0000;
+  border-top: 1px solid $white+-10;
+  color: $white;
   font-size: 12px;
   padding: 10px;
 }
@@ -624,7 +630,11 @@ footer {
   }
 
   a:hover {
-    color: #dd0044;
+    color: $red;
+  }
+  .btn:hover {
+    background-color: $green+-50;
+    border-color: $white;
   }
   .container {
     @include container($tablet);
@@ -646,7 +656,7 @@ footer {
       &:hover {
         h3:after {
           width: 90%;
-          background-color: #D30000;
+          background-color: $red;
         }
       }
     }
@@ -666,10 +676,10 @@ footer {
         }
       }
       &:hover + h3 {
-        color: #D30000;
+        color: $red;
       }
       &:hover {
-        border-color: #D30000;
+        border-color: $red;
       }
       &:hover .itemName {
         visibility: visible;
@@ -689,7 +699,7 @@ footer {
     }
     .picsGallery-thumbs {
       img {
-        border: 1px solid #DDD;
+        border: 1px solid $white+-20;
       }
     }
     .picsGallery-show {
@@ -731,7 +741,7 @@ footer {
   .orderForm-delivery {
     margin: 30px 60px;
     & > div:hover {
-      background: #EBEBEB;
+      background: $white+-20;
     }
   }
   .orderForm-info {
