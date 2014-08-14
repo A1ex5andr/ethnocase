@@ -2242,7 +2242,7 @@ textarea {
   float: right; }
 
 .share42init {
-  text-align: center;
+  text-align: right;
   margin-top: 10px; }
 
 /*=============================================
@@ -2446,7 +2446,7 @@ h1 {
 .picsGallery .picsGallery-show {
   display: none; }
 
-.singleCase .singleCase-about {
+.singleProduct .singleCase-about {
   padding: 10px;
   text-align: justify;
   text-indent: 10px;
@@ -2588,6 +2588,10 @@ h1 {
   .inCart-more .btn-addMore {
     margin: 0 auto;
     display: block; }
+
+/* buy button form */
+.buyForm {
+  text-align: right; }
 
 /* order form */
 .orderInput input {

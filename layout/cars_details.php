@@ -58,9 +58,13 @@ foreach($cars as $data)
 			<header class="headline">
 				<h3>'.$texts['about_case'].'</h3>
 			</header>
+			<form action="#" class="buyForm">
+			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> купить</button>
+			</form>
 			<p class="singleCase-about">
-				'.$data[$about].'						
+				'.$data[$about].'
 			</p>
+			<div class="share42init"></div>
 		</div>
 
     </div>';

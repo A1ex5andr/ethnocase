@@ -119,7 +119,7 @@ textarea {
 }
 
 .share42init {
-  text-align: center;
+  text-align: right;
   margin-top: 10px;
 }
 
@@ -486,6 +486,11 @@ textarea {
     margin: 0 auto;
     display: block;
   }
+}
+
+/* buy button form */
+.buyForm {
+  text-align: right;
 }
 
 /* order form */
