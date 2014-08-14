@@ -18,7 +18,11 @@ if (!empty($form["email"]) && (!empty($form["puk"]))){
 
 if (!empty($_SESSION['users'])){
 
-  require_once("admin/layout/open.php");
+  if ($loc["0"] == "news"){
+
+    require_once("admin/layout/news.php");
+
+  }
 
 exit;  
 }
