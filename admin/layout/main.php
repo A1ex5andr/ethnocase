@@ -13,10 +13,17 @@ if (!empty($form["email"]) AND (!empty($form["puk"]))){
   }else{
 
   }
-  
+
   exit;
 }
 
+
+if (!isset($_SESSION['user'])){
+
+  require_once("admin/layout/open.php");
+
+exit;  
+}
 
   require_once("admin/layout/head.php");
 ?>
