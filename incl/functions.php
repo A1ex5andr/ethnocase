@@ -243,7 +243,7 @@ function pages($lang, $page)
 }
 
 function check_link($tocheck) {
-
+    
     if (empty($tocheck)) {
         require_once("layout/404.php");
         exit;

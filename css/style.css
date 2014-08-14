@@ -2272,6 +2272,10 @@ textarea {
 .pullRight {
   float: right; }
 
+.share42init {
+  text-align: center;
+  margin-top: 10px; }
+
 /*=============================================
 =          GENERAL FOR ALL RESOULUTIONS       =
 =============================================*/

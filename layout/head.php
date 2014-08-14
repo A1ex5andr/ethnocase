@@ -15,7 +15,9 @@
 	<script src="<?php echo $site; ?>js/responsive-nav.js"></script>
 	<!-- bxSlider Javascript file -->
 	<script src="<?php echo $site; ?>js/jquery.bxslider.js"></script>
-	<!-- MAIN Javascript file -->
-	<script src="<?php echo $site; ?>js/main.js"></script>
+    <!-- social icons and shares  -->
+    <script src="<?php echo $site; ?>js/share42.js"></script>
+    <!-- MAIN Javascript file -->
+    <script src="<?php echo $site; ?>js/main.js"></script>
 </head>
 <body>

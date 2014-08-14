@@ -31,7 +31,7 @@ $(document).ready(function() {
     // SLIDER
     $('.bxslider').bxSlider({
         auto: true,
-        pause: 4000,
+        pause: 4000
     });
 
     // single case picGallery
@@ -51,4 +51,4 @@ $(document).ready(function() {
         $('<img src="img/cases/iphone_5/' + idModel + '_' + idPic + '.jpg" class="singleCasePic" alt="" />').fadeIn(600).appendTo('.picsGallery-show');
     });
 
-})
+});

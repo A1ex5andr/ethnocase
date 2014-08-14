@@ -43,10 +43,10 @@ foreach($cases as $data)
 
 		<div class="picsGallery">
 			<div class="picsGallery-thumbs">
-				<span><img src="'.$site.'img/cases/iphone_5/5_14_1.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="1"></span>
-				<span><img src="'.$site.'img/cases/iphone_5/5_14_2.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="2"></span>
-				<span><img src="'.$site.'img/cases/iphone_5/5_14_3.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="3"></span>
-				<span><img src="'.$site.'img/cases/iphone_5/5_14_4.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="4"></span>
+				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_1.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="1"></span>
+				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_2.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="2"></span>
+				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_3.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="3"></span>
+				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_4.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleCasePic" id="4"></span>
 			</div>
 
 			<div class="picsGallery-show">
@@ -59,8 +59,9 @@ foreach($cases as $data)
 				<h3>'.$texts['about_case'].'</h3>
 			</header>
 			<p class="singleCase-about">
-				'.$data[$about].'						
+				'.$data[$about].'
 			</p>
+			<div class="share42init"></div>
 		</div>
 
     </div>';
