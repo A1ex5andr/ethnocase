@@ -2459,7 +2459,8 @@ h1 {
         display: block;
         margin: 0 auto; }
   .brandModel h2 {
-    font-weight: 100; }
+    font-weight: 100;
+    padding: 10px 0; }
 
 /* single model details */
 .picsGallery img {
