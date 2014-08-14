@@ -1,6 +1,7 @@
 <?php
 
 $site = "http://new.ethnocase.com/";
+$asite = "http://new.ethnocase.com/lesya-ukrainka/";
 
 
 

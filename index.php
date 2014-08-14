@@ -4,6 +4,8 @@ error_reporting(E_ERROR | E_PARSE);
 if ( !defined('MITH') )
     define('MITH', 'zeusz');
 
+session_start();
+
 require_once("./incl/common.php");
 require_once("./incl/medoo.min.php");
 require_once("./incl/functions.php"); 
@@ -18,7 +20,6 @@ $texts = common_txt($lang);
 // ----------- ADMIN BLOCK --------
 if ($loc["0"] == "lesya-ukrainka"){
 
-	require_once("admin/layout/head.php");
 	require_once("admin/layout/main.php");
 	require_once("admin/layout/footer.php");
 exit;

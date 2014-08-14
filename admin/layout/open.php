@@ -1,0 +1,1 @@
+<?php if ( !defined('MITH') ) {exit;} ?>
