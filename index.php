@@ -4,6 +4,8 @@ error_reporting(E_ERROR | E_PARSE);
 if ( !defined('MITH') )
     define('MITH', 'zeusz');
 
+session_start();
+
 require_once("./incl/common.php");
 require_once("./incl/medoo.min.php");
 require_once("./incl/functions.php"); 
