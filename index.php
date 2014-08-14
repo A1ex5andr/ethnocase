@@ -18,7 +18,6 @@ $texts = common_txt($lang);
 // ----------- ADMIN BLOCK --------
 if ($loc["0"] == "lesya-ukrainka"){
 
-	require_once("admin/layout/head.php");
 	require_once("admin/layout/main.php");
 	require_once("admin/layout/footer.php");
 exit;

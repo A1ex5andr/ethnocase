@@ -2,11 +2,23 @@
 <?php 
 
 if (!empty($form["email"]) AND (!empty($form["puk"]))){
+
   $users = users($form["email"]);
-  echo $users["user"];
+  
+  if (($form["email"] == $users["0"]["email"]) AND ($form["puk"] == md5(md5($users["0"]["password"])))){
+
+    $_SESSION['user'] = $users["0"]["user"];
+    header('Location: '.$site.'lesya-ukrainka/');
+
+  }else{
+
+  }
+  
   exit;
 }
 
+
+  require_once("admin/layout/head.php");
 ?>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
