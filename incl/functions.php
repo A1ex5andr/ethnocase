@@ -90,7 +90,7 @@ function news($lang, $lim_from, $lim_step)
 {
 	$database = new medoo();
 	$txt = $lang."_txt";
-    $news = $database->select("news", ["link_item", "img", $lang, $txt, "top", "pos"], 
+    $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
         [
         "active" => "1",
         "ORDER" => ["top ASC", "id ASC", "pos ASC"],

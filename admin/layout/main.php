@@ -16,9 +16,9 @@ if (!empty($form["email"]) && (!empty($form["puk"]))){
   require_once("admin/layout/head.php");
 
 
-if (!empty($_SESSION['users'])){
+if (!empty($_SESSION['user'])){
 
-  if ($loc["0"] == "news"){
+  if ($loc["1"] == "news"){
 
     require_once("admin/layout/news.php");
 

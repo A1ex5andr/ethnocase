@@ -122,6 +122,8 @@ if (empty($_SESSION['user'])){
       </div>
     </div>
 
+<div style="padding-top:80px;"></div>
+
 <?php
 }
 ?>
