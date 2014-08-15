@@ -350,8 +350,8 @@ textarea {
   }
 }
 
-.singleCase {
-  .singleCase-about {
+.singleProduct {
+  .singleProduct-about {
     padding: 10px;
     text-align: justify;
     text-indent: 10px;
@@ -633,7 +633,6 @@ footer {
       line-height: $size;
     }
   }
-
   a:hover {
     color: $red;
   }
@@ -710,14 +709,14 @@ footer {
     .picsGallery-show {
       display: block;
     }
-    .singleCasePic {
+    .singleProductPic {
       margin: 20px auto;
       display: block !important;
       width: 100%;
       max-width: 100%;
     }
   }
-  .singleCase {
+  .singleProduct {
     @include span(10);
     padding-left: 6%;
   }
