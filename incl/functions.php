@@ -93,7 +93,7 @@ function news($lang, $lim_from, $lim_step)
     $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
         [
         "active" => "1",
-        "ORDER" => ["top ASC", "id ASC", "pos ASC"],
+        "ORDER" => ["top DESC", "id DESC", "pos ASC"],
         "LIMIT" => [$lim_from, $lim_step]
         ]);
 
@@ -292,8 +292,32 @@ function users($email)
     return $users;
 }
 
+function adm_news($lang, $lim_from, $lim_step)
+{
+    $database = new medoo();
+    $txt = $lang."_txt";
+    $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
+        [
+        "ORDER" => ["top DESC", "id DESC", "pos ASC"],
+        "LIMIT" => [$lim_from, $lim_step]
+        ]);
 
+    return $news;
+}
 
+function adm_news_one($lang, $id)
+{
+    $database = new medoo();
+    $txt = $lang."_txt";
+    $news = $database->select("news", ["id", "link_item", "img", "eng", "eng_txt", "rus", "rus_txt", "ukr", "ukr_txt", "top", "active"], 
+        [
+        "AND" => [
+        "id" => $id
+        ]
+        ]);
+
+    return $news;
+}
 
 ?>
 

@@ -1,16 +1,124 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php 
 
-if (!empty($form['link_items'])) {
-	
+if ((!empty($form['link_items'])) && ($form['act'] == "add")) {
+
+		//image upload
+		$filename = "img/news/".$form["link_items"]."-".basename($_FILES['img']['name']);
+		$img = $form["link_items"]."-".basename($_FILES['img']['name']);
+
+		   if(is_uploaded_file($_FILES["img"]["tmp_name"]))
+		   {
+		     move_uploaded_file($_FILES["img"]["tmp_name"], $filename);
+		   }
+		//#image upload
+
+
+	if ($form["top"] == "1") { $top = "1"; } else { $top = "0"; }
+	if ($form["active"] == "1") { $active = "1"; } else { $active = "0"; }
+
+		$database = new medoo();
+
+		$last_user_id = $database->insert("news", [
+		"link_item" => $form["link_items"],
+		"img" => $img,
+		"eng" => $form["titlee"],
+		"rus" => $form["titler"],
+		"ukr" => $form["titleu"],
+		"eng_txt" => $form["texte"],
+		"rus_txt" => $form["textr"],
+		"ukr_txt" => $form["textu"],
+		"top" => $top,
+		"active" => $active
+		]);
+
+}elseif($form['act'] == "edit") {
+
+	if (!empty($_FILES["img"]["tmp_name"])){
+		//image upload
+		$filename = "img/news/".$form["link_items"]."-".basename($_FILES['img']['name']);
+		$img = $form["link_items"]."-".basename($_FILES['img']['name']);
+
+		   if(is_uploaded_file($_FILES["img"]["tmp_name"]))
+		   {
+		     move_uploaded_file($_FILES["img"]["tmp_name"], $filename);
+		   }
+		//#image upload
+	}else{
+		$img = $form["img_old"];
+	}
+
+	if ($form["top"] == "1") { $top = "1"; } else { $top = "0"; }
+	if ($form["active"] == "1") { $active = "1"; } else { $active = "0"; }
+
+	$database = new medoo();
+
+	$database->update("news", [
+		"link_item" => $form["link_items"],
+		"img" => $img,
+		"eng" => $form["titlee"],
+		"rus" => $form["titler"],
+		"ukr" => $form["titleu"],
+		"eng_txt" => $form["texte"],
+		"rus_txt" => $form["textr"],
+		"ukr_txt" => $form["textu"],
+		"top" => $top,
+		"active" => $active
+	], [
+	"id" => $form["id"]
+	]);
+
+}elseif(!empty($form['links'])) {
+
+	if ($form["top"] == "1") { $top = "1"; } else { $top = "0"; }
+	if ($form["active"] == "1") { $active = "1"; } else { $active = "0"; }
+
+	$database = new medoo();
+
+	$database->update("news", [
+		"top" => $top,
+		"active" => $active
+	], [
+	"link_item" => $form["links"]
+	]);
+
 }
 
-$news = news($lang, '0', '100');
+
+
+$news = adm_news($lang, '0', '100');
 $txt = $lang."_txt";
 
 if (!empty($loc["2"])){
-	$news_one = news_one($lang, $loc["2"]);
-	$txt_one = $lang."_txt";
+	$news_one = adm_news_one($lang, $loc["2"]);
+
+	$link_item = $news_one['0']['link_item'];
+	$img = '<input type="hidden" name="img_old" value="'.$news_one['0']['img'].'">';
+	$titleu = $news_one['0']['ukr'];
+	$titler = $news_one['0']['rus'];
+	$titlee = $news_one['0']['eng'];
+	$txtu = $news_one['0']['ukr_txt'];
+	$txtr = $news_one['0']['rus_txt'];
+	$txte = $news_one['0']['eng_txt'];
+	if ($news_one['0']['top'] == "1") { $top = "checked"; } else { $top = ""; }
+	if ($news_one['0']['active'] == "1") { $active = "checked"; } else { $active = ""; }
+	$y = '<input type="hidden" name="act" value="edit"><input type="hidden" name="id" value="'.$news_one['0']['id'].'">';
+	
+	
+}else{
+
+	$link_item = "";
+	$img = "";
+	$titleu = "";
+	$titler = "";
+	$titlee = "";
+	$txtu = "";
+	$txtr = "";
+	$txte = "";
+	$top = "";
+	$active = "checked";
+	$y = '<input type="hidden" name="act" value="add">';
+
 }
 ?>
 
@@ -22,32 +130,40 @@ if (!empty($loc["2"])){
 <table class="table table-hover">
 	<tr>
 		<td>link_item</td>
-		<td><input name="link_items" type="text" class="form-control" placeholder="Text input"></td>
+		<td><input name="link_items" type="text" class="form-control" placeholder="Text input" value="<?php echo $link_item; ?>"></td>
 	</tr>
 	<tr>
 		<td>IMG</td>
-		<td><input name="img" type="file" id="exampleInputFile">
+		<td><input name="img" type="file" id="exampleInputFile"><?php echo $img; ?>
     		<p class="help-block">Example block-level help text here.</p></td>
 	</tr>
 	<tr>
 		<td>Title</td>
-		<td><input name="title" type="text" class="form-control" placeholder="Text input"></td>
+		<td>
+			<input name="titleu" type="text" class="form-control" placeholder="ukr" value="<?php echo $titleu; ?>"></br>
+			<input name="titler" type="text" class="form-control" placeholder="rus" value="<?php echo $titler; ?>"></br>
+			<input name="titlee" type="text" class="form-control" placeholder="eng" value="<?php echo $titlee; ?>"></br>
+		</td>
 	</tr>
 	<tr>
 		<td>Text</td>
-		<td><textarea name="text" class="form-control" rows="3"></textarea></td>
+		<td>
+			<textarea name="textu" class="form-control" rows="3" placeholder="ukr"><?php echo $txtu; ?></textarea></br>
+			<textarea name="textr" class="form-control" rows="3" placeholder="rus"><?php echo $txtr; ?></textarea></br>
+			<textarea name="texte" class="form-control" rows="3" placeholder="eng"><?php echo $txte; ?></textarea></br>
+		</td>
 	</tr>
 	<tr>
 		<td>TOP</td>
-		<td><input name="top" type="checkbox" value="1"></td>
+		<td><input name="top" type="checkbox" value="1" <?php echo $top; ?>></td>
 	</tr>
 	<tr>
 		<td>Active</td>
-		<td><input name="active" type="checkbox" value="1"></td>
+		<td><input name="active" type="checkbox" value="1" <?php echo $active; ?>></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td><button type="submit" class="btn btn-default">Submit</button></td>
+		<td><?php echo $y; ?><button type="submit" class="btn btn-default">Submit</button></td>
 	</tr>
 </table>
 </form>
@@ -69,10 +185,10 @@ foreach($news as $data)
 		echo '	<tr>
 		<td><form role="form" method="post" enctype="multipart/form-data">'.$data["id"].'</td>
 		<td><img src="'.$site.'img/news/'.$data["img"].'" width="50%" height="50%" alt=""></td>
-		<td><a href="'.$site.'news/'.$data["link_item"].'">'.$data[$lang].'</a></td>
+		<td><a href="'.$asite.'news/'.$data["id"].'">'.$data[$lang].'</a></td>
 		<td><input type="checkbox" name="top" value="1" '.$top.'></td>
 		<td><input type="checkbox" name="active" value="1" '.$active.'></td>
-		<td><input type="hidden" name="top" value="'.$data["link_item"].'"><button type="submit" class="btn btn-default">Submit</button></form></td>
+		<td><input type="hidden" name="links" value="'.$data["link_item"].'"><button type="submit" class="btn btn-default">Submit</button></form></td>
 	</tr>';
 	}
 ?>
