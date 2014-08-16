@@ -1,5 +1,10 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php 
+
+if (!empty($form['link_items'])) {
+	
+}
+
 $news = news($lang, '0', '100');
 $txt = $lang."_txt";
 
@@ -17,28 +22,28 @@ if (!empty($loc["2"])){
 <table class="table table-hover">
 	<tr>
 		<td>link_item</td>
-		<td><input type="text" class="form-control" placeholder="Text input"></td>
+		<td><input name="link_items" type="text" class="form-control" placeholder="Text input"></td>
 	</tr>
 	<tr>
 		<td>IMG</td>
-		<td><input type="file" id="exampleInputFile">
+		<td><input name="img" type="file" id="exampleInputFile">
     		<p class="help-block">Example block-level help text here.</p></td>
 	</tr>
 	<tr>
 		<td>Title</td>
-		<td><input type="text" class="form-control" placeholder="Text input"></td>
+		<td><input name="title" type="text" class="form-control" placeholder="Text input"></td>
 	</tr>
 	<tr>
 		<td>Text</td>
-		<td><textarea class="form-control" rows="3"></textarea></td>
+		<td><textarea name="text" class="form-control" rows="3"></textarea></td>
 	</tr>
 	<tr>
 		<td>TOP</td>
-		<td><input type="checkbox" value="1"></td>
+		<td><input name="top" type="checkbox" value="1"></td>
 	</tr>
 	<tr>
 		<td>Active</td>
-		<td><input type="checkbox" value="1"></td>
+		<td><input name="active" type="checkbox" value="1"></td>
 	</tr>
 	<tr>
 		<td></td>
@@ -63,8 +68,8 @@ foreach($news as $data)
 		if ($data["active"] == "1") { $active = "checked"; } else { $active = ""; }
 		echo '	<tr>
 		<td><form role="form" method="post" enctype="multipart/form-data">'.$data["id"].'</td>
-		<td>'.$data["img"].'</td>
-		<td>'.$data[$lang].'</td>
+		<td><img src="'.$site.'img/news/'.$data["img"].'" width="50%" height="50%" alt=""></td>
+		<td><a href="'.$site.'news/'.$data["link_item"].'">'.$data[$lang].'</a></td>
 		<td><input type="checkbox" name="top" value="1" '.$top.'></td>
 		<td><input type="checkbox" name="active" value="1" '.$active.'></td>
 		<td><input type="hidden" name="top" value="'.$data["link_item"].'"><button type="submit" class="btn btn-default">Submit</button></form></td>
