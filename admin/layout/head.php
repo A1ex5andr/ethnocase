@@ -89,6 +89,10 @@ if (empty($_SESSION['user'])){
  <ul class="nav navbar-nav">
         <li <?php if ($loc["1"] == "news"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>news"><?php echo $texts['news']; ?></a></li>
         <li <?php if ($loc["1"] == "cars"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>cars"><?php echo $texts['cars']; ?></a></li>
+        <li <?php if ($loc["1"] == "cases"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>cases"><?php echo $texts['cases']; ?></a></li>
+        <li <?php if ($loc["1"] == "menus"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>menus"><?php echo $texts['menus']; ?></a></li>
+        <li <?php if ($loc["1"] == "pages"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>pages"><?php echo $texts['pages']; ?></a></li>
+        <li <?php if ($loc["1"] == "texts"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>texts"><?php echo $texts['texts']; ?></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">

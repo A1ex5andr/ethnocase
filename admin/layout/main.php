@@ -26,6 +26,10 @@ if (!empty($_SESSION['user'])){
 
     require_once("admin/layout/cars.php");
 
+  }elseif ($loc["1"] == "cases"){
+
+    require_once("admin/layout/cases.php");
+
   }
 
 exit;  

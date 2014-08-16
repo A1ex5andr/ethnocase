@@ -350,5 +350,33 @@ function adm_cars_one($id)
 }
 
 
+function adm_cases($lang, $sel)
+{
+    $database = new medoo();
+
+    img     name_eng    name_rus    name_ukr    model_eng   model_rus   model_ukr   about_eng   about_ukr   about_rus   price   price_old   disc    stock   top     new     sale 
+    
+    $cases = $database->select("cases", ["id", "active", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+        [
+        "ORDER" => ["id DESC"],
+        "LIMIT" => ["100"]
+        ]);
+
+    return $cases;
+}
+
+function adm_cases_one($lang, $id)
+{
+    $database = new medoo();
+
+    $cases = $database->select("cases", ["id", "active", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+        [
+        "AND" => [
+            "id" => $id
+            ]
+        ]);
+
+    return $cases;
+}
 ?>
 
