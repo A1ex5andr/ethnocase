@@ -87,8 +87,8 @@ if (empty($_SESSION['user'])){
         <div class="navbar-collapse collapse">
 
  <ul class="nav navbar-nav">
-        <li class="active"><a href="<?php echo $asite; ?>news"><?php echo $texts['news']; ?></a></li>
-        <li><a href="#">Link</a></li>
+        <li <?php if ($loc["1"] == "news"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>news"><?php echo $texts['news']; ?></a></li>
+        <li <?php if ($loc["1"] == "cars"){ echo 'class="active"'; } ?>><a href="<?php echo $asite; ?>cars"><?php echo $texts['cars']; ?></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">

@@ -276,7 +276,10 @@ function mailto($to,$subject,$message,$from,$exit)
         if ($exit == '1'){exit;}
     
     }
+
+
 // ==================================================================
+
 // ADMIN
 
 function users($email)
@@ -317,6 +320,38 @@ function adm_news_one($lang, $id)
         ]);
 
     return $news;
+}
+
+function adm_cars()
+{
+    $database = new medoo();
+
+    $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
+        [
+        "ORDER" => ["id DESC"],
+        "LIMIT" => ["100"]
+        ]);
+
+    return $cars;
+}
+
+function adm_cars_details($lang, $id)
+{
+    $database = new medoo();
+
+    $name = "name_".$lang;
+    $model = "model_".$lang;
+    $about = "about_".$lang;
+
+    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "link_item" => $id
+            ]
+        ]);
+
+    return $cars;
 }
 
 ?>
