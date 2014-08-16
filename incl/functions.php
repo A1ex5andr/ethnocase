@@ -335,24 +335,20 @@ function adm_cars()
     return $cars;
 }
 
-function adm_cars_details($lang, $id)
+function adm_cars_one($id)
 {
     $database = new medoo();
 
-    $name = "name_".$lang;
-    $model = "model_".$lang;
-    $about = "about_".$lang;
-
-    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
+    $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
         [
         "AND" => [
-            "active" => "1",
-            "link_item" => $id
+            "id" => $id
             ]
         ]);
 
     return $cars;
 }
+
 
 ?>
 
