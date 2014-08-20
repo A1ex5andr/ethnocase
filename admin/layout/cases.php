@@ -3,11 +3,9 @@
 
 if ((!empty($form['link_items'])) && ($form['act'] == "add")) {
 
-	$menu = menu($lang, '2');
-	foreach ($menu as $menus) { if($form["parent"] == $menus["id"]) { $menu_id = $menus["link_item"]; } }
 
 		//image upload
-		$filename = "img/cases/".$menu_id."/".$form["link_items"]."-".basename($_FILES['img']['name']);
+		$filename = "img/cases/".$form["link_items"]."-".basename($_FILES['img']['name']);
 		$img = $form["link_items"]."-".basename($_FILES['img']['name']);
 
 		   if(is_uploaded_file($_FILES["img"]["tmp_name"]))
@@ -50,12 +48,9 @@ if ((!empty($form['link_items'])) && ($form['act'] == "add")) {
 
 elseif($form['act'] == "edit") {
 
-	$menu = menu($lang, '2');
-	foreach ($menu as $menus) { if($form["parent"] == $menus["id"]) { $menu_id = $menus["link_item"]; } }
-
 	if (!empty($_FILES["img"]["tmp_name"])){
 		//image upload
-		$filename = "img/cases/".$menu_id."/".$form["link_items"]."-".basename($_FILES['img']['name']);
+		$filename = "img/cases/".$form["link_items"]."-".basename($_FILES['img']['name']);
 		$img = $form["link_items"]."-".basename($_FILES['img']['name']);
 
 		   if(is_uploaded_file($_FILES["img"]["tmp_name"]))
@@ -279,10 +274,10 @@ foreach($cases as $data)
 		if ($data["top"] == "1") { $top = "checked"; } else { $top = ""; }
 		if ($data["new"] == "1") { $new = "checked"; } else { $new = ""; }
 		if ($data["sale"] == "1") { $sale = "checked"; } else { $sale = ""; }
-		foreach ($menu as $menus) { if($data["parent"] == $menus["id"]) { $menu_item = $menus[$lang]; $menu_id = $menus["link_item"]; } }
+		
 		echo '	<tr>
 		<td><form role="form" method="post" enctype="multipart/form-data">'.$data["id"].'</td>
-		<td><img src="'.$site.'img/cases/'.$menu_id.'/'.$data["img"].'" width="30%" height="30%" alt=""></td>
+		<td><img src="'.$site.'img/cases/'.$data["img"].'" width="30%" height="30%" alt=""></td>
 		<td>'.$menu_item.'</td>
 		<td><a href="'.$asite.'cases/'.$data["id"].'">'.$data["name_ukr"].'</a></td>
 		<td>'.$data["price"].'</br>'.$data["price_old"].'</td>

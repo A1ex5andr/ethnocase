@@ -2,7 +2,7 @@
     <section class="items container">
 
 <?php 
-
+    
 $cases = cases($lang, 'new');
 $name = "name_".$lang;
 $model = "model_".$lang;

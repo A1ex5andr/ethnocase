@@ -17,6 +17,7 @@ if (!empty($cases)){
 foreach($cases as $data)
     {
 
+    
 echo '      <div class="itemBlock">
             <a href="'.$data["link_item"].'" class="itemBlockLink">
                 <div class="itemPrice priceDiscount">

@@ -32,6 +32,7 @@ check_link($cases);
 
 foreach($cases as $data)
     {
+
     	$i = $i + 1;
     	$img = '';
     	
@@ -57,7 +58,7 @@ foreach($cases as $data)
 			</div>
 
 			<div class="picsGallery-show">
-				<img src="'.$site.'img/cars/'.$data["img"].'" class="singleProductPic" alt="Чехол для iPhone - этно чехол вышиванка на iPhone">
+				<img src="'.$site.'img/cases/'.$data["img"].'" class="singleProductPic" alt="Чехол для iPhone - этно чехол вышиванка на iPhone">
 			</div>
 		</div>
 

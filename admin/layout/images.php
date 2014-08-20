@@ -198,7 +198,7 @@ if (!empty($loc["2"])){
 			<select class="form-control" name="parent">
 <?php 
 		foreach ($cases as $case) {
-			echo '<option value="'.case["id"].'" '.$parent.'>'.$case[$model].' - '.$case[$name].'</option>';	
+			echo '<option value="'.$case["id"].'" '.$parent.'>'.$case[$model].' - '.$case[$name].'</option>';	
 		}
 ?>
 			</select>
@@ -206,22 +206,22 @@ if (!empty($loc["2"])){
 	</tr>
 	<tr>
 		<td>IMG</td>
-		<td><input name="img" type="file[]" id="exampleInputFile"><?php echo $img; ?>
+		<td><input name="img[]" type="file" id="exampleInputFile"><?php echo $img; ?>
     		<p class="help-block"><input name="alt[]" type="text" class="form-control" placeholder="alt" value="<?php echo $alt; ?>"></p></td>
 	</tr>
 	<tr>
 		<td>IMG</td>
-		<td><input name="img" type="file[]" id="exampleInputFile"><?php echo $img; ?>
+		<td><input name="img[]" type="file" id="exampleInputFile"><?php echo $img; ?>
     		<p class="help-block"><input name="alt[]" type="text" class="form-control" placeholder="alt" value="<?php echo $alt; ?>"></p></td>
 	</tr>
 	<tr>
 		<td>IMG</td>
-		<td><input name="img" type="file[]" id="exampleInputFile"><?php echo $img; ?>
+		<td><input name="img[]" type="file" id="exampleInputFile"><?php echo $img; ?>
     		<p class="help-block"><input name="alt[]" type="text" class="form-control" placeholder="alt" value="<?php echo $alt; ?>"></p></td>
 	</tr>
 	<tr>
 		<td>IMG</td>
-		<td><input name="img" type="file[]" id="exampleInputFile"><?php echo $img; ?>
+		<td><input name="img[]" type="file" id="exampleInputFile"><?php echo $img; ?>
     		<p class="help-block"><input name="alt[]" type="text" class="form-control" placeholder="alt" value="<?php echo $alt; ?>"></p></td>
 	</tr>
 	<tr>
@@ -243,7 +243,7 @@ if (!empty($loc["2"])){
 		<th>Action</th>
 	</tr>
 <?php 
-foreach($cases as $data)
+foreach($images as $data)
 	{
 		if ($data["active"] == "1") { $active = "checked"; } else { $active = ""; }
 		foreach ($menu as $menus) { if($data["parent"] == $menus["id"]) { $menu_item = $menus[$lang]; $menu_id = $menus["link_item"]; } }
