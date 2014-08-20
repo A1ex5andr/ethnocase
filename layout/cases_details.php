@@ -29,9 +29,19 @@ $i = "0";
 
 check_link($cases);
 
+
 foreach($cases as $data)
     {
     	$i = $i + 1;
+    	$img = '';
+    	
+    	$images = images($data["id"] , "cases");
+    	$x = '0';
+    	foreach($images as $image)
+    	{ 
+    		$x++;
+    		$img = $img.'\n <span><img src="'.$site.'img/cases/'.$data["img"].'" alt="'.$data["alt"].'" class="singleProductPic" id="'.$x.'"></span>';
+		}
 
     	echo '
 	<div class="slogan container">
@@ -43,10 +53,7 @@ foreach($cases as $data)
 
 		<div class="picsGallery">
 			<div class="picsGallery-thumbs">
-				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_1.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleProductPic" id="1"></span>
-				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_2.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleProductPic" id="2"></span>
-				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_3.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleProductPic" id="3"></span>
-				<span><img src="'.$site.'img/cases/iphone_5/'.$data["link_item"].'_4.jpg" alt="Чехол для iPhone - этно чехол вышиванка на iPhone" class="singleProductPic" id="4"></span>
+				'.$img.'
 			</div>
 
 			<div class="picsGallery-show">

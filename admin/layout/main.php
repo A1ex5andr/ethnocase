@@ -30,6 +30,10 @@ if (!empty($_SESSION['user'])){
 
     require_once("admin/layout/cases.php");
 
+  }elseif ($loc["1"] == "images"){
+
+    require_once("admin/layout/images.php");
+
   }
 
 exit;  

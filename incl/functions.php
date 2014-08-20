@@ -179,7 +179,7 @@ function cases_details($lang, $id)
 	$model = "model_".$lang;
 	$about = "about_".$lang;
 
-    $cases = $database->select("cases", ["link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+    $cases = $database->select("cases", ["id", "link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
         [
         "AND" => [
         	"active" => "1",
@@ -240,6 +240,21 @@ function pages($lang, $page)
         	]
         ]);
     return $pages;
+}
+
+function images($parent, $type) {
+
+    $database = new medoo();
+    $images = $database->select("images", ["id", "name", "alt"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "parent" => $parent,
+            "type" => $type
+            ]
+        ]);
+    return $images;
+    
 }
 
 function check_link($tocheck) {
@@ -375,6 +390,20 @@ function adm_cases_one($id)
         ]);
 
     return $cases;
+}
+
+function adm_images($parent, $name) {
+
+    $database = new medoo();
+    $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "parent"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "link_item" => $page
+            ]
+        ]);
+    return $pages;
+    
 }
 ?>
 
