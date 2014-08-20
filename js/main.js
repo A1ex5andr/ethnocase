@@ -35,20 +35,10 @@ $(document).ready(function() {
     });
 
     // single case picGallery
-    $('.picsGallery-thumbs').find('.singleCasePic').click(function() {
+    $('.picsGallery-thumbs').find('.singleProductPic').click(function() {
 
-        var thisUrl = window.location.search;
-        // console.log(thisUrl);
-        var model = thisUrl.split("=");
-        // console.log(model);
-        var idModel = model[1];
-        // console.log(idModel);
-        var idPic = $(this).attr("id");
-        console.log(idPic);
-
-
-        $('.picsGallery-show').empty();
-        $('<img src="img/cases/iphone_5/' + idModel + '_' + idPic + '.jpg" class="singleCasePic" alt="" />').fadeIn(600).appendTo('.picsGallery-show');
+        var src = $(this).attr("src");
+        $('.picsGallery-show img').attr("src", src);
     });
 
     // equal height for items blocks
