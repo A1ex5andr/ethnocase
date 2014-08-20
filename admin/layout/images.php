@@ -235,45 +235,31 @@ if (!empty($loc["2"])){
 	<tr>
 		<th>#</th>
 		<th>IMG</th>
-		<th>CATALOG</th>
-		<th>TEXT</th>
-		<th>PRICE</th>
+		<th>NAME</th>
+		<th>ALT</th>
+		<th>PARENT</th>
+		<th>TYPE</th>
 		<th>ACTIVE</th>
-		<th>TOP</th>
-		<th>NEW</th>
-		<th>SALE</th>
 		<th>Action</th>
 	</tr>
 <?php 
 foreach($cases as $data)
 	{
 		if ($data["active"] == "1") { $active = "checked"; } else { $active = ""; }
-		if ($data["top"] == "1") { $top = "checked"; } else { $top = ""; }
-		if ($data["new"] == "1") { $new = "checked"; } else { $new = ""; }
-		if ($data["sale"] == "1") { $sale = "checked"; } else { $sale = ""; }
 		foreach ($menu as $menus) { if($data["parent"] == $menus["id"]) { $menu_item = $menus[$lang]; $menu_id = $menus["link_item"]; } }
 		echo '	<tr>
 		<td><form role="form" method="post" enctype="multipart/form-data">'.$data["id"].'</td>
-		<td><img src="'.$site.'img/cases/'.$menu_id.'/'.$data["img"].'" width="30%" height="30%" alt=""></td>
-		<td>'.$menu_item.'</td>
-		<td><a href="'.$asite.'cases/'.$data["id"].'">'.$data["name_ukr"].'</a></td>
-		<td>'.$data["price"].'</br>'.$data["price_old"].'</td>
+		<td><img src="'.$site.'img/cases/'.$data["type"].'/'.$data["img"].'" width="30%" height="30%" alt=""></td>
+		<td><a href="'.$asite.'images/'.$data["id"].'">'.$data["name"].'</a></td>
+		<td>'.$data["alt"].'</td>
+		<td>'.$data["parent"].'</td>
+		<td>'.$data["type"].'</td>
 		<td><input type="checkbox" name="active" value="1" '.$active.'></td>
-		<td><input type="checkbox" name="top" value="1" '.$top.'></td>
-		<td><input type="checkbox" name="new" value="1" '.$new.'></td>
-		<td><input type="checkbox" name="sale" value="1" '.$sale.'></td>
-		<td><input type="hidden" name="links" value="'.$data["link_item"].'"><button type="submit" class="btn btn-default">Submit</button></form></td>
+		<td><input type="hidden" name="links" value="'.$data["id"].'"><button type="submit" class="btn btn-default">Submit</button></form></td>
 	</tr>';
 	}
 ?>
 
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>	
 </table>
 
 	</div>

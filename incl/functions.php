@@ -395,12 +395,13 @@ function adm_cases_one($id)
 function adm_images($parent, $name) {
 
     $database = new medoo();
-    $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "parent"], 
+    $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "active"], 
         [
         "AND" => [
             "active" => "1",
             "link_item" => $page
             ]
+        "ORDER" => ["parent DESC", "type ASC"]
         ]);
     return $pages;
     

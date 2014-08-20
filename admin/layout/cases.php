@@ -295,13 +295,7 @@ foreach($cases as $data)
 	}
 ?>
 
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>	
+
 </table>
 
 	</div>
