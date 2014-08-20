@@ -41,7 +41,7 @@ foreach($cases as $data)
     	foreach($images as $image)
     	{ 
     		$x++;
-    		$img = $img.'<span><img src="'.$site.'img/cases/'.$image["name"].'" alt="'.$image["alt"].'" class="singleProductPic" id="'.$x.'"></span>';
+    		$img = $img.'<span><img src="'.$site.'img/cases/'.$image["name"].'" alt="'.$image["alt"].'" class="singleProductPic" id="'.$data["link_item"].'_'.$x.'"></span>';
 		}
 
     	echo '
