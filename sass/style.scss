@@ -477,6 +477,19 @@ textarea {
         text-decoration: line-through;
       }
     }
+    .quantity {
+      span{
+        font-size: 22px;
+        color: #000000;
+        cursor: pointer;
+      }
+      .quantity-select{
+        width: 16px;
+        text-align: center;
+        border: 1px solid #F00;
+        border-radius: 5px;
+      }
+    }
   }
 }
 

@@ -2577,6 +2577,14 @@ h1 {
         color: #595959; }
       .inCart-details ul li .itemPrice-old {
         text-decoration: line-through; }
+    .inCart-details ul .quantity span {
+      font-size: 22px;
+      color: #000000; }
+    .inCart-details ul .quantity .quantity-select {
+      width: 16px;
+      text-align: center;
+      border: 1px solid #F00;
+      border-radius: 5px; }
 
 .inCart-more {
   width: 100%;

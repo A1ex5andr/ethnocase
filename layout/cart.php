@@ -40,7 +40,11 @@
                                 </li>
                                 <li>
                                     <h2><?php echo $texts['quantity']; ?></h2>
-                                    <h4><input class="quantity-select" type="text" value="1" length="2" maxlength="3"></h4>
+                                    <h4 class="quantity">
+                                        <span class="quantity_minus">&#8212;</span>
+                                        <input class="quantity-select" type="text" value="1" length="2" maxlength="3">
+                                        <span class="quantity_plus">&#43;</span>
+                                    </h4>
                                 </li>
                                 <li>
                                     <h2><?php echo $texts['payment']; ?></h2>
