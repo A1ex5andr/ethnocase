@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <div class="orderForm-field sendOrder">
-                    <button class="btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> ВІДПРАВИТИ замовлення</button>
+                    <button class="btn btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> ВІДПРАВИТИ замовлення</button>
                 </div>
             </form>
         </section>

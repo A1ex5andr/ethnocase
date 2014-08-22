@@ -499,26 +499,22 @@ th {
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg); }
-
   100% {
     -moz-transform: rotate(359deg); } }
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg); } }
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
-
   100% {
     -o-transform: rotate(359deg); } }
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
@@ -2218,22 +2214,21 @@ textarea {
   margin: 10px;
   padding: 10px 20px;
   background-color: #1fa67a;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px solid white; }
+  border: 1px solid #ffffff; }
   .btn .fa {
     padding-right: 6px; }
 
 .btn-Remove {
   background-color: #d30000;
-  border: 1px solid #cfcfcf;
   float: right; }
 
 .btn-addMore {
-  min-width: 240px; }
+  min-width: 200px; }
 
 .pullLeft {
   float: left; }
@@ -2279,7 +2274,7 @@ h1 {
   line-height: 1em; }
 
 .img-responsive {
-  border: 1px #cfcfcf solid;
+  border: 1px #CFCFCF solid;
   padding: 4px;
   width: 90%;
   margin: 0 auto;
@@ -2312,7 +2307,7 @@ h1 {
 .headline {
   display: block;
   margin: 30px auto;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid #CFCFCF;
   padding-left: 0; }
   .headline h1, .headline h2, .headline h3, .headline h4 {
     font-size: 20px;
@@ -2343,7 +2338,7 @@ h1 {
     height: 1px;
     display: block;
     content: "";
-    background-color: #cfcfcf;
+    background-color: #CFCFCF;
     position: relative;
     bottom: 0;
     margin: 10px auto 20px;
@@ -2374,7 +2369,7 @@ h1 {
   .itemBlock .itemBlockLink {
     margin: 0 auto;
     width: 90%;
-    border: 1px solid #cfcfcf;
+    border: 1px solid #CFCFCF;
     display: block;
     position: relative;
     font-family: "Exo 2", sans-serif;
@@ -2385,15 +2380,15 @@ h1 {
       .itemBlock .itemBlockLink .itemPrice .itemPrice-final {
         background: #696969;
         padding: 10px;
-        color: white; }
+        color: #ffffff; }
       .itemBlock .itemBlockLink .itemPrice .itemPrice-old {
         background: #ff4949;
         padding: 10px;
-        color: white;
+        color: #ffffff;
         text-decoration: line-through; }
       .itemBlock .itemBlockLink .itemPrice .itemPrice-disc {
         padding: 10px;
-        background: #2cffc4; }
+        background: #2CFFC4; }
     .itemBlock .itemBlockLink .picWrap {
       overflow: hidden;
       padding: 10px 0; }
@@ -2513,7 +2508,7 @@ h1 {
   .contacts .contactsForm .form-name:focus,
   .contacts .contactsForm .form-mail:focus,
   .contacts .contactsForm .form-mesg:focus {
-    background-color: white;
+    background-color: #ffffff;
     outline: 0;
     border-color: #ff4949; }
 
@@ -2570,7 +2565,8 @@ h1 {
       overflow: hidden; }
       .inCart-details ul li h4 {
         color: #d30000;
-        text-align: center; }
+        text-align: center;
+        font-weight: bold; }
       .inCart-details ul li h2 {
         text-align: center;
         font-weight: 100;
@@ -2641,7 +2637,7 @@ h1 {
   margin: 30px 10%;
   letter-spacing: 2px;
   line-height: 22px;
-  border-top: 1px #cfcfcf solid;
+  border-top: 1px #CFCFCF solid;
   padding: 10px;
   text-transform: capitalize; }
 .aboutUs p {
@@ -2668,7 +2664,7 @@ h1 {
     padding-left: 0.41667%;
     padding-right: 0.41667%; }
   .picGallery img {
-    border: 1px #cfcfcf solid;
+    border: 1px #CFCFCF solid;
     padding: 4px;
     width: 90%;
     margin: 0 auto;
@@ -2680,7 +2676,7 @@ footer {
   background-color: #9b9b9b;
   /* background-color: #005C96; */
   border-top: 1px solid whitesmoke;
-  color: white;
+  color: #ffffff;
   font-size: 12px;
   padding: 10px; }
 
@@ -2707,8 +2703,10 @@ footer {
     color: #d30000; }
 
   .btn:hover {
-    background-color: #007448;
-    border-color: white; }
+    background-color: #007448; }
+
+  .btn-Remove:hover {
+    background-color: #e71414; }
 
   .container {
     -moz-box-sizing: border-box;

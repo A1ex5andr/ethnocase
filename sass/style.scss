@@ -96,15 +96,15 @@ textarea {
 
 .btn-Remove {
   background-color: $red;
-  border: 1px solid $lightGray;
   float: right;
 }
 
 .btn-addMore {
-  min-width: 240px;
+  min-width: 200px;
 }
 
 .btn-sendOrder {
+
 }
 
 .btn-buy {
@@ -461,6 +461,7 @@ textarea {
       h4 {
         color: $red;
         text-align: center;
+        font-weight: bold;
       }
       h2 {
         text-align: center;
@@ -638,7 +639,9 @@ footer {
   }
   .btn:hover {
     background-color: $green+-50;
-    border-color: $white;
+  }
+  .btn-Remove:hover {
+    background-color: $red+20;
   }
   .container {
     @include container($tablet);
