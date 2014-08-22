@@ -3,8 +3,6 @@
 $site = "http://new.ethnocase.com/";
 $asite = "http://new.ethnocase.com/lesya-ukrainka/";
 
-
-
 // ochistka POST
 foreach($_POST as $key => $value) {
 	$value = trim($value);
@@ -49,4 +47,12 @@ if (($args['0'] == "rus") OR ($args['0'] == "eng")){
 
 if (!isset($args['0'])){$lang = 'ukr';}
 
+
+if ( (isset($_COOKIE["lang"])) && (!isset($_SESSION['lang'])) && (is_numeric($_COOKIE["lang"])) ){
+	if ($_COOKIE["lang"] == '1'){ $lang = "rus"; }
+	elseif ($_COOKIE["lang"] == '2'){ $lang = "eng"; }
+	else { $lang = "ukr"; }
+}
+
 ?>
+
