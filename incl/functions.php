@@ -190,6 +190,25 @@ function cases_details($lang, $id)
     return $cases;
 }
 
+function cases_one($lang, $id)
+{
+    $database = new medoo();
+
+    $name = "name_".$lang;
+    $model = "model_".$lang;
+    $about = "about_".$lang;
+
+    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "id" => $id
+            ]
+        ]);
+
+    return $cases;
+}
+
 function cars($lang)
 {
 	$database = new medoo();

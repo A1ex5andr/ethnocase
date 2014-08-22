@@ -1,3 +1,27 @@
+<?php if ( !defined('MITH') ) {exit;} ?>
+
+<?php 
+
+if(($loc['1'] != "") && (is_numeric($loc['1'])))  
+{
+
+    $case = cases_one($lang, $loc['1']);
+
+    $name = "name_".$lang;
+    $model = "model_".$lang;
+    $about = "about_".$lang;
+    
+//    echo $case['0'][$name];
+//    exit;
+
+}else{
+
+    require_once("layout/404.php");
+    exit;
+
+}
+
+?>
 	<div class="slogan container">
         <h1><?php echo $texts['your_order']; ?></h1>
     </div>
