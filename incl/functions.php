@@ -11,7 +11,8 @@ function language($lang){
 
 if ((!isset($_COOKIE['lang'])) || (!is_numeric($_COOKIE['lang'])) || ($_COOKIE['lang']>3) || (empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang) )
 	{
-		$lang = langtcook($lang);
+		setcookie("lang", "", time()-3600);
+        $lang = langtcook($lang);
 		setcookie('lang',$lang,time() + (86400 * 7));
 		$_SESSION['lang'] = langfcook($lang);
 		$lang = langfcook($lang);
