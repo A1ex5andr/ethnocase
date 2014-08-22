@@ -11,7 +11,7 @@
 foreach($menus as $data)
 	{
 
-		echo '			<li><a href="'.$data['link_item'].'"><img src="img/slider/'.$data['img'].'" /></a></li>\n';
+		echo '			<li><a href="'.$data['link_item'].'"><img src="'.$site.'img/slider/'.$data['img'].'" /></a></li>\n';
 
 	}
 ?>

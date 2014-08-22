@@ -49,9 +49,9 @@ if (!isset($args['0'])){$lang = 'ukr';}
 
 
 if ( (isset($_COOKIE["lang"])) && (!isset($_SESSION['lang'])) && (is_numeric($_COOKIE["lang"])) ){
-	if ($_COOKIE["lang"] == '1'){ $lang = "rus"; }
-	elseif ($_COOKIE["lang"] == '2'){ $lang = "eng"; }
-	else { $lang = "ukr"; }
+	if ($_COOKIE["lang"] == '1'){ $lang = "rus"; $_SESSION['lang'] = "rus"; }
+	elseif ($_COOKIE["lang"] == '2'){ $lang = "eng"; $_SESSION['lang'] = "eng";}
+	else { $lang = "ukr"; $_SESSION['lang'] = "ukr";}
 }
 
 ?>
