@@ -2577,14 +2577,26 @@ h1 {
         color: #595959; }
       .inCart-details ul li .itemPrice-old {
         text-decoration: line-through; }
-    .inCart-details ul .quantity span {
+    .inCart-details ul .quantity {
       font-size: 22px;
-      color: #000000; }
-    .inCart-details ul .quantity .quantity-select {
+      color: #FFF;
+      cursor: pointer;
+      background: #A2A2A2;
+      width: 30px;
+      height: 22px;
+      line-height: 18px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 2px; }
+      .inCart-details ul .quantity .quantity_minus {
+        position: relative;
+        top: 1px; }
+    .inCart-details ul .quantity-select {
       width: 16px;
       text-align: center;
-      border: 1px solid #F00;
-      border-radius: 5px; }
+      border: 0;
+      border-radius: 5px;
+      padding: 6px; }
 
 .inCart-more {
   width: 100%;
@@ -2715,6 +2727,9 @@ footer {
 
   .btn-Remove:hover {
     background-color: #e71414; }
+
+  .quantity:hover {
+    background: #707070 !important; }
 
   .container {
     -moz-box-sizing: border-box;

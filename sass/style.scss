@@ -478,17 +478,27 @@ textarea {
       }
     }
     .quantity {
-      span{
-        font-size: 22px;
-        color: #000000;
-        cursor: pointer;
+      font-size: 22px;
+      color: #FFF;
+      cursor: pointer;
+      background: #A2A2A2;
+      width: 30px;
+      height: 22px;
+      line-height: 18px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 2px;
+      .quantity_minus {
+        position: relative;
+        top: 1px;
       }
-      .quantity-select{
-        width: 16px;
-        text-align: center;
-        border: 1px solid #F00;
-        border-radius: 5px;
-      }
+    }
+    .quantity-select{
+      width: 16px;
+      text-align: center;
+      border: 0;
+      border-radius: 5px;
+      padding: 6px;
     }
   }
 }
@@ -655,6 +665,9 @@ footer {
   }
   .btn-Remove:hover {
     background-color: $red+20;
+  }
+  .quantity:hover {
+    background: #707070!important;
   }
   .container {
     @include container($tablet);
