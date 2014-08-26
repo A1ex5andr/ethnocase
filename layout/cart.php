@@ -5,7 +5,7 @@
 if(($loc['1'] != "") && (is_numeric($loc['1'])))  
 {
 
-    $case = cases_one($lang, $loc['1']);
+    $cases = cases_one($lang, $loc['1']);
 
     $name = "name_".$lang;
     $model = "model_".$lang;
@@ -14,13 +14,12 @@ if(($loc['1'] != "") && (is_numeric($loc['1'])))
 if (!empty($_SESSION['cart'])) { $i = count($_SESSION['cart'])-1; }
 else { $i = '0'; }
 
-$_SESSION['cart'][$i] = $case['0']['id'].":1";
-echo "--".$_SESSION['cart'][$i];     
+$_SESSION['cart'][$i] = $cases['0']['id'].":1";     
 
 }else{
 
-    require_once("layout/404.php");
-    exit;
+    //require_once("layout/404.php");
+    //exit;
 
 }
 
@@ -37,20 +36,14 @@ echo "--".$_SESSION['cart'][$i];
 
             <div class="inCart">
 
-                <div class="inCart-item item_01">
-
-                    <div class="inCart-itemPicture">
-                        <img class="picIndex" src="<?php echo $site; ?>img/cases/5_4_1.jpg" alt="">
-                    </div>
-
 <?php
 if (!empty($_SESSION['cart'])) {
 
 //$i = count($_SESSION['cart']);
-//$i = '0';
+$i = '0';
 
 foreach ($_SESSION['cart'] as $value) {
-    
+
     list ($id, $q) = split(":", $value);
 
     $case = cases_one($lang, $id);
@@ -59,23 +52,29 @@ foreach ($_SESSION['cart'] as $value) {
     $model = "model_".$lang;
     $about = "about_".$lang;
 
-    echo '                    <div class="inCart-details">
+    echo '                <div class="inCart-item item_0'.$i.'">
+
+                    <div class="inCart-itemPicture">
+                        <img class="picIndex" src="'.$site.'img/cases/'.$case['0']["img"].'" alt="">
+                    </div>
+
+                    <div class="inCart-details">
                         
                         <div class="">
                             <ul>
                                 <li>
                                     <h2>'.$texts['model_name'].'</h2>
-                                    <h4>'.$case[$name].'</h4>
+                                    <h4>'.$case['0'][$name].'</h4>
                                 </li>
                                 <li>
                                     <h2>'.$texts['model'].'</h2>
-                                    <h4>'.$case[$model].'</h4>
+                                    <h4>'.$case['0'][$model].'</h4>
                                 </li>
                                 <li class="inCart-details-priceInfo">
                                     <h2>'.$texts['price'].'</h2>
                                     <h4>
                                         <div class="itemPrice priceDiscount">
-                                            <div class="itemPrice-final">'.$case['price'].'₴</div>
+                                            <div class="itemPrice-final">'.$case['0']['price'].'₴</div>
                                             <div class="itemPrice-old">&nbsp;399₴&nbsp;</div>
                                             <div class="itemPrice-disc">-20%</div>  
                                         </div>
@@ -95,9 +94,11 @@ foreach ($_SESSION['cart'] as $value) {
                                 </li>
                             </ul>
                         </div>
-                    </div>';
+                    </div>
+                    <button class="btn btn-Remove"><i class="fa fa-trash-o"></i> '.$texts['remove'].'</button>
+                </div>';
 
-//$i++;
+$i++;
 }
 
 //list ($id, $q) = split(":::", $_SESSION['cart']);
@@ -107,8 +108,7 @@ foreach ($_SESSION['cart'] as $value) {
 
 ?>
 
-                    <button class="btn btn-Remove"><i class="fa fa-trash-o"></i> <?php echo $texts['remove']; ?></button>
-                </div>
+
 
                 <div class="inCart-more">
 	                <button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button>
