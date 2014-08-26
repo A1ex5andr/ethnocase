@@ -10,9 +10,12 @@ if(($loc['1'] != "") && (is_numeric($loc['1'])))
     $name = "name_".$lang;
     $model = "model_".$lang;
     $about = "about_".$lang;
-    
-//    echo $case['0'][$name];
-//    exit;
+
+if (!empty($_SESSION['cart'])) { $i = count($_SESSION['cart'])-1; }
+else { $i = '0'; }
+
+$_SESSION['cart'][$i] = $case['0']['id'].":1";
+echo "--".$_SESSION['cart'][$i];     
 
 }else{
 
@@ -40,43 +43,70 @@ if(($loc['1'] != "") && (is_numeric($loc['1'])))
                         <img class="picIndex" src="<?php echo $site; ?>img/cases/5_4_1.jpg" alt="">
                     </div>
 
-                    <div class="inCart-details">
+<?php
+if (!empty($_SESSION['cart'])) {
+
+//$i = count($_SESSION['cart']);
+//$i = '0';
+
+foreach ($_SESSION['cart'] as $value) {
+    
+    list ($id, $q) = split(":", $value);
+
+    $case = cases_one($lang, $id);
+
+    $name = "name_".$lang;
+    $model = "model_".$lang;
+    $about = "about_".$lang;
+
+    echo '                    <div class="inCart-details">
                         
                         <div class="">
                             <ul>
                                 <li>
-                                    <h2><?php echo $texts['model_name']; ?></h2>
-                                    <h4>Полтавка</h4>
+                                    <h2>'.$texts['model_name'].'</h2>
+                                    <h4>'.$case[$name].'</h4>
                                 </li>
                                 <li>
-                                    <h2><?php echo $texts['model']; ?></h2>
-                                    <h4>Apple iPhone 5s</h4>
+                                    <h2>'.$texts['model'].'</h2>
+                                    <h4>'.$case[$model].'</h4>
                                 </li>
                                 <li class="inCart-details-priceInfo">
-                                    <h2><?php echo $texts['price']; ?></h2>
+                                    <h2>'.$texts['price'].'</h2>
                                     <h4>
-                                    	<div class="itemPrice priceDiscount">
-						                    <div class="itemPrice-final">399₴</div>
+                                        <div class="itemPrice priceDiscount">
+                                            <div class="itemPrice-final">'.$case['price'].'₴</div>
                                             <div class="itemPrice-old">&nbsp;399₴&nbsp;</div>
                                             <div class="itemPrice-disc">-20%</div>  
-						                </div>
+                                        </div>
                                     </h4>
                                 </li>
                                 <li>
-                                    <h2><?php echo $texts['quantity']; ?></h2>
+                                    <h2>'.$texts['quantity'].'</h2>
                                     <h4>
                                         <div class="quantity"><span class="quantity_minus">&#8211;</span></div>
-                                        <input class="quantity-select" type="text" value="1" length="2" maxlength="3" disabled="disabled">
+                                        <input class="quantity-select" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
                                         <div class="quantity"><span class="quantity_plus">&#43;</span></div>
                                     </h4>
                                 </li>
                                 <li>
-                                    <h2><?php echo $texts['payment']; ?></h2>
-                                    <h4>399<span class="priceCur"><?php echo $texts['uah']; ?></span></h4>
+                                    <h2>'.$texts['payment'].'</h2>
+                                    <h4>399<span class="priceCur">'.$texts['uah'].'</span></h4>
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div>';
+
+//$i++;
+}
+
+//list ($id, $q) = split(":::", $_SESSION['cart']);
+
+
+}
+
+?>
+
                     <button class="btn btn-Remove"><i class="fa fa-trash-o"></i> <?php echo $texts['remove']; ?></button>
                 </div>
 
