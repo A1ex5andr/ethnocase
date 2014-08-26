@@ -9,7 +9,5 @@ $_SESSION['a']['1'] = 'лорлорлорлор';
 
 echo count($_SESSION['a']);
 
-echo $txt;
-
 var_dump($_SESSION['a']);
 ?>
