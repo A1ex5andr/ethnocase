@@ -18,6 +18,8 @@ if (!empty($_SESSION['cart'])) {
 //$i = count($_SESSION['cart']);
 $i = '0';
 
+var_dump($_SESSION['cart']);
+
 foreach ($_SESSION['cart'] as $value) {
 
     list ($id, $q) = split(":", $value);
@@ -77,7 +79,7 @@ echo '                                        </div>
                             </ul>
                         </div>
                     </div>
-                    <button class="btn btn-Remove"><i class="fa fa-trash-o"></i> '.$texts['remove'].'</button>
+                    <form action="'.$site.'cart/'.$case['0']['id'].'/del"><button class="btn btn-Remove"><i class="fa fa-trash-o"></i> '.$texts['remove'].'</button></form>
                 </div>';
 
 $i++;
