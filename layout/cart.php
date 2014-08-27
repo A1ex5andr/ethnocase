@@ -1,29 +1,5 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 
-<?php 
-
-if(($loc['1'] != "") && (is_numeric($loc['1'])))  
-{
-
-    $cases = cases_one($lang, $loc['1']);
-
-    $name = "name_".$lang;
-    $model = "model_".$lang;
-    $about = "about_".$lang;
-
-if (!empty($_SESSION['cart'])) { $i = count($_SESSION['cart']); }
-else { $i = '0'; }
-
-$_SESSION['cart'][$i] = $cases['0']['id'].":1";     
-
-}else{
-
-    //require_once("layout/404.php");
-    //exit;
-
-}
-
-?>
 	<div class="slogan container">
         <h1><?php echo $texts['your_order']; ?></h1>
     </div>
@@ -75,7 +51,7 @@ foreach ($_SESSION['cart'] as $value) {
                                     <h4>
                                         <div class="itemPrice priceDiscount">
                                             <div class="itemPrice-final">'.$case['0']['price'].'₴</div>';
-                                            
+
 if ($case['0']['price_old'] != '0') { 
 	echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0']['price_old'].'₴&nbsp;</div>';
 }
@@ -90,8 +66,8 @@ echo '                                        </div>
                                     <h2>'.$texts['quantity'].'</h2>
                                     <h4>
                                         <div class="quantity"><span class="quantity_minus">&#8211;</span></div>
-                                        <input class="quantity-select" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
-                                        <div class="quantity"><span class="quantity_plus">&#43;</span></div>
+                                        <input class="quantity-select" id="q" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
+                                        <div class="quantity"><a href="#" onclick="send();"><span class="quantity_plus">&#43;</span></a></div>
                                     </h4>
                                 </li>
                                 <li>

@@ -26,6 +26,10 @@ exit;
 }
 // ----------- #ADMIN BLOCK -------
 
+if ( ($loc["0"] == "cart") && (!empty($loc["1"])) ) {
+	require_once("layout/cartdo.php");
+}
+
 require_once("layout/head.php");
 require_once("layout/header.php");
 

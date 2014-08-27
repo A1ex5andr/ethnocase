@@ -19,5 +19,6 @@
     <script src="<?php echo $site; ?>js/share42.js"></script>
     <!-- MAIN Javascript file -->
     <script src="<?php echo $site; ?>js/main.js"></script>
+    <script src="<?php echo $site; ?>js/ajax.js"></script>
 </head>
 <body>
