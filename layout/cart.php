@@ -11,7 +11,7 @@ if(($loc['1'] != "") && (is_numeric($loc['1'])))
     $model = "model_".$lang;
     $about = "about_".$lang;
 
-if (!empty($_SESSION['cart'])) { $i = count($_SESSION['cart'])-1; }
+if (!empty($_SESSION['cart'])) { $i = count($_SESSION['cart']); }
 else { $i = '0'; }
 
 $_SESSION['cart'][$i] = $cases['0']['id'].":1";     
@@ -74,10 +74,16 @@ foreach ($_SESSION['cart'] as $value) {
                                     <h2>'.$texts['price'].'</h2>
                                     <h4>
                                         <div class="itemPrice priceDiscount">
-                                            <div class="itemPrice-final">'.$case['0']['price'].'₴</div>
-                                            <div class="itemPrice-old">&nbsp;399₴&nbsp;</div>
-                                            <div class="itemPrice-disc">-20%</div>  
-                                        </div>
+                                            <div class="itemPrice-final">'.$case['0']['price'].'₴</div>';
+                                            
+if ($case['0']['price_old'] != '0') { 
+	echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0']['price_old'].'₴&nbsp;</div>';
+}
+if ($case['0']['disc'] != '0') { 
+	echo '                                            <div class="itemPrice-disc">'.$case['0']['disc'].'</div>';
+} 
+
+echo '                                        </div>
                                     </h4>
                                 </li>
                                 <li>
