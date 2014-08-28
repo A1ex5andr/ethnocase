@@ -142,7 +142,7 @@ $i++;
 
 
                 <div class="inCart-more">
-	                <button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button>
+	                <form action="<?php echo $site.'products/'; ?>"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
                 </div>
 
             </div>
@@ -151,7 +151,7 @@ $i++;
                 <h2><?php echo $texts['dodelivery']; ?></h2>
             </header>
 
-            <form class="orderForm" method="post" action="includes/buy.php" accept-charset="utf-8">
+            <form class="orderForm" method="post" action="<?php echo $site.'order/'; ?>" accept-charset="utf-8" enctype="multipart/form-data">
                 <div class="orderForm-field">
                     <div class="orderForm-name">
                         <span class="orderInput">

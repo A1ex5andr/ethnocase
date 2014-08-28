@@ -59,6 +59,11 @@ if ($loc["0"] == "news"){
 		require_once("layout/cart.php");
 		require_once("layout/contacts.php");
 
+}elseif ($loc["0"] == "order"){
+
+		require_once("layout/order.php");
+		require_once("layout/contacts.php");
+
 }elseif ($loc["0"] == "404"){
 
 	require_once("layout/404.php");
