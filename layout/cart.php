@@ -67,7 +67,7 @@ echo '                                        </div>
                                     <h4>
                                         <div class="quantity"><span class="quantity_minus">&#8211;</span></div>
                                         <input class="quantity-select" id="q" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
-                                        <div class="quantity"><a href="#" onclick="send();"><span class="quantity_plus">&#43;</span></a></div>
+                                        <div class="quantity"><span class="quantity_plus">&#43;</span></div>
                                     </h4>
                                 </li>
                                 <li>
