@@ -15,10 +15,8 @@
 <?php
 if (!empty($_SESSION['cart'])) {
 
-//$i = count($_SESSION['cart']);
-$i = '0';
 
-var_dump($_SESSION['cart']);
+$i = '0';
 
 foreach ($_SESSION['cart'] as $value) {
 
