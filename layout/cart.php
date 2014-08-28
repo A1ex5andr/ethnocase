@@ -10,6 +10,55 @@
                 <h2><?php echo $texts['goodincart']; ?></h2>
             </header>
 
+            <script>
+                $(document).ready( function() {
+
+                    var itemsOrdered = $('.quantity-select').val();
+
+                    //add one
+                    $('#qPlus').click(function () {
+                        if(itemsOrdered < 5) {
+                            console.log(itemsOrdered);
+                            var newCount = ++itemsOrdered;
+                            console.log(newCount);
+
+                            $.ajax({
+                                url: "layout/cart.php",
+                                datatype: "JSON",
+                                type: "POST",
+                                data: newCount,
+                                success: function () {
+                                    $('.quantity-select').val(newCount);
+                                }
+                            });
+                            return false
+                        }
+                    });
+
+                    //subtract one
+                    $('#qMinus').click(function () {
+                        if(itemsOrdered > 1) {
+                            console.log(itemsOrdered);
+                            var newCount = --itemsOrdered;
+                            console.log(newCount);
+
+                            $.ajax({
+                                url: "layout/cart.php",
+                                datatype: "JSON",
+                                type: "POST",
+                                data: newCount,
+                                success: function () {
+                                    $('.quantity-select').val(newCount);
+                                }
+                            });
+                            return false
+                        }
+                    });
+
+
+                });
+            </script>
+
             <div class="inCart">
 
 <?php
@@ -64,10 +113,10 @@ echo '                                        </div>
                                 </li>
                                 <li>
                                     <h2>'.$texts['quantity'].'</h2>
-                                    <h4>
-                                        <div class="quantity"><span class="quantity_minus">&#8211;</span></div>
+                                    <h4 class="noSelection">
+                                        <div class="quantity" id="qMinus"><span class="quantity_minus">&#8211;</span></div>
                                         <input class="quantity-select" id="q" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
-                                        <div class="quantity"><span class="quantity_plus">&#43;</span></div>
+                                        <div class="quantity" id="qPlus"><span class="quantity_plus">&#43;</span></div>
                                     </h4>
                                 </li>
                                 <li>
