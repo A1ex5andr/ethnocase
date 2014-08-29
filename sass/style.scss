@@ -95,8 +95,11 @@ textarea {
 }
 
 .btn-Remove {
-  background-color: $gray;
-  float: right;
+  background-color: #595959;
+  margin: 6px auto;
+  padding: 6px 0;
+  width: 100%;
+  max-width: 120px;
 }
 
 .btn-addMore {
@@ -121,6 +124,10 @@ textarea {
 .share42init {
   text-align: right;
   margin-top: 10px;
+}
+
+.highlight{
+  background: #F5E0E3;
 }
 
 /*=============================================
@@ -431,14 +438,17 @@ textarea {
 .inCart-item {
   @include span(24 border-box);
   margin: 20px 0 20px;
-  border-bottom: 1px solid $white+-70;
+//  border-bottom: 1px solid $white+-70;
   position: relative;
 }
 
 .inCart-itemPicture {
   @include span(24);
   img.picIndex {
+    max-width: 320px;
     width: 100%;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -501,6 +511,9 @@ textarea {
       padding: 6px;
     }
   }
+  .removeButton{
+    text-align: center;
+  }
 }
 
 .inCart-more {
@@ -528,6 +541,7 @@ textarea {
     font-size: 16px;
     margin-top: 20px;
     border-radius: 0;
+    padding-left: 10px;
   }
   input:focus {
     outline: 0;
