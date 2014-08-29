@@ -82,7 +82,6 @@ $(document).ready(function() {
     // if not world delivery fiill woth none to have check OK
     $('.delCost').change(function (){
         var delWorldActive = $("#delivery_3").prop('checked');
-        console.log (delWorldActive);
         if (delWorldActive) {
             $('.delWorld input').val('');
             $('.delWorld').slideDown();
@@ -116,6 +115,16 @@ $(document).ready(function() {
         };
     });
 
+    //count finalPrice for all items in cart
+    function finalPrice(){
+        var sum = 0;
+        $('.priceTotal').each(function(){
+            sum += parseFloat($(this).text());  //Or this.innerHTML, this.innerText
+        });
+        $('.finalPrice').html(sum);
+    };
+    finalPrice();
+
     // count case quantity in order
     // count price in order
     $('.inCart-item').on('click', '.quantity', function(){
@@ -130,8 +139,7 @@ $(document).ready(function() {
         //add one
         if ($(this).hasClass('qPlus') && (itemsCount < 5)){
             var newItemCount = ++itemsCount;
-            var newPriceCount = itemsCount * priceCount ;
-            console.log(newPriceCount);
+            var newPriceCount = itemsCount * priceCount;
             $.ajax({
                 url: "layout/cart.php",
                 datatype: "JSON",
@@ -140,6 +148,7 @@ $(document).ready(function() {
                 success: function (data) {
                     $(itemsTarget).val(newItemCount);
                     $(priceTarget).html(newPriceCount);
+                    finalPrice();
                 }
             });
             return false
@@ -147,6 +156,7 @@ $(document).ready(function() {
         //subtract one
         if ($(this).hasClass('qMinus') && (itemsCount > 1)){
             var newItemCount = --itemsCount;
+            var newPriceCount = itemsCount * priceCount;
             $.ajax({
                 url: "layout/cart.php",
                 datatype: "JSON",
@@ -154,20 +164,12 @@ $(document).ready(function() {
                 data: newItemCount,
                 success: function (data) {
                     $(itemsTarget).val(newItemCount);
+                    $(priceTarget).html(newPriceCount);
+                    finalPrice();
                 }
             });
             return false
         };
     });
-
-    //count case price in order
-    //(function() {
-    //    $.each(  $('.inCart-item'), function( key, value ) {
-    //        console.log( key + ": " + value );
-    //    });
-    //}());
-
-
-    //count finalprice in order
 
 });

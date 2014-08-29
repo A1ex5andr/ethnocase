@@ -2663,12 +2663,6 @@ h1 {
   .orderForm-info textarea {
     width: 100%; }
 
-.total {
-  width: 100%;
-  clear: both; }
-  .total .totalDetails {
-    float: right; }
-
 /* about us page*/
 .aboutUs h3 {
   text-align: center;

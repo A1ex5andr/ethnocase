@@ -73,7 +73,7 @@ echo '                                        </div>
                             <li>
                                 <h2>'.$texts['payment'].'</h2>
                                 <h4>
-                                    <span class="priceTotal">399</span>
+                                    <span class="priceTotal">'.$case['0']['price'].'</span>
                                     <span class="priceCur">'.$texts['uah'].'</span>
                                 </h4>
                             </li>
@@ -179,6 +179,9 @@ $i++;
                     <div class="orderForm-info">
                         <textarea name="info" placeholder="<?php echo $texts['notes']; ?>" rows="4"></textarea>
                     </div>
+                </div>
+                <div class="finalPriceWrap">
+                    <p class="finalPrice"></p>
                 </div>
                 <div class="orderForm-field sendOrder">
                     <button class="btn btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> <?php echo $texts['sendme']; ?></button>
