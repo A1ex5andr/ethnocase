@@ -151,7 +151,7 @@ $i++;
                             	</label>
                             </div>                                   
                             <div class="delType">
-                                <input class="delCost" type="radio" name="delivery" id="delivery_3" value="World Wide">
+                                <input class="delCost" type="radio" name="delivery" id="delivery_3" value="0">
                             	<label for="delivery_3">
 	                            	<?php echo $texts['delivery_3']; ?> <span><?php echo $texts['delivery_31']; ?></span>
                             	</label>
@@ -181,7 +181,7 @@ $i++;
                     </div>
                 </div>
                 <div class="finalPriceWrap">
-                    <p class="finalPrice"></p>
+                    <h2>До сплати <span class="finalPrice"></span> <span><?php echo $texts['uah'] ?></span></h2>
                 </div>
                 <div class="orderForm-field sendOrder">
                     <button class="btn btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> <?php echo $texts['sendme']; ?></button>

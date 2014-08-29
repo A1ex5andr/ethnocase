@@ -90,6 +90,7 @@ $(document).ready(function() {
             $('.delWorld').slideUp();
             $('.delWorld input').val('none');
         }
+        finalPrice();
     });
 
     // check if fields are OK on submission
@@ -118,10 +119,12 @@ $(document).ready(function() {
     //count finalPrice for all items in cart
     function finalPrice(){
         var sum = 0;
+        var deliveryCost = parseFloat($('input[name=delivery]:checked').val());
         $('.priceTotal').each(function(){
             sum += parseFloat($(this).text());  //Or this.innerHTML, this.innerText
         });
-        $('.finalPrice').html(sum);
+        overall = sum + deliveryCost;
+        $('.finalPrice').html(overall);
     };
     finalPrice();
 

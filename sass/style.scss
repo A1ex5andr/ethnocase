@@ -526,6 +526,20 @@ textarea {
   clear: both;
 }
 
+.finalPriceWrap {
+  text-align: center;
+  margin: 30px auto 0;
+  h2 {
+    width: 260px;
+    border-bottom: 1px solid #18A833;
+    margin: 0 auto 3px;
+    padding-bottom: 3px;
+  }
+  span{
+    color: $red;
+  }
+}
+
 /* buy button form */
 .buyForm {
   text-align: right;
@@ -553,7 +567,6 @@ textarea {
 .sendOrder {
   width: 100%;
   clear: both;
-  margin-top: 20px;
   .btn-sendOrder {
     margin: 0 auto;
     display: block;

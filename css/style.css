@@ -2616,6 +2616,17 @@ h1 {
   width: 100%;
   clear: both; }
 
+.finalPriceWrap {
+  text-align: center;
+  margin: 30px auto 0; }
+  .finalPriceWrap h2 {
+    width: 260px;
+    border-bottom: 1px solid #18A833;
+    margin: 0 auto 3px;
+    padding-bottom: 3px; }
+  .finalPriceWrap span {
+    color: #d30000; }
+
 /* buy button form */
 .buyForm {
   text-align: right; }
@@ -2637,8 +2648,7 @@ h1 {
 
 .sendOrder {
   width: 100%;
-  clear: both;
-  margin-top: 20px; }
+  clear: both; }
   .sendOrder .btn-sendOrder {
     margin: 0 auto;
     display: block; }
