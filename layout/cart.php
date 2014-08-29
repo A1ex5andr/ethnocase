@@ -13,49 +13,43 @@
             <script>
                 $(document).ready( function() {
 
-                    var itemsOrdered = $('.quantity-select').val();
+                    $('.inCart-item').on('click', '.quantity', function(){
 
-                    //add one
-                    $('#qPlus').click(function () {
-                        if(itemsOrdered < 5) {
-                            console.log(itemsOrdered);
-                            var newCount = ++itemsOrdered;
-                            console.log(newCount);
-
+                        var itemsTarget = $(this).siblings('.quantity-select');
+                        var itemsCount = itemsTarget.val();
+                        //add one
+                        if ($(this).hasClass('qPlus') && (itemsCount < 5)){
+                            console.log(itemsCount);
+                            var newCount = ++itemsCount;
+                            console.log(itemsCount);
                             $.ajax({
                                 url: "layout/cart.php",
                                 datatype: "JSON",
                                 type: "POST",
                                 data: newCount,
-                                success: function () {
-                                    $('.quantity-select').val(newCount);
+                                success: function (data) {
+                                    $(itemsTarget).val(newCount);
                                 }
                             });
                             return false
-                        }
-                    });
-
-                    //subtract one
-                    $('#qMinus').click(function () {
-                        if(itemsOrdered > 1) {
-                            console.log(itemsOrdered);
-                            var newCount = --itemsOrdered;
-                            console.log(newCount);
-
+                        };
+                        //subtract one
+                        if ($(this).hasClass('qMinus') && (itemsCount > 1)){
+                            console.log(itemsCount);
+                            var newCount = --itemsCount;
+                            console.log(itemsCount);
                             $.ajax({
                                 url: "layout/cart.php",
                                 datatype: "JSON",
                                 type: "POST",
                                 data: newCount,
-                                success: function () {
-                                    $('.quantity-select').val(newCount);
+                                success: function (data) {
+                                    $(itemsTarget).val(newCount);
                                 }
                             });
                             return false
-                        }
+                        };
                     });
-
-
                 });
             </script>
 
@@ -77,7 +71,7 @@ foreach ($_SESSION['cart'] as $value) {
     $model = "model_".$lang;
     $about = "about_".$lang;
 
-    echo '                <div class="inCart-item item_0'.$i.'">
+    echo '                <div class="inCart-item" id=""item_0'.$i.'>
 
                     <div class="inCart-itemPicture">
                         <img class="picIndex" src="'.$site.'img/cases/'.$case['0']["img"].'" alt="">
@@ -112,9 +106,9 @@ echo '                                        </div>
                             <li>
                                 <h2>'.$texts['quantity'].'</h2>
                                 <h4 class="noSelection">
-                                    <div class="quantity" id="qMinus"><span class="quantity_minus">&#8211;</span></div>
-                                    <input class="quantity-select" id="q" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
-                                    <div class="quantity" id="qPlus"><span class="quantity_plus">&#43;</span></div>
+                                    <div class="quantity qMinus"><span class="quantity_minus">&#8211;</span></div>
+                                    <input class="quantity-select" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
+                                    <div class="quantity qPlus"><span class="quantity_plus">&#43;</span></div>
                                 </h4>
                                 <form action="'.$site.'cart/'.$case['0']['id'].'/del" class="removeButton"><button class="btn btn-Remove"><!--i class="fa fa-trash-o"></i--> '.$texts['remove'].'</button></form>
                             </li>
