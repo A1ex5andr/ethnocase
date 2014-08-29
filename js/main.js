@@ -91,6 +91,30 @@ $(document).ready(function() {
         else {
             $('.delWorld').slideUp();
         }
+    })
+
+
+    // check if fields are OK on submission
+    $('.orderForm').on('submit', function(event) {
+        var isFormValid = true;
+        // check if all input fields ok!
+        $(".orderInput").children().each(function() {
+            if ($.trim($(this).val()).length == 0) {
+                $(this).addClass("highlight");
+                isFormValid = false;
+                event.preventDefault();
+                //alert('Form submitted!');
+            } else {
+                $(this).removeClass("highlight");
+            }
+        });
+    });
+
+    // if field has input unMask it
+    $('.orderForm input').on('input', function() {
+        if ($.trim($(this).val()).length > 0) {
+            $(this).removeClass("highlight");
+        };
     });
 
 });

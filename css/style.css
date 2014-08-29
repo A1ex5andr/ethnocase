@@ -2225,7 +2225,10 @@ textarea {
 
 .btn-Remove {
   background-color: #595959;
-  float: right; }
+  margin: 6px auto;
+  padding: 6px 0;
+  width: 100%;
+  max-width: 120px; }
 
 .btn-addMore {
   min-width: 200px; }
@@ -2239,6 +2242,9 @@ textarea {
 .share42init {
   text-align: right;
   margin-top: 10px; }
+
+.highlight {
+  background: #F5E0E3; }
 
 /*=============================================
 =          GENERAL FOR ALL RESOULUTIONS       =
@@ -2522,7 +2528,6 @@ h1 {
   padding-left: 0.41667%;
   padding-right: 0.41667%;
   margin: 20px 0 20px;
-  border-bottom: 1px solid #b9b9b9;
   position: relative; }
 
 .inCart-itemPicture {
@@ -2534,7 +2539,10 @@ h1 {
   padding-left: 0.41667%;
   padding-right: 0.41667%; }
   .inCart-itemPicture img.picIndex {
-    width: 100%; }
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
 
 .inCart-details {
   -moz-box-sizing: border-box;
@@ -2597,6 +2605,8 @@ h1 {
       border: 0;
       border-radius: 5px;
       padding: 6px; }
+  .inCart-details .removeButton {
+    text-align: center; }
 
 .inCart-more {
   width: 100%;
@@ -2618,7 +2628,8 @@ h1 {
   border-bottom: 1px solid #595959;
   font-size: 16px;
   margin-top: 20px;
-  border-radius: 0; }
+  border-radius: 0;
+  padding-left: 10px; }
 .orderInput input:focus {
   outline: 0;
   border-bottom: 1px solid #ff4949; }

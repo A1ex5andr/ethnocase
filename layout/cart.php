@@ -84,49 +84,46 @@ foreach ($_SESSION['cart'] as $value) {
                     </div>
 
                     <div class="inCart-details">
-                        
-                        <div class="">
-                            <ul>
-                                <li>
-                                    <h2>'.$texts['model_name'].'</h2>
-                                    <h4>'.$case['0'][$name].'</h4>
-                                </li>
-                                <li>
-                                    <h2>'.$texts['model'].'</h2>
-                                    <h4>'.$case['0'][$model].'</h4>
-                                </li>
-                                <li class="inCart-details-priceInfo">
-                                    <h2>'.$texts['price'].'</h2>
-                                    <h4>
-                                        <div class="itemPrice priceDiscount">
-                                            <div class="itemPrice-final">'.$case['0']['price'].'₴</div>';
+                        <ul>
+                            <li>
+                                <h2>'.$texts['model_name'].'</h2>
+                                <h4>'.$case['0'][$name].'</h4>
+                            </li>
+                            <li>
+                                <h2>'.$texts['model'].'</h2>
+                                <h4>'.$case['0'][$model].'</h4>
+                            </li>
+                            <li class="inCart-details-priceInfo">
+                                <h2>'.$texts['price'].'</h2>
+                                <h4>
+                                    <div class="itemPrice priceDiscount">
+                                        <div class="itemPrice-final">'.$case['0']['price'].'₴</div>';
 
 if ($case['0']['price_old'] != '0') { 
-	echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0']['price_old'].'₴&nbsp;</div>';
+echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0']['price_old'].'₴&nbsp;</div>';
 }
 if ($case['0']['disc'] != '0') { 
-	echo '                                            <div class="itemPrice-disc">'.$case['0']['disc'].'</div>';
+echo '                                            <div class="itemPrice-disc">'.$case['0']['disc'].'</div>';
 } 
 
 echo '                                        </div>
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h2>'.$texts['quantity'].'</h2>
-                                    <h4 class="noSelection">
-                                        <div class="quantity" id="qMinus"><span class="quantity_minus">&#8211;</span></div>
-                                        <input class="quantity-select" id="q" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
-                                        <div class="quantity" id="qPlus"><span class="quantity_plus">&#43;</span></div>
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h2>'.$texts['payment'].'</h2>
-                                    <h4>399<span class="priceCur">'.$texts['uah'].'</span></h4>
-                                </li>
-                            </ul>
-                        </div>
+                                </h4>
+                            </li>
+                            <li>
+                                <h2>'.$texts['quantity'].'</h2>
+                                <h4 class="noSelection">
+                                    <div class="quantity" id="qMinus"><span class="quantity_minus">&#8211;</span></div>
+                                    <input class="quantity-select" id="q" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
+                                    <div class="quantity" id="qPlus"><span class="quantity_plus">&#43;</span></div>
+                                </h4>
+                                <form action="'.$site.'cart/'.$case['0']['id'].'/del" class="removeButton"><button class="btn btn-Remove"><!--i class="fa fa-trash-o"></i--> '.$texts['remove'].'</button></form>
+                            </li>
+                            <li>
+                                <h2>'.$texts['payment'].'</h2>
+                                <h4>399<span class="priceCur">'.$texts['uah'].'</span></h4>
+                            </li>
+                        </ul>
                     </div>
-                    <form action="'.$site.'cart/'.$case['0']['id'].'/del"><button class="btn btn-Remove"><i class="fa fa-trash-o"></i> '.$texts['remove'].'</button></form>
                 </div>';
 
 $i++;
