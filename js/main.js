@@ -82,17 +82,19 @@ $(document).ready(function() {
     //});
 
     //world wide delivery extras
+    // if not world delivery fiill woth none to have check OK
     $('.delCost').change(function (){
         var delWorldActive = $("#delivery_3").prop('checked');
         console.log (delWorldActive);
         if (delWorldActive) {
+            $('.delWorld input').val('');
             $('.delWorld').slideDown();
         }
         else {
             $('.delWorld').slideUp();
+            $('.delWorld input').val('none');
         }
-    })
-
+    });
 
     // check if fields are OK on submission
     $('.orderForm').on('submit', function(event) {
