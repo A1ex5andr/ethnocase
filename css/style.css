@@ -2198,7 +2198,7 @@ textarea {
 .show {
   display: block !important; }
 
-.noSelection {
+.noSelection * {
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
@@ -2633,10 +2633,17 @@ h1 {
 
 .orderForm-delivery {
   margin: 30px 20px; }
-  .orderForm-delivery > div {
+  .orderForm-delivery .delTypeTitle {
+    font-weight: 800;
+    margin-bottom: 10px; }
+  .orderForm-delivery .delType {
     padding: 10px; }
-  .orderForm-delivery input {
+  .orderForm-delivery .delCost {
     margin-right: 8px; }
+  .orderForm-delivery .delWorld {
+    display: none;
+    margin-bottom: 20px;
+    overflow: hidden; }
 
 .orderForm-info {
   width: 90%;
@@ -2883,8 +2890,15 @@ footer {
 
   .orderForm-delivery {
     margin: 30px 60px; }
-    .orderForm-delivery > div:hover {
-      background: #ebebeb; }
+    .orderForm-delivery .orderForm-zip,
+    .orderForm-delivery .orderForm-state {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 0.41667%;
+      padding-right: 0.41667%; }
 
   .orderForm-info {
     width: 80%;

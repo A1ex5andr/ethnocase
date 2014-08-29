@@ -77,9 +77,20 @@ $(document).ready(function() {
         equalheight('.itemBlock');
     });
 
-
     //$(window).resize(function(){
     //    equalheight('.main article');
     //});
+
+    //world wide delivery extras
+    $('.delCost').change(function (){
+        var delWorldActive = $("#delivery_3").prop('checked');
+        console.log (delWorldActive);
+        if (delWorldActive) {
+            $('.delWorld').slideDown();
+        }
+        else {
+            $('.delWorld').slideUp();
+        }
+    });
 
 });

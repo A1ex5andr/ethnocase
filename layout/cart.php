@@ -185,21 +185,36 @@ $i++;
                 </div>
                 <div class="orderForm-field">
                     <div class="orderForm-delivery" id="deliveryType">
-                        <span><?php echo $texts['del_way']; ?>:</span>
-                            <div><input class="delCost" type="radio" name="delivery" id="delivery_1" value="0">
+                        <div class="delTypeTitle"><?php echo $texts['del_way']; ?>:</div>
+                            <div class="delType">
+                                <input class="delCost" type="radio" name="delivery" id="delivery_1" value="0">
                             	<label for="delivery_1">
 	                            	<?php echo $texts['delivery_1']; ?>
                             	</label>
                             </div>                                   
-                            <div><input class="delCost" type="radio" name="delivery" id="delivery_2" value="30" checked="">
+                            <div class="delType">
+                                <input class="delCost" type="radio" name="delivery" id="delivery_2" value="30" checked="">
                             	<label for="delivery_2">
 	                            	<?php echo $texts['delivery_2']; ?>
                             	</label>
                             </div>                                   
-                            <div><input class="delCost" type="radio" name="delivery" id="delivery_3" value="World Wide">
+                            <div class="delType">
+                                <input class="delCost" type="radio" name="delivery" id="delivery_3" value="World Wide">
                             	<label for="delivery_3">
 	                            	<?php echo $texts['delivery_3']; ?> <span><?php echo $texts['delivery_31']; ?></span>
                             	</label>
+                            </div>
+                            <div class="delWorld">
+                                <div class="orderForm-zip">
+                                    <span class="orderInput">
+                                        <input name="zip" placeholder="zip" type="text" class="text">
+                                    </span>
+                                </div>
+                                <div class="orderForm-state">
+                                    <span class="orderInput">
+                                        <input name="state" placeholder="state" type="text" class="text">
+                                    </span>
+                                </div>
                             </div>
                     </div>
                 </div>

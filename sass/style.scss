@@ -547,11 +547,20 @@ textarea {
 
 .orderForm-delivery {
   margin: 30px 20px;
-  & > div {
+  .delTypeTitle {
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .delType {
     padding: 10px;
   }
-  input {
+  .delCost {
     margin-right: 8px;
+  }
+  .delWorld {
+    display: none;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
 }
 
@@ -773,8 +782,9 @@ footer {
   }
   .orderForm-delivery {
     margin: 30px 60px;
-    & > div:hover {
-      background: $white+-20;
+    .orderForm-zip,
+    .orderForm-state {
+      @include span(12);
     }
   }
   .orderForm-info {
