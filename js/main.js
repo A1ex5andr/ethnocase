@@ -77,9 +77,6 @@ $(document).ready(function() {
         equalheight('.itemBlock');
     });
 
-    //$(window).resize(function(){
-    //    equalheight('.main article');
-    //});
 
     //world wide delivery extras
     // if not world delivery fiill woth none to have check OK
@@ -118,5 +115,59 @@ $(document).ready(function() {
             $(this).removeClass("highlight");
         };
     });
+
+    // count case quantity in order
+    // count price in order
+    $('.inCart-item').on('click', '.quantity', function(){
+
+        var parentTarget = $(this).offsetParent();
+        var itemsTarget = parentTarget.find('.quantity-select');
+        var priceSource = parentTarget.find('.itemPrice-final');
+        var priceTarget = parentTarget.find('.priceTotal');
+        var priceCount = priceSource.text();
+        var itemsCount = itemsTarget.val();
+
+        //add one
+        if ($(this).hasClass('qPlus') && (itemsCount < 5)){
+            var newItemCount = ++itemsCount;
+            var newPriceCount = itemsCount * priceCount ;
+            console.log(newPriceCount);
+            $.ajax({
+                url: "layout/cart.php",
+                datatype: "JSON",
+                type: "POST",
+                data: newItemCount,
+                success: function (data) {
+                    $(itemsTarget).val(newItemCount);
+                    $(priceTarget).html(newPriceCount);
+                }
+            });
+            return false
+        };
+        //subtract one
+        if ($(this).hasClass('qMinus') && (itemsCount > 1)){
+            var newItemCount = --itemsCount;
+            $.ajax({
+                url: "layout/cart.php",
+                datatype: "JSON",
+                type: "POST",
+                data: newItemCount,
+                success: function (data) {
+                    $(itemsTarget).val(newItemCount);
+                }
+            });
+            return false
+        };
+    });
+
+    //count case price in order
+    //(function() {
+    //    $.each(  $('.inCart-item'), function( key, value ) {
+    //        console.log( key + ": " + value );
+    //    });
+    //}());
+
+
+    //count finalprice in order
 
 });

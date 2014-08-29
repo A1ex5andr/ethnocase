@@ -113,6 +113,14 @@ textarea {
 .btn-buy {
 }
 
+.removeButton{
+  text-align: center;
+}
+
+.addButton {
+  text-align: center;
+}
+
 .pullLeft {
   float: left;
 }
@@ -511,18 +519,11 @@ textarea {
       padding: 6px;
     }
   }
-  .removeButton{
-    text-align: center;
-  }
 }
 
 .inCart-more {
   width: 100%;
   clear: both;
-  .btn-addMore {
-    margin: 0 auto;
-    display: block;
-  }
 }
 
 /* buy button form */
@@ -674,7 +675,6 @@ footer {
       font-size: $size;
     }
   }
-
   @each $header, $size in (h1: 1.2em,) {
     #{$header} {
       line-height: $size;
@@ -797,8 +797,9 @@ footer {
   .orderForm-delivery {
     margin: 30px 60px;
     .orderForm-zip,
+    .orderForm-country,
     .orderForm-state {
-      @include span(12);
+      @include span(8);
     }
   }
   .orderForm-info {

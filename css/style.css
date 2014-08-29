@@ -2233,6 +2233,12 @@ textarea {
 .btn-addMore {
   min-width: 200px; }
 
+.removeButton {
+  text-align: center; }
+
+.addButton {
+  text-align: center; }
+
 .pullLeft {
   float: left; }
 
@@ -2605,15 +2611,10 @@ h1 {
       border: 0;
       border-radius: 5px;
       padding: 6px; }
-  .inCart-details .removeButton {
-    text-align: center; }
 
 .inCart-more {
   width: 100%;
   clear: both; }
-  .inCart-more .btn-addMore {
-    margin: 0 auto;
-    display: block; }
 
 /* buy button form */
 .buyForm {
@@ -2902,11 +2903,12 @@ footer {
   .orderForm-delivery {
     margin: 30px 60px; }
     .orderForm-delivery .orderForm-zip,
+    .orderForm-delivery .orderForm-country,
     .orderForm-delivery .orderForm-state {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      width: 50%;
+      width: 33.33333%;
       float: left;
       padding-left: 0.41667%;
       padding-right: 0.41667%; }

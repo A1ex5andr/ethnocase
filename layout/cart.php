@@ -10,49 +10,6 @@
                 <h2><?php echo $texts['goodincart']; ?></h2>
             </header>
 
-            <script>
-                $(document).ready( function() {
-
-                    $('.inCart-item').on('click', '.quantity', function(){
-
-                        var itemsTarget = $(this).siblings('.quantity-select');
-                        var itemsCount = itemsTarget.val();
-                        //add one
-                        if ($(this).hasClass('qPlus') && (itemsCount < 5)){
-                            console.log(itemsCount);
-                            var newCount = ++itemsCount;
-                            console.log(itemsCount);
-                            $.ajax({
-                                url: "layout/cart.php",
-                                datatype: "JSON",
-                                type: "POST",
-                                data: newCount,
-                                success: function (data) {
-                                    $(itemsTarget).val(newCount);
-                                }
-                            });
-                            return false
-                        };
-                        //subtract one
-                        if ($(this).hasClass('qMinus') && (itemsCount > 1)){
-                            console.log(itemsCount);
-                            var newCount = --itemsCount;
-                            console.log(itemsCount);
-                            $.ajax({
-                                url: "layout/cart.php",
-                                datatype: "JSON",
-                                type: "POST",
-                                data: newCount,
-                                success: function (data) {
-                                    $(itemsTarget).val(newCount);
-                                }
-                            });
-                            return false
-                        };
-                    });
-                });
-            </script>
-
             <div class="inCart">
 
 <?php
@@ -71,7 +28,7 @@ foreach ($_SESSION['cart'] as $value) {
     $model = "model_".$lang;
     $about = "about_".$lang;
 
-    echo '                <div class="inCart-item" id=""item_0'.$i.'>
+    echo '                <div class="inCart-item" id="item_0'.$i.'">
 
                     <div class="inCart-itemPicture">
                         <img class="picIndex" src="'.$site.'img/cases/'.$case['0']["img"].'" alt="">
@@ -91,7 +48,8 @@ foreach ($_SESSION['cart'] as $value) {
                                 <h2>'.$texts['price'].'</h2>
                                 <h4>
                                     <div class="itemPrice priceDiscount">
-                                        <div class="itemPrice-final">'.$case['0']['price'].'₴</div>';
+                                        <span class="itemPrice-final">'.$case['0']['price'].'</span>
+                                        <span class="priceCur">'.$texts['uah'].'</span>';
 
 if ($case['0']['price_old'] != '0') { 
 echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0']['price_old'].'₴&nbsp;</div>';
@@ -114,7 +72,10 @@ echo '                                        </div>
                             </li>
                             <li>
                                 <h2>'.$texts['payment'].'</h2>
-                                <h4>399<span class="priceCur">'.$texts['uah'].'</span></h4>
+                                <h4>
+                                    <span class="priceTotal">399</span>
+                                    <span class="priceCur">'.$texts['uah'].'</span>
+                                </h4>
                             </li>
                         </ul>
                     </div>
@@ -133,7 +94,7 @@ $i++;
 
 
                 <div class="inCart-more">
-	                <form action="<?php echo $site.'products/'; ?>"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
+	                <form action="<?php echo $site.'products/'; ?>" class="addButton"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
                 </div>
 
             </div>
@@ -196,6 +157,11 @@ $i++;
                             	</label>
                             </div>
                             <div class="delWorld">
+                                <div class="orderForm-country">
+                                    <span class="orderInput">
+                                        <input name="country" placeholder="country" type="text" class="text">
+                                    </span>
+                                </div>
                                 <div class="orderForm-zip">
                                     <span class="orderInput">
                                         <input name="zip" placeholder="zip" type="text" class="text">
