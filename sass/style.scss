@@ -683,7 +683,6 @@ footer {
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
 //from 768px to the end
 @include breakpoint($tablet) {
-
   @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
     #{$header} {
       font-size: $size;
