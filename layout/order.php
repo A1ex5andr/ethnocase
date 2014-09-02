@@ -59,3 +59,6 @@ $last_user_id = $database->insert("orders", [
 
 ?>
 
+    <div class="slogan container">
+        <h1><?php echo $texts['thankyou']; ?></h1>
+    </div>
