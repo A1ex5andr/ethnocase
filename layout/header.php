@@ -14,10 +14,17 @@ foreach($menus as $data)
 
 		if ($data["parent"] == "0")
 		{
-			$pr_menu .= '
-	        <li>
-	        	<a href="'.$site.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].'</a>
-	        </li>';
+			if ( $data["link_item"] == "cart" ){
+					$pr_menu .= '
+		        <li>
+		        	<a href="'.$site.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].' '.$inthecart.'</a>
+		        </li>';
+		    }else{
+				$pr_menu .= '
+		        <li>
+		        	<a href="'.$site.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].'</a>
+		        </li>';
+		    }
 	    }
 	}
 

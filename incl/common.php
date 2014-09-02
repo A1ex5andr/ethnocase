@@ -2,6 +2,7 @@
 
 $site = "http://new.ethnocase.com/";
 $asite = "http://new.ethnocase.com/lesya-ukrainka/";
+$fromemail = "bars38@gmail.com";
 
 // ochistka POST
 foreach($_POST as $key => $value) {
@@ -55,5 +56,11 @@ echo $_COOKIE["lang"];
 	else { $lang = "ukr"; $_SESSION['lang'] = "ukr";}
 }
 echo $_COOKIE["lang"];
+
+if (!empty($_SESSION['cart'])) {
+	$inthecart = '<span class="inCart">'.count($_SESSION["cart"]).'</span>';
+}else{
+	$inthecart = '';
+}
 ?>
 

@@ -155,7 +155,7 @@ $i++;
                             </label>
                         </div>
                         <div class="delType">
-                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="0">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="02">
                             <label for="delivery_3">
                                 <?php echo $texts['delivery_3']; ?>
                             </label>
