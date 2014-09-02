@@ -117,6 +117,8 @@ $i++;
 	                        <input name="phone" placeholder="<?php echo $texts['phone']; ?>" type="text" class="text">
                         </span>
                     </div>
+                </div>
+                <div class="orderForm-field">
                     <div class="orderForm-email">
                         <span class="orderInput">
 	                        <input name="email" placeholder="<?php echo $texts['email']; ?>" type="text" class="text">
@@ -129,61 +131,63 @@ $i++;
 	                        <input name="city" placeholder="<?php echo $texts['city']; ?>" type="text" class="text">
                         </span>
                     </div>
+                </div>
+                <div class="orderForm-field">
                     <div class="orderForm-address">
                         <span class="orderInput">
 	                        <input name="address" placeholder="<?php echo $texts['adress']; ?>" type="text" class="text">
                         </span>
                     </div>
                 </div>
-                <div class="orderForm-field">
-                    <div class="orderForm-delivery" id="deliveryType">
-                        <div class="delTypeTitle"><?php echo $texts['del_way']; ?>:</div>
-                            <div class="delType">
-                                <input class="delCost" type="radio" name="delivery" id="delivery_1" value="0">
-                            	<label for="delivery_1">
-	                            	<?php echo $texts['delivery_1']; ?>
-                            	</label>
-                            </div>                                   
-                            <div class="delType">
-                                <input class="delCost" type="radio" name="delivery" id="delivery_2" value="30" checked="">
-                            	<label for="delivery_2">
-	                            	<?php echo $texts['delivery_2']; ?>
-                            	</label>
-                            </div>                                   
-                            <div class="delType">
-                                <input class="delCost" type="radio" name="delivery" id="delivery_3" value="0">
-                            	<label for="delivery_3">
-	                            	<?php echo $texts['delivery_3']; ?> <span><?php echo $texts['delivery_31']; ?></span>
-                            	</label>
+
+                <div class="orderForm-delivery" id="deliveryType">
+                    <div class="delTypeTitle"><?php echo $texts['del_way']; ?>:</div>
+                        <div class="delType">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_1" value="0">
+                            <label for="delivery_1">
+                                <?php echo $texts['delivery_1']; ?>
+                            </label>
+                        </div>
+                        <div class="delType">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_2" value="30" checked="">
+                            <label for="delivery_2">
+                                <?php echo $texts['delivery_2']; ?>
+                            </label>
+                        </div>
+                        <div class="delType">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="0">
+                            <label for="delivery_3">
+                                <?php echo $texts['delivery_3']; ?>
+                            </label>
+                        </div>
+                        <div class="delWorld">
+                            <div class="orderForm-country">
+                                <span class="orderInput">
+                                    <input name="country" placeholder="country" type="text" class="text">
+                                </span>
                             </div>
-                            <div class="delWorld">
-                                <div class="orderForm-country">
-                                    <span class="orderInput">
-                                        <input name="country" placeholder="country" type="text" class="text">
-                                    </span>
-                                </div>
-                                <div class="orderForm-zip">
-                                    <span class="orderInput">
-                                        <input name="zip" placeholder="zip" type="text" class="text">
-                                    </span>
-                                </div>
-                                <div class="orderForm-state">
-                                    <span class="orderInput">
-                                        <input name="state" placeholder="state" type="text" class="text">
-                                    </span>
-                                </div>
+                            <div class="orderForm-zip">
+                                <span class="orderInput">
+                                    <input name="zip" placeholder="zip" type="text" class="text">
+                                </span>
                             </div>
+                            <div class="orderForm-state">
+                                <span class="orderInput">
+                                    <input name="state" placeholder="state" type="text" class="text">
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="orderForm-field">
+
+                <div class="orderForm-note">
                     <div class="orderForm-info">
-                        <textarea name="info" placeholder="<?php echo $texts['notes']; ?>" rows="4"></textarea>
+                        <textarea name="info" placeholder="<?php echo $texts['notes']; ?>"></textarea>
                     </div>
                 </div>
                 <div class="finalPriceWrap">
                     <h2>До сплати <span class="finalPrice"></span> <span><?php echo $texts['uah'] ?></span></h2>
                 </div>
-                <div class="orderForm-field sendOrder">
+                <div class="sendOrder">
                     <button class="btn btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> <?php echo $texts['sendme']; ?></button>
                 </div>
             </form>

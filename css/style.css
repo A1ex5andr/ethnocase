@@ -2654,7 +2654,11 @@ h1 {
     display: block; }
 
 .orderForm-delivery {
-  margin: 30px 20px; }
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  clear: both; }
   .orderForm-delivery .delTypeTitle {
     font-weight: 800;
     margin-bottom: 10px; }
@@ -2665,13 +2669,18 @@ h1 {
   .orderForm-delivery .delWorld {
     display: none;
     margin-bottom: 20px;
-    overflow: hidden; }
+    overflow: hidden;
+    clear: both; }
 
 .orderForm-info {
   width: 90%;
   margin: 0 auto; }
   .orderForm-info textarea {
-    width: 100%; }
+    width: 100%;
+    height: 80px; }
+  .orderForm-info textarea:focus {
+    outline: 0;
+    border: 1px solid #ff4949; }
 
 /* about us page*/
 .aboutUs h3 {
@@ -2904,25 +2913,31 @@ footer {
     .inCart-details ul li {
       width: 20%; }
 
-  .orderForm-delivery {
-    margin: 30px 60px; }
-    .orderForm-delivery .orderForm-zip,
-    .orderForm-delivery .orderForm-country,
-    .orderForm-delivery .orderForm-state {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 33.33333%;
-      float: left;
-      padding-left: 0.41667%;
-      padding-right: 0.41667%; }
+  .orderForm-delivery .orderForm-zip,
+  .orderForm-delivery .orderForm-country,
+  .orderForm-delivery .orderForm-state {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.41667%;
+    padding-right: 0.41667%; }
 
   .orderForm-info {
     width: 80%;
     margin: 0 auto; }
     .orderForm-info textarea {
-      width: 100%;
-      height: 160px; }
+      width: 100%; }
+
+  .orderForm-field {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 0.41667%;
+    padding-right: 0.41667%; }
 
   .aboutUs h3 {
     margin: 30px 30%; } }

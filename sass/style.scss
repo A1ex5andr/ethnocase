@@ -12,6 +12,7 @@ $susy: (
 @import "grids";
 @import "font-awesome";
 @import "nav";
+@import "compass/css3";
 
 $mobile: 767px;
 $tablet: 768px;
@@ -574,7 +575,9 @@ textarea {
 }
 
 .orderForm-delivery {
-  margin: 30px 20px;
+  @include box-sizing(border-box);
+  padding: 40px 20px;
+  clear: both;
   .delTypeTitle {
     font-weight: 800;
     margin-bottom: 10px;
@@ -589,6 +592,7 @@ textarea {
     display: none;
     margin-bottom: 20px;
     overflow: hidden;
+    clear: both;
   }
 }
 
@@ -597,6 +601,11 @@ textarea {
   margin: 0 auto;
   textarea {
     width: 100%;
+    height: 80px;
+  }
+  textarea:focus {
+    outline: 0;
+    border: 1px solid $pink;
   }
 }
 
@@ -799,8 +808,9 @@ footer {
       }
     }
   }
+  .orderForm-delivery, .orderForm-note {
+  }
   .orderForm-delivery {
-    margin: 30px 60px;
     .orderForm-zip,
     .orderForm-country,
     .orderForm-state {
@@ -812,8 +822,10 @@ footer {
     margin: 0 auto;
     textarea {
       width: 100%;
-      height: 160px;
     }
+  }
+  .orderForm-field {
+    @include span(12);
   }
   .btn-Remove {
 //    position: absolute;
@@ -868,4 +880,3 @@ footer {
     }
   }
 }
-
