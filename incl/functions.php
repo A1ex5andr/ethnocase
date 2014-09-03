@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ====================FUNCTIONS=====================================
 // function startSession() {
 //     if ( session_id() ) return true;
