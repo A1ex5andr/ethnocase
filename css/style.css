@@ -2671,6 +2671,8 @@ h1 {
     margin-bottom: 20px;
     overflow: hidden;
     clear: both; }
+  .orderForm-delivery .delBtn {
+    color: #d30000; }
 
 .orderForm-info {
   width: 90%;

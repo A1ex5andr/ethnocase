@@ -107,35 +107,35 @@ $i++;
                 <div class="orderForm-field">
                     <div class="orderForm-name">
                         <span class="orderInput">
-	                        <input name="name" placeholder="<?php echo $texts['name']; ?>" type="text" class="text">
+	                        <input name="name" placeholder="<?php echo $texts['name']; ?>" type="text" class="checkField text">
                         </span>
                     </div>
                 </div>
                 <div class="orderForm-field">
                     <div class="orderForm-phone">
                         <span class="orderInput">
-	                        <input name="phone" placeholder="<?php echo $texts['phone']; ?>" type="text" class="text">
+	                        <input name="phone" placeholder="<?php echo $texts['phone']; ?>" type="text" class="checkField text">
                         </span>
                     </div>
                 </div>
                 <div class="orderForm-field">
                     <div class="orderForm-email">
                         <span class="orderInput">
-	                        <input name="email" placeholder="<?php echo $texts['email']; ?>" type="text" class="text">
+	                        <input name="email" placeholder="<?php echo $texts['email']; ?>" type="text" class="checkField text">
                         </span>
                     </div>
                 </div>
                 <div class="orderForm-field">
                     <div class="orderForm-city">
                         <span class="orderInput">
-	                        <input name="city" placeholder="<?php echo $texts['city']; ?>" type="text" class="text">
+	                        <input name="city" placeholder="<?php echo $texts['city']; ?>" type="text" class="checkField text">
                         </span>
                     </div>
                 </div>
                 <div class="orderForm-field">
                     <div class="orderForm-address">
                         <span class="orderInput">
-	                        <input name="address" placeholder="<?php echo $texts['adress']; ?>" type="text" class="text">
+	                        <input name="address" placeholder="<?php echo $texts['adress']; ?>" type="text" class="checkField text">
                         </span>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ $i++;
                             </label>
                         </div>
                         <div class="delType">
-                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="02">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="200">
                             <label for="delivery_3">
                                 <?php echo $texts['delivery_3']; ?>
                             </label>
@@ -178,7 +178,6 @@ $i++;
                             </div>
                         </div>
                     </div>
-
                 <div class="orderForm-note">
                     <div class="orderForm-info">
                         <textarea name="info" placeholder="<?php echo $texts['notes']; ?>"></textarea>

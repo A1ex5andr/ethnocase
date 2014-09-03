@@ -88,7 +88,7 @@ $(document).ready(function() {
         }
         else {
             $('.delWorld').slideUp();
-            $('.delWorld input').val('none');
+            //$('.delWorld input').val('none');
         }
         finalPrice();
     });
@@ -97,7 +97,7 @@ $(document).ready(function() {
     $('.orderForm').on('submit', function(event) {
         var isFormValid = true;
         // check if all input fields ok!
-        $(".orderInput").children().each(function() {
+        $(".checkField").each(function() {
             if ($.trim($(this).val()).length == 0) {
                 $(this).addClass("highlight");
                 isFormValid = false;
