@@ -2219,7 +2219,8 @@ textarea {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px solid #ffffff; }
+  border: 1px solid #ffffff;
+  font-family: 'Open Sans', sans-serif; }
   .btn .fa {
     padding-right: 6px; }
 
@@ -2232,6 +2233,13 @@ textarea {
 
 .btn-addMore {
   min-width: 200px; }
+
+.btn-buy_cat {
+  margin: 0;
+  padding: 10px 8px;
+  background-color: #1FA67A;
+  color: #FFF;
+  border: 0; }
 
 .removeButton {
   text-align: center; }
@@ -2423,6 +2431,10 @@ h1 {
     padding-left: 10%;
     font-family: "Exo 2", sans-serif;
     font-weight: 100; }
+  .itemBlock .buyForm {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
 
 /* brands catalog */
 .brandModel {
@@ -2821,10 +2833,15 @@ footer {
       .itemBlock .itemBlockLink .picWrap .picIndex {
         width: 200px;
         margin-left: -60px; }
+      .itemBlock .itemBlockLink .buyForm {
+        display: none; }
       .itemBlock .itemBlockLink:hover + h3 {
         color: #d30000; }
+      .itemBlock .itemBlockLink:hover .buyForm {
+        display: inline-block; }
       .itemBlock .itemBlockLink:hover {
-        border-color: #d30000; }
+        border-color: #d30000;
+        border-color: #1fa67a; }
       .itemBlock .itemBlockLink:hover .itemName {
         visibility: visible; }
 

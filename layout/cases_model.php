@@ -40,6 +40,10 @@ echo '      <div class="itemBlock">
 if ($data["price_old"] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data["price_old"].'&#8372;&nbsp;</div>';}
 if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
 echo '                </div>
+                <form action="'.$site.'cart/'.$data["id"].'" class="buyForm" method="post" enctype="multipart/form-data">
+			     <button class="btn btn-buy_cat">купить</button>
+			     <input type="hidden" name="type" value="1">
+			    </form>
                 <div class="picWrap">
                     <img class="picIndex" src="'.$site.'img/cases/'.$menu_id.'/'.$data["img"].'" alt="">
                 </div>
