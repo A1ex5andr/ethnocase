@@ -42,6 +42,11 @@ if (($args['0'] == "rus") OR ($args['0'] == "eng")){
 
 }
 
+$urls = "";
+if( ($loc[0] == "usd") || ($loc[0] == "uah") ) { $_SESSION['valuta'] = $loc[0]; header('Location: '.$site); exit; }
+if( ($loc[1] == "usd") || ($loc[1] == "uah") ) { $_SESSION['valuta'] = $loc[1]; header('Location: '.$site); exit; }
+
+
 	if ($args['0'] == "eng" ) {$lang = "eng";}
 	elseif ($args['0'] == "rus") {$lang = 'rus';}
 	else {$lang = 'ukr'; }
