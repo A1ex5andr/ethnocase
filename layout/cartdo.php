@@ -39,9 +39,18 @@ if(($loc['1'] != "") && (is_numeric($loc['1'])))
 if (!empty($_SESSION['cart'])) { $i = count($_SESSION['cart']); }
 else { $i = '0'; }
 
+
+$x = count($_SESSION["cart"]);
+
+	for ($i=0; $i < $x; $i++) {
+
+		list ($id, $q) = split(":", $_SESSION["cart"][$i]); 
+		if ($cases['0']['id'] == $id){ header('Location: '.$site.'cart/'); exit; }
+	}
+
 $_SESSION['cart'][$i] = $cases['0']['id'].":1";     
 
-header('Location: '.$site.'cart');
+header('Location: '.$site.'cart/');
 exit;
 }
 

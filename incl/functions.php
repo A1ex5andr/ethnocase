@@ -139,7 +139,7 @@ function cases($lang, $sel)
 	$model = "model_".$lang;
 	$about = "about_".$lang;
 
-    $cases = $database->select("cases", ["parent", "link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
         [
         "AND" => [
         	"active" => "1",
@@ -160,7 +160,7 @@ function cases_model($lang, $parent)
 	$model = "model_".$lang;
 	$about = "about_".$lang;
 
-    $cases = $database->select("cases", ["parent", "link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
         [
         "AND" => [
         	"active" => "1",
@@ -180,7 +180,7 @@ function cases_details($lang, $id)
 	$model = "model_".$lang;
 	$about = "about_".$lang;
 
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
         [
         "AND" => [
         	"active" => "1",
@@ -199,7 +199,7 @@ function cases_one($lang, $id)
     $model = "model_".$lang;
     $about = "about_".$lang;
 
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
         [
         "AND" => [
             "active" => "1",

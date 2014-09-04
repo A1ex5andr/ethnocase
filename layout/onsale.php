@@ -21,8 +21,8 @@ foreach($cases as $data)
 echo '      <div class="itemBlock">
             <a href="'.$data["link_item"].'" class="itemBlockLink">
                 <div class="itemPrice priceDiscount">
-                    <div class="itemPrice-final">'.$data["price"].'&#8372;</div>';
-if ($data["price_old"] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data["price_old"].'&#8372;&nbsp;</div>';}
+                    <div class="itemPrice-final">'.$data[$pri].''.$cur_symbol.'</div>';
+if ($data[$prio] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data[$prio].''.$cur_symbol.'&nbsp;</div>';}
 if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
 echo '                </div>
                 <div class="picWrap">

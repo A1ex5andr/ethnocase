@@ -42,10 +42,6 @@ if (($args['0'] == "rus") OR ($args['0'] == "eng")){
 
 }
 
-$urls = "";
-if( ($loc[0] == "usd") || ($loc[0] == "uah") ) { $_SESSION['valuta'] = $loc[0]; header('Location: '.$site); exit; }
-if( ($loc[1] == "usd") || ($loc[1] == "uah") ) { $_SESSION['valuta'] = $loc[1]; header('Location: '.$site); exit; }
-
 
 	if ($args['0'] == "eng" ) {$lang = "eng";}
 	elseif ($args['0'] == "rus") {$lang = 'rus';}
@@ -60,12 +56,16 @@ echo $_COOKIE["lang"];
 	elseif ($_COOKIE["lang"] == '2'){ $lang = "eng"; $_SESSION['lang'] = "eng";}
 	else { $lang = "ukr"; $_SESSION['lang'] = "ukr";}
 }
-echo $_COOKIE["lang"];
+//echo $_COOKIE["lang"];
 
 if (!empty($_SESSION['cart'])) {
 	$inthecart = '<span class="inCart">'.count($_SESSION["cart"]).'</span>';
 }else{
 	$inthecart = '';
 }
+
+if ($_SESSION["valuta"] == "usd") { $cur_symbol = "&#36;"; $pri = "price_eng"; $prio = "price_old_eng";  }
+else { $cur_symbol = "&#8372;"; $pri = "price"; $prio = "price_old";}
+
 ?>
 

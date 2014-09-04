@@ -29,7 +29,7 @@ check_link($menus);
                             
                             if ($dat["parent"] == $parent){
                                 echo '            <div class="brandModel">
-                                                    <a href="'.$site.'products/'.$dat["link_item"].'">
+                                                    <a href="'.$site.'products/'.$dat["link_item"].'/">
                                                         <div class="brandPicWrap"><img src="'.$site.'img/cases/catModels/'.$dat["img"].'" alt=""></div>
                                                         <h2>'.$dat[$lang].'</h2>
                                                     </a>

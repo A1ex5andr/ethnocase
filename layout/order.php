@@ -16,8 +16,8 @@ foreach ($_SESSION['cart'] as $value) {
     $name = "name_".$lang;
     $model = "model_".$lang;
 
-$order = $order.$case['0'][$name]." ".$case['0'][$model]." ".$case['0']["link_item"]." ".$q." ".$case['0']['price']." = ".$q*$case['0']['price']."<br>";
-$all = $q*$case['0']['price'] + $all;
+$order = $order.$case['0'][$name]." ".$case['0'][$model]." ".$case['0']["link_item"]." ".$q." ".$case['0'][$pri]." = ".$q*$case['0'][$pri]."<br>";
+$all = $q*$case['0'][$pri] + $all;
 }
 $foreign = "";
 if ($form["delivery"] == "02") { $foreign = " Country: ".$form["country"]." Zip: ".$form["zip"]." State: ".$form["state"]; }
@@ -40,7 +40,7 @@ $database = new medoo();
 $last_user_id = $database->insert("orders", [
     "order" => $order,
     "price" => $all,
-    "currency" => "",
+    "currency" => $_SESSION['valuta'],
     "delivery" => $form["delivery"],
     "name" => $form["name"],
     "phone" => $form["phone"],

@@ -48,11 +48,11 @@ foreach ($_SESSION['cart'] as $value) {
                                 <h2>'.$texts['price'].'</h2>
                                 <h4>
                                     <div class="itemPrice priceDiscount">
-                                        <span class="itemPrice-final">'.$case['0']['price'].'</span>
+                                        <span class="itemPrice-final">'.$case['0'][$pri].'</span>
                                         <span class="priceCur">'.$texts['uah'].'</span>';
 
-if ($case['0']['price_old'] != '0') { 
-echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0']['price_old'].'₴&nbsp;</div>';
+if ($case['0'][$prio] != '0') { 
+echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0'][$prio].''.$cur_symbol.'&nbsp;</div>';
 }
 if ($case['0']['disc'] != '0') { 
 echo '                                            <div class="itemPrice-disc">'.$case['0']['disc'].'</div>';
@@ -73,7 +73,7 @@ echo '                                        </div>
                             <li>
                                 <h2>'.$texts['payment'].'</h2>
                                 <h4>
-                                    <span class="priceTotal">'.$case['0']['price'].'</span>
+                                    <span class="priceTotal">'.$case['0'][$pri].'</span>
                                     <span class="priceCur">'.$texts['uah'].'</span>
                                 </h4>
                             </li>

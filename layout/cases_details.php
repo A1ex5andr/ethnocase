@@ -66,8 +66,8 @@ foreach($cases as $data)
 			<header class="headline">
 				<h3>'.$texts['about_case'].'</h3>
 			</header>
-			<form action="'.$site.'cart/'.$data["id"].'" class="buyForm" method="post" enctype="multipart/form-data">
-			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> купить</button>
+			<form action="'.$site.'cart/'.$data["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
+			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].'</button>
 			    <input type="hidden" name="type" value="1">
 			</form>
 			<p class="singleProduct-about">

@@ -17,6 +17,15 @@ if ((empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang))
 
 $texts = common_txt($lang);
 
+if (empty($_SESSION["valuta"])) { $_SESSION["valuta"] = "uah"; }
+if( ($loc[0] == "usd") || ($loc[0] == "uah") ) { $_SESSION['valuta'] = $loc[0]; header('Location: '.$site); exit; }
+if( ($loc[1] == "usd") || ($loc[1] == "uah") ) { $_SESSION['valuta'] = $loc[1]; header('Location: '.$site.$loc[0].'/'); exit; }
+if( ($loc[2] == "usd") || ($loc[2] == "uah") ) { $_SESSION['valuta'] = $loc[2]; header('Location: '.$site.$loc[0].'/'.$loc[1].'/'); exit; }
+if( ($loc[3] == "usd") || ($loc[3] == "uah") ) { $_SESSION['valuta'] = $loc[3]; header('Location: '.$site.$loc[0].'/'.$loc[1].'/'.$loc[2].'/'); exit; }
+if( ($loc[4] == "usd") || ($loc[4] == "uah") ) { $_SESSION['valuta'] = $loc[4]; header('Location: '.$site.$loc[0].'/'.$loc[1].'/'.$loc[2].'/'.$loc[3].'/'); exit; }
+
+
+
 // ----------- ADMIN BLOCK --------
 if ($loc["0"] == "lesya-ukrainka"){
 

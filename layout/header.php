@@ -44,8 +44,8 @@ foreach($menus as $data)
 	        		<li><a href="<?php flags_url("eng"); ?>">en</a></li>
 	        		<li><a href="<?php flags_url("ukr"); ?>">ua</a></li>
 	        		<li><a href="<?php flags_url("rus"); ?>">ru</a></li>
-	        		<li><a href="usd">USD</a></li>
-	        		<li><a href="uah">UAH</a></li>
+	        		<li><a href="<?php flags_url($lang); ?>usd">USD</a></li>
+	        		<li><a href="<?php flags_url($lang); ?>uah">UAH</a></li>
 	        	</ul>
 	        </li>
 	      </ul>
