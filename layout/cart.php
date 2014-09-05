@@ -143,22 +143,25 @@ $i++;
                 <div class="orderForm-delivery" id="deliveryType">
                     <div class="delTypeTitle"><?php echo $texts['del_way']; ?>:</div>
                         <div class="delType">
-                            <input class="delCost" type="radio" name="delivery" id="delivery_1" value="0">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_1" value="1">
                             <label for="delivery_1">
                                 <?php echo $texts['delivery_1']; ?>
                             </label>
+                            <span class="delivery_cost">0</span>
                         </div>
                         <div class="delType">
-                            <input class="delCost" type="radio" name="delivery" id="delivery_2" value="30" checked="">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_2" value="2" checked="">
                             <label for="delivery_2">
                                 <?php echo $texts['delivery_2']; ?>
                             </label>
+                            <span class="delivery_cost">30</span>
                         </div>
                         <div class="delType">
-                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="200">
+                            <input class="delCost" type="radio" name="delivery" id="delivery_3" value="3">
                             <label for="delivery_3">
                                 <?php echo $texts['delivery_3']; ?>
                             </label>
+                            <span class="delivery_cost">200</span>
                         </div>
                         <div class="delWorld">
                             <div class="orderForm-country">

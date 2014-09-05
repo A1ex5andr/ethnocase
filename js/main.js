@@ -119,7 +119,9 @@ $(document).ready(function() {
     //count finalPrice for all items in cart
     function finalPrice(){
         var sum = 0;
-        var deliveryCost = parseFloat($('input[name=delivery]:checked').val());
+        var deliveryRadio = $('.delCost:checked').siblings('.delivery_cost').html();
+        var deliveryCost = parseFloat(deliveryRadio);
+        //console.log(deliveryCost);
         $('.priceTotal').each(function(){
             sum += parseFloat($(this).text());  //Or this.innerHTML, this.innerText
         });
