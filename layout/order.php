@@ -55,8 +55,7 @@ $last_user_id = $database->insert("orders", [
     "payment_state" => "0",
     "delivery_state" => "0"
 ]);
-echo $last_user_id;
-exit;
+
  // echo $database->last_query();   
  // var_dump($database->error());
 
@@ -82,34 +81,35 @@ if ($form["delivery"] == '3'){
 <input type="hidden" name="sid" value="901254072" />
 <input type="hidden" name="mode" value="2CO" />
 <input type="hidden" name="li_0_type" value="product" />
-<input type="hidden" name="li_0_name" value="invoice123" />
-<input type="hidden" name="li_0_price" value="25.99" />
+<input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
+<input type="hidden" name="li_0_price" value="'.$all.'" />
 <input type="hidden" name="li_0_tangible" value="Y" />
 <input type="hidden" name="li_1_type" value="shipping" />
-<input type="hidden" name="li_1_name" value="Express Shipping" />
-<input type="hidden" name="li_1_price" value="13.99" />
-<input type="hidden" name="card_holder_name" value="Checkout Shopper" />
-<input type="hidden" name="street_address" value="123 Test Address" />
-<input type="hidden" name="street_address2" value="Suite 200" />
-<input type="hidden" name="city" value="Columbus" />
-<input type="hidden" name="state" value="OH" />
-<input type="hidden" name="zip" value="43228" />
-<input type="hidden" name="country" value="USA" />
-<input type="hidden" name="ship_name" value="Checkout Shopper" />
-<input type="hidden" name="ship_street_address" value="123 Test Address" />
-<input type="hidden" name="ship_street_address2" value="Suite 200" />
-<input type="hidden" name="ship_city" value="Columbus" />
-<input type="hidden" name="ship_state" value="OH" />
-<input type="hidden" name="ship_zip" value="43228" />
-<input type="hidden" name="ship_country" value="USA" />
-<input type="hidden" name="email" value="example@2co.com" />
-<input type="hidden" name="phone" value="614-921-2450" />
+<input type="hidden" name="li_1_name" value="World wide" />
+<input type="hidden" name="li_1_price" value="17" />
+<input type="hidden" name="card_holder_name" value="'.$form["name"].'" />
+<input type="hidden" name="street_address" value="'.$form["address"].'" />
+<input type="hidden" name="street_address2" value="'.$form["address2"].'" />
+<input type="hidden" name="city" value="'.$form["city"].'" />
+<input type="hidden" name="state" value="'.$form["state"].'" />
+<input type="hidden" name="zip" value="'.$form["zip"].'" />
+<input type="hidden" name="country" value="'.$form["country"].'" />
+<input type="hidden" name="ship_name" value="'.$form["name"].'" />
+<input type="hidden" name="ship_street_address" value="'.$form["address"].'" />
+<input type="hidden" name="ship_street_address2" value="'.$form["address2"].'" />
+<input type="hidden" name="ship_city" value="'.$form["city"].'" />
+<input type="hidden" name="ship_state" value="'.$form["state"].'" />
+<input type="hidden" name="ship_zip" value="'.$form["zip"].'" />
+<input type="hidden" name="ship_country" value="'.$form["country"].'" />
+<input type="hidden" name="email" value="'.$form["email"].'" />
+<input type="hidden" name="phone" value="'.$form["phone"].'" />
 <input name="submit" type="submit" value="Checkout" />
 </form>
 
                     
 </body>
 </html>';
+exit;
 }
 
 
