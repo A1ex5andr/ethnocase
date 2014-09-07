@@ -46,6 +46,7 @@ $last_user_id = $database->insert("orders", [
     "phone" => $form["phone"],
     "email" => $form["email"],
     "address" => $form["address"],
+    "address2" => $form["address2"],
     "city" => $form["city"],
     "country" => $form["country"],
     "zip" => $form["zip"],
@@ -54,7 +55,8 @@ $last_user_id = $database->insert("orders", [
     "payment_state" => "0",
     "delivery_state" => "0"
 ]);
-
+echo $last_user_id;
+exit;
  // echo $database->last_query();   
  // var_dump($database->error());
 
@@ -65,35 +67,61 @@ $toc = $form["email"];
 $fromemail = "abutyuhin@hotmail.com";
 
 
-mailto($to,$subject,$message,$fromemail,"0");
-mailto($toc,$subjectc,$message,$fromemail,"0");
+//mailto($to,$subject,$message,$fromemail,"0");
+//mailto($toc,$subjectc,$message,$fromemail,"0");
 
-// -------- PAYMENT ---------------
+if ($form["delivery"] == '3'){
+    echo '<html>
+<head>
+<script src="https://www.2checkout.com/static/checkout/javascript/direct.min.js"></script>
+</head>
+<body onload="document.forms[0].submit()">
 
-require_once("incl/lib/Twocheckout.php");
 
-// Your sellerId(account number) and privateKey are required to make the Payment API Authorization call.
-Twocheckout::privateKey('CE87DF44-1D69-11E4-81C4-DA633A5D4FFE');
-Twocheckout::sellerId('202327775');
+<form action="https://sandbox.2checkout.com/checkout/purchase" method="post">
+<input type="hidden" name="sid" value="901254072" />
+<input type="hidden" name="mode" value="2CO" />
+<input type="hidden" name="li_0_type" value="product" />
+<input type="hidden" name="li_0_name" value="invoice123" />
+<input type="hidden" name="li_0_price" value="25.99" />
+<input type="hidden" name="li_0_tangible" value="Y" />
+<input type="hidden" name="li_1_type" value="shipping" />
+<input type="hidden" name="li_1_name" value="Express Shipping" />
+<input type="hidden" name="li_1_price" value="13.99" />
+<input type="hidden" name="card_holder_name" value="Checkout Shopper" />
+<input type="hidden" name="street_address" value="123 Test Address" />
+<input type="hidden" name="street_address2" value="Suite 200" />
+<input type="hidden" name="city" value="Columbus" />
+<input type="hidden" name="state" value="OH" />
+<input type="hidden" name="zip" value="43228" />
+<input type="hidden" name="country" value="USA" />
+<input type="hidden" name="ship_name" value="Checkout Shopper" />
+<input type="hidden" name="ship_street_address" value="123 Test Address" />
+<input type="hidden" name="ship_street_address2" value="Suite 200" />
+<input type="hidden" name="ship_city" value="Columbus" />
+<input type="hidden" name="ship_state" value="OH" />
+<input type="hidden" name="ship_zip" value="43228" />
+<input type="hidden" name="ship_country" value="USA" />
+<input type="hidden" name="email" value="example@2co.com" />
+<input type="hidden" name="phone" value="614-921-2450" />
+<input name="submit" type="submit" value="Checkout" />
+</form>
 
-// Your username and password are required to make any Admin API call.
-Twocheckout::username('testlibraryapi901248204');
-Twocheckout::password('testlibraryapi901248204PASS');
+                    
+</body>
+</html>';
+}
 
-// If you want to turn off SSL verification (Please don't do this in your production environment)
-Twocheckout::verifySSL(false);  // this is set to true by default
-
-// To use your sandbox account set sandbox to true
-Twocheckout::sandbox(true);
-
-// All methods return an Array by default or you can set the format to 'json' to get a JSON response.
-Twocheckout::format('json');
-
-// -------- #PAYMENT ---------------
 
 unset($_SESSION['cart']);
+
+require_once("layout/head.php");
+require_once("layout/header.php");
+
 ?>
 
     <div class="slogan container">
         <h1><?php echo $texts['thankyou']; ?></h1>
     </div>
+
+<?php require_once("layout/contacts.php"); ?>

@@ -36,7 +36,13 @@ exit;
 // ----------- #ADMIN BLOCK -------
 
 if ( ($loc["0"] == "cart") && (!empty($loc["1"])) ) {
+
 	require_once("layout/cartdo.php");
+
+}elseif ($loc["0"] == "order"){
+
+	require_once("layout/order.php");
+	exit;
 }
 
 require_once("layout/head.php");
@@ -66,11 +72,6 @@ if ($loc["0"] == "news"){
 }elseif ($loc["0"] == "cart"){
 
 		require_once("layout/cart.php");
-		require_once("layout/contacts.php");
-
-}elseif ($loc["0"] == "order"){
-
-		require_once("layout/order.php");
 		require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "404"){

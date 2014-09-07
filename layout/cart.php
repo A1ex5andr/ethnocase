@@ -49,7 +49,7 @@ foreach ($_SESSION['cart'] as $value) {
                                 <h4>
                                     <div class="itemPrice priceDiscount">
                                         <span class="itemPrice-final">'.$case['0'][$pri].'</span>
-                                        <span class="priceCur">'.$texts['uah'].'</span>';
+                                        <span class="priceCur">'.$cur_symbol.'</span>';
 
 if ($case['0'][$prio] != '0') { 
 echo '                                            <div class="itemPrice-old">&nbsp;'.$case['0'][$prio].''.$cur_symbol.'&nbsp;</div>';
@@ -74,7 +74,7 @@ echo '                                        </div>
                                 <h2>'.$texts['payment'].'</h2>
                                 <h4>
                                     <span class="priceTotal">'.$case['0'][$pri].'</span>
-                                    <span class="priceCur">'.$texts['uah'].'</span>
+                                    <span class="priceCur">'.$cur_symbol.'</span>
                                 </h4>
                             </li>
                         </ul>
@@ -139,6 +139,13 @@ $i++;
                         </span>
                     </div>
                 </div>
+                <div class="orderForm-field">
+                    <div class="orderForm-address">
+                        <span class="orderInput">
+	                        <input name="address2" placeholder="<?php echo $texts['adress']; ?> 2" type="text" class="checkField text">
+                        </span>
+                    </div>
+                </div>
 
                 <div class="orderForm-delivery" id="deliveryType">
                     <div class="delTypeTitle"><?php echo $texts['del_way']; ?>:</div>
@@ -147,21 +154,22 @@ $i++;
                             <label for="delivery_1">
                                 <?php echo $texts['delivery_1']; ?>
                             </label>
-                            <span class="delivery_cost">0</span>
+                            <span class="delBtn"><?php echo $texts['free']; ?></span>
+                             (<span class="delivery_cost">0</span> <?php echo $cur_symbol; ?>)
                         </div>
                         <div class="delType">
                             <input class="delCost" type="radio" name="delivery" id="delivery_2" value="2" checked="">
                             <label for="delivery_2">
                                 <?php echo $texts['delivery_2']; ?>
                             </label>
-                            <span class="delivery_cost">30</span>
+                            <?php if ($_SESSION["valuta"] == "usd")  { echo '<span class="delBtn delivery_cost">1 '.$cur_symbol.'</span>';} else { echo '<span class="delBtn delivery_cost">30 '.$cur_symbol.'</span>'; } ?>
                         </div>
                         <div class="delType">
                             <input class="delCost" type="radio" name="delivery" id="delivery_3" value="3">
                             <label for="delivery_3">
                                 <?php echo $texts['delivery_3']; ?>
                             </label>
-                            <span class="delivery_cost">200</span>
+                            <?php if ($_SESSION["valuta"] == "usd")  { echo '<span class="delBtn delivery_cost">17 '.$cur_symbol.'</span>';} else { echo '<span class="delBtn delivery_cost">200 '.$cur_symbol.'</span>'; } ?>
                         </div>
                         <div class="delWorld">
                             <div class="orderForm-country">
@@ -187,7 +195,7 @@ $i++;
                     </div>
                 </div>
                 <div class="finalPriceWrap">
-                    <h2>До сплати <span class="finalPrice"></span> <span><?php echo $texts['uah'] ?></span></h2>
+                    <h2>До сплати <span class="finalPrice"></span> <span><?php echo $cur_symbol; ?></span></h2>
                 </div>
                 <div class="sendOrder">
                     <button class="btn btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> <?php echo $texts['sendme']; ?></button>
