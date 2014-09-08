@@ -70,15 +70,55 @@ $fromemail = "abutyuhin@hotmail.com";
 //mailto($toc,$subjectc,$message,$fromemail,"0");
 
 if ($form["delivery"] == '3'){
+
+// require_once("./incl/lib/Twocheckout.php");
+// Twocheckout::privateKey('F1D4F959-1A1A-49F0-9DCC-2BEA924203CC');
+// Twocheckout::sellerId('901254072');
+//  Twocheckout::sandbox(true);  #Uncomment to use Sandbox
+
+// try {
+//     $charge = Twocheckout_Charge::auth(array(
+//         "merchantOrderId" => 'invoice'.$last_user_id,
+//         "token" => 'Y2U2OTdlZjMtOGQzMi00MDdkLWJjNGQtMGJhN2IyOTdlN2Ni',
+//         "currency" => 'USD',
+//         "total" => $all,
+//         "billingAddr" => array(
+//             "name" => $form["name"],
+//             "addrLine1" => $form["address"],
+//             "city" => $form["city"],
+//             "state" => $form["state"],
+//             "zipCode" => $form["zip"],
+//             "country" => $form["country"],
+//             "email" => 'testingtester@2co.com',
+//             "phoneNumber" => '555-555-5555'
+//         ),
+//         "shippingAddr" => array(
+//             "name" => $form["name"],
+//             "addrLine1" => $form["address"],
+//             "city" => $form["city"],
+//             "state" => $form["state"],
+//             "zipCode" => $form["zip"],
+//             "country" => $form["country"],
+//             "email" => $form["email"],
+//             "phoneNumber" => $form["phone"]
+//         )
+//     ), 'array');
+//     if ($charge['response']['responseCode'] == 'APPROVED') {
+//         echo "Thanks for your Order!";
+//     }
+// } catch (Twocheckout_Error $e) {
+//     $e->getMessage();
+// }
+
     echo '<html>
 <head>
-<script src="https://www.2checkout.com/static/checkout/javascript/direct.min.js"></script>
+<script src="https://sandbox.2checkout.com/static/checkout/javascript/direct.min.js"></script>
 </head>
 <body onload="document.forms[0].submit()">
 
 
 <form action="https://sandbox.2checkout.com/checkout/purchase" method="post">
-<input type="hidden" name="sid" value="901254072" />
+<input type="hidden" name="sid" value="202327775" />
 <input type="hidden" name="mode" value="2CO" />
 <input type="hidden" name="li_0_type" value="product" />
 <input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
@@ -103,6 +143,7 @@ if ($form["delivery"] == '3'){
 <input type="hidden" name="ship_country" value="'.$form["country"].'" />
 <input type="hidden" name="email" value="'.$form["email"].'" />
 <input type="hidden" name="phone" value="'.$form["phone"].'" />
+<input type="hidden" name="x_receipt_link_url" value="http://new.ethnocase.com/thankyou/'.$last_user_id.'">
 <input name="submit" type="submit" value="Checkout" />
 </form>
 

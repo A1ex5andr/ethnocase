@@ -4,11 +4,24 @@
 </head>
 <body>
 
+<?php 
+
+
+// $link = 'https://sandbox.2checkout.com/checkout/api/1/202327775/rs/authService';
+// $str = file_get_contents($link);
+// $result = json_decode($str, true);
+
+// var_dump($result);
+// exit;
+?>
+
+
+
 <form action='https://sandbox.2checkout.com/checkout/purchase' method='post'>
-<input type='hidden' name='sid' value='901254072' />
+<input type='hidden' name='sid' value='202327775' />
 <input type='hidden' name='mode' value='2CO' />
 <input type='hidden' name='li_0_type' value='product' />
-<input type='hidden' name='li_0_name' value='invoice123' />
+<input type='hidden' name='li_0_name' value='invoice44' />
 <input type='hidden' name='li_0_price' value='25.99' />
 <input type='hidden' name='li_0_tangible' value='Y' />
 <input type='hidden' name='li_1_type' value='shipping' />

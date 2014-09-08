@@ -43,7 +43,8 @@ if ( ($loc["0"] == "cart") && (!empty($loc["1"])) ) {
 
 	require_once("layout/order.php");
 	exit;
-elseif ($loc["0"] == "thankyou"){
+
+}elseif ($loc["0"] == "thankyou"){
 
 	require_once("layout/thankyou.php");
 	exit;
