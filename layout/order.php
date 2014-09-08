@@ -114,11 +114,25 @@ if ($form["delivery"] == '3'){
 <head>
 <script src="https://sandbox.2checkout.com/static/checkout/javascript/direct.min.js"></script>
 </head>
-<body onload="document.forms[0].submit()">
+<body>
+
+Ваш заказ номер <input name="li_0_name" value="invoice'.$last_user_id.'" />
+Всего (сумма)<input name="li_0_price" value="'.$all.'" />
+Доставка службой<input name="li_1_name" value="World wide" />
+цена доставки <input name="li_1_price" value="17" />
+имя <input name="card_holder_name" value="'.$form["name"].'" />
+адресс <input name="street_address" value="'.$form["address"].'" />
+адресс2 <input name="street_address2" value="'.$form["address2"].'" />
+город <input name="city" value="'.$form["city"].'" />
+штат <input name="state" value="'.$form["state"].'" />
+индекс <input name="zip" value="'.$form["zip"].'" />
+страна <input name="country" value="'.$form["country"].'" />
+емейл <input name="email" value="'.$form["email"].'" />
+телефон <input name="phone" value="'.$form["phone"].'" />
 
 
 <form action="https://sandbox.2checkout.com/checkout/purchase" method="post">
-<input type="hidden" name="sid" value="202327775" />
+<input type="hidden" name="sid" value="901254072" />
 <input type="hidden" name="mode" value="2CO" />
 <input type="hidden" name="li_0_type" value="product" />
 <input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
