@@ -93,7 +93,7 @@ $(document).ready(function() {
     });
 
     // check if fields are OK on submission
-    $('.orderForm').on('submit', function(event) {
+    $('.orderForm, .contactsForm').on('submit', function(event) {
         var isFormValid = true;
         // check if all input fields ok!
         $(".checkField").each(function() {
@@ -109,7 +109,7 @@ $(document).ready(function() {
     });
 
     // if field has input unMask it
-    $('.orderForm input').on('input', function() {
+    $('.orderForm input, .contactsForm input').on('input', function() {
         if ($.trim($(this).val()).length > 0) {
             $(this).removeClass("highlight");
         };

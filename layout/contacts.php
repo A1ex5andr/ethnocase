@@ -42,12 +42,12 @@
                 </div>
             </div>
 
-            <div class="contactsBlock contactsForm">
-                <form action="contact.php" method="post" role="form">
-	                <input type="text" class="form-name" id="nameinput" placeholder="<?php echo $texts['name']; ?>" name="contact-name">
-	                <input type="email" class="form-mail" id="emailinput" placeholder="Email" name="contact-email">
-	                <textarea class="form-mesg" rows="6" name="contact-message" placeholder="<?php echo $texts['message']; ?>"></textarea>
-	                <button type="submit" class="btn btn-send"><i class="fa fa-pencil-square-o"></i> <?php echo $texts['send']; ?></button>                
+            <div class="contactsBlock">
+                <form action="contactSend.php" method="post" role="form" class="contactsForm">
+	                <input type="text" class="checkField form-name" id="nameinput" placeholder="<?php echo $texts['name']; ?>" name="contact-name">
+	                <input type="email" class="checkField form-mail" id="emailinput" placeholder="Email" name="contact-email">
+	                <textarea class="checkField form-mesg" rows="6" name="contact-message" placeholder="<?php echo $texts['message']; ?>"></textarea>
+	                <button type="submit" class="btn btn-send"><i class="fa fa-pencil-square-o"></i> <?php echo $texts['send']; ?></button>
 	            </form>
             </div>
         </div>

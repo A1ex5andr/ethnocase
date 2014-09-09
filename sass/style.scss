@@ -76,7 +76,7 @@ textarea {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: $green;
+  background: $green;
   //	border: 1px solid #1b926c;
   color: $white;
   cursor: pointer;
@@ -97,7 +97,7 @@ textarea {
 }
 
 .btn-Remove {
-  background-color: #595959;
+  background: #595959;
   margin: 6px auto;
   padding: 6px 0;
   width: 100%;
@@ -115,7 +115,7 @@ textarea {
 .btn-buy_cat {
   margin: 0;
   padding: 10px 8px;
-  background-color: #1FA67A;
+  background: #1FA67A;
   color: #FFF;
   border: 0;
 }
@@ -146,8 +146,9 @@ textarea {
 }
 
 .highlight{
-  background: #F5E0E3;
+  background: #F5E0E3!important;
 }
+
 
 /*=============================================
 =          GENERAL FOR ALL RESOULUTIONS       =
@@ -258,7 +259,7 @@ textarea {
     height: 1px;
     display: block;
     content: "";
-    background-color: $lightGray;
+    background: $lightGray;
     position: relative;
     bottom: 0;
     margin: 10px auto 20px;
@@ -396,7 +397,7 @@ textarea {
   padding: 0 0 20px 0;
   margin-top: 30px;
   text-align: center;
-  background-color: $white+-10;
+  background: $white+-10;
   border-top: 1px solid $white+-50;
   .headline {
     text-align: left;
@@ -429,7 +430,7 @@ textarea {
     .form-name,
     .form-mail,
     .form-mesg {
-      background-color: $white+-5;
+      background: $white+-5;
       // -webkit-transition: all .2s ease-out;
       // -moz-transition: all .2s ease-out;
       // -o-transition: all .2s ease-out;
@@ -451,7 +452,7 @@ textarea {
     .form-name:focus,
     .form-mail:focus,
     .form-mesg:focus {
-      background-color: $white;
+      background: $white;
       outline: 0;
       border-color: $pink;
     }
@@ -674,8 +675,8 @@ textarea {
 footer {
   @include layout(border-box);
   text-align: center;
-  background-color: $white+-100;
-  /* background-color: #005C96; */
+  background: $white+-100;
+  /* background: #005C96; */
   border-top: 1px solid $white+-10;
   color: $white;
   font-size: 12px;
@@ -744,10 +745,10 @@ footer {
     color: $red;
   }
   .btn:hover {
-    background-color: $green+-50;
+    background: $green+-50;
   }
   .btn-Remove:hover {
-    background-color: $red+20;
+    background: $red+20;
   }
   .quantity:hover {
     background: #707070!important;
@@ -772,7 +773,7 @@ footer {
       &:hover {
         h3:after {
           width: 90%;
-          background-color: $red;
+          background: $red;
         }
       }
     }

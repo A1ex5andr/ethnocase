@@ -85,11 +85,12 @@ $large: 1200px;
   background: #941111;
   display: inline-block;
   font-size: 15px;
-  margin-left: 6px;
   color: #FFFFFF;
   border-radius: 16px;
   text-align: center;
+  margin-right: -10px;
 }
+
 .nav-collapse .fa {
   font-size: 18px;
   padding-right: 10px;
@@ -128,14 +129,18 @@ $navItem : 1/5;
   border-bottom: 1px solid white;
   padding: 0.7em 1em;
   float: left;
+  position: relative;
 }
 
 @media screen and (max-width: $mobile) {
   .nav-collapse  {
-      ul ul li {
-        @include span (1 of 3 no-gutters);
-        text-align: center;
-      }
+    ul ul li {
+      @include span (1 of 5 no-gutters);
+      text-align: center;
+    }
+    .currency a {
+      background: #A62D12;
+    }
   }
 }
 @media screen and (min-width: $tablet) {
@@ -186,9 +191,9 @@ $navItem : 1/5;
   }
   .nav-collapse ul li.lang {
     position: absolute;
-  right: 0;
-  top: -60px;
-  z-index: 9999;
+    right: 0;
+    top: -60px;
+    z-index: 9999;
   }
   .nav-collapse ul ul a {
   padding: 10px 0;
