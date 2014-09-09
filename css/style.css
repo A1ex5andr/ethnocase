@@ -2752,6 +2752,38 @@ footer {
   margin: 0 auto;
   padding: 80px 0px; }
 
+/* pre pay page before checkout*/
+.prePay {
+  margin-top: 60px; }
+  .prePay-title {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.41667%;
+    padding-right: 0.41667%;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 800;
+    text-transform: capitalize; }
+  .prePay-data {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.41667%;
+    padding-right: 0.41667%;
+    text-transform: capitalize; }
+  .prePay input {
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  .prePay .sendOrder {
+    padding-top: 30px;
+    margin-bottom: 60px; }
+
 @media (min-width: 768px) {
   h1 {
     font-size: 2em; }
@@ -2959,7 +2991,28 @@ footer {
     padding-right: 0.41667%; }
 
   .aboutUs h3 {
-    margin: 30px 30%; } }
+    margin: 30px 30%; }
+
+  /* pre pay page before checkout*/
+  .prePay {
+    margin-top: 60px; }
+    .prePay-title {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 0.41667%;
+      padding-right: 0.41667%;
+      text-align: right; }
+    .prePay-data {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 0.41667%;
+      padding-right: 0.41667%; } }
 @media (min-width: 960px) {
   h1 {
     font-size: 2.2em; }

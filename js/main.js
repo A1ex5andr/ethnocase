@@ -72,7 +72,6 @@ $(document).ready(function() {
             }
         });
     }
-
     $(window).load(function() {
         equalheight('.itemBlock');
     });

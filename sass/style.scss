@@ -692,6 +692,35 @@ footer {
   }
 }
 
+/* pre pay page before checkout*/
+.prePay{
+  margin-top: 60px;
+  &-title{
+    @include span(24);
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+  &-data {
+    @include span(24);
+    text-transform: capitalize;
+  }
+  input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .sendOrder {
+    padding-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+
+
+
+
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
@@ -859,6 +888,17 @@ footer {
   .aboutUs {
     h3 {
       margin: 30px 30%;
+    }
+  }
+  /* pre pay page before checkout*/
+  .prePay{
+    margin-top: 60px;
+    &-title{
+      @include span(12);
+      text-align: right;
+    }
+    &-data {
+      @include span(12);
     }
   }
 }

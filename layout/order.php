@@ -30,13 +30,13 @@ $topay = $form["delivery"]." To pay: ".$all." + ".$form["delivery"];
 
     header('Location: '.$site.'cart');
     exit;
-    
+
 }
 
 $message = $order."\n".$from."\n".$topay;
 
 $database = new medoo();
- 
+
 $last_user_id = $database->insert("orders", [
     "order" => $order,
     "price" => $all,
@@ -56,7 +56,7 @@ $last_user_id = $database->insert("orders", [
     "delivery_state" => "0"
 ]);
 
- // echo $database->last_query();   
+ // echo $database->last_query();
  // var_dump($database->error());
 
 $subject = "Новый заказ";
@@ -110,59 +110,76 @@ if ($form["delivery"] == '3'){
 //     $e->getMessage();
 // }
 
-    echo '<html>
-<head>
-<script src="https://sandbox.2checkout.com/static/checkout/javascript/direct.min.js"></script>
-</head>
-<body>
+require ("./layout/head.php");
 
-Ваш заказ номер <input name="li_0_name" value="invoice'.$last_user_id.'" />
-Всего (сумма)<input name="li_0_price" value="'.$all.'" />
-Доставка службой<input name="li_1_name" value="World wide" />
-цена доставки <input name="li_1_price" value="17" />
-имя <input name="card_holder_name" value="'.$form["name"].'" />
-адресс <input name="street_address" value="'.$form["address"].'" />
-адресс2 <input name="street_address2" value="'.$form["address2"].'" />
-город <input name="city" value="'.$form["city"].'" />
-штат <input name="state" value="'.$form["state"].'" />
-индекс <input name="zip" value="'.$form["zip"].'" />
-страна <input name="country" value="'.$form["country"].'" />
-емейл <input name="email" value="'.$form["email"].'" />
-телефон <input name="phone" value="'.$form["phone"].'" />
+echo'
+
+    <header class="container">
+		<div class="headLogo">
+			<a href=#">
+				<img src="http://new.ethnocase.com/img/logo.jpg" alt="" class="logo">
+			</a>
+		</div>
+
+	</header>
+
+    <div class="container prePay">
 
 
-<form action="https://sandbox.2checkout.com/checkout/purchase" method="post">
-<input type="hidden" name="sid" value="901254072" />
-<input type="hidden" name="mode" value="2CO" />
-<input type="hidden" name="li_0_type" value="product" />
-<input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
-<input type="hidden" name="li_0_price" value="'.$all.'" />
-<input type="hidden" name="li_0_tangible" value="Y" />
-<input type="hidden" name="li_1_type" value="shipping" />
-<input type="hidden" name="li_1_name" value="World wide" />
-<input type="hidden" name="li_1_price" value="17" />
-<input type="hidden" name="card_holder_name" value="'.$form["name"].'" />
-<input type="hidden" name="street_address" value="'.$form["address"].'" />
-<input type="hidden" name="street_address2" value="'.$form["address2"].'" />
-<input type="hidden" name="city" value="'.$form["city"].'" />
-<input type="hidden" name="state" value="'.$form["state"].'" />
-<input type="hidden" name="zip" value="'.$form["zip"].'" />
-<input type="hidden" name="country" value="'.$form["country"].'" />
-<input type="hidden" name="ship_name" value="'.$form["name"].'" />
-<input type="hidden" name="ship_street_address" value="'.$form["address"].'" />
-<input type="hidden" name="ship_street_address2" value="'.$form["address2"].'" />
-<input type="hidden" name="ship_city" value="'.$form["city"].'" />
-<input type="hidden" name="ship_state" value="'.$form["state"].'" />
-<input type="hidden" name="ship_zip" value="'.$form["zip"].'" />
-<input type="hidden" name="ship_country" value="'.$form["country"].'" />
-<input type="hidden" name="email" value="'.$form["email"].'" />
-<input type="hidden" name="phone" value="'.$form["phone"].'" />
-<input type="hidden" name="x_receipt_link_url" value="http://new.ethnocase.com/thankyou/'.$last_user_id.'">
-<input name="submit" type="submit" value="Checkout" />
-</form>
 
-                    
-</body>
+        <div><span class="prePay-title">Ваш заказ номер</span><span class="prePay-data orderInput"><input name="li_0_name" value="invoice'.$last_user_id.'" disabled/></span></div>
+        <div><span class="prePay-title">Всего (сумма)</span><span class="prePay-data orderInput"><input name="li_0_price" value="'.$all.'" disabled/></span></div>
+        <div><span class="prePay-title">Доставка службой</span><span class="prePay-data orderInput"><input name="li_1_name" value="World wide" disabled/></span></div>
+        <div><span class="prePay-title">цена доставки </span><span class="prePay-data orderInput"><input name="li_1_price" value="17" disabled/></span></div>
+        <div><span class="prePay-title">имя </span><span class="prePay-data orderInput"><input name="card_holder_name" value="'.$form["name"].'" disabled/></span></div>
+        <div><span class="prePay-title">адресс </span><span class="prePay-data orderInput"><input name="street_address" value="'.$form["address"].'" disabled/></span></div>
+        <div><span class="prePay-title">адресс2 </span><span class="prePay-data orderInput"><input name="street_address2" value="'.$form["address2"].'" disabled/></span></div>
+        <div><span class="prePay-title">город </span><span class="prePay-data orderInput"><input name="city" value="'.$form["city"].'" disabled/></span></div>
+        <div><span class="prePay-title">штат </span><span class="prePay-data orderInput"><input name="state" value="'.$form["state"].'" disabled/></span></div>
+        <div><span class="prePay-title">индекс </span><span class="prePay-data orderInput"><input name="zip" value="'.$form["zip"].'" disabled/></span></div>
+        <div><span class="prePay-title">страна </span><span class="prePay-data orderInput"><input name="country" value="'.$form["country"].'" disabled/></span></div>
+        <div><span class="prePay-title">емейл </span><span class="prePay-data orderInput"><input name="email" value="'.$form["email"].'" disabled/></span></div>
+        <div><span class="prePay-title">телефон </span><span class="prePay-data orderInput"><input name="phone" value="'.$form["phone"].'" disabled/></span></div>
+
+
+
+
+        <form action="https://sandbox.2checkout.com/checkout/purchase" method="post">
+        <input type="hidden" name="sid" value="901254072" />
+        <input type="hidden" name="mode" value="2CO" />
+        <input type="hidden" name="li_0_type" value="product" />
+        <input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
+        <input type="hidden" name="li_0_price" value="'.$all.'" />
+        <input type="hidden" name="li_0_tangible" value="Y" />
+        <input type="hidden" name="li_1_type" value="shipping" />
+        <input type="hidden" name="li_1_name" value="World wide" />
+        <input type="hidden" name="li_1_price" value="17" />
+        <input type="hidden" name="card_holder_name" value="'.$form["name"].'" />
+        <input type="hidden" name="street_address" value="'.$form["address"].'" />
+        <input type="hidden" name="street_address2" value="'.$form["address2"].'" />
+        <input type="hidden" name="city" value="'.$form["city"].'" />
+        <input type="hidden" name="state" value="'.$form["state"].'" />
+        <input type="hidden" name="zip" value="'.$form["zip"].'" />
+        <input type="hidden" name="country" value="'.$form["country"].'" />
+        <input type="hidden" name="ship_name" value="'.$form["name"].'" />
+        <input type="hidden" name="ship_street_address" value="'.$form["address"].'" />
+        <input type="hidden" name="ship_street_address2" value="'.$form["address2"].'" />
+        <input type="hidden" name="ship_city" value="'.$form["city"].'" />
+        <input type="hidden" name="ship_state" value="'.$form["state"].'" />
+        <input type="hidden" name="ship_zip" value="'.$form["zip"].'" />
+        <input type="hidden" name="ship_country" value="'.$form["country"].'" />
+        <input type="hidden" name="email" value="'.$form["email"].'" />
+        <input type="hidden" name="phone" value="'.$form["phone"].'" />
+        <input type="hidden" name="x_receipt_link_url" value="http://new.ethnocase.com/thankyou/'.$last_user_id.'">
+        <div class="sendOrder">
+            <button class="btn btn-sendOrder" name="submit" type="submit">Checkout</button>
+        </div>
+        </form>
+    </div>
+
+
+    <script src="https://sandbox.2checkout.com/static/checkout/javascript/direct.min.js"></script>
+    </body>
 </html>';
 exit;
 }
