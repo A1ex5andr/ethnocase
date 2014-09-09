@@ -116,9 +116,9 @@ echo'
 
     <header class="container">
 		<div class="headLogo">
-			<a href=#">
+
 				<img src="http://new.ethnocase.com/img/logo.jpg" alt="" class="logo">
-			</a>
+
 		</div>
 
 	</header>

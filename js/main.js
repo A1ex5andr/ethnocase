@@ -87,7 +87,7 @@ $(document).ready(function() {
         }
         else {
             $('.delWorld').slideUp();
-            //$('.delWorld input').val('none');
+            $('.delWorld input').val('none');
         }
         finalPrice();
     });
