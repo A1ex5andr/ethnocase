@@ -77,7 +77,7 @@ if ($loc["0"] == "news"){
 }elseif ($loc["0"] == "cart"){
 
 		require_once("layout/cart.php");
-		require_once("layout/contacts.php");
+		//require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "404"){
 
