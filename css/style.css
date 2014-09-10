@@ -2663,7 +2663,8 @@ h1 {
 
 .sendOrder {
   width: 100%;
-  clear: both; }
+  clear: both;
+  margin-bottom: 140px; }
   .sendOrder .btn-sendOrder {
     margin: 0 auto;
     display: block; }
