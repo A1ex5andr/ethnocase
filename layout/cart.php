@@ -22,7 +22,7 @@ foreach ($_SESSION['cart'] as $value) {
 
     list ($id, $q) = split(":", $value);
 
-    $case = cases_one($lang, $id);
+    $case = product($lang, "id", $id, "1");
 
     $name = "name_".$lang;
     $model = "model_".$lang;
@@ -31,7 +31,7 @@ foreach ($_SESSION['cart'] as $value) {
     echo '                <div class="inCart-item" id="item_0'.$i.'">
 
                     <div class="inCart-itemPicture">
-                        <img class="picIndex" src="'.$site.'img/cases/'.$case['0']["img"].'" alt="">
+                        <img class="picIndex" src="'.$site.'img/products/'.$case['0']["img"].'" alt="">
                     </div>
 
                     <div class="inCart-details">

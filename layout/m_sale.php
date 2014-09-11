@@ -26,7 +26,7 @@ if ($data[$prio] != '0'){echo '                    <div class="itemPrice-old">&n
 if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
 echo '                </div>
                 <div class="picWrap">
-                    <img class="picIndex" src="'.$site.'img/cases/'.$data["img"].'" alt="">
+                    <img class="picIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
                 </div>
             </a>
             <h3 class="itemName">'.$data[$name].'</h3>

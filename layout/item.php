@@ -18,20 +18,23 @@ $about = "about_".$lang;
 
 $i = "0";
 
+$images = images($lang, $items[0]["id"]);
 
-// foreach($items as $data)
-//     {
+	    	$x = '1';
+	    	$img = "";
 
-//     	$i = $i + 1;
-//     	$img = '';
-    	
-//     	$images = images($data["id"] , "cases");
-//     	$x = '0';
-//     	foreach($images as $image)
-//     	{ 
-//     		$x++;
-//     		$img = $img.'<span><img src="'.$site.'img/cases/'.$image["name"].'" alt="'.$image["alt"].'" class="singleProductPic" id="'.$data["link_item"].'_'.$x.'"></span>';
-// 		}
+	    	foreach($images as $image)
+	    	{ 
+	    		
+	    		if (!empty($image)){
+	    			$img = $img.'<span><img src="'.$site.'img/products/'.$image["name"].'" alt="'.$image["alt"].'" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$x.'"></span>';
+	    		}
+	    	$x++;
+			}
+
+			for ($z=$x; $z < 5 ; $z++) { 
+				$img = $img.'<span><img src="'.$site.'img/products/clean_'.$z.'.jpg" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$z.'"></span>';
+			}
 
     	echo '
 	<div class="slogan container">
@@ -47,7 +50,7 @@ $i = "0";
 			</div>
 
 			<div class="picsGallery-show">
-				<img src="'.$site.'img/cases/'.$items[0]["img"].'" class="singleProductPic" alt="Чехол для iPhone - этно чехол вышиванка на iPhone">
+				<img src="'.$site.'img/products/'.$items[0]["img"].'" class="singleProductPic" alt="Чехол для iPhone - этно чехол вышиванка на iPhone">
 			</div>
 		</div>
 

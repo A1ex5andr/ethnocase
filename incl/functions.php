@@ -74,7 +74,7 @@ $url = explode('/',$url);
 function menu($lang, $menu)
 {
 	$database = new medoo();
-    $menus = $database->select("menus", ["id", "link_item", "menu", "img", "parent", "orders", $lang, "class", "alt" ], 
+    $menus = $database->select("menus", ["id", "link_item", "menu", "img", "parent", "category", "orders", $lang, "class", "alt" ], 
         [
         "AND" => [
         	"active" => "1",
@@ -103,23 +103,7 @@ function menu_one($lang, $menu, $limit)
     return $menus;
 }
 
-function menu_x($lang, $x) {
 
-    $database = new medoo();
-    $database->select("post", ["[>]account" => [
-        "author_id" => "user_id"],
-        "[>]album" => "user_id",
-        "[>]photo" => ["user_id", "avatar_id"]
-    ], [
-    "post.post_id",
-    "post.title",
-    "account.city"
-    ], [
-    "post.user_id" => 100,
-    "ORDER" => "post.post_id DESC",
-    "LIMIT" => 50
-    ]);
-}
 
 function news($lang, $lim_from, $lim_step)
 {
@@ -180,7 +164,7 @@ function minmenu ($parent) {
     return $minmenu;
 }
 
-function product($lang, $type, $typev, $limit, $parent)
+function product($lang, $type, $typev, $limit)
 {
     $name = "name_".$lang;
     $model = "model_".$lang;
@@ -397,16 +381,17 @@ function pages($lang, $page)
     return $pages;
 }
 
-function images($parent, $type) {
+function images($lang, $parent) {
+    $alt = "alt_".$lang;
 
     $database = new medoo();
-    $images = $database->select("images", ["id", "name", "alt"], 
+    $images = $database->select("images", ["id", "name", $alt], 
         [
         "AND" => [
             "active" => "1",
-            "parent" => $parent,
-            "type" => $type
-            ]
+            "parent" => $parent
+            ],
+        "ORDER" => ["name ASC"]
         ]);
     return $images;
     

@@ -1,6 +1,8 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php 
 
+
+// Delete from cart
 if ($loc["2"] == "del"){
 $x = count($_SESSION["cart"]);
 
@@ -26,11 +28,13 @@ $_SESSION['cart'] = $o;
 header('Location: '.$site.'cart');
 exit;	
 }
+// #Delete from cart
+
 
 if(($loc['1'] != "") && (is_numeric($loc['1'])))  
 {
 
-    $cases = cases_one($lang, $loc['1']);
+    $cases = product($lang, "id", $loc['1'], "1");
 
     $name = "name_".$lang;
     $model = "model_".$lang;

@@ -6,6 +6,7 @@ if ($loc["0"] == "auto"){
     $level = "3"; 
 
     $menus = menu($lang, $level);
+    check_link($menus);
     $i = "0";
 
     if (empty($menus)) {
@@ -15,6 +16,7 @@ if ($loc["0"] == "auto"){
 
 
     $cars = products($lang, "any", "1", "100", $loc[0]);
+    check_link($cars);
     $name = "name_".$lang;
     $model = "model_".$lang;
     $about = "about_".$lang;
@@ -30,10 +32,7 @@ if ($loc["0"] == "auto"){
             foreach($cars as $data)
                 {
 
-                    $my_menu_txt = menu_one($lang, $menu["link_item"]);
-                    //check_link($my_menu_txt);
-                    echo $menu["link_item"];
-                    if ($data[0]["catalog"] == $menu["link_item"]){
+                    if ($data["parent"] == $menu["category"]){
                     echo '      <div class="itemBlock">
                                 <a href="'.$site.'auto/'.$menu["link_item"].'/'.$data["link_item"].'/" class="itemBlockLink">
                                     <div class="itemPrice priceDiscount">
@@ -46,7 +45,7 @@ if ($loc["0"] == "auto"){
                                      <input type="hidden" name="type" value="1">
                                     </form>
                                     <div class="stripeWrap">
-                                        <img class="stripeIndex" src="'.$site.'img/cars/'.$data["img"].'" alt="">
+                                        <img class="stripeIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
                                     </div>
                                 </a>
                                 <h3 class="itemName">'.$data[$name].'</h3>
@@ -96,7 +95,7 @@ echo '        <section class="items container">
                      <input type="hidden" name="type" value="1">
                     </form>
                     <div class="picWrap">
-                        <img class="picIndex" src="'.$site.'img/cases/'.$data["img"].'" alt="">
+                        <img class="picIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
                     </div>
                 </a>
                 <h3 class="itemName">'.$data[$name].'</h3>

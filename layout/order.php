@@ -11,7 +11,7 @@ foreach ($_SESSION['cart'] as $value) {
 
     list ($id, $q) = split(":", $value);
 
-    $case = cases_one($lang, $id);
+    $case = product($lang, "id", $id, "1");
 
     $name = "name_".$lang;
     $model = "model_".$lang;
@@ -70,45 +70,6 @@ $fromemail = "abutyuhin@hotmail.com";
 //mailto($toc,$subjectc,$message,$fromemail,"0");
 
 if ($form["delivery"] == '3'){
-
-// require_once("./incl/lib/Twocheckout.php");
-// Twocheckout::privateKey('F1D4F959-1A1A-49F0-9DCC-2BEA924203CC');
-// Twocheckout::sellerId('901254072');
-//  Twocheckout::sandbox(true);  #Uncomment to use Sandbox
-
-// try {
-//     $charge = Twocheckout_Charge::auth(array(
-//         "merchantOrderId" => 'invoice'.$last_user_id,
-//         "token" => 'Y2U2OTdlZjMtOGQzMi00MDdkLWJjNGQtMGJhN2IyOTdlN2Ni',
-//         "currency" => 'USD',
-//         "total" => $all,
-//         "billingAddr" => array(
-//             "name" => $form["name"],
-//             "addrLine1" => $form["address"],
-//             "city" => $form["city"],
-//             "state" => $form["state"],
-//             "zipCode" => $form["zip"],
-//             "country" => $form["country"],
-//             "email" => 'testingtester@2co.com',
-//             "phoneNumber" => '555-555-5555'
-//         ),
-//         "shippingAddr" => array(
-//             "name" => $form["name"],
-//             "addrLine1" => $form["address"],
-//             "city" => $form["city"],
-//             "state" => $form["state"],
-//             "zipCode" => $form["zip"],
-//             "country" => $form["country"],
-//             "email" => $form["email"],
-//             "phoneNumber" => $form["phone"]
-//         )
-//     ), 'array');
-//     if ($charge['response']['responseCode'] == 'APPROVED') {
-//         echo "Thanks for your Order!";
-//     }
-// } catch (Twocheckout_Error $e) {
-//     $e->getMessage();
-// }
 
 require ("./layout/head.php");
 
@@ -185,15 +146,7 @@ exit;
 }
 
 
-unset($_SESSION['cart']);
-
-require_once("layout/head.php");
-require_once("layout/header.php");
+header('Location: '.$site.'thankyou');
+exit;
 
 ?>
-
-    <div class="slogan container">
-        <h1><?php echo $texts['thankyou']; ?></h1>
-    </div>
-
-<?php require_once("layout/contacts.php"); ?>
