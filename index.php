@@ -62,15 +62,15 @@ if ($loc["0"] == "news"){
 
 }elseif ($loc["0"] == "auto"){
 
-		if (!empty($loc["2"])) { require_once("layout/cars_details.php"); }
-		else{ require_once("layout/cars.php"); }
+		if (!empty($loc["2"])) { require_once("layout/item.php"); }
+		else{ require_once("layout/subcategory.php"); }
 		require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "cases"){
 
-		if (!empty($loc["2"])) { require_once("layout/cases_details.php"); }
-		elseif (!empty($loc["1"])) { require_once("layout/cases_model.php"); }
-		else { require_once("layout/cases.php"); }
+		if (!empty($loc["2"])) { require_once("layout/item.php"); }
+		elseif (!empty($loc["1"])) { require_once("layout/subcategory.php"); }
+		else { require_once("layout/category.php"); }
 		require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "cart"){
