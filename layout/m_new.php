@@ -16,8 +16,10 @@ if (!empty($cases)){
 foreach($cases as $data)
     {
 
+$link = category_one($data["parent"]);
+
 echo '      <div class="itemBlock">
-            <a href="'.$data["link_item"].'" class="itemBlockLink">
+            <a href="'.$site.$link.$data["link_item"].'" class="itemBlockLink">
                 <div class="itemPrice priceDiscount">
                     <div class="itemPrice-final">'.$data[$pri].''.$cur_symbol.'</div>';
 if ($data[$prio] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data[$prio].''.$cur_symbol.'&nbsp;</div>';}

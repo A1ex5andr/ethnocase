@@ -6,6 +6,7 @@ if (!empty($_SESSION['cart'])) {
 
 $order = "";
 $all = '0';
+$usd = '0';
 
 foreach ($_SESSION['cart'] as $value) {
 
@@ -18,6 +19,7 @@ foreach ($_SESSION['cart'] as $value) {
 
 $order = $order.$case['0'][$name]." ".$case['0'][$model]." ".$case['0']["link_item"]." ".$q." ".$case['0'][$pri]." = ".$q*$case['0'][$pri]."<br>";
 $all = $q*$case['0'][$pri] + $all;
+$usd = $q*$case['0']['price_eng'] + $usd;
 }
 $foreign = "";
 if ($form["delivery"] == "02") { $foreign = " Country: ".$form["country"]." Zip: ".$form["zip"]." State: ".$form["state"]; }
@@ -89,7 +91,7 @@ echo'
 
 
         <div><span class="prePay-title">Ваш заказ номер</span><span class="prePay-data orderInput"><input name="li_0_name" value="invoice'.$last_user_id.'" disabled/></span></div>
-        <div><span class="prePay-title">Всего (сумма)</span><span class="prePay-data orderInput"><input name="li_0_price" value="'.$all.'" disabled/></span></div>
+        <div><span class="prePay-title">Всего (сумма)</span><span class="prePay-data orderInput"><input name="li_0_price" value="'.$usd.'&#36;" disabled/></span></div>
         <div><span class="prePay-title">Доставка службой</span><span class="prePay-data orderInput"><input name="li_1_name" value="World wide" disabled/></span></div>
         <div><span class="prePay-title">цена доставки </span><span class="prePay-data orderInput"><input name="li_1_price" value="17" disabled/></span></div>
         <div><span class="prePay-title">имя </span><span class="prePay-data orderInput"><input name="card_holder_name" value="'.$form["name"].'" disabled/></span></div>
@@ -110,7 +112,7 @@ echo'
         <input type="hidden" name="mode" value="2CO" />
         <input type="hidden" name="li_0_type" value="product" />
         <input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
-        <input type="hidden" name="li_0_price" value="'.$all.'" />
+        <input type="hidden" name="li_0_price" value="'.$usd.'" />
         <input type="hidden" name="li_0_tangible" value="Y" />
         <input type="hidden" name="li_1_type" value="shipping" />
         <input type="hidden" name="li_1_name" value="World wide" />

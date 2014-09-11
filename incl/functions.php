@@ -215,6 +215,46 @@ function products($lang, $type, $typev, $limit, $parent)
     return $products;
 }
 
+function category_one($parent)
+{
+
+    $database = new medoo();
+    $category = $database->select("category", ["id", "parent", "name"], 
+        [
+        "active" => "1",
+        "ORDER" => ["id ASC"]
+        ]);
+
+$link = "";
+
+foreach ($category as $key) {
+    if ($parent == $key["id"]){
+        $link .= $key["name"]."/";
+        $parent2 = $key["parent"];
+
+        foreach ($category as $key2) {
+            if ($parent2 == $key2["id"]){
+
+                //$link = $key2["name"]."/".$link;
+                $parent3 = $key2["parent"];
+
+                    foreach ($category as $key3) {
+                        if ($parent3 == $key3["id"]){
+                            
+                            $link = $key3["name"]."/".$link;
+
+                        }
+                    }
+
+            }
+        }
+    }
+}
+
+    return $link;
+}
+
+
 function category($menu)
 {
     $list = "";
