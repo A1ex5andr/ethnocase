@@ -142,7 +142,7 @@ $i++;
                 <div class="orderForm-field">
                     <div class="orderForm-address">
                         <span class="orderInput">
-	                        <input name="address2" placeholder="<?php echo $texts['adress']; ?> 2" type="text" class="checkField text">
+	                        <input name="address2" placeholder="<?php echo $texts['adress']; ?> 2" type="text" class="text">
                         </span>
                     </div>
                 </div>

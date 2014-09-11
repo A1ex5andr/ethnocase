@@ -4,7 +4,7 @@
 
 <?php 
 
-$cases = cases($lang, 'sale');
+$cases = products($lang, "sale", "1", "3", "cases");
 $name = "name_".$lang;
 $model = "model_".$lang;
 

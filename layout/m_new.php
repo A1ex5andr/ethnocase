@@ -3,7 +3,7 @@
 
 <?php 
     
-$cases = cases($lang, 'new');
+$cases = products($lang, "new", "1", "3", "cases");
 $name = "name_".$lang;
 $model = "model_".$lang;
 

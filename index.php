@@ -25,7 +25,6 @@ if( ($loc[3] == "usd") || ($loc[3] == "uah") ) { $_SESSION['valuta'] = $loc[3]; 
 if( ($loc[4] == "usd") || ($loc[4] == "uah") ) { $_SESSION['valuta'] = $loc[4]; header('Location: '.$site.$loc[0].'/'.$loc[1].'/'.$loc[2].'/'.$loc[3].'/'); exit; }
 
 
-
 // ----------- ADMIN BLOCK --------
 if ($loc["0"] == "lesya-ukrainka"){
 
@@ -55,10 +54,10 @@ require_once("layout/header.php");
 
 if ($loc["0"] == "news"){
 
-		if (!empty($loc["1"])) { require_once("layout/news_details.php"); }
-		else{ require_once("layout/newsDetailed.php"); }
-		require_once("layout/bestseller.php");
-		require_once("layout/onsale.php");
+		if (!empty($loc["1"])) { require_once("layout/news_one.php"); }
+		else{ require_once("layout/news.php"); }
+		require_once("layout/m_bestseller.php");
+		require_once("layout/m_sale.php");
 		require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "auto"){
@@ -67,7 +66,7 @@ if ($loc["0"] == "news"){
 		else{ require_once("layout/cars.php"); }
 		require_once("layout/contacts.php");
 
-}elseif ($loc["0"] == "products"){
+}elseif ($loc["0"] == "cases"){
 
 		if (!empty($loc["2"])) { require_once("layout/cases_details.php"); }
 		elseif (!empty($loc["1"])) { require_once("layout/cases_model.php"); }
@@ -91,9 +90,9 @@ if ($loc["0"] == "news"){
 	    </div>';
 		require_once("layout/slider.php");
 		require_once("layout/indexNews.php");
-		require_once("layout/newest.php");
-		require_once("layout/bestseller.php");
-		require_once("layout/onsale.php");
+		require_once("layout/m_new.php");
+		require_once("layout/m_bestseller.php");
+		require_once("layout/m_sale.php");
 		require_once("layout/contacts.php");
 
 }else{

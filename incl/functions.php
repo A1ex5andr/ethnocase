@@ -131,84 +131,159 @@ function common_txt($lang)
     return $max;
 }
 
-function cases($lang, $sel)
-{
-	$database = new medoo();
-
-	$name = "name_".$lang;
-	$model = "model_".$lang;
-	$about = "about_".$lang;
-
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
-        [
-        "AND" => [
-        	"active" => "1",
-        	$sel => "1"
-        	],
-        "ORDER" => ["id DESC"],
-        "LIMIT" => ["3"]
-        ]);
-
-    return $cases;
-}
-
-function cases_model($lang, $parent)
-{
-	$database = new medoo();
-
-	$name = "name_".$lang;
-	$model = "model_".$lang;
-	$about = "about_".$lang;
-
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
-        [
-        "AND" => [
-        	"active" => "1",
-        	"parent" => $parent
-        	],
-        "ORDER" => ["id DESC"]
-        ]);
-
-    return $cases;
-}
-
-function cases_details($lang, $id)
-{
-	$database = new medoo();
-
-	$name = "name_".$lang;
-	$model = "model_".$lang;
-	$about = "about_".$lang;
-
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
-        [
-        "AND" => [
-        	"active" => "1",
-        	"link_item" => $id
-        	]
-        ]);
-
-    return $cases;
-}
-
-function cases_one($lang, $id)
-{
+function minmenu ($parent) {
     $database = new medoo();
+    $minmenu = "";
+    $min = $database->select("menus", "id", [
+        "parent" => $database->select("menus", "id", ["link_item" => $parent])
+    ]);
+// echo $database->last_query();   
+// var_dump($database->error());
+    foreach ($min as $value) {
+        $minmenu .= $value.",";
+    }
+    $minmenu = mb_substr($minmenu, 0, -1);
+    return $minmenu;
+}
 
-    $name = "name_".$lang;
-    $model = "model_".$lang;
-    $about = "about_".$lang;
+function products($lang, $type, $typev, $limit, $parent)
+{
+    $val = category($parent);
+    if (($type == "new") || ($type == "top") || ($type == "sale")) { $types = "1"; } else { $types = "1, 0"; }
+    if (($type == "parent") || ($type == "link_item") || ($type == "id")) { $types = $typev; }
+     $name = "name_".$lang;
+     $model = "model_".$lang;
+     $about = "about_".$lang;
+    
+    $database = new medoo();
+    // $products = $database->select("products", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+    //     [
+    //     "AND" => [
+    //         "active" => "1",
+    //         $type => $types,
+    //         "parent" => $val
+    //         ],
+    //     "ORDER" => ["id DESC"],
+    //     "LIMIT" => [$limit]
+    //     ]);
 
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+$products = $database->query("SELECT id, parent, link_item, img, $name, $model, $about, price, price_old, price_eng, price_old_eng, disc, stock, top, new, sale FROM products WHERE active = 1 AND $type = $types AND parent IN ($val) ORDER BY id DESC LIMIT $limit")->fetchAll();    
+// echo $database->last_query();   
+// var_dump($database->error());
+    return $products;
+}
+
+function category($menu)
+{
+    $list = "";
+    $database = new medoo();
+    $category = $database->select("category", ["id", "parent", "name"], 
         [
-        "AND" => [
-            "active" => "1",
-            "id" => $id
-            ]
+        "active" => "1",
+        "ORDER" => ["id ASC"]
         ]);
 
-    return $cases;
+if ($menu == '0') {$name = "parent"; } else {$name = "name"; }
+
+    foreach ($category as $key) {
+        if ($key[$name] == $menu) { 
+            $list .= "'".$key["id"]."', ";
+            $x = $key["id"];
+            foreach ($category as $key2) {
+                if ($key2["parent"] == $x) {
+                    $list .= "'".$key2["id"]."', ";
+                    $y = $key2["id"];
+                        foreach ($category as $key3) {
+                            if ($key3["parent"] == $y) {
+                                $list .= "'".$key3["id"]."', ";
+                            }
+                        }
+                }
+            }
+        }
+    }
+    $list = mb_substr($list, 0, -2);   
+    return $list;
 }
+
+// function cases($lang, $sel)
+// {
+// 	$database = new medoo();
+
+// 	$name = "name_".$lang;
+// 	$model = "model_".$lang;
+// 	$about = "about_".$lang;
+
+//     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+//         [
+//         "AND" => [
+//         	"active" => "1",
+//         	$sel => "1"
+//         	],
+//         "ORDER" => ["id DESC"],
+//         "LIMIT" => ["3"]
+//         ]);
+
+//     return $cases;
+// }
+
+// function cases_model($lang, $parent)
+// {
+// 	$database = new medoo();
+
+// 	$name = "name_".$lang;
+// 	$model = "model_".$lang;
+// 	$about = "about_".$lang;
+
+//     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+//         [
+//         "AND" => [
+//         	"active" => "1",
+//         	"parent" => $parent
+//         	],
+//         "ORDER" => ["id DESC"]
+//         ]);
+
+//     return $cases;
+// }
+
+// function cases_details($lang, $id)
+// {
+// 	$database = new medoo();
+
+// 	$name = "name_".$lang;
+// 	$model = "model_".$lang;
+// 	$about = "about_".$lang;
+
+//     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+//         [
+//         "AND" => [
+//         	"active" => "1",
+//         	"link_item" => $id
+//         	]
+//         ]);
+
+//     return $cases;
+// }
+
+// function cases_one($lang, $id)
+// {
+//     $database = new medoo();
+
+//     $name = "name_".$lang;
+//     $model = "model_".$lang;
+//     $about = "about_".$lang;
+
+//     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+//         [
+//         "AND" => [
+//             "active" => "1",
+//             "id" => $id
+//             ]
+//         ]);
+
+//     return $cases;
+// }
 
 function cars($lang)
 {
