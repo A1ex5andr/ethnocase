@@ -2464,7 +2464,8 @@ h1 {
   margin: 30px auto;
   display: block; }
 .picsGallery .picsGallery-thumbs, .picsGallery .picsGallery-show {
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 550px; }
 .picsGallery .picsGallery-show {
   display: none; }
 

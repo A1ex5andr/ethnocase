@@ -376,7 +376,9 @@ textarea {
   }
   .picsGallery-thumbs, .picsGallery-show {
     overflow: hidden;
+    max-width: 550px;
   }
+
   .picsGallery-show {
     display: none;
   }

@@ -25,6 +25,10 @@ echo '      <div class="itemBlock">
 if ($data[$prio] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data[$prio].''.$cur_symbol.'&nbsp;</div>';}
 if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
 echo '                </div>
+                <form action="'.$site.'cart/'.$data["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
+			     <button class="btn btn-buy_cat">'.$texts['buy'].'</button>
+			     <input type="hidden" name="type" value="1">
+			    </form>
                 <div class="picWrap">
                     <img class="picIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
                 </div>
