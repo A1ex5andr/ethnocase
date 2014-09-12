@@ -94,7 +94,7 @@ $i++;
 
 
                 <div class="inCart-more">
-	                <form action="<?php echo $site.'products/'; ?>" class="addButton"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
+	                <form action="<?php echo $site.'cases/'; ?>" class="addButton"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
                 </div>
 
             </div>
