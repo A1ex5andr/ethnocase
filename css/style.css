@@ -2064,7 +2064,7 @@ th {
   color: #fff;
   text-decoration: none;
   width: 100%;
-  background: #ed1c24;
+  background: #CA2D33;
   border-bottom: 1px solid white;
   padding: 0.7em 1em;
   float: left;
@@ -2356,6 +2356,8 @@ h1 {
     max-width: 400px; }
     .newsBlock .img-news.pullLeft, .newsBlock .img-news.pullRight {
       padding: 10px; }
+  .newsBlock h3 {
+    margin-top: 10px; }
   .newsBlock h3:after {
     width: 60px;
     height: 1px;
@@ -2371,7 +2373,8 @@ h1 {
   .newsBlock p {
     padding: 10px;
     text-align: justify;
-    font-size: 15px; }
+    font-size: 16px;
+    line-height: 25px; }
 
 .newsTitle {
   text-align: center;
@@ -2416,7 +2419,8 @@ h1 {
       overflow: hidden;
       padding: 10px 0; }
       .itemBlock .itemBlockLink .picWrap .picIndex {
-        width: 200px; }
+        width: 200px;
+        height: 200px; }
     .itemBlock .itemBlockLink .stripeWrap .stripeIndex {
       width: 100%;
       display: block; }
@@ -2465,7 +2469,8 @@ h1 {
   display: block; }
 .picsGallery .picsGallery-thumbs, .picsGallery .picsGallery-show {
   overflow: hidden;
-  max-width: 550px; }
+  max-width: 550px;
+  margin: 0 auto; }
 .picsGallery .picsGallery-show {
   display: none; }
 
@@ -2802,6 +2807,12 @@ footer {
   h1 {
     line-height: 1.2em; }
 
+  a {
+    -webkit-transition: all .35s ease-out;
+    -moz-transition: all .35s ease-out;
+    -o-transition: all .35s ease-out;
+    transition: all .35s ease-out; }
+
   a:hover {
     color: #d30000; }
 
@@ -2869,6 +2880,7 @@ footer {
       /* Safari */ }
       .itemBlock .itemBlockLink .picWrap .picIndex {
         width: 200px;
+        height: 200px;
         margin-left: -60px; }
       .itemBlock .itemBlockLink .buyForm {
         display: none; }
@@ -3050,6 +3062,7 @@ footer {
     padding-right: 0.41667%; }
     .itemBlock .itemBlockLink .picWrap .picIndex {
       width: 220px;
+      height: 220px;
       margin-left: -50px; } }
 @media (min-width: 1200px) {
   .container {
@@ -3064,6 +3077,7 @@ footer {
       display: block;
       clear: both; }
 
-  .picWrap .picIndex {
+  .itemBlock .itemBlockLink .picWrap .picIndex {
     width: 250px;
+    height: 250px;
     margin-left: -50px; } }

@@ -254,6 +254,9 @@ textarea {
       padding: 10px;
     }
   }
+  h3{
+    margin-top: 10px;
+  }
   h3:after {
     width: 60px;
     height: 1px;
@@ -269,7 +272,8 @@ textarea {
   p {
     padding: 10px;
     text-align: justify;
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
@@ -316,6 +320,7 @@ textarea {
       padding: 10px 0;
       .picIndex {
         width: 200px;
+        height: 200px;
         // margin-left: -50px;
       }
     }
@@ -377,8 +382,8 @@ textarea {
   .picsGallery-thumbs, .picsGallery-show {
     overflow: hidden;
     max-width: 550px;
+    margin: 0 auto;
   }
-
   .picsGallery-show {
     display: none;
   }
@@ -744,6 +749,12 @@ footer {
       line-height: $size;
     }
   }
+  a{
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+  }
   a:hover {
     color: $red;
   }
@@ -792,6 +803,7 @@ footer {
       .picWrap {
         .picIndex {
           width: 200px;
+          height: 200px;
           margin-left: -60px;
         }
       }
@@ -925,6 +937,7 @@ footer {
       .picWrap {
         .picIndex {
           width: 220px;
+          height: 220px;
           margin-left: -50px;
         }
       }
@@ -941,10 +954,15 @@ footer {
     .headLogo {
     }
   }
-  .picWrap {
-    .picIndex {
-      width: 250px;
-      margin-left: -50px;
+  .itemBlock {
+    .itemBlockLink {
+      .picWrap {
+        .picIndex {
+          width: 250px;
+          height: 250px;
+          margin-left: -50px;
+        }
+      }
     }
   }
 }

@@ -21,6 +21,6 @@ unset($_SESSION['cart']);
         <div class="slogan container">
             <h1><?php echo $texts['thankyou']; ?></h1>
         </div>
-<?php require_once("layout/contacts.php"); ?>
+<?php //require_once("layout/contacts.php"); ?>
     </body>
 </html>

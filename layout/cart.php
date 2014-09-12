@@ -174,17 +174,17 @@ $i++;
                         <div class="delWorld">
                             <div class="orderForm-country">
                                 <span class="orderInput">
-                                    <input name="country" placeholder="country" type="text" class="checkField text">
+                                    <input name="country" placeholder="country" type="text" class="checkField text" value="-">
                                 </span>
                             </div>
                             <div class="orderForm-zip">
                                 <span class="orderInput">
-                                    <input name="zip" placeholder="zip" type="text" class="checkField text">
+                                    <input name="zip" placeholder="zip" type="text" class="checkField text" value="-">
                                 </span>
                             </div>
                             <div class="orderForm-state">
                                 <span class="orderInput">
-                                    <input name="state" placeholder="state" type="text" class="checkField text">
+                                    <input name="state" placeholder="state" type="text" class="checkField text" value="-">
                                 </span>
                             </div>
                         </div>
