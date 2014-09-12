@@ -2357,7 +2357,8 @@ h1 {
     .newsBlock .img-news.pullLeft, .newsBlock .img-news.pullRight {
       padding: 10px; }
   .newsBlock h3 {
-    margin-top: 10px; }
+    margin-top: 10px;
+    text-transform: capitalize; }
   .newsBlock h3:after {
     width: 60px;
     height: 1px;
@@ -2808,10 +2809,10 @@ footer {
     line-height: 1.2em; }
 
   a {
-    -webkit-transition: all .35s ease-out;
-    -moz-transition: all .35s ease-out;
-    -o-transition: all .35s ease-out;
-    transition: all .35s ease-out; }
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out; }
 
   a:hover {
     color: #d30000; }

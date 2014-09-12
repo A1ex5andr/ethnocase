@@ -11,7 +11,7 @@
                 <div class="contactsSocial">
                     <div class="contactsSocial-link">
                         <div class="icon">
-                        <a href="http://www.facebook.com/ETHNOitem" target="blank">
+                        <a href="http://www.facebook.com/ETHNOCASE" target="blank">
                             <i class="fa fa-facebook-square fa-2x"></i>
                         </a>
                         </div>
@@ -25,15 +25,15 @@
                     </div> -->
                     <div class="contactsSocial-link">
                         <div class="icon">
-                        	<a href="mailto:sales@ethnoitem.com">
+                        	<a href="mailto:sales@ethnocase.com">
 	                            <i class="fa fa-envelope fa-2x"></i>
                         	</a>
                         </div>
-                        <p class="contact-meta"> sales@ethnoitem.com </p>
+                        <p class="contact-meta"> sales@ethnocase.com </p>
                     </div>
                     <div class="contactsSocial-link">
                         <div class="icon">
-                        	<a href="tel:3-8097-438-75-84">
+                        	<a href="tel:3-8097-438-75-84" data-rel="external">
 	                            <i class="fa fa-phone fa-2x"></i>
                         	</a>
                         </div>
