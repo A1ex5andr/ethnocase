@@ -68,8 +68,8 @@ $toc = $form["email"];
 $fromemail = "abutyuhin@hotmail.com";
 
 
-//mailto($to,$subject,$message,$fromemail,"0");
-//mailto($toc,$subjectc,$message,$fromemail,"0");
+mailto($to,$subject,$message,$fromemail,"0");
+mailto($toc,$subjectc,$message,$fromemail,"0");
 
 if ($form["delivery"] == '3'){
 
