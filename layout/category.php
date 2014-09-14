@@ -19,7 +19,7 @@ check_link($menus);
             	if ($i == '1'){ echo "</div>"; $i = '0'; }
                 echo '        <div class="catalog-brand">
                 <header class="headline">
-                    <h1><img class="headlineImg '.$data["class"].'" src="'.$site.'img/cases/catModels/'.$data["img"].'" alt="'.$data["alt"].'"></h1>
+                    <h1><img class="headlineImg '.$data["class"].'" src="'.$site.'img/category/'.$data["img"].'" alt="'.$data["alt"].'"></h1>
                 </header>';
             	$i = $i+1;
                 $parent = $data["id"];
@@ -30,7 +30,7 @@ check_link($menus);
                             if ($dat["parent"] == $parent){
                                 echo '            <div class="brandModel">
                                                     <a href="'.$link.$loc["0"].'/'.$dat["link_item"].'/">
-                                                        <div class="brandPicWrap"><img src="'.$site.'img/cases/catModels/'.$dat["img"].'" alt=""></div>
+                                                        <div class="brandPicWrap"><img src="'.$site.'img/category/'.$dat["img"].'" alt=""></div>
                                                         <h2>'.$dat[$lang].'</h2>
                                                     </a>
                                                 </div> ';
