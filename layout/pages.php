@@ -7,7 +7,7 @@ if (!empty($page)){
 	    {
 		    if (!empty($data[$lang])){
 
-				echo $data[$lang]."-";
+				echo $data[$lang];
 
 			}
 		}

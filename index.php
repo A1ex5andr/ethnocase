@@ -24,7 +24,6 @@ if( ($loc[2] == "usd") || ($loc[2] == "uah") ) { $_SESSION['valuta'] = $loc[2]; 
 if( ($loc[3] == "usd") || ($loc[3] == "uah") ) { $_SESSION['valuta'] = $loc[3]; header('Location: '.$site.$loc[0].'/'.$loc[1].'/'.$loc[2].'/'); exit; }
 if( ($loc[4] == "usd") || ($loc[4] == "uah") ) { $_SESSION['valuta'] = $loc[4]; header('Location: '.$site.$loc[0].'/'.$loc[1].'/'.$loc[2].'/'.$loc[3].'/'); exit; }
 
-
 // ----------- ADMIN BLOCK --------
 if ($loc["0"] == "lesya-ukrainka"){
 
@@ -88,8 +87,8 @@ if ($loc["0"] == "news"){
 	    echo '<div class="slogan container">
 	        <h1>'.$texts['sloganSmall'].'</h1>
 	    </div>';
-		require_once("layout/slider.php");
-		require_once("layout/indexNews.php");
+		require_once("layout/m_slider.php");
+		require_once("layout/m_news.php");
 		require_once("layout/m_new.php");
 		require_once("layout/m_bestseller.php");
 		require_once("layout/m_sale.php");

@@ -68,7 +68,7 @@ echo '                                        </div>
                                     <input class="quantity-select" type="text" value="'.$q.'" length="2" maxlength="3" disabled="disabled">
                                     <div class="quantity qPlus"><span class="quantity_plus">&#43;</span></div>
                                 </h4>
-                                <form action="'.$site.'cart/'.$case['0']['id'].'/del" class="removeButton"><button class="btn btn-Remove"><!--i class="fa fa-trash-o"></i--> '.$texts['remove'].'</button></form>
+                                <form action="'.$link.'cart/'.$case['0']['id'].'/del" class="removeButton"><button class="btn btn-Remove"><!--i class="fa fa-trash-o"></i--> '.$texts['remove'].'</button></form>
                             </li>
                             <li>
                                 <h2>'.$texts['payment'].'</h2>
@@ -84,17 +84,13 @@ echo '                                        </div>
 $i++;
 }
 
-//list ($id, $q) = split(":::", $_SESSION['cart']);
-
 
 }
 
 ?>
 
-
-
                 <div class="inCart-more">
-	                <form action="<?php echo $site.'cases/'; ?>" class="addButton"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
+	                <form action="<?php echo $link."cases/"; ?>" class="addButton"><button class="btn btn-addMore"><i class="fa fa-plus-square-o"></i> <?php echo $texts['addmore']; ?></button></form>
                 </div>
 
             </div>
@@ -103,7 +99,7 @@ $i++;
                 <h2><?php echo $texts['dodelivery']; ?></h2>
             </header>
 
-            <form class="orderForm" method="post" action="<?php echo $site.'order/'; ?>" accept-charset="utf-8" enctype="multipart/form-data">
+            <form class="orderForm" method="post" action="<?php echo $link.'order/'; ?>" accept-charset="utf-8" enctype="multipart/form-data">
                 <div class="orderForm-field">
                     <div class="orderForm-name">
                         <span class="orderInput">

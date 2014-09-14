@@ -17,16 +17,16 @@ if (!empty($cases)){
 foreach($cases as $data)
     {
 
-$link = category_one($data["parent"]);
+$links = category_one($data["parent"]);
 
 echo '      <div class="itemBlock">
-            <a href="'.$site.$link.$data["link_item"].'" class="itemBlockLink">
+            <a href="'.$link.$links.$data["link_item"].'" class="itemBlockLink">
                 <div class="itemPrice priceDiscount">
                     <div class="itemPrice-final">'.$data[$pri].''.$cur_symbol.'</div>';
 if ($data[$prio] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data[$prio].''.$cur_symbol.'&nbsp;</div>';}
 if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
 echo '                </div>
-                <form action="'.$site.'cart/'.$data["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
+                <form action="'.$link.'cart/'.$data["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
 			     <button class="btn btn-buy_cat">'.$texts['buy'].'</button>
 			     <input type="hidden" name="type" value="1">
 			    </form>

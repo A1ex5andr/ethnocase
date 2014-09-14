@@ -6,11 +6,11 @@
         $form[$key] = $value;
     }
 
-function redirect($time, $link, $text, $exit)
+function redirect($time, $links, $text, $exit)
     {
-        print"<html><head><meta http-equiv=\"refresh\" content=\"".$time."; url=".$link."\"></head>
+        print"<html><head><meta http-equiv=\"refresh\" content=\"".$time."; url=".$links."\"></head>
 	        <body>
-		        ".$text."<p align=center><a href=\"".$link."\">"."</a><br><br>
+		        ".$text."<p align=center><a href=\"".$links."\">"."</a><br><br>
 	        </body>
         </html>"; 
         if ($exit == '1'){exit;}
@@ -49,7 +49,7 @@ function mailto($to,$subject,$message,$from)
             mailto('info@coderstudio.net', 'CoderStudio', $message, $from);
 			mailto($form['email'], 'CoderStudio', $message2,  $from);
 
-            redirect('0', 'http://ethnocase.com/', '<!--h2 style="text-align: center; margin-top:100px;"> Thanks for registration!</h2-->', '1');
+            redirect('0', $link, '<!--h2 style="text-align: center; margin-top:100px;"> Thanks for registration!</h2-->', '1');
             exit;
         }
 ?>		

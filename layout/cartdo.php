@@ -25,7 +25,7 @@ foreach ($_SESSION["cart"] as $value) {
 unset($_SESSION['cart']);
 $_SESSION['cart'] = $o;
 
-header('Location: '.$site.'cart');
+header('Location: '.$link.'cart');
 exit;	
 }
 // #Delete from cart
@@ -49,12 +49,12 @@ $x = count($_SESSION["cart"]);
 	for ($i=0; $i < $x; $i++) {
 
 		list ($id, $q) = split(":", $_SESSION["cart"][$i]); 
-		if ($cases['0']['id'] == $id){ header('Location: '.$site.'cart/'); exit; }
+		if ($cases['0']['id'] == $id){ header('Location: '.$link.'cart/'); exit; }
 	}
 
 $_SESSION['cart'][$i] = $cases['0']['id'].":1";     
 
-header('Location: '.$site.'cart/');
+header('Location: '.$link.'cart/');
 exit;
 }
 

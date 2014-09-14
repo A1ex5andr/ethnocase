@@ -1,6 +1,6 @@
 <?php if ( !defined('MITH') ) {exit;} ?>	<header class="container">
 		<div class="headLogo">
-			<a href="<?php echo $site; ?>">
+			<a href="<?php echo $link; ?>">
 				<img src="<?php echo $site; ?>img/logo.jpg" alt="" class="logo">
 			</a>
 		</div>
@@ -17,12 +17,12 @@ foreach($menus as $data)
 			if ( $data["link_item"] == "cart" ){
 					$pr_menu .= '
 		        <li>
-		        	<a href="'.$site.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].' '.$inthecart.'</a>
+		        	<a href="'.$link.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].' '.$inthecart.'</a>
 		        </li>';
 		    }else{
 				$pr_menu .= '
 		        <li>
-		        	<a href="'.$site.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].'</a>
+		        	<a href="'.$link.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].'</a>
 		        </li>';
 		    }
 	    }

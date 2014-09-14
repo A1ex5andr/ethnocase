@@ -9,14 +9,14 @@
 
 function language($lang){
 
-if ((!isset($_COOKIE['lang'])) || (!is_numeric($_COOKIE['lang'])) || ($_COOKIE['lang']>3) || (empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang) )
-	{
+// if ( (empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang) )
+// 	{
 		setcookie("lang", "", time()-3600);
         $lang = langtcook($lang);
 		setcookie('lang',$lang,time() + (86400 * 7));
 		$_SESSION['lang'] = langfcook($lang);
 		$lang = langfcook($lang);
-	}
+	// }
 
 	return $lang;
 }
@@ -52,18 +52,30 @@ $url = explode('/',$url);
 	    $args[] = urldecode($val);
 
 	    if ($i == false){
-	    	if ((($args['0'] != "rus") AND ($args['0'] != "eng")) AND ($lang != "ukr")){
-	    		$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],1);
-	    	}
-	    	elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang != "ukr")){
-	    		$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],5);
-	    	}
-	    	elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang == "ukr")){
-	    		$i = true; echo $site.substr($_SERVER['REQUEST_URI'],5);
-	    	}
-	    	else {
-	    		$i = true; echo $site.substr($_SERVER['REQUEST_URI'],1);
-	    	}
+            if ((($args['0'] != "rus") AND ($args['0'] != "eng")) AND ($lang != "ukr")){
+                $i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],1);
+            }
+            elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang != "ukr")){
+                $i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],5);
+            }
+            elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang == "ukr")){
+                $i = true; echo $site.substr($_SERVER['REQUEST_URI'],5);
+            }
+            else {
+                $i = true; echo $site.substr($_SERVER['REQUEST_URI'],1);
+            }
+	    	// if ((($args['0'] != "rus") AND ($args['0'] != "eng")) AND ($lang != "ukr")){
+	    	// 	$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],1);
+	    	// }
+	    	// elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang != "ukr")){
+	    	// 	$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],5);
+	    	// }
+	    	// elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang == "ukr")){
+	    	// 	$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],5);
+	    	// }
+	    	// else {
+	    	// 	$i = true; echo $site.substr($_SERVER['REQUEST_URI'],1);
+	    	// }
 
 		}
 	   // echo urldecode($val);

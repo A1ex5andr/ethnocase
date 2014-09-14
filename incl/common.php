@@ -1,6 +1,7 @@
 <?php
 
 $site = "http://new.ethnocase.com/";
+$link = $site;
 $asite = "http://new.ethnocase.com/lesya-ukrainka/";
 $fromemail = "bars38@gmail.com";
 
@@ -43,19 +44,24 @@ if (($args['0'] == "rus") OR ($args['0'] == "eng")){
 }
 
 
-	if ($args['0'] == "eng" ) {$lang = "eng";}
-	elseif ($args['0'] == "rus") {$lang = 'rus';}
-	else {$lang = 'ukr'; }
+if ( (($args['0'] != "rus") && ($args['0'] != "eng")) || (!isset($args['0'])) || ($args['0'] == "ukr") ) {$lang = "ukr"; $_SESSION['lang'] = "ukr"; 
+}elseif ( $args['0'] == "rus" ) { $lang = "rus"; $_SESSION['lang'] = "rus"; $link = $link.$lang."/";
+}elseif ( $args['0'] == "eng" ) { $lang = "eng"; $_SESSION['lang'] = "eng"; $link = $link.$lang."/";
+}
+
+	// if ($args['0'] == "eng" ) {$lang = "eng"; }
+	// elseif ($args['0'] == "rus") {$lang = 'rus';}
+	// else {$lang = 'ukr'; }
 
 if (!isset($args['0'])){$lang = 'ukr';}
 
 
-if ( (isset($_COOKIE["lang"])) && (!isset($_SESSION['lang'])) && (is_numeric($_COOKIE["lang"])) && (empty($loc[0])) ){
-echo $_COOKIE["lang"];
-	if ($_COOKIE["lang"] == '1'){ $lang = "rus"; $_SESSION['lang'] = "rus"; }
-	elseif ($_COOKIE["lang"] == '2'){ $lang = "eng"; $_SESSION['lang'] = "eng";}
-	else { $lang = "ukr"; $_SESSION['lang'] = "ukr";}
-}
+// if ( (isset($_COOKIE["lang"])) && (!isset($_SESSION['lang'])) && (is_numeric($_COOKIE["lang"])) && (empty($loc[0])) ){
+// echo $_COOKIE["lang"];
+// 	if ($_COOKIE["lang"] == '1'){ $lang = "rus"; $_SESSION['lang'] = "rus"; }
+// 	elseif ($_COOKIE["lang"] == '2'){ $lang = "eng"; $_SESSION['lang'] = "eng";}
+// 	else { $lang = "ukr"; $_SESSION['lang'] = "ukr";}
+// }
 //echo $_COOKIE["lang"];
 
 if (!empty($_SESSION['cart'])) {
