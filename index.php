@@ -46,6 +46,12 @@ if ( ($loc["0"] == "cart") && (!empty($loc["1"])) ) {
 
 	require_once("layout/thankyou.php");
 	exit;
+
+}elseif ($loc["0"] == "contact"){
+
+	require_once("layout/contactsend.php");
+	exit;
+
 }
 
 require_once("layout/head.php");

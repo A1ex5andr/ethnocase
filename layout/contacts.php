@@ -43,8 +43,8 @@
             </div>
 
             <div class="contactsBlock">
-                <form action="contactSend.php" method="post" role="form" class="contactsForm">
-	                <input type="text" class="checkField form-name" id="nameinput" placeholder="<?php echo $texts['name']; ?>" name="contact-name">
+                <form action="<?php echo $link; ?>contact/" method="post" role="form" class="contactsForm" enctype="multipart/form-data">
+	                <input type="text" class="checkField form-name" id="nameinput" placeholder="<?php echo $texts['name']; ?>" name="contactname">
 	                <input type="email" class="checkField form-mail" id="emailinput" placeholder="Email" name="contact-email">
 	                <textarea class="checkField form-mesg" rows="6" name="contact-message" placeholder="<?php echo $texts['message']; ?>"></textarea>
 	                <button type="submit" class="btn btn-send"><i class="fa fa-pencil-square-o"></i> <?php echo $texts['send']; ?></button>

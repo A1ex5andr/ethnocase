@@ -1,10 +1,6 @@
 <?php
-    foreach($_POST as $key => $value)
-    {
-        $value = trim($value);
-        $value = addslashes(htmlspecialchars($value));
-        $form[$key] = $value;
-    }
+echo "test";
+echo $form['contactname'];
 
 function redirect($time, $links, $text, $exit)
     {
@@ -25,29 +21,29 @@ function mailto($to,$subject,$message,$from)
         mail($to, $subject, $message, $headers);  
     }    
 
-    if(($form['name'] != '') AND ($form['email'] != '') AND ($form['message']))
+    if( (!empty($form['contact-name']) && (!empty($form['contact-email'])) && (!empty($form['contact-message'])) )
 		{
 			$message = '<html><head><title>ETHNOCASE - Contact</title></head><body>
-            <p>Автор: '.$form['name']. '</p>
-            <p>Email: '.$form['email']. '</p><br />
+            <p>Автор: '.$form['contact-name']. '</p>
+            <p>Email: '.$form['contact-email']. '</p><br />
 			<p>Вам надійшло замовлення:</p>
-			<p>'. $form['email'] .'</p>
+			<p>'. $form['contact-message'] .'</p>
 			</body></html>';
 
-            $message2 = '<html><head><title>ETHNOCASE</title></head><body>
+            $message2 = "<html><head><title>ETHNOCASE</title></head><body>
             <p>Thank you, <br>
-                we\'ll contact you asap.
+                we'll contact you asap.
             </p>
             <br />
             <br />
             Best regards, <br />
             ETHNOCASE Team
-            </body></html>';
+            </body></html>";
 
-			$from = 'From: <info@ethnocase.net>' . "\r\n";
+			$from = "From: <bars38@gmail.com>\r\n";
 
-            mailto('info@coderstudio.net', 'CoderStudio', $message, $from);
-			mailto($form['email'], 'CoderStudio', $message2,  $from);
+            mailto('bars38@gmail.com', 'CoderStudio', $message, $from);
+			mailto($form['contact-email'], 'CoderStudio', $message2,  $from);
 
             redirect('0', $link, '<!--h2 style="text-align: center; margin-top:100px;"> Thanks for registration!</h2-->', '1');
             exit;
