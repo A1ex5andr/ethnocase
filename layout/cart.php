@@ -1,5 +1,15 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
+<?php 
+if (empty($_SESSION['cart'])) {
+            
+echo '            <div class="slogan container">
+            <h1>'.$texts['emptycart'].'</h1>
+        </div>';
+require_once("layout/footer.php");
+exit;
+}
 
+?>
 	<div class="slogan container">
         <h1><?php echo $texts['your_order']; ?></h1>
     </div>
