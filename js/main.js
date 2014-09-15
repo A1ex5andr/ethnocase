@@ -71,10 +71,14 @@ $(document).ready(function() {
                 rowDivs[currentDiv].height(currentTallest);
             }
         });
-    }
+    };
     $(window).load(function() {
         equalheight('.itemBlock');
     });
+    $(window).resize(function() {
+        equalheight('.itemBlock');
+    });
+
 
 
     //world wide delivery extras

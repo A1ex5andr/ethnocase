@@ -21,7 +21,7 @@ function mailto($to,$subject,$message,$from)
         mail($to, $subject, $message, $headers);  
     }    
 
-    if( (!empty($form['contact-name']) && (!empty($form['contact-email'])) && (!empty($form['contact-message'])) )
+    if( (!empty($form['contact-name']) && (!empty($form['contact-email'])) && (!empty($form['contact-message'])) ))
 		{
 			$message = '<html><head><title>ETHNOCASE - Contact</title></head><body>
             <p>Автор: '.$form['contact-name']. '</p>

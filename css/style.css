@@ -2885,8 +2885,6 @@ footer {
         width: 200px;
         height: 200px;
         margin-left: -60px; }
-      .itemBlock .itemBlockLink .buyForm {
-        display: none; }
       .itemBlock .itemBlockLink:hover + h3 {
         color: #d30000; }
       .itemBlock .itemBlockLink:hover .buyForm {

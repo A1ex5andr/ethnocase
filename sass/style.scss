@@ -808,14 +808,8 @@ footer {
           margin-left: -60px;
         }
       }
-      .buyForm {
-        display: none;
-      }
       &:hover + h3 {
         color: $red;
-      }
-      &:hover .buyForm {
-        display: inline-block;
       }
       &:hover {
         border-color: $red;
