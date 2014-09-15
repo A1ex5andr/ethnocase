@@ -31,12 +31,21 @@
         mail('bars38@gmail.com', 'CoderStudio', $message2, $headers);
 
 
+require_once("layout/head.php");
+require_once("layout/header.php");
+?>
+        <div class="slogan container">
+            <h1><?php echo $texts['thankyoumail']; ?></h1>
+        </div>
+    </body>
+</html>
 
-print '<html><head><meta http-equiv="refresh" content="0; url='.$link.'"></head>
-            <body>
-                <!--h2 style="text-align: center; margin-top:100px;"> Thanks for registration!</h2--><p align=center><a href="'.$link.'"></a><br><br>
-            </body>
-        </html>';
+<?php 
+// print '<html><head><meta http-equiv="refresh" content="3; url='.$link.'"></head>
+//             <body>
+//                 <!--h2 style="text-align: center; margin-top:100px;"> Спасибо, Ваше сообщение отправленно!</h2--><p align=center><a href="'.$link.'"></a><br><br>
+//             </body>
+//         </html>';
 
            exit;
         }
