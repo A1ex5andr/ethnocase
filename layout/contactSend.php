@@ -27,7 +27,8 @@
     'Reply-To: bars38@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-        mail('bars38@gmail.com', 'CoderStudio', $message, $headers);
+        mail($form['contact-email'], 'CoderStudio', $message, $headers);
+        mail('bars38@gmail.com', 'CoderStudio', $message2, $headers);
 
 
 
