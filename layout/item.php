@@ -59,7 +59,7 @@ $images = images($lang, $items[0]["id"]);
 				<h3>'.$texts['about_case'].'</h3>
 			</header>
 			<form action="'.$link.'cart/'.$items[0]["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
-			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].'</button>
+			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].' '.$items[0][$pri].''.$cur_symbol.'</button>
 			    <input type="hidden" name="type" value="1">
 			</form>
 			<p class="singleProduct-about">
