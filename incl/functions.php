@@ -1,22 +1,14 @@
 ﻿<?php
 // ====================FUNCTIONS=====================================
-// function startSession() {
-//     if ( session_id() ) return true;
-//     else return session_start();
-// }
-
-// startSession();
 
 function language($lang){
 
-// if ( (empty($_SESSION['lang'])) || ($_SESSION['lang'] != $lang) )
-// 	{
 		setcookie("lang", "", time()-3600);
         $lang = langtcook($lang);
 		setcookie('lang',$lang,time() + (86400 * 7));
 		$_SESSION['lang'] = langfcook($lang);
 		$lang = langfcook($lang);
-	// }
+
 
 	return $lang;
 }
@@ -64,21 +56,8 @@ $url = explode('/',$url);
             else {
                 $i = true; echo $site.substr($_SERVER['REQUEST_URI'],1);
             }
-	    	// if ((($args['0'] != "rus") AND ($args['0'] != "eng")) AND ($lang != "ukr")){
-	    	// 	$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],1);
-	    	// }
-	    	// elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang != "ukr")){
-	    	// 	$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],5);
-	    	// }
-	    	// elseif ((($args['0'] == "rus") OR ($args['0'] == "eng")) AND ($lang == "ukr")){
-	    	// 	$i = true; echo $site.$lang."/".substr($_SERVER['REQUEST_URI'],5);
-	    	// }
-	    	// else {
-	    	// 	$i = true; echo $site.substr($_SERVER['REQUEST_URI'],1);
-	    	// }
 
 		}
-	   // echo urldecode($val);
 	}
 
 }
@@ -161,20 +140,20 @@ function common_txt($lang)
     return $max;
 }
 
-function minmenu ($parent) {
-    $database = new medoo();
-    $minmenu = "";
-    $min = $database->select("menus", "id", [
-        "parent" => $database->select("menus", "id", ["link_item" => $parent])
-    ]);
-// echo $database->last_query();   
-// var_dump($database->error());
-    foreach ($min as $value) {
-        $minmenu .= $value.",";
-    }
-    $minmenu = mb_substr($minmenu, 0, -1);
-    return $minmenu;
-}
+// function minmenu ($parent) {
+//     $database = new medoo();
+//     $minmenu = "";
+//     $min = $database->select("menus", "id", [
+//         "parent" => $database->select("menus", "id", ["link_item" => $parent])
+//     ]);
+// // echo $database->last_query();   
+// // var_dump($database->error());
+//     foreach ($min as $value) {
+//         $minmenu .= $value.",";
+//     }
+//     $minmenu = mb_substr($minmenu, 0, -1);
+//     return $minmenu;
+// }
 
 function product($lang, $type, $typev, $limit)
 {
@@ -220,9 +199,6 @@ function products($lang, $type, $typev, $limit, $parent)
         "ORDER" => ["id DESC"],
         "LIMIT" => $limit
         ]);
-// echo $database->last_query();   
-// var_dump($database->error());
-// $products = $database->query("SELECT id, parent, link_item, img, $name, $model, $about, price, price_old, price_eng, price_old_eng, disc, stock, top, new, sale FROM products WHERE active = 1 AND $type = $types AND parent IN ($val) ORDER BY id DESC LIMIT $limit")->fetchAll();    
 
     return $products;
 }
@@ -247,7 +223,6 @@ foreach ($category as $key) {
         foreach ($category as $key2) {
             if ($parent2 == $key2["id"]){
 
-                //$link = $key2["name"]."/".$link;
                 $parent3 = $key2["parent"];
 
                     foreach ($category as $key3) {
@@ -302,7 +277,28 @@ if ($menu == '0') {$name = "parent"; } else {$name = "name"; }
     return $list;
 }
 
-// function cases($lang, $sel)
+// // function cases($lang, $sel)
+// // {
+// // 	$database = new medoo();
+
+// // 	$name = "name_".$lang;
+// // 	$model = "model_".$lang;
+// // 	$about = "about_".$lang;
+
+// //     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+// //         [
+// //         "AND" => [
+// //         	"active" => "1",
+// //         	$sel => "1"
+// //         	],
+// //         "ORDER" => ["id DESC"],
+// //         "LIMIT" => ["3"]
+// //         ]);
+
+// //     return $cases;
+// // }
+
+// function cases_model($lang, $parent)
 // {
 // 	$database = new medoo();
 
@@ -314,55 +310,73 @@ if ($menu == '0') {$name = "parent"; } else {$name = "name"; }
 //         [
 //         "AND" => [
 //         	"active" => "1",
-//         	$sel => "1"
+//         	"parent" => $parent
+//         	],
+//         "ORDER" => ["id DESC"]
+//         ]);
+
+//     return $cases;
+// }
+
+// // function cases_details($lang, $id)
+// // {
+// // 	$database = new medoo();
+
+// // 	$name = "name_".$lang;
+// // 	$model = "model_".$lang;
+// // 	$about = "about_".$lang;
+
+// //     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+// //         [
+// //         "AND" => [
+// //         	"active" => "1",
+// //         	"link_item" => $id
+// //         	]
+// //         ]);
+
+// //     return $cases;
+// // }
+
+// // function cases_one($lang, $id)
+// // {
+// //     $database = new medoo();
+
+// //     $name = "name_".$lang;
+// //     $model = "model_".$lang;
+// //     $about = "about_".$lang;
+
+// //     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+// //         [
+// //         "AND" => [
+// //             "active" => "1",
+// //             "id" => $id
+// //             ]
+// //         ]);
+
+// //     return $cases;
+// // }
+
+// function cars($lang)
+// {
+// 	$database = new medoo();
+
+// 	$name = "name_".$lang;
+// 	$model = "model_".$lang;
+// 	$about = "about_".$lang;
+
+//     $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
+//         [
+//         "AND" => [
+//         	"active" => "1"
 //         	],
 //         "ORDER" => ["id DESC"],
 //         "LIMIT" => ["3"]
 //         ]);
 
-//     return $cases;
+//     return $cars;
 // }
 
-function cases_model($lang, $parent)
-{
-	$database = new medoo();
-
-	$name = "name_".$lang;
-	$model = "model_".$lang;
-	$about = "about_".$lang;
-
-    $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
-        [
-        "AND" => [
-        	"active" => "1",
-        	"parent" => $parent
-        	],
-        "ORDER" => ["id DESC"]
-        ]);
-
-    return $cases;
-}
-
-// function cases_details($lang, $id)
-// {
-// 	$database = new medoo();
-
-// 	$name = "name_".$lang;
-// 	$model = "model_".$lang;
-// 	$about = "about_".$lang;
-
-//     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
-//         [
-//         "AND" => [
-//         	"active" => "1",
-//         	"link_item" => $id
-//         	]
-//         ]);
-
-//     return $cases;
-// }
-
-// function cases_one($lang, $id)
+// function cars_details($lang, $id)
 // {
 //     $database = new medoo();
 
@@ -370,55 +384,16 @@ function cases_model($lang, $parent)
 //     $model = "model_".$lang;
 //     $about = "about_".$lang;
 
-//     $cases = $database->select("cases", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+//     $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
 //         [
 //         "AND" => [
 //             "active" => "1",
-//             "id" => $id
+//             "link_item" => $id
 //             ]
 //         ]);
 
-//     return $cases;
+//     return $cars;
 // }
-
-function cars($lang)
-{
-	$database = new medoo();
-
-	$name = "name_".$lang;
-	$model = "model_".$lang;
-	$about = "about_".$lang;
-
-    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
-        [
-        "AND" => [
-        	"active" => "1"
-        	],
-        "ORDER" => ["id DESC"],
-        "LIMIT" => ["3"]
-        ]);
-
-    return $cars;
-}
-
-function cars_details($lang, $id)
-{
-    $database = new medoo();
-
-    $name = "name_".$lang;
-    $model = "model_".$lang;
-    $about = "about_".$lang;
-
-    $cars = $database->select("cars", ["link_item", "catalog", "img", $name, $model, $about, "price", "price_old", "disc", "stock", "sale"], 
-        [
-        "AND" => [
-            "active" => "1",
-            "link_item" => $id
-            ]
-        ]);
-
-    return $cars;
-}
 
 function pages($lang, $page)
 {
@@ -463,14 +438,14 @@ function check_link($tocheck) {
 
 
 
-function is_valid_email($email) 
-    {
-          $result = true;
-          if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email)) {
-            $result = false;
-          }
-          return $result;
-    }
+// function is_valid_email($email) 
+//     {
+//           $result = true;
+//           if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email)) {
+//             $result = false;
+//           }
+//           return $result;
+//     }
 
 function mailto($to,$subject,$message,$from,$exit)
     {
@@ -485,114 +460,114 @@ function mailto($to,$subject,$message,$from,$exit)
     }
 
 
-// ==================================================================
+// // ==================================================================
 
-// ADMIN
+// // ADMIN
 
-function users($email)
-{
-    $database = new medoo();
-    $users = $database->select("users", ["id", "user", "email", "password"], 
-        [
-        "AND" => [
-            "active" => "1",
-            "email" => $email
-            ]
-        ]);
-    return $users;
-}
+// function users($email)
+// {
+//     $database = new medoo();
+//     $users = $database->select("users", ["id", "user", "email", "password"], 
+//         [
+//         "AND" => [
+//             "active" => "1",
+//             "email" => $email
+//             ]
+//         ]);
+//     return $users;
+// }
 
-function adm_news($lang, $lim_from, $lim_step)
-{
-    $database = new medoo();
-    $txt = $lang."_txt";
-    $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
-        [
-        "ORDER" => ["top DESC", "id DESC", "pos ASC"],
-        "LIMIT" => [$lim_from, $lim_step]
-        ]);
+// function adm_news($lang, $lim_from, $lim_step)
+// {
+//     $database = new medoo();
+//     $txt = $lang."_txt";
+//     $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
+//         [
+//         "ORDER" => ["top DESC", "id DESC", "pos ASC"],
+//         "LIMIT" => [$lim_from, $lim_step]
+//         ]);
 
-    return $news;
-}
+//     return $news;
+// }
 
-function adm_news_one($lang, $id)
-{
-    $database = new medoo();
-    $txt = $lang."_txt";
-    $news = $database->select("news", ["id", "link_item", "img", "eng", "eng_txt", "rus", "rus_txt", "ukr", "ukr_txt", "top", "active"], 
-        [
-        "AND" => [
-        "id" => $id
-        ]
-        ]);
+// function adm_news_one($lang, $id)
+// {
+//     $database = new medoo();
+//     $txt = $lang."_txt";
+//     $news = $database->select("news", ["id", "link_item", "img", "eng", "eng_txt", "rus", "rus_txt", "ukr", "ukr_txt", "top", "active"], 
+//         [
+//         "AND" => [
+//         "id" => $id
+//         ]
+//         ]);
 
-    return $news;
-}
+//     return $news;
+// }
 
-function adm_cars()
-{
-    $database = new medoo();
+// function adm_cars()
+// {
+//     $database = new medoo();
 
-    $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
-        [
-        "ORDER" => ["id DESC"],
-        "LIMIT" => ["100"]
-        ]);
+//     $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
+//         [
+//         "ORDER" => ["id DESC"],
+//         "LIMIT" => ["100"]
+//         ]);
 
-    return $cars;
-}
+//     return $cars;
+// }
 
-function adm_cars_one($id)
-{
-    $database = new medoo();
+// function adm_cars_one($id)
+// {
+//     $database = new medoo();
 
-    $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
-        [
-        "AND" => [
-            "id" => $id
-            ]
-        ]);
+//     $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
+//         [
+//         "AND" => [
+//             "id" => $id
+//             ]
+//         ]);
 
-    return $cars;
-}
+//     return $cars;
+// }
 
 
-function adm_cases($lang, $sel)
-{
-    $database = new medoo();
+// function adm_cases($lang, $sel)
+// {
+//     $database = new medoo();
 
-    $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
-        [
-        "ORDER" => ["id DESC"],
-        "LIMIT" => ["100"]
-        ]);
+//     $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+//         [
+//         "ORDER" => ["id DESC"],
+//         "LIMIT" => ["100"]
+//         ]);
 
-    return $cases;
-}
+//     return $cases;
+// }
 
-function adm_cases_one($id)
-{
-    $database = new medoo();
+// function adm_cases_one($id)
+// {
+//     $database = new medoo();
 
-    $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
-        [
-        "AND" => [
-            "id" => $id
-            ]
-        ]);
+//     $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+//         [
+//         "AND" => [
+//             "id" => $id
+//             ]
+//         ]);
 
-    return $cases;
-}
+//     return $cases;
+// }
 
-function adm_images() {
+// function adm_images() {
 
-    $database = new medoo();
-    $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "active"], 
-        [
-        "ORDER" => ["parent DESC", "type ASC"]
-        ]);
-    return $pages;
+//     $database = new medoo();
+//     $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "active"], 
+//         [
+//         "ORDER" => ["parent DESC", "type ASC"]
+//         ]);
+//     return $pages;
     
-}
+// }
 ?>
 
