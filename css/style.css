@@ -2757,7 +2757,8 @@ footer {
   border-top: 1px solid whitesmoke;
   color: #ffffff;
   font-size: 12px;
-  padding: 10px; }
+  padding: 10px;
+  box-sizing: border-box; }
 
 /* 404 */
 .error404 img {
@@ -2796,6 +2797,22 @@ footer {
   .prePay .sendOrder {
     padding-top: 30px;
     margin-bottom: 60px; }
+
+/* sticky footer */
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -33px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+footer, .push {
+  height: 33px;
+  /* '.push' must be the same height as 'footer' */ }
 
 @media (min-width: 768px) {
   h1 {
@@ -2887,8 +2904,6 @@ footer {
         margin-left: -60px; }
       .itemBlock .itemBlockLink:hover + h3 {
         color: #d30000; }
-      .itemBlock .itemBlockLink:hover .buyForm {
-        display: inline-block; }
       .itemBlock .itemBlockLink:hover {
         border-color: #d30000;
         border-color: #1fa67a; }

@@ -23,3 +23,4 @@
         <script src="<?php echo $site; ?>js/ajax.js"></script>
     </head>
     <body>
+        <section class="wrapper">

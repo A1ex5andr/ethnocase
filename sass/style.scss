@@ -690,6 +690,7 @@ footer {
   color: $white;
   font-size: 12px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 /* 404 */
@@ -727,7 +728,21 @@ footer {
   }
 }
 
-
+/* sticky footer */
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -33px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+  height: 33px; /* '.push' must be the same height as 'footer' */
+  clear: both;
+}
 
 
 
