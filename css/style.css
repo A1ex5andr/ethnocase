@@ -2812,7 +2812,8 @@ html, body {
 
 footer, .push {
   height: 33px;
-  /* '.push' must be the same height as 'footer' */ }
+  /* '.push' must be the same height as 'footer' */
+  clear: both; }
 
 @media (min-width: 768px) {
   h1 {
@@ -2943,7 +2944,7 @@ footer, .push {
       display: block; }
     .picsGallery .singleProductPic {
       margin: 20px auto;
-      display: block !important;
+      display: block;
       width: 100%;
       max-width: 100%; }
 

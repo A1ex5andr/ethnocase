@@ -36,10 +36,22 @@ $(document).ready(function() {
 
     // single case picGallery
     $('.picsGallery-thumbs').find('.singleProductPic').click(function() {
-
         var src = $(this).attr("src");
         $('.picsGallery-show img').attr("src", src);
     });
+
+    //remove "clean" images from gallery
+    (function(){
+        $('.picsGallery-thumbs').find('.singleProductPic').each(function(){
+            var src = ($(this).attr("src"));
+            var target = new RegExp("clean");
+            var res = target.test(src);
+            if (res){
+                //console.log(this);
+                $(this).parent().remove();
+            }
+        });
+    })();
 
     // equal height for items blocks
     equalheight = function(container){
