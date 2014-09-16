@@ -55,13 +55,13 @@ $images = images($lang, $items[0]["id"]);
 		</div>
 
 		<div class="singleProduct">
-			<header class="headline">
-				<h3>'.$texts['about_case'].'</h3>
-			</header>
-			<form action="'.$link.'cart/'.$items[0]["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
-			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].' '.$items[0][$pri].''.$cur_symbol.'</button>
+			<form action="'.$link.'cart/'.$items[0]["id"].'/" class="buyThisItem" method="post" enctype="multipart/form-data">
+			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].' <b>'.$items[0][$pri].''.$cur_symbol.'</b></button>
 			    <input type="hidden" name="type" value="1">
 			</form>
+            <header class="headline">
+				<h3>'.$texts['about_case'].'</h3>
+			</header>
 			<p class="singleProduct-about">
 				'.$items[0][$about].'
 			</p>
