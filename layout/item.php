@@ -56,7 +56,7 @@ $images = images($lang, $items[0]["id"]);
 
 		<div class="singleProduct">
 			<form action="'.$link.'cart/'.$items[0]["id"].'/" class="buyThisItem" method="post" enctype="multipart/form-data">
-			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].' <b>'.$items[0][$pri].''.$cur_symbol.'</b></button>
+			    <button class="btn btn-buy"><i class="fa fa-shopping-cart"></i> '.$texts['buy'].' <b>'.$items[0][$pri].' '.$cur_symbol.'</b></button>
 			    <input type="hidden" name="type" value="1">
 			</form>
             <header class="headline">
