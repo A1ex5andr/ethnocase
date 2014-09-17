@@ -20,7 +20,7 @@ foreach($cases as $data)
 $links = category_one($data["parent"]);
 
 echo '      <div class="itemBlock">
-            <a href="'.$link.$links.$data["link_item"].'" class="itemBlockLink">
+            <a href="'.$link.$links.$data["link_item"].'/" class="itemBlockLink">
                 <div class="itemPrice priceDiscount">
                     <div class="itemPrice-final">'.$data[$pri].''.$cur_symbol.'</div>';
 if ($data[$prio] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data[$prio].''.$cur_symbol.'&nbsp;</div>';}
