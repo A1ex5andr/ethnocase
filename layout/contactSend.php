@@ -1,7 +1,6 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php
 
-
     if( (!empty($form['contact-name'])) && (!empty($form['contact-email'])) && (!empty($form['contact-message'])) )
         {
             $message = '<html><head><title>ETHNOCASE - Contact</title></head><body>
