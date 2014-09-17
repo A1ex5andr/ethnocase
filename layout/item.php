@@ -32,9 +32,9 @@ $images = images($lang, $items[0]["id"]);
 	    	$x++;
 			}
 
-			for ($z=$x; $z < 5 ; $z++) { 
-				$img = $img.'<span><img src="'.$site.'img/products/clean_'.$z.'.jpg" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$z.'"></span>';
-			}
+			// for ($z=$x; $z < 5 ; $z++) { 
+			// 	$img = $img.'<span><img src="'.$site.'img/products/clean_'.$z.'.jpg" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$z.'"></span>';
+			// }
 
     	echo '
 	<div class="slogan container">

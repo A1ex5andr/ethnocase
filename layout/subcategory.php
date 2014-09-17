@@ -40,7 +40,7 @@ if ($loc["0"] == "auto"){
                     if ($data["price_old"] != '0'){echo '                    <div class="itemPrice-old">&nbsp;'.$data["price_old"].'&#8372;&nbsp;</div>';}
                     if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
                     echo '                </div>
-                                    <form action="'.$link.'cart/'.$data["id"].'" class="buyForm" method="post" enctype="multipart/form-data">
+                                    <form action="'.$link.'cart/'.$data["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
                                      <button class="btn btn-buy_cat">купить</button>
                                      <input type="hidden" name="type" value="1">
                                     </form>
