@@ -2451,7 +2451,8 @@ h1 {
 .buyThisItem {
   text-align: center; }
   .buyThisItem .btn {
-    font-size: 16px; }
+    font-size: 16px;
+    margin-top: 20px; }
   .buyThisItem b {
     padding-left: 10px; }
 
@@ -2875,6 +2876,12 @@ footer, .push {
 
   .slider {
     display: block; }
+
+  .slogan h1 {
+    margin-bottom: 0; }
+  .slogan h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CFCFCF; }
 
   .news .newsBlock {
     -moz-box-sizing: border-box;

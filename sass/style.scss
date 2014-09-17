@@ -355,9 +355,11 @@ textarea {
   text-align: center;
   .btn {
     font-size: 16px;
+    margin-top: 20px;
   }
   b{
     padding-left: 10px;
+    font-size: 16px;
   }
 }
 
@@ -757,7 +759,6 @@ footer, .push {
 }
 
 
-
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 //  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
@@ -808,6 +809,15 @@ footer, .push {
   }
   .slider {
     display: block;
+  }
+  .slogan {
+    h1 {
+      margin-bottom: 0;
+    }
+    h2 {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $lightGray;
+    }
   }
   .news {
     .newsBlock {
