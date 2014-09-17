@@ -69,13 +69,13 @@ if ($loc["0"] == "news"){
 }elseif ($loc["0"] == "auto"){
 
 		if (!empty($loc["2"])) { require_once("layout/item.php"); }
-		else{ require_once("layout/subcategory.php"); }
+		else{ require_once("layout/category_sub.php"); }
 		//require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "cases"){
 
 		if (!empty($loc["2"])) { require_once("layout/item.php"); }
-		elseif (!empty($loc["1"])) { require_once("layout/subcategory.php"); }
+		elseif (!empty($loc["1"])) { require_once("layout/category_sub.php"); }
 		else { require_once("layout/category.php"); }
 		//require_once("layout/contacts.php");
 

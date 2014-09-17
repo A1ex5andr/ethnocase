@@ -6,6 +6,7 @@
 $cases = products($lang, "new", "1", "6", "cases");
 $name = "name_".$lang;
 $model = "model_".$lang;
+$alt = "alt_".$lang;
 
 if (!empty($cases)){
 
@@ -30,7 +31,7 @@ echo '                </div>
 			     <input type="hidden" name="type" value="1">
 			    </form>
                 <div class="picWrap">
-                    <img class="picIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
+                    <img class="picIndex" src="'.$site.'img/products/'.$data["name"].'" alt="'.$data[$alt].'">
                 </div>
             </a>
             <h3 class="itemName">'.$data[$name].'</h3>

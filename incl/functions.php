@@ -157,18 +157,23 @@ function common_txt($lang)
 
 function product($lang, $type, $typev, $limit)
 {
-    $name = "name_".$lang;
-    $model = "model_".$lang;
-    $about = "about_".$lang;
+    $name = "products.name_".$lang;
+    $model = "products.model_".$lang;
+    $about = "products.about_".$lang;
+    $alt = "images.alt_".$lang;
+    $typex = "products.".$type;
 
     $database = new medoo();
-    $product = $database->select("products", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+    $product = $database->select("products", 
+        ["[>]images" => ["id" => "parent"],],
+        ["products.id", "products.parent", "products.link_item", $name, $model, $about, "products.price", "products.price_old", "products.price_eng", "products.price_old_eng", "products.disc", "products.stock", "products.top", "products.new", "products.sale", "images.name", $alt], 
         [
         "AND" => [
-            "active" => "1",
-            $type => $typev
+            "products.active" => "1",
+            $typex => $typev,
+            "images.main" => "1"
             ],
-        "ORDER" => ["id DESC"],
+        "ORDER" => ["products.id DESC"],
         "LIMIT" => $limit
         ]);
 
@@ -181,27 +186,36 @@ function products($lang, $type, $typev, $limit, $parent)
     $val = category($parent);
     if (($type == "new") || ($type == "top") || ($type == "sale")) { $types = "1"; } else { $type = "new"; $types = explode(", ", "1, 0"); }
     if (($type == "parent") || ($type == "link_item") || ($type == "id")) { $types = $typev; }
-     $name = "name_".$lang;
-     $model = "model_".$lang;
-     $about = "about_".$lang;
+     $name = "products.name_".$lang;
+     $model = "products.model_".$lang;
+     $about = "products.about_".$lang;
+     $alt = "images.alt_".$lang;
+
+     $typex = "products.".$type;
 
      if (count(explode(", ", $val)) >1) { $mm = explode(", ", $val); }
      else { $mm = $val; }
     
     $database = new medoo();
-    $products = $database->select("products", ["id", "parent", "link_item", "img", $name, $model, $about, "price", "price_old", "price_eng", "price_old_eng", "disc", "stock", "top", "new", "sale"], 
+    $products = $database->select("products", 
+        ["[>]images" => ["id" => "parent"],],
+        ["products.id", "products.parent", "products.link_item", $name, $model, $about, "products.price", "products.price_old", "products.price_eng", "products.price_old_eng", "products.disc", "products.stock", "products.top", "products.new", "products.sale", "images.name", $alt], 
         [
         "AND" => [
-            "active" => "1",
-            $type => $types,
-            "parent" => $mm
+            "products.active" => "1",
+            $typex => $types,
+            "products.parent" => $mm,
+            "images.main" => "1"
             ],
-        "ORDER" => ["id DESC"],
+        "ORDER" => ["products.id DESC"],
         "LIMIT" => $limit
         ]);
-
+ // echo $database->last_query();   
+ // var_dump($database->error());
+// exit;
     return $products;
 }
+
 
 function category_one($parent)
 {

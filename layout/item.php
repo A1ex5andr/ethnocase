@@ -15,6 +15,7 @@ if ($loc["0"] == "auto"){ $level = 3; }
 $name = "name_".$lang;
 $model = "model_".$lang;
 $about = "about_".$lang;
+$alt = "alt_".$lang;
 
 $i = "0";
 
@@ -50,7 +51,7 @@ $images = images($lang, $items[0]["id"]);
 			</div>
 
 			<div class="picsGallery-show">
-				<img src="'.$site.'img/products/'.$items[0]["img"].'" class="singleProductPic" alt="Чехол для iPhone - этно чехол вышиванка на iPhone">
+				<img src="'.$site.'img/products/'.$items[0]["name"].'" class="singleProductPic" alt="'.$items[0][$alt].'">
 			</div>
 		</div>
 

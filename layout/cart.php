@@ -37,11 +37,12 @@ foreach ($_SESSION['cart'] as $value) {
     $name = "name_".$lang;
     $model = "model_".$lang;
     $about = "about_".$lang;
+    $alt = "alt_".$lang;
 
     echo '                <div class="inCart-item" id="item_0'.$i.'">
 
                     <div class="inCart-itemPicture">
-                        <img class="picIndex" src="'.$site.'img/products/'.$case['0']["img"].'" alt="">
+                        <img class="picIndex" src="'.$site.'img/products/'.$case['0']["name"].'" alt="'.$case['0'][$alt].'">
                     </div>
 
                     <div class="inCart-details">

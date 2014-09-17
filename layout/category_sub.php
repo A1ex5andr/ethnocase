@@ -20,6 +20,7 @@ if ($loc["0"] == "auto"){
     $name = "name_".$lang;
     $model = "model_".$lang;
     $about = "about_".$lang;
+    $alt = "alt_".$lang;
 
     check_link($cars);
 
@@ -45,7 +46,7 @@ if ($loc["0"] == "auto"){
                                      <input type="hidden" name="type" value="1">
                                     </form>
                                     <div class="stripeWrap">
-                                        <img class="stripeIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
+                                        <img class="stripeIndex" src="'.$site.'img/products/'.$data["name"].'" alt="'.$data[$alt].'">
                                     </div>
                                 </a>
                                 <h3 class="itemName">'.$data[$name].'</h3>
@@ -76,6 +77,7 @@ echo '        <section class="items container">
 
     $name = "name_".$lang;
     $model = "model_".$lang;
+    $alt = "alt_".$lang;
 
     check_link($cases);
 
@@ -95,7 +97,7 @@ echo '        <section class="items container">
                      <input type="hidden" name="type" value="1">
                     </form>
                     <div class="picWrap">
-                        <img class="picIndex" src="'.$site.'img/products/'.$data["img"].'" alt="">
+                        <img class="picIndex" src="'.$site.'img/products/'.$data["name"].'" alt="'.$data[$alt].'">
                     </div>
                 </a>
                 <h3 class="itemName">'.$data[$name].'</h3>
