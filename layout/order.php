@@ -30,7 +30,7 @@ $topay = $form["delivery"]." To pay: ".$all." + ".$form["delivery"];
 
 }else{
 
-    header('Location: '.$link.'cart');
+    header('Location: '.$link.'cart/');
     exit;
 
 }
@@ -148,7 +148,7 @@ exit;
 }
 
 
-header('Location: '.$link.'thankyou');
+header('Location: '.$link.'thankyou/');
 exit;
 
 ?>

@@ -25,7 +25,7 @@ foreach ($_SESSION["cart"] as $value) {
 unset($_SESSION['cart']);
 $_SESSION['cart'] = $o;
 
-header('Location: '.$link.'cart');
+header('Location: '.$link.'cart/');
 exit;	
 }
 // #Delete from cart
