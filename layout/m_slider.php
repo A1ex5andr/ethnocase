@@ -2,7 +2,7 @@
 		<ul class="bxslider">
 <?php 
 	$database = new medoo();
-    $menus = $database->select("sliders", ["link_item", "img"], 
+    $menus = $database->select("sliders", ["link_item", "img", "alt"], 
         [
         "active" => "1",
         "ORDER" => ["orders ASC"]
@@ -11,7 +11,7 @@
 foreach($menus as $data)
 	{
 
-		echo '			<li><a href="'.$data['link_item'].'"><img src="'.$site.'img/slider/'.$data['img'].'" /></a></li>\n';
+		echo '			<li><a href="'.$data['link_item'].'"><img src="'.$site.'img/slider/'.$data['img'].'" alt="'.$data["alt"].'" /></a></li>\n';
 
 	}
 ?>
