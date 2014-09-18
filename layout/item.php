@@ -23,12 +23,13 @@ $images = images($lang, $items[0]["id"]);
 
 	    	$x = '1';
 	    	$img = "";
-
+			$alt = "alt_".$lang;
+			
 	    	foreach($images as $image)
 	    	{ 
 	    		
 	    		if (!empty($image)){
-	    			$img = $img.'<span><img src="'.$site.'img/products/'.$image["name"].'" alt="'.$image["alt"].'" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$x.'"></span>';
+	    			$img = $img.'<span><img src="'.$site.'img/products/'.$image["name"].'" alt="'.$image[$alt].'" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$x.'"></span>';
 	    		}
 	    	$x++;
 			}
