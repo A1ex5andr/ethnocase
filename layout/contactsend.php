@@ -6,14 +6,12 @@
             $message = '<html><head><title>ETHNOCASE - Contact</title></head><body>
             <p>Автор: '.$form['contact-name']. '</p>
             <p>Email: '.$form['contact-email']. '</p><br />
-            <p>Вам надійшло замовлення:</p>
+            <p>Вам надійшов запит:</p>
             <p>'. $form['contact-message'] .'</p>
             </body></html>';
 
             $message2 = "<html><head><title>ETHNOCASE</title></head><body>
-            <p>Thank you, <br>
-                we'll contact you asap.
-            </p>
+            <p>".$texts['thanks']."</p>
             <br />
             <br />
             Best regards, <br />
@@ -22,12 +20,12 @@
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $headers .= 'From: bars38@gmail.com' . "\r\n" .
-    'Reply-To: bars38@gmail.com' . "\r\n" .
+        $headers .= 'From: info@ethnocase.com' . "\r\n" .
+    'Reply-To: info@ethnocase.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-        mail($form['contact-email'], 'CoderStudio', $message, $headers);
-        mail('info@ethnocase.com', 'CoderStudio', $message2, $headers);
+        mail($form['contact-email'], 'ETHNOCASE', $message2, $headers);
+        mail('info@ethnocase.com', 'ETHNOCASE', $message, $headers);
 
 
 require_once("layout/head.php");
