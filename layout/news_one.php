@@ -1,12 +1,18 @@
-	<section class="news container">
-
-
 <?php 
-
 $news = news_one($lang, $loc["1"]);
 $txt = $lang."_txt";
 
 check_link($news);
+
+$title = strip_tags($data[$lang]);
+
+require_once("layout/head.php");
+require_once("layout/header.php");
+?>
+	<section class="news container">
+
+
+<?php 
 
 foreach($news as $data)
 	{

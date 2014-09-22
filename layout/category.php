@@ -1,8 +1,4 @@
-<?php if ( !defined('MITH') ) {exit;} ?>
-
-    <section class="container">
-
-<?php 
+<?php if ( !defined('MITH') ) {exit;} 
 
 if ($loc["0"] == "cases"){ $level = "2"; }
 
@@ -10,6 +6,16 @@ $menus = menu($lang, $level);
 $i = "0";
 
 check_link($menus);
+
+
+
+?>
+
+    <section class="container">
+
+<?php 
+
+
 
     foreach($menus as $data)
         {

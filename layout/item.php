@@ -38,6 +38,11 @@ $images = images($lang, $items[0]["id"]);
 			// 	$img = $img.'<span><img src="'.$site.'img/products/clean_'.$z.'.jpg" class="singleProductPic" id="'.$items[0]["link_item"].'_'.$z.'"></span>';
 			// }
 
+//$title = preg_replace('/(<(h1|h2|h3|br)\b[^>]*>).*?(<\/\2>)/s', "", $items[0][$name])
+$title = strip_tags($items[0][$name])." - ".strip_tags($items[0][$model]);
+require_once("layout/head.php");
+require_once("layout/header.php");
+
     	echo '
 	<div class="slogan container">
         <h1>'.$items[0][$name].'</h1>

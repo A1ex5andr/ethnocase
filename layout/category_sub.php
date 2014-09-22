@@ -24,6 +24,10 @@ if ($loc["0"] == "auto"){
 
     check_link($cars);
 
+$title = strip_tags($menu[$lang]);
+require_once("layout/head.php");
+require_once("layout/header.php");
+
     foreach($menus as $menu)
         {
 
@@ -70,6 +74,10 @@ if ($loc["0"] == "auto"){
 
 
     check_link($my_menu_txt);
+
+$title = strip_tags($my_menu_txt[0][$lang]);
+require_once("layout/head.php");
+require_once("layout/header.php");    
 
 echo '        <section class="items container">
             <div class="headline"><h2>'.$my_menu_txt[0][$lang].'</h2></div>';

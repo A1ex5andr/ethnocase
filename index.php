@@ -55,13 +55,20 @@ if ( ($loc["0"] == "cart") && (!empty($loc["1"])) ) {
 
 }
 
-require_once("layout/head.php");
-require_once("layout/header.php");
+// require_once("layout/head.php");
+// require_once("layout/header.php");
 
 if ($loc["0"] == "news"){
 
-		if (!empty($loc["1"])) { require_once("layout/news_one.php"); }
-		else{ require_once("layout/news.php"); }
+		if (!empty($loc["1"])) { 
+				require_once("layout/news_one.php"); 
+			}
+		else{ 
+				$title = $texts['news'];
+				require_once("layout/head.php");
+				require_once("layout/header.php"); 
+				require_once("layout/news.php"); 
+			}
 		require_once("layout/m_bestseller.php");
 		require_once("layout/m_sale.php");
 		require_once("layout/contacts.php");
@@ -70,39 +77,43 @@ if ($loc["0"] == "news"){
 
 		if (!empty($loc["2"])) { require_once("layout/item.php"); }
 		else{ require_once("layout/category_sub.php"); }
-		//require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "cases"){
 
 		if (!empty($loc["2"])) { require_once("layout/item.php"); }
 		elseif (!empty($loc["1"])) { require_once("layout/category_sub.php"); }
 		else { require_once("layout/category.php"); }
-		//require_once("layout/contacts.php");
 
 }elseif ($loc["0"] == "cart"){
 
-		require_once("layout/cart.php");
-		//require_once("layout/contacts.php");
+	require_once("layout/head.php");
+	require_once("layout/header.php"); 
+	require_once("layout/cart.php");
 
 }elseif ($loc["0"] == "404"){
-
+	
+	require_once("layout/head.php");
+	require_once("layout/header.php"); 
 	require_once("layout/404.php");
 	exit;
 
 }elseif(empty($loc["0"])){
-    
-	    echo '<div class="slogan container">
-	        <h1>'.$texts['sloganSmall'].'</h1>
-	    </div>';
-		require_once("layout/m_slider.php");
-		require_once("layout/m_news.php");
-		require_once("layout/m_new.php");
-		require_once("layout/m_bestseller.php");
-		require_once("layout/m_sale.php");
-		require_once("layout/contacts.php");
+		
+	require_once("layout/head.php");
+	require_once("layout/header.php");    
+    echo '<div class="slogan container">
+        <h1>'.$texts['sloganSmall'].'</h1>
+    </div>';
+	require_once("layout/m_slider.php");
+	require_once("layout/m_news.php");
+	require_once("layout/m_new.php");
+	require_once("layout/m_bestseller.php");
+	require_once("layout/m_sale.php");
+	require_once("layout/contacts.php");
 
 }else{
-	
+	require_once("layout/head.php");
+	require_once("layout/header.php"); 	
 	require_once("layout/pages.php");
 	require_once("layout/contacts.php");
 
