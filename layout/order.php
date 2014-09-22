@@ -77,32 +77,29 @@ require ("./layout/head.php");
 
 echo'
 
-    <header class="container">
-		<div class="headLogo">
-
-				<img src="http://new.ethnocase.com/img/logo.jpg" alt="" class="logo">
-
-		</div>
-
-	</header>
-
     <div class="container prePay">
 
+        <header class="container">
+            <div class="headLogo">
+                    <img src="http://new.ethnocase.com/img/logo.jpg" alt="" class="logo">
+            </div>
+	        <hr>
+	    </header>
 
 
-        <div><span class="prePay-title">Ваш заказ номер</span><span class="prePay-data orderInput"><input name="li_0_name" value="invoice'.$last_user_id.'" disabled/></span></div>
-        <div><span class="prePay-title">Всего (сумма)</span><span class="prePay-data orderInput"><input name="li_0_price" value="'.$usd.'&#36;" disabled/></span></div>
-        <div><span class="prePay-title">Доставка службой</span><span class="prePay-data orderInput"><input name="li_1_name" value="World wide" disabled/></span></div>
-        <div><span class="prePay-title">цена доставки </span><span class="prePay-data orderInput"><input name="li_1_price" value="17" disabled/></span></div>
-        <div><span class="prePay-title">имя </span><span class="prePay-data orderInput"><input name="card_holder_name" value="'.$form["name"].'" disabled/></span></div>
-        <div><span class="prePay-title">адресс </span><span class="prePay-data orderInput"><input name="street_address" value="'.$form["address"].'" disabled/></span></div>
-        <div><span class="prePay-title">адресс2 </span><span class="prePay-data orderInput"><input name="street_address2" value="'.$form["address2"].'" disabled/></span></div>
-        <div><span class="prePay-title">город </span><span class="prePay-data orderInput"><input name="city" value="'.$form["city"].'" disabled/></span></div>
-        <div><span class="prePay-title">штат </span><span class="prePay-data orderInput"><input name="state" value="'.$form["state"].'" disabled/></span></div>
-        <div><span class="prePay-title">индекс </span><span class="prePay-data orderInput"><input name="zip" value="'.$form["zip"].'" disabled/></span></div>
-        <div><span class="prePay-title">страна </span><span class="prePay-data orderInput"><input name="country" value="'.$form["country"].'" disabled/></span></div>
-        <div><span class="prePay-title">емейл </span><span class="prePay-data orderInput"><input name="email" value="'.$form["email"].'" disabled/></span></div>
-        <div><span class="prePay-title">телефон </span><span class="prePay-data orderInput"><input name="phone" value="'.$form["phone"].'" disabled/></span></div>
+        <div><span class="prePay-title">Your Order </span><span class="prePay-data orderInput"><input name="li_0_name" value="invoice'.$last_user_id.'" disabled/></span></div>
+        <div><span class="prePay-title">Amount To Be Paid </span><span class="prePay-data orderInput"><input name="li_0_price" value="'.$usd.'&#36;" disabled/></span></div>
+        <div><span class="prePay-title">Delivery Type </span><span class="prePay-data orderInput"><input name="li_1_name" value="World wide" disabled/></span></div>
+        <div><span class="prePay-title">Delivery Cost </span><span class="prePay-data orderInput"><input name="li_1_price" value="17" disabled/></span></div>
+        <div><span class="prePay-title">Name </span><span class="prePay-data orderInput"><input name="card_holder_name" value="'.$form["name"].'" disabled/></span></div>
+        <div><span class="prePay-title">Address </span><span class="prePay-data orderInput"><input name="street_address" value="'.$form["address"].'" disabled/></span></div>
+        <div><span class="prePay-title">Address #2  </span><span class="prePay-data orderInput"><input name="street_address2" value="'.$form["address2"].'" disabled/></span></div>
+        <div><span class="prePay-title">City </span><span class="prePay-data orderInput"><input name="city" value="'.$form["city"].'" disabled/></span></div>
+        <div><span class="prePay-title">State </span><span class="prePay-data orderInput"><input name="state" value="'.$form["state"].'" disabled/></span></div>
+        <div><span class="prePay-title">ZIP </span><span class="prePay-data orderInput"><input name="zip" value="'.$form["zip"].'" disabled/></span></div>
+        <div><span class="prePay-title">Country </span><span class="prePay-data orderInput"><input name="country" value="'.$form["country"].'" disabled/></span></div>
+        <div><span class="prePay-title">E-mail </span><span class="prePay-data orderInput"><input name="email" value="'.$form["email"].'" disabled/></span></div>
+        <div><span class="prePay-title">Phone </span><span class="prePay-data orderInput"><input name="phone" value="'.$form["phone"].'" disabled/></span></div>
 
 
 
