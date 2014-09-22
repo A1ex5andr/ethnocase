@@ -202,7 +202,7 @@ $i++;
                     </div>
                 </div>
                 <div class="finalPriceWrap">
-                    <h2>До сплати <span class="finalPrice"></span> <span><?php echo $cur_symbol; ?></span></h2>
+                    <h2><?php echo $texts['to_pay']; ?> <span class="finalPrice"></span> <span><?php echo $cur_symbol; ?></span></h2>
                 </div>
                 <div class="sendOrder">
                     <button class="btn btn-sendOrder" type="submit" class="btn"><i class="fa fa-upload"></i> <?php echo $texts['sendme']; ?></button>

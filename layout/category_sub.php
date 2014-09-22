@@ -42,7 +42,7 @@ if ($loc["0"] == "auto"){
                     if ($data["disc"] != '0'){echo '                    <div class="itemPrice-disc">-'.$data["disc"].'%</div>';}    
                     echo '                </div>
                                     <form action="'.$link.'cart/'.$data["id"].'/" class="buyForm" method="post" enctype="multipart/form-data">
-                                     <button class="btn btn-buy_cat">купить</button>
+                                     <button class="btn btn-buy_cat">'.$texts['buy'].'</button>
                                      <input type="hidden" name="type" value="1">
                                     </form>
                                     <div class="stripeWrap">
@@ -50,7 +50,7 @@ if ($loc["0"] == "auto"){
                                     </div>
                                 </a>
                                 <h3 class="itemName">'.$data[$name].'</h3>
-                                <h2 class="itemName">Вишиванка: наклейка на авто</h2>
+                                <h2 class="itemName">'.$texts['car_txt'].'</h2>
                             </div>
                     ';
                     }
