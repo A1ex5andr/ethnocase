@@ -7,23 +7,23 @@
                 </div>
 <?php 
 
-$menus = menu($lang, '1');
+$menuhead = menu($lang, '1');
 $pr_menu = '';
 
-foreach($menus as $data)
+foreach($menuhead as $datahead)
 	{
 
-		if ($data["parent"] == "0")
+		if ($datahead["parent"] == "0")
 		{
-			if ( $data["link_item"] == "cart" ){
+			if ( $datahead["link_item"] == "cart" ){
 					$pr_menu .= '
 		        <li>
-		        	<a href="'.$link.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].' '.$inthecart.'</a>
+		        	<a href="'.$link.$datahead["link_item"].'/"><i class="fa '.$datahead["class"].'"></i> '.$datahead[$lang].' '.$inthecart.'</a>
 		        </li>';
 		    }else{
 				$pr_menu .= '
 		        <li>
-		        	<a href="'.$link.$data["link_item"].'/"><i class="fa '.$data["class"].'"></i> '.$data[$lang].'</a>
+		        	<a href="'.$link.$datahead["link_item"].'/"><i class="fa '.$datahead["class"].'"></i> '.$datahead[$lang].'</a>
 		        </li>';
 		    }
 	    }

@@ -7,7 +7,8 @@ $i = "0";
 
 check_link($menus);
 
-
+require_once("layout/head.php");
+require_once("layout/header.php");
 
 ?>
 

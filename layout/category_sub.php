@@ -24,7 +24,7 @@ if ($loc["0"] == "auto"){
 
     check_link($cars);
 
-$title = strip_tags($menu[$lang]);
+//$title = strip_tags($menu[$lang]);
 require_once("layout/head.php");
 require_once("layout/header.php");
 
