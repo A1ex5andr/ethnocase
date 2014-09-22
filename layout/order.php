@@ -86,7 +86,6 @@ echo'
 	        <hr>
 	    </header>
 
-
         <div><span class="prePay-title">Your Order </span><span class="prePay-data orderInput"><input name="li_0_name" value="invoice'.$last_user_id.'" disabled/></span></div>
         <div><span class="prePay-title">Amount To Be Paid </span><span class="prePay-data orderInput"><input name="li_0_price" value="'.$usd.'&#36;" disabled/></span></div>
         <div><span class="prePay-title">Delivery Type </span><span class="prePay-data orderInput"><input name="li_1_name" value="World wide" disabled/></span></div>

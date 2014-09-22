@@ -947,14 +947,15 @@ footer, .push {
   /* pre pay page before checkout*/
   .prePay{
     &-title{
-      @include span(9);
+      @include span(5);
       text-align: right;
     }
     &-data {
-      @include span(9);
+      @include span(7);
     }
   }
 }
+
 
 //from 960px to 1200
 @include breakpoint($small) {
