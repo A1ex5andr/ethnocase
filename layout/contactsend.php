@@ -27,7 +27,7 @@
     'X-Mailer: PHP/' . phpversion();
 
         mail($form['contact-email'], 'CoderStudio', $message, $headers);
-        mail('bars38@gmail.com', 'CoderStudio', $message2, $headers);
+        mail('info@ethnocase.com', 'CoderStudio', $message2, $headers);
 
 
 require_once("layout/head.php");
@@ -40,11 +40,6 @@ require_once("layout/header.php");
 </html>
 
 <?php 
-// print '<html><head><meta http-equiv="refresh" content="3; url='.$link.'"></head>
-//             <body>
-//                 <!--h2 style="text-align: center; margin-top:100px;"> Спасибо, Ваше сообщение отправленно!</h2--><p align=center><a href="'.$link.'"></a><br><br>
-//             </body>
-//         </html>';
 
            exit;
         }
