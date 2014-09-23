@@ -478,110 +478,110 @@ function mailto($to,$subject,$message,$from,$exit)
 
 // // ADMIN
 
-// function users($email)
-// {
-//     $database = new medoo();
-//     $users = $database->select("users", ["id", "user", "email", "password"], 
-//         [
-//         "AND" => [
-//             "active" => "1",
-//             "email" => $email
-//             ]
-//         ]);
-//     return $users;
-// }
+function users($email)
+{
+    $database = new medoo();
+    $users = $database->select("users", ["id", "user", "email", "password"], 
+        [
+        "AND" => [
+            "active" => "1",
+            "email" => $email
+            ]
+        ]);
+    return $users;
+}
 
-// function adm_news($lang, $lim_from, $lim_step)
-// {
-//     $database = new medoo();
-//     $txt = $lang."_txt";
-//     $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
-//         [
-//         "ORDER" => ["top DESC", "id DESC", "pos ASC"],
-//         "LIMIT" => [$lim_from, $lim_step]
-//         ]);
+function adm_news($lang, $lim_from, $lim_step)
+{
+    $database = new medoo();
+    $txt = $lang."_txt";
+    $news = $database->select("news", ["id", "link_item", "img", $lang, $txt, "top", "pos", "active"], 
+        [
+        "ORDER" => ["top DESC", "id DESC", "pos ASC"],
+        "LIMIT" => [$lim_from, $lim_step]
+        ]);
 
-//     return $news;
-// }
+    return $news;
+}
 
-// function adm_news_one($lang, $id)
-// {
-//     $database = new medoo();
-//     $txt = $lang."_txt";
-//     $news = $database->select("news", ["id", "link_item", "img", "eng", "eng_txt", "rus", "rus_txt", "ukr", "ukr_txt", "top", "active"], 
-//         [
-//         "AND" => [
-//         "id" => $id
-//         ]
-//         ]);
+function adm_news_one($lang, $id)
+{
+    $database = new medoo();
+    $txt = $lang."_txt";
+    $news = $database->select("news", ["id", "link_item", "img", "eng", "eng_txt", "rus", "rus_txt", "ukr", "ukr_txt", "top", "active"], 
+        [
+        "AND" => [
+        "id" => $id
+        ]
+        ]);
 
-//     return $news;
-// }
+    return $news;
+}
 
-// function adm_cars()
-// {
-//     $database = new medoo();
+function adm_cars()
+{
+    $database = new medoo();
 
-//     $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
-//         [
-//         "ORDER" => ["id DESC"],
-//         "LIMIT" => ["100"]
-//         ]);
+    $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
+        [
+        "ORDER" => ["id DESC"],
+        "LIMIT" => ["100"]
+        ]);
 
-//     return $cars;
-// }
+    return $cars;
+}
 
-// function adm_cars_one($id)
-// {
-//     $database = new medoo();
+function adm_cars_one($id)
+{
+    $database = new medoo();
 
-//     $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
-//         [
-//         "AND" => [
-//             "id" => $id
-//             ]
-//         ]);
+    $cars = $database->select("cars", ["id", "active", "link_item", "catalog", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_rus", "about_ukr", "price", "price_old", "disc", "stock", "sale"], 
+        [
+        "AND" => [
+            "id" => $id
+            ]
+        ]);
 
-//     return $cars;
-// }
+    return $cars;
+}
 
 
-// function adm_cases($lang, $sel)
-// {
-//     $database = new medoo();
+function adm_cases($lang, $sel)
+{
+    $database = new medoo();
 
-//     $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
-//         [
-//         "ORDER" => ["id DESC"],
-//         "LIMIT" => ["100"]
-//         ]);
+    $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+        [
+        "ORDER" => ["id DESC"],
+        "LIMIT" => ["100"]
+        ]);
 
-//     return $cases;
-// }
+    return $cases;
+}
 
-// function adm_cases_one($id)
-// {
-//     $database = new medoo();
+function adm_cases_one($id)
+{
+    $database = new medoo();
 
-//     $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
-//         [
-//         "AND" => [
-//             "id" => $id
-//             ]
-//         ]);
+    $cases = $database->select("cases", ["id", "active", "parent", "link_item", "img", "name_eng", "name_rus", "name_ukr", "model_eng", "model_rus", "model_ukr", "about_eng", "about_ukr", "about_rus", "price", "price_old", "disc", "stock", "top", "new", "sale"], 
+        [
+        "AND" => [
+            "id" => $id
+            ]
+        ]);
 
-//     return $cases;
-// }
+    return $cases;
+}
 
-// function adm_images() {
+function adm_images() {
 
-//     $database = new medoo();
-//     $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "active"], 
-//         [
-//         "ORDER" => ["parent DESC", "type ASC"]
-//         ]);
-//     return $pages;
+    $database = new medoo();
+    $pages = $database->select("images", ["id", "parent", "name", "type", "alt", "active"], 
+        [
+        "ORDER" => ["parent DESC", "type ASC"]
+        ]);
+    return $pages;
     
-// }
+}
 ?>
 

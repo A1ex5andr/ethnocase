@@ -1,6 +1,23 @@
 <?php if ( !defined('MITH') ) {exit;} ?>
 <?php 
 
+if (!empty($form['remove'])) {
+
+	$news = adm_news_one("eng", $form['remove']);
+
+		if ($news[0]['id'] == $form['remove']){
+			$file = "/home/ethnocas/ethnocase.com/new/img/news/".$news[0]['img'];
+			unlink($file);
+			    $database = new medoo();
+     
+			    $database->delete("news", [
+			    "AND" => [
+			    "id" => $news[0]['id']
+			    ]
+			    ]);
+		}
+}
+
 if ((!empty($form['link_items'])) && ($form['act'] == "add")) {
 
 		//image upload
@@ -183,12 +200,12 @@ foreach($news as $data)
 		if ($data["top"] == "1") { $top = "checked"; } else { $top = ""; }
 		if ($data["active"] == "1") { $active = "checked"; } else { $active = ""; }
 		echo '	<tr>
-		<td><form role="form" method="post" enctype="multipart/form-data">'.$data["id"].'</td>
+		<td><form role="form" method="post" enctype="multipart/form-data" name="ed">'.$data["id"].'</td>
 		<td><img src="'.$site.'img/news/'.$data["img"].'" width="50%" height="50%" alt=""></td>
 		<td><a href="'.$asite.'news/'.$data["id"].'">'.$data[$lang].'</a></td>
 		<td><input type="checkbox" name="top" value="1" '.$top.'></td>
 		<td><input type="checkbox" name="active" value="1" '.$active.'></td>
-		<td><input type="hidden" name="links" value="'.$data["link_item"].'"><button type="submit" class="btn btn-default">Submit</button></form></td>
+		<td><input type="hidden" name="links" value="'.$data["link_item"].'"><button type="submit" class="btn btn-default">Submit</button></form> <br> <form role="form" method="post" enctype="multipart/form-data" name="del"><input type="hidden" name="remove" value="'.$data["id"].'"><button type="submit" class="btn btn-default">Remove</button></form></td>
 	</tr>';
 	}
 ?>
