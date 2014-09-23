@@ -158,6 +158,7 @@ textarea {
 /* main all pages container */
 .container {
   @include container(100% border-box);
+  position: relative;
 }
 
 /* hide slider for mobile */

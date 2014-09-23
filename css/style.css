@@ -2276,7 +2276,8 @@ textarea {
   box-sizing: border-box;
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   .container:after {
     content: " ";
     display: block;
