@@ -1,9 +1,9 @@
 <?php
 
-$site = "http://new.ethnocase.com/";
+$site = "http://ethnocase.com/";
 $link = $site;
-$asite = "http://new.ethnocase.com/lesya-ukrainka/";
-$fromemail = "bars38@gmail.com";
+$asite = "http://ethnocase.com/lesya-ukrainka/";
+$fromemail = "info@ethnocase.com";
 
 // ochistka POST
 foreach($_POST as $key => $value) {

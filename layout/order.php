@@ -1,4 +1,4 @@
-﻿<?php if ( !defined('MITH') ) {exit;} ?>
+<?php if ( !defined('MITH') ) {exit;} ?>
 
 
 <?php
@@ -17,7 +17,7 @@ foreach ($_SESSION['cart'] as $value) {
     $name = "name_".$lang;
     $model = "model_".$lang;
 
-$order = $order.$texts['name'].": ".$case['0'][$name]."<br>\r\n ".$texts['model'].": ".$case['0'][$model]."<br>\r\n ".$texts['model_name'].": ".$case['0']["link_item"]."<br>\n ".$texts['quantity'].": ".$q."<br>\n ".$texts['price'].": ".$case['0'][$pri]." /".$q*$case['0'][$pri]."/<br>\n";
+$order = $order.$texts['model_name'].": ".$case['0'][$name]."<br>\r\n ".$texts['model'].": ".$case['0'][$model]."<br>\r\n ID: ".$case['0']["link_item"]."<br>\n ".$texts['quantity'].": ".$q."<br>\n ".$texts['price'].": ".$case['0'][$pri]."<br>\n<br>\n";
 $all = $q*$case['0'][$pri] + $all;
 $usd = $q*$case['0']['price_eng'] + $usd;
 }
@@ -28,8 +28,10 @@ $from = $texts['from'].": ".$form["name"]."<br>\n ".$texts['phone'].": ".$form["
 
 if ( ($form["delivery"] == "2") && ($_SESSION["valuta"] == "usd")) {$all = $all + 1;}
 elseif ( ($form["delivery"] == "2") && ($_SESSION["valuta"] != "usd")) {$all = $all + 30;}
-elseif ( ($form["delivery"] == "3") && ($_SESSION["valuta"] == "usd")) {$all = $all + 17;}
-elseif ( ($form["delivery"] == "3") && ($_SESSION["valuta"] != "usd")) {$all = $all + 200;}
+//elseif ( ($form["delivery"] == "3") && ($_SESSION["valuta"] == "usd")) {$all = $all + 17;}
+//elseif ( ($form["delivery"] == "3") && ($_SESSION["valuta"] != "usd")) {$all = $all + 200;}
+elseif ( ($form["delivery"] == "3") && ($_SESSION["valuta"] == "usd")) {$all = $all + 17; $dostavka = "<br>\n".$texts['deliverycost'].": 17".$cur_symbol."<br>\n";}
+elseif ( ($form["delivery"] == "3") && ($_SESSION["valuta"] != "usd")) {$all = $all + 200; $dostavka = "<br>\n".$texts['deliverycost'].": 200".$cur_symbol."<br>\n";}
 $topay = $texts['to_pay'].": ".$all." ".$cur_symbol;
 
 }else{
@@ -64,23 +66,23 @@ $last_user_id = $database->insert("orders", [
  // echo $database->last_query();
  // var_dump($database->error());
 
-$subject = "Новый заказ";
+$subject = "NEW order";
 $subjectc = $texts['orderin'];
 $to = "info@ethnocase.com";
 $toc = $form["email"];
 $fromemail = "info@ethnocase.com";
 
-$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><title>' .$subject. '</title></head>';
+$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><title>' .$subjectc. '</title></head>';
 $message .= '<body style="background-color: #ffffff; color: #000000; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: 18px; font-family: helvetica, arial, verdana, sans-serif;">';
-$message .= $order."\n".$from."\n".$topay;
+$message .= $order."\n".$from."\n".$dostavka."\n".$topay."\n";
 $message .= '</body></html>';
 
-require_once('/home/ethnocas/ethnocase.com/new/incl/PHPMailer/PHPMailerAutoload.php');
+require_once('/home/ethnocas/ethnocase.com/www/incl/PHPMailer/PHPMailerAutoload.php');
 
 $email = new PHPMailer();
 $email->From      = $to;
 $email->FromName  = 'Ethnocase';
-$email->Subject   = iconv("UTF-8", "ISO-8859-5", $subject);
+$email->Subject   = $subjectc;
 $email->Body      = $message;
 $email->AddAddress( $toc );
 
@@ -90,6 +92,19 @@ $email->AddAddress( $toc );
 $email->isHTML(true);
 $email->Send();
 
+
+$email = new PHPMailer();
+$email->From      = $to;
+$email->FromName  = 'Ethnocase';
+$email->Subject   = $subject;
+$email->Body      = $message;
+$email->AddAddress( $to );
+
+//$file_to_attach = './'.$filename;
+//$email->AddAttachment( $file_to_attach , $filename );
+
+$email->isHTML(true);
+$email->Send();
 
 //mailto($to,$subject,$message,$fromemail,"0");
 //mailto($toc,$subjectc,$message,$fromemail,"0");
@@ -104,7 +119,7 @@ echo'
 
         <header class="container">
             <div class="headLogo">
-                    <img src="http://new.ethnocase.com/img/logo.jpg" alt="" class="logo">
+                    <img src="'.$site.'img/logo.jpg" alt="" class="logo">
             </div>
 	        <hr>
 	    </header>
@@ -126,8 +141,8 @@ echo'
 
 
 
-        <form action="https://sandbox.2checkout.com/checkout/purchase" method="post">
-        <input type="hidden" name="sid" value="901254072" />
+        <form action="https://www.2checkout.com/checkout/purchase" method="post">
+        <input type="hidden" name="sid" value="202327775" />
         <input type="hidden" name="mode" value="2CO" />
         <input type="hidden" name="li_0_type" value="product" />
         <input type="hidden" name="li_0_name" value="invoice'.$last_user_id.'" />
