@@ -2,7 +2,7 @@
             <header class="container">
                 <div class="headLogo">
                     <a href="<?php echo $link; ?>">
-                        <img src="<?php echo $site; ?>img/logo.jpg" alt="" class="logo">
+                        <img src="<?php echo $site; ?>img/logo.jpg" alt="Ethnocase logo" class="logo">
                     </a>
                 </div>
 <?php 

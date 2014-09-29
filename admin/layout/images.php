@@ -143,7 +143,7 @@ foreach($images as $data)
 		
 		echo '	<tr>
 		<td><form role="form" method="post" enctype="multipart/form-data">'.$data["id"].'</td>
-		<td><img src="'.$site.'img/cases/'.$data["name"].'" width="30%" height="30%" alt=""></td>
+		<td><img src="'.$site.'img/products/'.$data["name"].'" width="30%" height="30%" alt=""></td>
 		<td><a href="'.$asite.'images/'.$data["id"].'">'.$data["name"].'</a></td>
 		<td>'.$data["alt"].'</td>
 		<td>'.$data["parent"].'</td>
