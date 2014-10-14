@@ -10,7 +10,7 @@ foreach($news as $data)
 	{
 
 echo '	    <div class="newsBlock">
-        	<a href="'.$link.'news/'.$data["link_item"].'">
+        	<a href="'.$link.'news/'.$data["link_item"].'" class="newsBlock-link">
 		        <img class="img-responsive" src="'.$site.'img/news/'.$data["img"].'" alt="">
 		        <h3 class="truncate newsTitle">
 		        		'.$data[$lang].'

@@ -242,6 +242,11 @@ textarea {
 /* news */
 .newsBlock {
   margin-bottom: 30px;
+  &-link{
+    margin: 0 auto;
+    max-width: 355px;
+    display: block;
+  }
   .img-responsive {
     width: 90%;
     margin: 0 auto;
@@ -249,7 +254,7 @@ textarea {
   }
   .img-news {
     width: 40%;
-    max-width: 400px;
+    max-width: 355px;
     &.pullLeft,
     &.pullRight {
       padding: 10px;
